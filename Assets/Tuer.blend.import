@@ -4,11 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://d22gv88qy1k7o"
-valid=false
+path="res://.godot/imported/Tuer.blend-b5c02292dc26aa847208e81c52f000d1.scn"
 
 [deps]
 
 source_file="res://Assets/Tuer.blend"
+dest_files=["res://.godot/imported/Tuer.blend-b5c02292dc26aa847208e81c52f000d1.scn"]
 
 [params]
 
