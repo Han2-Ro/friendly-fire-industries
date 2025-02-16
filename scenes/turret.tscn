@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://v18ghw3ou3p3"]
+[gd_scene load_steps=3 format=3 uid="uid://dhekf3klrcqwn"]
 
 [ext_resource type="PackedScene" uid="uid://cey11nyqhf4jd" path="res://Assets/TurretLowPoly.blend" id="1_60v5c"]
 [ext_resource type="Script" path="res://scripts/turret.gd" id="2_su5rc"]

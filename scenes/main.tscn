@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="1_6b7dr"]
 [ext_resource type="Script" path="res://scripts/enemy.gd" id="2_7qevw"]
-[ext_resource type="PackedScene" path="res://scenes/turret.tscn" id="2_ap0gk"]
+[ext_resource type="PackedScene" uid="uid://dhekf3klrcqwn" path="res://scenes/turret.tscn" id="2_ap0gk"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_7pb4y"]
 
@@ -17,7 +17,7 @@ albedo_color = Color(0.72, 0, 0.0119998, 1)
 
 [node name="Player" parent="." instance=ExtResource("1_6b7dr")]
 transform = Transform3D(0.862511, 0, -0.501993, 0, 0.997959, 0, 0.501993, 0, 0.862511, 0, 0, 0)
-speed = 10
+speed = 5
 
 [node name="Level" type="Node3D" parent="."]
 
@@ -79,11 +79,13 @@ surface_material_override/0 = SubResource("StandardMaterial3D_f1lto")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.06, 0, 7.549)
 
 [node name="TurretLowPoly" parent="." instance=ExtResource("2_ap0gk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 2)
+transform = Transform3D(1.71132, 0, 0, 0, 1.71132, 0, 0, 0, 1.71132, 7, 0, 2)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 14.69, 14.357, 0)
+transform = Transform3D(0.960576, 0.262591, -0.0913257, 0, 0.328487, 0.944508, 0.278019, -0.907272, 0.315537, 10.7678, 35.5779, 12.0938)
 current = true
+fov = 35.1
+size = 16.385
 
 [connection signal="area_entered" from="Enemy/Area3D" to="Enemy/Mesh" method="_on_area_3d_area_entered"]
 [connection signal="area_exited" from="Enemy/Area3D" to="Enemy/Mesh" method="_on_area_3d_area_exited"]
