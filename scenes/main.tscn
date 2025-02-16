@@ -3,9 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="1_6b7dr"]
 [ext_resource type="PackedScene" uid="uid://dn6tsnouahmva" path="res://scenes/level.tscn" id="2_6ja5e"]
 [ext_resource type="Script" path="res://scripts/enemy.gd" id="2_7qevw"]
-[ext_resource type="PackedScene" uid="uid://v18ghw3ou3p3" path="res://scenes/turret.tscn" id="2_ap0gk"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_7pb4y"]
+[ext_resource type="PackedScene" uid="uid://dhekf3klrcqwn" path="res://scenes/turret.tscn" id="2_ap0gk"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hd32q"]
 
@@ -18,7 +16,7 @@ albedo_color = Color(0.72, 0, 0.0119998, 1)
 
 [node name="Player" parent="." instance=ExtResource("1_6b7dr")]
 transform = Transform3D(0.862511, 0, -0.501993, 0, 0.997959, 0, 0.501993, 0, 0.862511, 0, 0, 0)
-speed = 1
+speed = 0
 
 [node name="Level" parent="." instance=ExtResource("2_6ja5e")]
 
@@ -43,10 +41,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.06, 0, 7.549)
 
 [node name="TurretLowPoly" parent="." instance=ExtResource("2_ap0gk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 2)
-rotation_speed = 100.0
-tracking_distance = 10.0
-tracking_angle = 45.0
-
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.960576, 0.262591, -0.0913257, 0, 0.328487, 0.944508, 0.278019, -0.907272, 0.315537, 10.7678, 35.5779, 12.0938)

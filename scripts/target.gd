@@ -29,4 +29,4 @@ func _on_area_3d_area_exited(area: Area3D) -> void:
 		in_ray = false
 
 func on_hit():
-	print("target hited")
+	print("target hit")
