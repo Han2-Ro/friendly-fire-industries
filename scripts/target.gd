@@ -4,10 +4,9 @@ class_name Target
 var in_ray: bool
 var area: Area3D
 
-# Called when the node enters the scene tree for the first time.
+# TODO: Fix overriding by child class
 func _ready() -> void:
 	area = find_child("Area3D") as Area3D
-	print(area)
 	area.area_entered.connect(_on_area_3d_area_entered)
 	area.area_exited.connect(_on_area_3d_area_exited)
 
@@ -21,13 +20,11 @@ func _input(event: InputEvent) -> void:
 		on_hit()
 
 func _on_area_3d_area_entered(area: Area3D) -> void:
-	print("area entered")
 	if area.is_in_group("ray"):
 		in_ray = true
 
 
 func _on_area_3d_area_exited(area: Area3D) -> void:
-	print("area exited")
 	if area.is_in_group("ray"):
 		in_ray = false
 
