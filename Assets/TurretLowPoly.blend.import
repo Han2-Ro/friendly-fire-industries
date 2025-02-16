@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cey11nyqhf4jd"
+uid="uid://b57nootbu4au6"
 path="res://.godot/imported/TurretLowPoly.blend-a59204af76d300c9a10c7931cdd5ff0e.scn"
 
 [deps]
@@ -25,10 +25,10 @@ meshes/light_baking=1
 meshes/lightmap_texel_size=0.2
 meshes/force_disable_compression=false
 skins/use_named_skins=true
-animation/import=false
+animation/import=true
 animation/fps=30
 animation/trimming=false
-animation/remove_immutable_tracks=false
+animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={}

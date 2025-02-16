@@ -1,8 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://v18ghw3ou3p3"]
 
-[ext_resource type="PackedScene" uid="uid://cey11nyqhf4jd" path="res://Assets/TurretLowPoly.blend" id="1_60v5c"]
+[ext_resource type="PackedScene" uid="uid://b57nootbu4au6" path="res://Assets/TurretLowPoly.blend" id="1_60v5c"]
 [ext_resource type="Script" path="res://scripts/turret.gd" id="2_su5rc"]
 
 [node name="TurretLowPoly" instance=ExtResource("1_60v5c")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 script = ExtResource("2_su5rc")
+
+[node name="Cylinder" parent="." index="1"]
+transform = Transform3D(-0.482931, 0, -0.875658, 0, 1, 0, 0.875658, 0, -0.482931, 0, 0, 0)
