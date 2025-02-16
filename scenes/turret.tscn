@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://v18ghw3ou3p3"]
+[gd_scene load_steps=5 format=3 uid="uid://dhekf3klrcqwn"]
 
 [ext_resource type="PackedScene" uid="uid://b57nootbu4au6" path="res://Assets/TurretLowPoly.blend" id="1_60v5c"]
 [ext_resource type="Script" path="res://scripts/turret.gd" id="2_su5rc"]
-[ext_resource type="PackedScene" uid="uid://j11vvc024r4e" path="res://scenes/health_bar_3d.tscn" id="3_qevxr"]
+[ext_resource type="PackedScene" path="res://scenes/health_bar_3d.tscn" id="3_qevxr"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_tmtmh"]
 viewport_path = NodePath("SubViewport")
