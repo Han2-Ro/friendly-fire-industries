@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://jn22a2o5sevi"]
+[gd_scene load_steps=7 format=3 uid="uid://jn22a2o5sevi"]
 
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="1_6b7dr"]
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="2_7qevw"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_7pb4y"]
 
@@ -8,6 +9,8 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f1lto"]
 albedo_color = Color(0.72, 0, 0.0119998, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hd32q"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -55,6 +58,15 @@ mesh = SubResource("BoxMesh_7pb4y")
 skeleton = NodePath("../MeshInstance3D2")
 
 [node name="Enemy" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.7356, 3.56393, 0)
+transform = Transform3D(1.00025, 0, 0, 0, 1.00025, 0, 0, 0, 1.00025, 28.7356, 3.56393, 0)
 mesh = SubResource("BoxMesh_bja7e")
 surface_material_override/0 = SubResource("StandardMaterial3D_f1lto")
+script = ExtResource("2_7qevw")
+
+[node name="Area3D" type="Area3D" parent="Enemy" groups=["target"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Enemy/Area3D"]
+shape = SubResource("BoxShape3D_hd32q")
+
+[connection signal="area_entered" from="Enemy/Area3D" to="Enemy" method="_on_area_3d_area_entered"]
+[connection signal="area_exited" from="Enemy/Area3D" to="Enemy" method="_on_area_3d_area_exited"]
