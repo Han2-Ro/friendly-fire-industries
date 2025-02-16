@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="1_6b7dr"]
 [ext_resource type="Script" path="res://scripts/enemy.gd" id="2_7qevw"]
-[ext_resource type="PackedScene" uid="uid://v18ghw3ou3p3" path="res://scenes/turret.tscn" id="2_ap0gk"]
+[ext_resource type="PackedScene" path="res://scenes/turret.tscn" id="2_ap0gk"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_7pb4y"]
 
@@ -16,6 +16,7 @@ albedo_color = Color(0.72, 0, 0.0119998, 1)
 [node name="Node3D" type="Node3D"]
 
 [node name="Player" parent="." instance=ExtResource("1_6b7dr")]
+transform = Transform3D(0.862511, 0, -0.501993, 0, 0.997959, 0, 0.501993, 0, 0.862511, 0, 0, 0)
 speed = 10
 
 [node name="Level" type="Node3D" parent="."]
@@ -59,16 +60,17 @@ mesh = SubResource("BoxMesh_7pb4y")
 skeleton = NodePath("../MeshInstance3D2")
 
 [node name="Enemy" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.5998, 0, 2.57516)
 script = ExtResource("2_7qevw")
 
 [node name="Area3D" type="Area3D" parent="Enemy" groups=["target"]]
-transform = Transform3D(1.00025, 0, 0, 0, 1.00025, 0, 0, 0, 1.00025, 28.7356, 3.56393, 0)
+transform = Transform3D(1.00025, 0, 0, 0, 1.00025, 0, 0, 0, 1.00025, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Enemy/Area3D"]
 shape = SubResource("BoxShape3D_hd32q")
 
 [node name="Mesh" type="MeshInstance3D" parent="Enemy"]
-transform = Transform3D(1.00025, 0, 0, 0, 1.00025, 0, 0, 0, 1.00025, 28.7356, 3.56393, 0)
+transform = Transform3D(1.00025, 0, 0, 0, 1.00025, 0, 0, 0, 1.00025, 0, 0, 0)
 mesh = SubResource("BoxMesh_bja7e")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_f1lto")
@@ -80,7 +82,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.06, 0, 7.549)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 2)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.963711, -0.184794, 0.192647, 0, 0.721663, 0.692245, -0.266949, -0.667123, 0.695474, 9.04577, 7.21126, 8.32111)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 14.69, 14.357, 0)
 current = true
 
 [connection signal="area_entered" from="Enemy/Area3D" to="Enemy/Mesh" method="_on_area_3d_area_entered"]

@@ -17,11 +17,8 @@ mesh = SubResource("CapsuleMesh_fw2n3")
 script = ExtResource("1_6100m")
 speed = 15
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.69618)
-
 [node name="Ray" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.0530733, 2.52381, 0, -0.0847538, 1.58042, 0, 0, 0, 0.1, 2.78271, 2.08702, 0)
+transform = Transform3D(-4.37113e-09, 2.97781, 0, -0.0999999, -1.30164e-07, 0, 0, 0, 0.1, 2.78271, 0.330221, 0)
 mesh = SubResource("CylinderMesh_yhwtt")
 surface_material_override/0 = SubResource("StandardMaterial3D_75plm")
 
