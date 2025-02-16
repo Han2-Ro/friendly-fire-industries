@@ -1,8 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://jn22a2o5sevi"]
+[gd_scene load_steps=8 format=3 uid="uid://jn22a2o5sevi"]
 
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="1_6b7dr"]
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="2_7qevw"]
+[ext_resource type="PackedScene" uid="uid://v18ghw3ou3p3" path="res://scenes/turret.tscn" id="2_ap0gk"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_7pb4y"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hd32q"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_bja7e"]
 
@@ -54,7 +58,30 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 78.5459, -2.26633, -5.27681)
 mesh = SubResource("BoxMesh_7pb4y")
 skeleton = NodePath("../MeshInstance3D2")
 
-[node name="Enemy" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.7356, 3.56393, 0)
+[node name="Enemy" type="Node3D" parent="."]
+script = ExtResource("2_7qevw")
+
+[node name="Area3D" type="Area3D" parent="Enemy" groups=["target"]]
+transform = Transform3D(1.00025, 0, 0, 0, 1.00025, 0, 0, 0, 1.00025, 28.7356, 3.56393, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Enemy/Area3D"]
+shape = SubResource("BoxShape3D_hd32q")
+
+[node name="Mesh" type="MeshInstance3D" parent="Enemy"]
+transform = Transform3D(1.00025, 0, 0, 0, 1.00025, 0, 0, 0, 1.00025, 28.7356, 3.56393, 0)
 mesh = SubResource("BoxMesh_bja7e")
+skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_f1lto")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.06, 0, 7.549)
+
+[node name="TurretLowPoly" parent="." instance=ExtResource("2_ap0gk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 2)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.963711, -0.184794, 0.192647, 0, 0.721663, 0.692245, -0.266949, -0.667123, 0.695474, 9.04577, 7.21126, 8.32111)
+current = true
+
+[connection signal="area_entered" from="Enemy/Area3D" to="Enemy/Mesh" method="_on_area_3d_area_entered"]
+[connection signal="area_exited" from="Enemy/Area3D" to="Enemy/Mesh" method="_on_area_3d_area_exited"]
