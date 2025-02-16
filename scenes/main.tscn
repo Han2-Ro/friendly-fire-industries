@@ -5,8 +5,6 @@
 [ext_resource type="Script" path="res://scripts/enemy.gd" id="2_7qevw"]
 [ext_resource type="PackedScene" uid="uid://v18ghw3ou3p3" path="res://scenes/turret.tscn" id="2_ap0gk"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_7pb4y"]
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_hd32q"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_bja7e"]
@@ -43,10 +41,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.06, 0, 7.549)
 
 [node name="TurretLowPoly" parent="." instance=ExtResource("2_ap0gk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 2)
-rotation_speed = 100.0
-tracking_distance = 10.0
-tracking_angle = 45.0
-
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.960576, 0.262591, -0.0913257, 0, 0.328487, 0.944508, 0.278019, -0.907272, 0.315537, 10.7678, 35.5779, 12.0938)
