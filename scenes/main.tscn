@@ -1,10 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://jn22a2o5sevi"]
 
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="1_6b7dr"]
+[ext_resource type="PackedScene" uid="uid://dn6tsnouahmva" path="res://scenes/level.tscn" id="2_6ja5e"]
 [ext_resource type="Script" path="res://scripts/enemy.gd" id="2_7qevw"]
 [ext_resource type="PackedScene" uid="uid://dhekf3klrcqwn" path="res://scenes/turret.tscn" id="2_ap0gk"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_7pb4y"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hd32q"]
 
@@ -19,45 +18,7 @@ albedo_color = Color(0.72, 0, 0.0119998, 1)
 transform = Transform3D(0.862511, 0, -0.501993, 0, 0.997959, 0, 0.501993, 0, 0.862511, 0, 0, 0)
 speed = 5
 
-[node name="Level" type="Node3D" parent="."]
-
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="Level"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.7457, 0, -4.58717)
-mesh = SubResource("BoxMesh_7pb4y")
-skeleton = NodePath("../MeshInstance3D2")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Level"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.43642, 0, -3.19993)
-mesh = SubResource("BoxMesh_7pb4y")
-skeleton = NodePath("../..")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Level"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.4342, 3.12064, -3.3584)
-mesh = SubResource("BoxMesh_7pb4y")
-
-[node name="MeshInstance3D8" type="MeshInstance3D" parent="Level"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.4522, 3.12064, -3.3584)
-mesh = SubResource("BoxMesh_7pb4y")
-
-[node name="MeshInstance3D4" type="MeshInstance3D" parent="Level"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.048, 0, -4.58717)
-mesh = SubResource("BoxMesh_7pb4y")
-skeleton = NodePath("../MeshInstance3D2")
-
-[node name="MeshInstance3D5" type="MeshInstance3D" parent="Level"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.3157, 1.48236, -5.27681)
-mesh = SubResource("BoxMesh_7pb4y")
-skeleton = NodePath("../MeshInstance3D2")
-
-[node name="MeshInstance3D6" type="MeshInstance3D" parent="Level"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.1777, 1.48236, -5.27681)
-mesh = SubResource("BoxMesh_7pb4y")
-skeleton = NodePath("../MeshInstance3D2")
-
-[node name="MeshInstance3D7" type="MeshInstance3D" parent="Level"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 78.5459, -2.26633, -5.27681)
-mesh = SubResource("BoxMesh_7pb4y")
-skeleton = NodePath("../MeshInstance3D2")
+[node name="Level" parent="." instance=ExtResource("2_6ja5e")]
 
 [node name="Enemy" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.5998, 0, 2.57516)
