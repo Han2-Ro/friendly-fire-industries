@@ -16,7 +16,7 @@ albedo_color = Color(0.72, 0, 0.0119998, 1)
 
 [node name="Player" parent="." instance=ExtResource("1_6b7dr")]
 transform = Transform3D(0.862511, 0, -0.501993, 0, 0.997959, 0, 0.501993, 0, 0.862511, 0, 0, 0)
-speed = 1
+speed = 0
 
 [node name="Level" parent="." instance=ExtResource("2_6ja5e")]
 
