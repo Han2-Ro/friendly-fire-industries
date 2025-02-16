@@ -1,12 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://jn22a2o5sevi"]
+[gd_scene load_steps=5 format=3 uid="uid://jn22a2o5sevi"]
 
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="1_6b7dr"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_7pb4y"]
 
+[sub_resource type="BoxMesh" id="BoxMesh_bja7e"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f1lto"]
+albedo_color = Color(0.72, 0, 0.0119998, 1)
+
 [node name="Node3D" type="Node3D"]
 
 [node name="Player" parent="." instance=ExtResource("1_6b7dr")]
+speed = 10
 
 [node name="Level" type="Node3D" parent="."]
 
@@ -47,3 +53,8 @@ skeleton = NodePath("../MeshInstance3D2")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 78.5459, -2.26633, -5.27681)
 mesh = SubResource("BoxMesh_7pb4y")
 skeleton = NodePath("../MeshInstance3D2")
+
+[node name="Enemy" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.7356, 3.56393, 0)
+mesh = SubResource("BoxMesh_bja7e")
+surface_material_override/0 = SubResource("StandardMaterial3D_f1lto")
