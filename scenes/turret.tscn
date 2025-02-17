@@ -18,7 +18,9 @@ shader_parameter/cone_color = Color(1, 0, 0, 0.2)
 [sub_resource type="ViewportTexture" id="ViewportTexture_tmtmh"]
 viewport_path = NodePath("SubViewport")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_svkif"]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_uwepn"]
+height = 1.36223
+radius = 0.368816
 
 [node name="TurretLowPoly" instance=ExtResource("1_60v5c")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
@@ -29,9 +31,13 @@ tracking_angle = 0.0
 transform = Transform3D(-0.00331624, 0, -0.999994, 0, 1, 0, 0.999994, 0, -0.00331624, 0, 0, 0)
 
 [node name="VisionCone" type="MeshInstance3D" parent="Cylinder" index="0"]
-transform = Transform3D(-8.71718e-07, -20, -4.37114e-08, 0, -8.74228e-07, 1, -20, 8.71718e-07, 1.88738e-15, 1.16415e-10, 0.378903, -0.176)
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 1.16415e-10, 0.378903, -0.176)
 mesh = SubResource("QuadMesh_idle6")
 surface_material_override/0 = SubResource("ShaderMaterial_5qtxh")
+
+[node name="Sprite3D" type="Sprite3D" parent="Cylinder" index="1"]
+transform = Transform3D(-2.21189e-08, 0.907687, -3.96184e-08, 0, -3.96763e-08, -0.906362, -0.506678, -3.86499e-08, 1.7486e-15, -0.00205195, 0.57524, -0.618763)
+texture = SubResource("ViewportTexture_tmtmh")
 
 [node name="SubViewport" type="SubViewport" parent="." index="2"]
 disable_3d = true
@@ -39,15 +45,10 @@ transparent_bg = true
 
 [node name="HealthBar3d" parent="SubViewport" index="0" instance=ExtResource("3_qevxr")]
 
-[node name="Sprite3D" type="Sprite3D" parent="." index="3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-billboard = 1
-texture = SubResource("ViewportTexture_tmtmh")
+[node name="Timer" type="Timer" parent="." index="3"]
 
-[node name="Timer" type="Timer" parent="." index="4"]
-
-[node name="Area3D" type="Area3D" parent="." index="5"]
+[node name="Area3D" type="Area3D" parent="." index="4"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.484833, 0)
-shape = SubResource("BoxShape3D_svkif")
+transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 0, 0.78618, 0)
+shape = SubResource("CylinderShape3D_uwepn")

@@ -21,7 +21,7 @@ func _ready():
 	timer.timeout.connect(_on_timer_timeout)
 	player = get_parent().find_child("Player")
 	barrel = find_child("Cylinder")
-	
+	vision_cone.scale = Vector3(tracking_distance*2, tracking_distance*2, 1)
 	var cone_material = ShaderMaterial.new()
 	cone_material.shader = load("res://shader/vision_cone.gdshader")
 	vision_cone.material_override = cone_material
@@ -105,10 +105,11 @@ func _on_timer_timeout():
 	print("kill")
 	EventBus.player_killed.emit()
 	
+	
 func on_hit():
 	stop_countdown()
 	queue_free()
-
+	
 func update_vision_cone(player_detected: bool, delta: float):
 	var material = vision_cone.material_override
 	var current_angle = material.get_shader_parameter("current_angle")
