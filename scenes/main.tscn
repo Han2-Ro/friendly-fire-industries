@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="1_6b7dr"]
 [ext_resource type="PackedScene" uid="uid://dn6tsnouahmva" path="res://scenes/level.tscn" id="2_6ja5e"]
 [ext_resource type="Script" path="res://scripts/enemy.gd" id="2_7qevw"]
-[ext_resource type="PackedScene" uid="uid://v18ghw3ou3p3" path="res://scenes/turret.tscn" id="2_ap0gk"]
+[ext_resource type="PackedScene" uid="uid://dhekf3klrcqwn" path="res://scenes/turret.tscn" id="2_ap0gk"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hd32q"]
 
