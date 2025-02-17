@@ -5,7 +5,6 @@ extends Node3D
 
 signal player_finished
 
-# Called when the node enters the scene tree for the first time.
 @onready var rotation_stange = $Player/player_base/player_rotationstange
 
 func _ready() -> void:
@@ -17,7 +16,6 @@ func _process(delta: float) -> void:
 	position.x += speed * delta
 	if (position.x > goal_distance):
 		EventBus.player_finished.emit()
-		#queue_free()
 
 func _physics_process(_delta: float) -> void:
 	look_at_cursor()

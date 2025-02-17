@@ -21,5 +21,6 @@ func _on_restart_pressed() -> void:
 func _on_player_finished() -> void:
 	endScreen.show()
 
+#TODO: change in UI text to failure
 func _on_player_killed() -> void:
 	endScreen.show()
