@@ -1,4 +1,4 @@
-extends Node3D
+extends Target
 
 @export var rotation_speed: float = 100.0
 @export var rotation_speed_awake : float = 50.0
@@ -13,7 +13,7 @@ var targeting: bool = false
 @onready var timer = $Timer
 
 func _ready():
-	
+	super._ready()
 	timer.one_shot = true
 	timer.timeout.connect(_on_timer_timeout)
 	
@@ -66,5 +66,10 @@ func stop_countdown():
 	
 func _on_timer_timeout():
 	print("kill")
+	
+func on_hit():
+	stop_countdown()
+	queue_free()
+	
 	
 	
