@@ -25,7 +25,7 @@ func look_at_cursor():
 		return;
 		
 	var cursor_position_on_plane = target_plane.intersects_ray(from, dir)
-	#print(str(from) + " : " + str(dir))
+	#print(str(mouse_position) + " " + str(from) + " : " + str(dir))
 	if (cursor_position_on_plane != null):
 		look_at(cursor_position_on_plane, Vector3.UP, 0)
 	else:

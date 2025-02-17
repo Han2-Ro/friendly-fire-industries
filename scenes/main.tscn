@@ -1,40 +1,19 @@
-[gd_scene load_steps=8 format=3 uid="uid://jn22a2o5sevi"]
+[gd_scene load_steps=5 format=3 uid="uid://jn22a2o5sevi"]
 
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="1_6b7dr"]
 [ext_resource type="PackedScene" uid="uid://dn6tsnouahmva" path="res://scenes/level.tscn" id="2_6ja5e"]
-[ext_resource type="Script" path="res://scripts/enemy.gd" id="2_7qevw"]
-[ext_resource type="PackedScene" uid="uid://dhekf3klrcqwn" path="res://scenes/turret.tscn" id="2_ap0gk"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_hd32q"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_bja7e"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f1lto"]
-albedo_color = Color(0.72, 0, 0.0119998, 1)
+[ext_resource type="PackedScene" uid="uid://v18ghw3ou3p3" path="res://scenes/turret.tscn" id="2_ap0gk"]
+[ext_resource type="PackedScene" uid="uid://b654g2n3j4fqw" path="res://scenes/enemy.tscn" id="3_hqxfb"]
 
 [node name="Node3D" type="Node3D"]
 
 [node name="Player" parent="." instance=ExtResource("1_6b7dr")]
-transform = Transform3D(0.862511, 0, -0.501993, 0, 0.997959, 0, 0.501993, 0, 0.862511, 0, 0, 0)
-speed = 2
+transform = Transform3D(0.997959, 0, 0, 0, 0.997959, 0, 0, 0, 0.997959, 0, 0.963509, 0)
+speed = 0
 
 [node name="Level" parent="." instance=ExtResource("2_6ja5e")]
 
-[node name="Enemy" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.5998, 0, 2.57516)
-script = ExtResource("2_7qevw")
-
-[node name="Area3D" type="Area3D" parent="Enemy" groups=["target"]]
-transform = Transform3D(1.00025, 0, 0, 0, 1.00025, 0, 0, 0, 1.00025, 0, 0, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Enemy/Area3D"]
-shape = SubResource("BoxShape3D_hd32q")
-
-[node name="Mesh" type="MeshInstance3D" parent="Enemy"]
-transform = Transform3D(1.00025, 0, 0, 0, 1.00025, 0, 0, 0, 1.00025, 0, 0, 0)
-mesh = SubResource("BoxMesh_bja7e")
-skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_f1lto")
+[node name="Enemy" parent="." instance=ExtResource("3_hqxfb")]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.06, 0, 7.549)
@@ -50,6 +29,3 @@ transform = Transform3D(0.960576, 0.262591, -0.0913257, 0, 0.328487, 0.944508, 0
 current = true
 fov = 35.1
 size = 16.385
-
-[connection signal="area_entered" from="Enemy/Area3D" to="Enemy/Mesh" method="_on_area_3d_area_entered"]
-[connection signal="area_exited" from="Enemy/Area3D" to="Enemy/Mesh" method="_on_area_3d_area_exited"]
