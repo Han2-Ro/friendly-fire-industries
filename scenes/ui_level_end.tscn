@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dtagpag7eaum5" path="res://Assets/restart.svg" id="1_thasw"]
 
 [node name="UILevelEnd" type="Control"]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -50,7 +51,7 @@ text = "Succes"
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="Restart" type="Button" parent="."]
+[node name="RestartButton" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

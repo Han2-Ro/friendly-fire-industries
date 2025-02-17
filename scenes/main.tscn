@@ -1,13 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://jn22a2o5sevi"]
+[gd_scene load_steps=7 format=3 uid="uid://jn22a2o5sevi"]
 
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="1_6b7dr"]
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_hlc4r"]
 [ext_resource type="PackedScene" uid="uid://dn6tsnouahmva" path="res://scenes/level.tscn" id="2_6ja5e"]
 [ext_resource type="PackedScene" uid="uid://v18ghw3ou3p3" path="res://scenes/turret.tscn" id="2_ap0gk"]
 [ext_resource type="PackedScene" path="res://scenes/enemy.tscn" id="3_hqxfb"]
+[ext_resource type="PackedScene" uid="uid://cul6wl06g6wvn" path="res://scenes/ui_level_end.tscn" id="6_8y5au"]
 
-[node name="Main" type="Node3D"]
+[node name="Main" type="Node3D" node_paths=PackedStringArray("endScreen")]
 script = ExtResource("1_hlc4r")
+endScreen = NodePath("UILevelEnd")
 
 [node name="Player" parent="." instance=ExtResource("1_6b7dr")]
 transform = Transform3D(0.997959, 0, 0, 0, 0.997959, 0, 0, 0, 0.997959, 0, 0.963509, 0)
@@ -31,3 +33,5 @@ transform = Transform3D(0.960576, 0.262591, -0.0913257, 0, 0.328487, 0.944508, 0
 current = true
 fov = 35.1
 size = 16.385
+
+[node name="UILevelEnd" parent="." instance=ExtResource("6_8y5au")]

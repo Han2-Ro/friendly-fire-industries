@@ -3,17 +3,21 @@ extends Node3D
 @export var speed = 3
 @export var goal_distance = 30
 
+signal player_finished
+
 # Called when the node enters the scene tree for the first time.
 @onready var rotation_stange = $Player/player_base/player_rotationstange
 
 func _ready() -> void:
-	pass
+	EventBus.player_finished.connect(queue_free)
+	EventBus.player_killed.connect(queue_free)
 	
 
 func _process(delta: float) -> void:
 	position.x += speed * delta
 	if (position.x > goal_distance):
-		get_tree().reload_current_scene()
+		EventBus.player_finished.emit()
+		#queue_free()
 
 func _physics_process(_delta: float) -> void:
 	look_at_cursor()
