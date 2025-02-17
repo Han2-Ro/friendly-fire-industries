@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://wtl1r2baf1fi"]
+[gd_scene load_steps=7 format=3 uid="uid://wtl1r2baf1fi"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_6100m"]
 [ext_resource type="Script" path="res://scripts/ray.gd" id="2_y0miw"]
@@ -12,10 +12,7 @@ albedo_color = Color(0.1, 1, 0, 1)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_7lh24"]
 
-[sub_resource type="SphereMesh" id="SphereMesh_qnayl"]
-
 [node name="Player" type="MeshInstance3D"]
-transform = Transform3D(0.997959, 0, 0, 0, 0.997959, 0, 0, 0, 0.997959, 0, 0, 0)
 mesh = SubResource("CapsuleMesh_fw2n3")
 script = ExtResource("1_6100m")
 
@@ -28,17 +25,13 @@ surface_material_override/0 = SubResource("StandardMaterial3D_75plm")
 [node name="Area3D" type="Area3D" parent="Ray" groups=["ray"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ray/Area3D"]
-transform = Transform3D(1, 0, 0, -2.35922e-16, 1, 1.11022e-16, 0, -9.09495e-13, 1, 0, 0, 0)
+transform = Transform3D(1, 2.24762e-16, -6.43049e-22, -2.24762e-16, 1, 1.84125e-12, 6.4305e-22, -1.84125e-12, 1, 0, 0, 0)
 shape = SubResource("CylinderShape3D_7lh24")
 
-[node name="MouseAim" type="Node3D" parent="."]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="MouseAim"]
-mesh = SubResource("SphereMesh_qnayl")
-
 [node name="RayCast3D" type="RayCast3D" parent="."]
-target_position = Vector3(0, 0, -30)
+target_position = Vector3(-10, 0, 0)
 collide_with_areas = true
+collide_with_bodies = false
 debug_shape_custom_color = Color(0.0666666, 1, 0, 1)
 debug_shape_thickness = 5
 script = ExtResource("2_y0miw")
