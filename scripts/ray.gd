@@ -19,6 +19,12 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	draw_ray2()
 
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("shoot") and is_colliding():
+		var obj = get_collider().get_parent()
+		if (obj.has_method("on_hit")):
+			obj.on_hit()
+
 func draw_ray():
 	mesh.clear_surfaces()
 	mesh.surface_begin(Mesh.PRIMITIVE_LINES)
@@ -29,7 +35,7 @@ func draw_ray():
 func draw_ray2():
 	mesh.clear_surfaces()
 	# Add these points to create a "thick" line using triangles
-	mesh.surface_begin(Mesh.PRIMITIVE_LINES)
+	mesh.surface_begin(Mesh.PRIMITIVE_TRIANGLE_STRIP)
 	var thickness = 0.1 # Adjust this value
 	var up = Vector3(0, thickness, 0)
 	var right = Vector3(thickness, 0, 0)
@@ -37,15 +43,15 @@ func draw_ray2():
 	var start = position
 	var end
 	if (is_colliding()):
-		print("Hit: " + str(get_collision_point()))
+		#print(get_collision_point())
 		end = to_local(get_collision_point())
 	else:
 		end = start + target_position
 
 	# Create a rectangular prism along the line
-	#mesh.surface_add_vertex(start + right)
+	mesh.surface_add_vertex(start + right)
 	mesh.surface_add_vertex(start)
 	mesh.surface_add_vertex(end)
-	#mesh.surface_add_vertex(end + right)
-	#mesh.surface_add_vertex(start + right)
+	mesh.surface_add_vertex(end + right)
+	mesh.surface_add_vertex(start + right)
 	mesh.surface_end()
