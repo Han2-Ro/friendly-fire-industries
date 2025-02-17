@@ -1,8 +1,19 @@
-[gd_scene load_steps=6 format=3 uid="uid://v18ghw3ou3p3"]
+[gd_scene load_steps=9 format=3 uid="uid://v18ghw3ou3p3"]
 
 [ext_resource type="PackedScene" uid="uid://b57nootbu4au6" path="res://Assets/TurretLowPoly.blend" id="1_60v5c"]
 [ext_resource type="Script" path="res://scripts/turret.gd" id="2_su5rc"]
+[ext_resource type="Shader" path="res://shader/vision_cone.gdshader" id="3_2ab0p"]
 [ext_resource type="PackedScene" uid="uid://j11vvc024r4e" path="res://scenes/health_bar_3d.tscn" id="3_qevxr"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_idle6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5qtxh"]
+render_priority = 0
+shader = ExtResource("3_2ab0p")
+shader_parameter/cone_angle = 90.0
+shader_parameter/min_angle = 5.0
+shader_parameter/current_angle = 90.0
+shader_parameter/cone_color = Color(1, 0, 0, 0.2)
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_tmtmh"]
 viewport_path = NodePath("SubViewport")
@@ -12,9 +23,15 @@ viewport_path = NodePath("SubViewport")
 [node name="TurretLowPoly" instance=ExtResource("1_60v5c")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 script = ExtResource("2_su5rc")
+tracking_angle = 0.0
 
 [node name="Cylinder" parent="." index="1"]
-transform = Transform3D(-0.482931, 0, -0.875658, 0, 1, 0, 0.875658, 0, -0.482931, 0, 0, 0)
+transform = Transform3D(-0.00331624, 0, -0.999994, 0, 1, 0, 0.999994, 0, -0.00331624, 0, 0, 0)
+
+[node name="VisionCone" type="MeshInstance3D" parent="Cylinder" index="0"]
+transform = Transform3D(-8.71718e-07, -20, -4.37114e-08, 0, -8.74228e-07, 1, -20, 8.71718e-07, 1.88738e-15, 1.16415e-10, 0.378903, -0.176)
+mesh = SubResource("QuadMesh_idle6")
+surface_material_override/0 = SubResource("ShaderMaterial_5qtxh")
 
 [node name="SubViewport" type="SubViewport" parent="." index="2"]
 disable_3d = true
