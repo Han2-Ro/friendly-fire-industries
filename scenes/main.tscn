@@ -1,37 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://jn22a2o5sevi"]
+[gd_scene load_steps=4 format=3 uid="uid://jn22a2o5sevi"]
 
-[ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="1_6b7dr"]
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_hlc4r"]
-[ext_resource type="PackedScene" uid="uid://dn6tsnouahmva" path="res://scenes/level.tscn" id="2_6ja5e"]
-[ext_resource type="PackedScene" uid="uid://v18ghw3ou3p3" path="res://scenes/turret.tscn" id="2_ap0gk"]
-[ext_resource type="PackedScene" path="res://scenes/enemy.tscn" id="3_hqxfb"]
+[ext_resource type="PackedScene" uid="uid://dyxaw3lu6lqej" path="res://scenes/levels/test_level.tscn" id="3_h8t6k"]
 [ext_resource type="PackedScene" uid="uid://cul6wl06g6wvn" path="res://scenes/ui_level_end.tscn" id="6_8y5au"]
 
 [node name="Main" type="Node3D" node_paths=PackedStringArray("endScreen")]
 script = ExtResource("1_hlc4r")
 endScreen = NodePath("UILevelEnd")
 
-[node name="Player" parent="." instance=ExtResource("1_6b7dr")]
-transform = Transform3D(0.997959, 0, 0, 0, 0.997959, 0, 0, 0, 0.997959, 0, 0.963509, 0)
-speed = 2
-
-[node name="Level" parent="." instance=ExtResource("2_6ja5e")]
-
-[node name="Enemy" parent="." instance=ExtResource("3_hqxfb")]
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.06, 0, 7.549)
-
-[node name="TurretLowPoly" parent="." instance=ExtResource("2_ap0gk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 2)
-rotation_speed = 60.0
-tracking_angle = 60.0
-death_timer = 1.0
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.960576, 0.262591, -0.0913257, 0, 0.328487, 0.944508, 0.278019, -0.907272, 0.315537, 10.7678, 35.5779, 12.0938)
-current = true
-fov = 35.1
-size = 16.385
-
 [node name="UILevelEnd" parent="." instance=ExtResource("6_8y5au")]
+
+[node name="Level" parent="." instance=ExtResource("3_h8t6k")]
