@@ -13,13 +13,11 @@ func _ready() -> void:
 	line.mesh = mesh
 	line.material_override = material
 	add_child(line)
-	
-	draw_ray2()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	draw_ray2()
 
 func draw_ray():
 	mesh.clear_surfaces()
@@ -29,20 +27,25 @@ func draw_ray():
 	mesh.surface_end()
 
 func draw_ray2():
+	mesh.clear_surfaces()
 	# Add these points to create a "thick" line using triangles
-	mesh.surface_begin(Mesh.PRIMITIVE_TRIANGLES)
+	mesh.surface_begin(Mesh.PRIMITIVE_LINES)
 	var thickness = 0.1 # Adjust this value
 	var up = Vector3(0, thickness, 0)
 	var right = Vector3(thickness, 0, 0)
-
-	var start = global_position
-	var end = start + target_position
+	
+	var start = position
+	var end
+	if (is_colliding()):
+		print("Hit: " + str(get_collision_point()))
+		end = to_local(get_collision_point())
+	else:
+		end = start + target_position
 
 	# Create a rectangular prism along the line
-	mesh.surface_add_vertex(start + right)
+	#mesh.surface_add_vertex(start + right)
 	mesh.surface_add_vertex(start)
 	mesh.surface_add_vertex(end)
-	mesh.surface_add_vertex(end)
-	mesh.surface_add_vertex(end + right)
-	mesh.surface_add_vertex(start + right)
+	#mesh.surface_add_vertex(end + right)
+	#mesh.surface_add_vertex(start + right)
 	mesh.surface_end()
