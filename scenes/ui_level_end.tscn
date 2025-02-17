@@ -1,0 +1,67 @@
+[gd_scene load_steps=2 format=3 uid="uid://cul6wl06g6wvn"]
+
+[ext_resource type="Texture2D" uid="uid://dtagpag7eaum5" path="res://Assets/restart.svg" id="1_thasw"]
+
+[node name="UILevelEnd" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.5
+offset_top = -106.5
+offset_right = 220.5
+offset_bottom = -17.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 17.0
+offset_right = 257.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 36
+text = "Test Result:"
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -180.0
+offset_right = -21.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 36
+text = "Succes"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Restart" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -68.0
+offset_top = 16.0
+offset_right = 68.0
+offset_bottom = 152.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("1_thasw")
+flat = true
