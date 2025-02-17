@@ -3,13 +3,13 @@
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="1_6b7dr"]
 [ext_resource type="PackedScene" uid="uid://dn6tsnouahmva" path="res://scenes/level.tscn" id="2_6ja5e"]
 [ext_resource type="PackedScene" uid="uid://v18ghw3ou3p3" path="res://scenes/turret.tscn" id="2_ap0gk"]
-[ext_resource type="PackedScene" uid="uid://b654g2n3j4fqw" path="res://scenes/enemy.tscn" id="3_hqxfb"]
+[ext_resource type="PackedScene" uid="uid://d4ejkjmy4wv3f" path="res://scenes/enemy.tscn" id="3_hqxfb"]
 
 [node name="Node3D" type="Node3D"]
 
 [node name="Player" parent="." instance=ExtResource("1_6b7dr")]
 transform = Transform3D(0.997959, 0, 0, 0, 0.997959, 0, 0, 0, 0.997959, 0, 0.963509, 0)
-speed = 0
+speed = 2
 
 [node name="Level" parent="." instance=ExtResource("2_6ja5e")]
 

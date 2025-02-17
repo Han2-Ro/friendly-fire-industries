@@ -1,13 +1,14 @@
-extends MeshInstance3D
+extends Node3D
 
 @export var speed = 3
 
 # Called when the node enters the scene tree for the first time.
+@onready var rotation_stange = $Player/player_base/player_rotationstange
+
 func _ready() -> void:
 	pass # Replace with function body.
+	
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	position.x += speed * delta
 
@@ -27,6 +28,6 @@ func look_at_cursor():
 	var cursor_position_on_plane = target_plane.intersects_ray(from, dir)
 	#print(str(mouse_position) + " " + str(from) + " : " + str(dir))
 	if (cursor_position_on_plane != null):
-		look_at(cursor_position_on_plane, Vector3.UP, 0)
-	else:
-		look_at(global_position + Vector3(0,10,0), Vector3.UP, 0)
+		rotation_stange.look_at(cursor_position_on_plane, Vector3.UP, 0)
+	#else:
+		#rotation_stange.look_at(global_position + Vector3(0,10,0), Vector3.UP, 0)
