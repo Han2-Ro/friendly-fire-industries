@@ -76,7 +76,7 @@ func target_player(delta) -> bool:
 	else:
 		if targeting:
 			targeting = false
-		update_vision_cone(false, delta)  # Neue Zeile
+		update_vision_cone(false, delta) # Neue Zeile
 		return false
 
 func rotate_at_player(barrel, direction, delta):
@@ -103,7 +103,7 @@ func stop_countdown():
 	
 func _on_timer_timeout():
 	print("kill")
-	EventBus.player_killed.emit()
+	EventBus.level_end.emit(false)
 	
 	
 func on_hit():

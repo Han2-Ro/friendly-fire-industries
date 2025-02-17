@@ -4,8 +4,7 @@ extends Node3D
 @onready var restartButton: Button
 
 func _ready() -> void:
-	EventBus.player_finished.connect(_on_player_finished)
-	EventBus.player_killed.connect(_on_player_killed)
+	EventBus.level_end.connect(_on_level_end)
 	if endScreen == null:
 		printerr("No end screen")
 		return
@@ -18,9 +17,6 @@ func _ready() -> void:
 func _on_restart_pressed() -> void:
 	get_tree().reload_current_scene()
 
-func _on_player_finished() -> void:
-	endScreen.show()
-
-#TODO: change in UI text to failure
-func _on_player_killed() -> void:
+func _on_level_end(success: bool) -> void:
+	print(success)
 	endScreen.show()

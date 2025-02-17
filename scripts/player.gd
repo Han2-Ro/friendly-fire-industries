@@ -3,19 +3,16 @@ extends Node3D
 @export var speed = 3
 @export var goal_distance = 30
 
-signal player_finished
-
 @onready var rotation_stange = $Player/player_base/player_rotationstange
 
 func _ready() -> void:
-	EventBus.player_finished.connect(queue_free)
-	EventBus.player_killed.connect(queue_free)
+	EventBus.level_end.connect(_on_level_end)
 	
 
 func _process(delta: float) -> void:
 	position.x += speed * delta
-	if (position.x > goal_distance):
-		EventBus.player_finished.emit()
+	if (position.x > goal_distance): # TODO: How to do it for more complex path
+		EventBus.level_end.emit(true)
 
 func _physics_process(_delta: float) -> void:
 	look_at_cursor()
@@ -33,3 +30,6 @@ func look_at_cursor():
 	var cursor_position_on_plane = target_plane.intersects_ray(from, dir)
 	if (cursor_position_on_plane != null):
 		rotation_stange.look_at(cursor_position_on_plane, Vector3.UP, 0)
+
+func _on_level_end(_success: bool) -> void:
+	queue_free()

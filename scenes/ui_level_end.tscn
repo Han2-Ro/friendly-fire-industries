@@ -1,8 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://cul6wl06g6wvn"]
+[gd_scene load_steps=3 format=3 uid="uid://cul6wl06g6wvn"]
 
+[ext_resource type="Script" path="res://scripts/ui_level_end.gd" id="1_dt46y"]
 [ext_resource type="Texture2D" uid="uid://dtagpag7eaum5" path="res://Assets/restart.svg" id="1_thasw"]
 
-[node name="UILevelEnd" type="Control"]
+[node name="UILevelEnd" type="Control" node_paths=PackedStringArray("status_label")]
 visible = false
 layout_mode = 3
 anchors_preset = 15
@@ -10,6 +11,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_dt46y")
+status_label = NodePath("Panel/Label2")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
