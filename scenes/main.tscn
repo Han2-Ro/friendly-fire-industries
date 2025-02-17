@@ -1,11 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://jn22a2o5sevi"]
+[gd_scene load_steps=6 format=3 uid="uid://jn22a2o5sevi"]
 
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="1_6b7dr"]
+[ext_resource type="Script" path="res://scenes/main.gd" id="1_hlc4r"]
 [ext_resource type="PackedScene" uid="uid://dn6tsnouahmva" path="res://scenes/level.tscn" id="2_6ja5e"]
 [ext_resource type="PackedScene" uid="uid://v18ghw3ou3p3" path="res://scenes/turret.tscn" id="2_ap0gk"]
-[ext_resource type="PackedScene" uid="uid://d4ejkjmy4wv3f" path="res://scenes/enemy.tscn" id="3_hqxfb"]
+[ext_resource type="PackedScene" path="res://scenes/enemy.tscn" id="3_hqxfb"]
 
-[node name="Node3D" type="Node3D"]
+[node name="Main" type="Node3D"]
+script = ExtResource("1_hlc4r")
 
 [node name="Player" parent="." instance=ExtResource("1_6b7dr")]
 transform = Transform3D(0.997959, 0, 0, 0, 0.997959, 0, 0, 0, 0.997959, 0, 0.963509, 0)
