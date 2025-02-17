@@ -12,6 +12,7 @@ func _ready() -> void:
 	var line := MeshInstance3D.new()
 	line.mesh = mesh
 	line.material_override = material
+	line.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 	add_child(line)
 
 
@@ -36,7 +37,7 @@ func draw_ray2():
 	mesh.clear_surfaces()
 	# Add these points to create a "thick" line using triangles
 	mesh.surface_begin(Mesh.PRIMITIVE_TRIANGLE_STRIP)
-	var thickness = 0.1 # Adjust this value
+	var thickness = 0.1 / 3 
 	var up = Vector3(0, thickness, 0)
 	var right = Vector3(thickness, 0, 0)
 	
@@ -50,8 +51,8 @@ func draw_ray2():
 
 	# Create a rectangular prism along the line
 	mesh.surface_add_vertex(start + right)
-	mesh.surface_add_vertex(start)
-	mesh.surface_add_vertex(end)
+	mesh.surface_add_vertex(start - right)
+	mesh.surface_add_vertex(end - right)
 	mesh.surface_add_vertex(end + right)
 	mesh.surface_add_vertex(start + right)
 	mesh.surface_end()

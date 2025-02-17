@@ -6,7 +6,7 @@ extends Node3D
 @onready var rotation_stange = $Player/player_base/player_rotationstange
 
 func _ready() -> void:
-	pass # Replace with function body.
+	pass
 	
 
 func _process(delta: float) -> void:
@@ -26,8 +26,5 @@ func look_at_cursor():
 		return;
 		
 	var cursor_position_on_plane = target_plane.intersects_ray(from, dir)
-	#print(str(mouse_position) + " " + str(from) + " : " + str(dir))
 	if (cursor_position_on_plane != null):
 		rotation_stange.look_at(cursor_position_on_plane, Vector3.UP, 0)
-	#else:
-		#rotation_stange.look_at(global_position + Vector3(0,10,0), Vector3.UP, 0)
