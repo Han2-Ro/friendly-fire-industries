@@ -32,6 +32,7 @@ func _process(delta):
 # tries to track the player and returns false if the player is out of range
 func target_player(delta) -> bool:
 	var dir = player.global_position - global_position
+	dir.y = 0
 	var barrel_forward = -barrel.global_transform.basis.z.normalized()
 	var angle = rad_to_deg(acos(barrel_forward.dot(dir.normalized())))
 		
