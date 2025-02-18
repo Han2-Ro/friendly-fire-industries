@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://x2sc06tp2kpu" path="res://scenes/levels/level_02/level_02_map.tscn" id="1_2pvps"]
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="2_ifvsw"]
-[ext_resource type="PackedScene" path="res://scenes/minenwerfer.tscn" id="3_yyotb"]
+[ext_resource type="PackedScene" uid="uid://2rl6p8dd3sh4" path="res://scenes/minenwerfer.tscn" id="3_yyotb"]
 
 [sub_resource type="Curve3D" id="Curve3D_225gm"]
 _data = {

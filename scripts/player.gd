@@ -47,3 +47,8 @@ func _input(event: InputEvent) -> void:
 
 func _on_level_end(_success: bool) -> void:
 	queue_free()
+
+
+func _on_area_3d_area_entered(area: Area3D) -> void:
+	if area.is_in_group("mine"):
+		EventBus.level_end.emit(false)
