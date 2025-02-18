@@ -26,4 +26,5 @@ transform = Transform3D(0.649846, -0.157897, -0.743484, 0.760066, 0.135, 0.63566
 [node name="Path3D" type="Path3D" parent="."]
 curve = SubResource("Curve3D_225gm")
 
-[node name="Player" parent="." instance=ExtResource("2_ifvsw")]
+[node name="Player" parent="Path3D" instance=ExtResource("2_ifvsw")]
+transform = Transform3D(-1, 0, 5.28415e-05, 0, 1, 0, -5.28415e-05, 0, -1, -0.99976, 0, -5.53392)

@@ -4,12 +4,12 @@
 [ext_resource type="Script" path="res://scripts/ray.gd" id="2_y0miw"]
 [ext_resource type="PackedScene" uid="uid://be88bwduqfvp2" path="res://Assets/Player.blend" id="3_00mdn"]
 
-[node name="Player" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.954695, 0)
+[node name="Player" type="PathFollow3D"]
+loop = false
 script = ExtResource("1_6100m")
 
 [node name="Player" parent="." instance=ExtResource("3_00mdn")]
-transform = Transform3D(2.59921, 0, 0, 0, 2.59921, 0, 0, 0, 2.59921, 0, -0.00436753, 0)
+transform = Transform3D(-1.13615e-07, 0, 2.59921, 0, 2.59921, 0, -2.59921, 0, -1.13615e-07, 0, 0.954589, 0)
 
 [node name="RayCast3D" type="RayCast3D" parent="Player/player_base/player_rotationstange" index="1"]
 transform = Transform3D(0.384732, 0, 0, 0, 0.384732, 0, 0, 0, 0.384732, -0.000137465, 0.00415465, 0)
