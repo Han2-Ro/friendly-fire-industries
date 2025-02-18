@@ -53,23 +53,16 @@ func bounce(old_pos: Vector3, hit_pos: Vector3, norm: Vector3):
 	var result = get_world_3d().direct_space_state.intersect_ray(query)
 	if (result.is_empty()):
 		draw_bounce(to_local(hit_pos), to_local(target))
-		print("bounce void")
-		print(str(to_local(target)))
-		pass
 	else:
-		print("bounce")
 		draw_bounce(to_local(hit_pos), to_local(result["position"]))
 		bounce(hit_pos, result["position"], result["normal"])
 
 func draw_bounce(start: Vector3, end: Vector3):
-	if start < end:
-		var tmp = start
-		start = end
-		end = tmp
+	var dir = (end - start).normalized()
+	var perp = Vector3(-dir.z, 0, dir.x)
 	
 	var thickness = 0.1 / 3 
-	var up = Vector3(0, thickness, 0)
-	var right = Vector3(thickness, 0, 0)
+	var right = perp * thickness
 #
 	## Create a rectangular prism along the line
 	mesh.surface_begin(Mesh.PRIMITIVE_TRIANGLE_STRIP)
@@ -78,11 +71,6 @@ func draw_bounce(start: Vector3, end: Vector3):
 	mesh.surface_add_vertex(end - right)
 	mesh.surface_add_vertex(end + right)
 	mesh.surface_add_vertex(start + right)
-	mesh.surface_end()
-	
-	mesh.surface_begin(Mesh.PRIMITIVE_LINES)
-	mesh.surface_add_vertex(start)
-	mesh.surface_add_vertex(end)
 	mesh.surface_end()
 
 func draw_ray_simple():
@@ -97,7 +85,7 @@ func draw_ray_quad():
 	# Add these points to create a "thick" line using triangles
 	mesh.surface_begin(Mesh.PRIMITIVE_TRIANGLE_STRIP)
 	var thickness = 0.1 / 3 
-	var up = Vector3(0, thickness, 0)
+	#var up = Vector3(0, thickness, 0)
 	var right = Vector3(thickness, 0, 0)
 	
 	var start = position
