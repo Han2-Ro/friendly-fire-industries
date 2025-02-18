@@ -27,6 +27,10 @@ func _on_restart_pressed() -> void:
 func _on_next_level_pressed() -> void:
 	current_level.free()
 	GameState.current_level += 1
+	if GameState.current_level >= levels.size():
+		printerr("No more levels: Exiting")
+		get_tree().quit()
+		return
 	current_level = levels[GameState.current_level].instantiate()
 	add_child(current_level)
 	end_screen.hide()
