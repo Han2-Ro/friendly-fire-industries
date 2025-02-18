@@ -27,9 +27,10 @@ section_segments = 1
 radius = 0.002
 
 [node name="Bullet" type="CharacterBody3D"]
-collision_layer = 0
+collision_layer = 16
 collision_mask = 3
 motion_mode = 1
+slide_on_ceiling = false
 wall_min_slide_angle = 0.0
 platform_on_leave = 2
 script = ExtResource("1_jf0ka")

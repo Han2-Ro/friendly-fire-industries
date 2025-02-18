@@ -13,10 +13,10 @@ var targeting: bool = false
 
 @onready var health_bar = $SubViewport/HealthBar3d
 @onready var timer = $Timer
-@onready var vision_cone = $Cylinder/VisionCone
-@onready var broken_turret = preload("res://scenes/turret_kaputt.tscn")
+@onready var vision_cone = $TurretLowPoly/Cylinder/VisionCone
+@onready var broken_turret = preload("res://scenes/turret_kaputt_model.tscn")
 @onready var explodeparticle = preload("res://scenes/Particles/explosion.tscn")
-@onready var muzzleflash = $Cylinder/Muzzleflash
+@onready var muzzleflash = $TurretLowPoly/Cylinder/Muzzleflash
 
 
 func _ready():
@@ -24,7 +24,7 @@ func _ready():
 	timer.one_shot = true
 	timer.timeout.connect(_on_timer_timeout)
 	player = get_parent().find_child("Player")
-	barrel = find_child("Cylinder")
+	barrel = find_child("Cylinder", true, false)
 	vision_cone.scale = Vector3(tracking_distance*2, tracking_distance*2, 1)
 	var cone_material = ShaderMaterial.new()
 	cone_material.shader = load("res://shader/vision_cone.gdshader")
@@ -34,6 +34,7 @@ func _ready():
 	cone_material.set_shader_parameter("min_angle", end_angle)
 	cone_material.set_shader_parameter("current_angle", tracking_angle)
 	print("tracking_angle: ", tracking_angle)
+
 func _process(delta):
 	if player == null or !target_player(delta):
 		rotate_turret(barrel, delta)

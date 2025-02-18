@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="1_ukjkp"]
 [ext_resource type="PackedScene" uid="uid://dn6tsnouahmva" path="res://scenes/levels/level_01/test_map.tscn" id="2_odf3w"]
-[ext_resource type="PackedScene" uid="uid://v18ghw3ou3p3" path="res://scenes/turret.tscn" id="4_w8p2x"]
+[ext_resource type="PackedScene" uid="uid://b8lky0yk4q64s" path="res://scenes/turret.tscn" id="3_12jph"]
 
 [sub_resource type="Curve3D" id="Curve3D_fo07a"]
 _data = {
@@ -18,8 +18,8 @@ point_count = 2
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.06, 0, 7.549)
 
-[node name="TurretLowPoly" parent="." instance=ExtResource("4_w8p2x")]
-transform = Transform3D(0.999999, 0.00162421, -0.000574441, -0.00162553, 0.999996, -0.00232891, 0.000570678, 0.00232984, 0.999997, 15.1298, 0, 1.12939)
+[node name="Turret" parent="." instance=ExtResource("3_12jph")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.3824, 0, 1.40864)
 rotation_speed = 60.0
 tracking_angle = 30.0
 death_timer = 1.0
