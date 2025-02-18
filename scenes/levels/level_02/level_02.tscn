@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cnccgdbee6a2j"]
+[gd_scene load_steps=5 format=3 uid="uid://cnccgdbee6a2j"]
 
 [ext_resource type="PackedScene" uid="uid://x2sc06tp2kpu" path="res://scenes/levels/level_02/level_02_map.tscn" id="1_2pvps"]
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="2_ifvsw"]
+[ext_resource type="PackedScene" uid="uid://2rl6p8dd3sh4" path="res://scenes/minenwerfer.tscn" id="3_yyotb"]
 
 [sub_resource type="Curve3D" id="Curve3D_225gm"]
 _data = {
@@ -28,3 +29,14 @@ curve = SubResource("Curve3D_225gm")
 
 [node name="Player" parent="Path3D" instance=ExtResource("2_ifvsw")]
 transform = Transform3D(-1, 0, 5.28415e-05, 0, 1, 0, -5.28415e-05, 0, -1, -0.99976, 0, -5.53392)
+
+[node name="Minenwerfer" parent="." node_paths=PackedStringArray("targets") instance=ExtResource("3_yyotb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.84038, 0, -1.26145)
+targets = [NodePath("Target"), NodePath("Target2")]
+seconds_between_shots = 2.0
+
+[node name="Target" type="Node3D" parent="Minenwerfer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.85498, 0, 1.46013)
+
+[node name="Target2" type="Node3D" parent="Minenwerfer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0039, 0, 4.37144)
