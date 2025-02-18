@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://byxempdciilxd"]
+
+[ext_resource type="Script" path="res://scripts/mine.gd" id="1_j6u3g"]
+[ext_resource type="PackedScene" uid="uid://c8q2ip2vf1nx8" path="res://Assets/Miene.blend" id="2_cobcv"]
+
+[node name="Mine" type="Node3D"]
+script = ExtResource("1_j6u3g")
+
+[node name="Miene" parent="." instance=ExtResource("2_cobcv")]
