@@ -27,7 +27,7 @@ func _physics_process(delta: float) -> void:
 		return
 	
 	if (is_collider_bouncy(get_collider())):
-		bounce(global_position, get_collision_point(), get_collision_normal(), 0)
+		bounce(global_position, get_collision_point(), get_collision_normal(), 1)
 
 func is_collider_bouncy(collider: Node3D) -> bool:
 	if (collider.has_method("get_collision_layer_value")):

@@ -16,14 +16,18 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
 	# remove offscreen
-	if (abs(global_position.x) > 100  or abs(global_position.z) > 100 or bounce_count > INH_MAX_BOUNCES):
+	if (abs(global_position.x) > 100  or abs(global_position.z) > 100):
 		queue_free()
 	
 	var coll = move_and_collide(dir * speed * delta)
 	if coll:
+		bounce_count += 1
+		if bounce_count > INH_MAX_BOUNCES:
+			queue_free()
+		
 		if is_collider_bouncy(coll.get_collider()):
 			dir = dir.bounce(coll.get_normal()).normalized()
-			bounce_count += 1
+			
 			look_at(get_lookat_point(), Vector3.UP, 0)
 		else:
 			queue_free()
