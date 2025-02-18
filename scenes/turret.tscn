@@ -24,6 +24,8 @@ height = 0.798872
 radius = 0.368816
 
 [node name="Turret" type="StaticBody3D"]
+collision_layer = 2
+collision_mask = 0
 script = ExtResource("2_su5rc")
 
 [node name="TurretLowPoly" parent="." instance=ExtResource("1_w0i3n")]
@@ -51,7 +53,5 @@ disable_3d = true
 transparent_bg = true
 
 [node name="HealthBar3d" parent="SubViewport" instance=ExtResource("3_qevxr")]
-
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 
 [editable path="TurretLowPoly"]

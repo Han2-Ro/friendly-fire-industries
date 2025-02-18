@@ -38,9 +38,9 @@ func _input(event: InputEvent) -> void:
 		var direction = last_cursor_pos - rotation_stange.global_position
 		direction.y = 0
 		instance.dir = direction.normalized()
-		instance.global_position = rotation_stange.global_position
 		instance.INH_MAX_BOUNCES = $Player/player_base/player_rotationstange/RayCast3D.MAX_BOUNCES
 		get_parent().get_parent().add_child(instance)
+		instance.global_position = rotation_stange.global_position
 
 func _on_level_end(_success: bool) -> void:
 	queue_free()
