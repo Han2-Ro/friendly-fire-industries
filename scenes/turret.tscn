@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://v18ghw3ou3p3"]
+[gd_scene load_steps=10 format=3 uid="uid://v18ghw3ou3p3"]
 
 [ext_resource type="PackedScene" uid="uid://b57nootbu4au6" path="res://Assets/TurretLowPoly.blend" id="1_60v5c"]
 [ext_resource type="Script" path="res://scripts/turret.gd" id="2_su5rc"]
 [ext_resource type="Shader" path="res://shader/vision_cone.gdshader" id="3_2ab0p"]
 [ext_resource type="PackedScene" uid="uid://j11vvc024r4e" path="res://scenes/health_bar_3d.tscn" id="3_qevxr"]
+[ext_resource type="PackedScene" uid="uid://h6o2oblxpy6m" path="res://scenes/Particles/muzzleflash.tscn" id="5_cmabb"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_idle6"]
 
@@ -38,6 +39,9 @@ surface_material_override/0 = SubResource("ShaderMaterial_5qtxh")
 [node name="Sprite3D" type="Sprite3D" parent="Cylinder" index="1"]
 transform = Transform3D(-3.21306e-08, 1.30937, -5.71509e-08, 0, -5.72344e-08, -1.30746, -0.7309, -5.54137e-08, 2.56739e-15, -0.00391434, 0.994822, -1.18036)
 texture = SubResource("ViewportTexture_tmtmh")
+
+[node name="Muzzleflash" parent="Cylinder" index="2" instance=ExtResource("5_cmabb")]
+transform = Transform3D(-0.00331624, 0, 0.999995, 0, 1, 0, -0.999995, 0, -0.00331624, -0.00544231, 0.854439, -1.64112)
 
 [node name="SubViewport" type="SubViewport" parent="." index="2"]
 disable_3d = true

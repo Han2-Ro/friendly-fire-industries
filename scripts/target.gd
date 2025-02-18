@@ -13,9 +13,10 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-#func _input(event: InputEvent) -> void:
-	#if event.is_action_pressed("shoot") and in_ray:
-		#on_hit()
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("shoot") and in_ray:
+		on_hit()
+		print("pew")
 
 func _on_area_3d_area_entered(area: Area3D) -> void:
 	if area.is_in_group("ray"):

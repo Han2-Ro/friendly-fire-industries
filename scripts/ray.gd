@@ -98,3 +98,9 @@ func draw_ray_quad():
 	mesh.surface_add_vertex(end + right)
 	mesh.surface_add_vertex(start + right)
 	mesh.surface_end()
+	
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("shoot") and is_colliding():
+		var obj = get_collider().get_parent()
+		if (obj.has_method("on_hit")):
+			obj.on_hit()

@@ -5,7 +5,7 @@ extends Target
 @export var tracking_distance: float = 10.0
 @export var tracking_angle: float = 45.0
 @export var death_timer: float = 3.0
-@export var end_angle: float = 1.0
+var end_angle: float = 0.0
 
 var player: Node3D
 var barrel: Node3D
@@ -14,6 +14,10 @@ var targeting: bool = false
 @onready var health_bar = $SubViewport/HealthBar3d
 @onready var timer = $Timer
 @onready var vision_cone = $Cylinder/VisionCone
+@onready var broken_turret = preload("res://scenes/turret_kaputt.tscn")
+@onready var explodeparticle = preload("res://scenes/Particles/explosion.tscn")
+@onready var muzzleflash = $Cylinder/Muzzleflash
+
 
 func _ready():
 	super._ready()
@@ -103,11 +107,29 @@ func stop_countdown():
 	
 func _on_timer_timeout():
 	print("kill")
+	muzzleflash.shoot()
+	var recoil_distance = 0.2
+	var recoil_duration = 0.05
+	
+	barrel.translate_object_local(Vector3(0, 0, recoil_distance))
+	
+	await get_tree().create_timer(recoil_duration).timeout
+	
+	barrel.translate_object_local(Vector3(0, 0, -recoil_distance))
+	
 	EventBus.level_end.emit(false)
 	
 	
 func on_hit():
 	stop_countdown()
+	var explosion_instance = explodeparticle.instantiate()
+	explosion_instance.global_transform = self.global_transform
+	get_parent().add_child(explosion_instance)
+	explosion_instance.explode()
+	
+	var broken_turret_instance = broken_turret.instantiate()
+	broken_turret_instance.global_transform = barrel.global_transform
+	get_parent().add_child(broken_turret_instance)
 	queue_free()
 	
 func update_vision_cone(player_detected: bool, delta: float):
