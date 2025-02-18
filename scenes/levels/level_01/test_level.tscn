@@ -19,7 +19,7 @@ speed = 2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.06, 0, 7.549)
 
 [node name="TurretLowPoly" parent="." instance=ExtResource("4_w8p2x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 2)
+transform = Transform3D(0.999999, 0.00162421, -0.000574441, -0.00162553, 0.999996, -0.00232891, 0.000570678, 0.00232984, 0.999997, 7, 0, 2)
 rotation_speed = 60.0
 tracking_angle = 30.0
 death_timer = 1.0

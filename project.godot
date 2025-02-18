@@ -35,3 +35,7 @@ shoot={
 [layer_names]
 
 3d_physics/layer_1="LaserRay"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
