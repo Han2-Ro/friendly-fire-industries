@@ -1,5 +1,7 @@
 extends RayCast3D
 
+@export var MAX_BOUNCES = 1000
+
 var mesh: ImmediateMesh
 var line: MeshInstance3D
 
@@ -25,7 +27,7 @@ func _physics_process(delta: float) -> void:
 		return
 	
 	if (is_collider_bouncy(get_collider())):
-		bounce(global_position, get_collision_point(), get_collision_normal())
+		bounce(global_position, get_collision_point(), get_collision_normal(), 0)
 
 func is_collider_bouncy(collider: Node3D) -> bool:
 	if (collider.has_method("get_collision_layer_value")):
@@ -33,7 +35,11 @@ func is_collider_bouncy(collider: Node3D) -> bool:
 	else:
 		return false
 
-func bounce(old_pos: Vector3, hit_pos: Vector3, norm: Vector3):
+func bounce(old_pos: Vector3, hit_pos: Vector3, norm: Vector3, count: int):
+	# break infinite recursion
+	if (count > MAX_BOUNCES):
+		return
+	
 	var prev_dir = hit_pos - old_pos
 	prev_dir = prev_dir.normalized()
 	var new_dir = prev_dir.bounce(norm)
@@ -50,7 +56,7 @@ func bounce(old_pos: Vector3, hit_pos: Vector3, norm: Vector3):
 		draw_bounce(to_local(hit_pos), to_local(result["position"]))
 		# recurse if bouncy
 		if (is_collider_bouncy(result["collider"])):
-			bounce(hit_pos, result["position"], result["normal"])
+			bounce(hit_pos, result["position"], result["normal"], count + 1)
 
 func draw_bounce(start: Vector3, end: Vector3):
 	var dir = (end - start).normalized()

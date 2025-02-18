@@ -3,10 +3,12 @@ extends PathFollow3D
 @export var speed = 3
 
 @onready var rotation_stange = $Player/player_base/player_rotationstange
+@onready var bullet_scene = preload("res://scenes/bullet.tscn")
+
+var last_cursor_pos: Vector3
 
 func _ready() -> void:
 	EventBus.level_end.connect(_on_level_end)
-	
 
 func _physics_process(delta: float) -> void:
 	look_at_cursor()
@@ -28,6 +30,16 @@ func look_at_cursor():
 	if (cursor_position_on_plane != null):
 		cursor_position_on_plane.y = rotation_stange.global_position.y
 		rotation_stange.look_at(cursor_position_on_plane, Vector3.UP, 0)
+		last_cursor_pos = cursor_position_on_plane
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("shoot"):
+		var instance = bullet_scene.instantiate()
+		var direction = last_cursor_pos - rotation_stange.global_position
+		direction.y = 0
+		instance.dir = direction.normalized()
+		instance.global_position = rotation_stange.global_position
+		get_parent().get_parent().add_child(instance)
 
 func _on_level_end(_success: bool) -> void:
 	queue_free()

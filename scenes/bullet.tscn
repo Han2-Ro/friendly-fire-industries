@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://bg8xfgyrgw4md"]
+[gd_scene load_steps=8 format=3 uid="uid://btirrlxg7cdo1"]
 
+[ext_resource type="Script" path="res://scripts/bullet.gd" id="1_jf0ka"]
 [ext_resource type="PackedScene" uid="uid://cvymwjucmvmaj" path="res://Assets/bulletModel.blend" id="1_symgq"]
 
 [sub_resource type="Gradient" id="Gradient_o7tbt"]
@@ -22,13 +23,27 @@ sections = 2
 section_length = 0.5
 section_segments = 1
 
-[node name="Bullet" type="Node3D"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_dveay"]
+radius = 0.002
+
+[node name="Bullet" type="CharacterBody3D"]
+collision_layer = 0
+collision_mask = 3
+motion_mode = 1
+wall_min_slide_angle = 0.0
+platform_on_leave = 2
+script = ExtResource("1_jf0ka")
 
 [node name="bulletModel" parent="." instance=ExtResource("1_symgq")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
 
-[node name="bulletCollision" type="CollisionShape3D" parent="bulletModel"]
-transform = Transform3D(6.90469, 0, 0, 0, 6.90469, 0, 0, 0, 6.90469, 0, 0, -0.0111379)
-
-[node name="tracer" type="MeshInstance3D" parent="bulletModel"]
-transform = Transform3D(0.232605, -0.000249163, -7.62161e-05, 7.60405e-05, 0.000757027, 0.233345, -6.961e-05, -0.831722, 0.000212413, 0, 0, 0.415344)
+[node name="tracer" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.699, -0.000747702, -9.15284e-12, 0, -1.09104e-07, 0.699, -0.000209393, -2.496, -3.05543e-08, 0, 0, 1.26885)
 mesh = SubResource("RibbonTrailMesh_4nyfs")
+skeleton = NodePath("../bulletModel")
+
+[node name="bulletCollision" type="CollisionShape3D" parent="."]
+transform = Transform3D(-6.90469, 0, -6.03627e-07, 0, 6.90469, 0, 6.03627e-07, 0, -6.90469, 0, 0, -0.0375293)
+shape = SubResource("SphereShape3D_dveay")
+
+[editable path="bulletModel"]
