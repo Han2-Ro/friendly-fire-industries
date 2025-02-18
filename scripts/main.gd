@@ -1,22 +1,36 @@
 extends Node3D
 
-@export var endScreen: Control
-@onready var restartButton: Button
+@export var end_screen: Control
+@onready var restart_button: Button
+@export var levels: Array[PackedScene]
+var current_level: Node
 
 func _ready() -> void:
+	current_level = levels[GameState.current_level].instantiate()
+	add_child(current_level)
 	EventBus.level_end.connect(_on_level_end)
-	if endScreen == null:
+	if end_screen == null:
 		printerr("No end screen")
 		return
-	restartButton = endScreen.find_child("RestartButton")
-	if restartButton == null:
+	end_screen.hide()
+	restart_button = end_screen.find_child("RestartButton")
+	#TODO: Unify button access
+	if restart_button == null:
 		printerr("No restart button")
 		return
-	restartButton.pressed.connect(_on_restart_pressed)
+	restart_button.pressed.connect(_on_restart_pressed)
+	end_screen.next_level_button.pressed.connect(_on_next_level_pressed)
 
 func _on_restart_pressed() -> void:
 	get_tree().reload_current_scene()
 
+func _on_next_level_pressed() -> void:
+	current_level.free()
+	GameState.current_level += 1
+	current_level = levels[GameState.current_level].instantiate()
+	add_child(current_level)
+	end_screen.hide()
+
 func _on_level_end(success: bool) -> void:
 	print(success)
-	endScreen.show()
+	end_screen.show()

@@ -1,10 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://cul6wl06g6wvn"]
+[gd_scene load_steps=4 format=3 uid="uid://cul6wl06g6wvn"]
 
 [ext_resource type="Script" path="res://scripts/ui_level_end.gd" id="1_dt46y"]
-[ext_resource type="Texture2D" uid="uid://dtagpag7eaum5" path="res://Assets/restart.svg" id="1_thasw"]
+[ext_resource type="Texture2D" uid="uid://dtagpag7eaum5" path="res://Assets/icons/restart.svg" id="1_thasw"]
+[ext_resource type="Texture2D" uid="uid://ck7y0b7v033if" path="res://Assets/icons/arrow_right.svg" id="3_2sd8s"]
 
-[node name="UILevelEnd" type="Control" node_paths=PackedStringArray("status_label")]
-visible = false
+[node name="UILevelEnd" type="Control" node_paths=PackedStringArray("status_label", "next_level_button")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,7 +12,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_dt46y")
-status_label = NodePath("Panel/Label2")
+status_label = NodePath("Panel/StatusLabel")
+next_level_button = NodePath("NextLevelButton")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -39,7 +40,7 @@ theme_override_font_sizes/font_size = 36
 text = "Test Result:"
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="Panel"]
+[node name="StatusLabel" type="Label" parent="Panel"]
 layout_mode = 1
 anchors_preset = 11
 anchor_left = 1.0
@@ -67,5 +68,24 @@ offset_right = 68.0
 offset_bottom = 152.0
 grow_horizontal = 2
 grow_vertical = 2
+tooltip_text = "restart the current level"
 icon = ExtResource("1_thasw")
+flat = true
+
+[node name="NextLevelButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 99.0
+offset_top = 24.0
+offset_right = 907.0
+offset_bottom = 832.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.159998, 0.159998)
+tooltip_text = "Play next Level"
+icon = ExtResource("3_2sd8s")
 flat = true

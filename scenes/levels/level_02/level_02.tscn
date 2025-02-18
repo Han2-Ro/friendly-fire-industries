@@ -1,3 +1,16 @@
-[gd_scene format=3 uid="uid://cnccgdbee6a2j"]
+[gd_scene load_steps=2 format=3 uid="uid://cnccgdbee6a2j"]
+
+[ext_resource type="PackedScene" uid="uid://x2sc06tp2kpu" path="res://scenes/levels/level_02/level_02_map.tscn" id="1_2pvps"]
 
 [node name="Level02" type="Node3D"]
+
+[node name="Level2Test" parent="." instance=ExtResource("1_2pvps")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.964558, 0.250237, -0.0837281, 0, 0.317305, 0.948323, 0.263873, -0.914713, 0.306058, -0.493, 39.997, 12.652)
+current = true
+fov = 15.9
+size = 16.385
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.649846, -0.157897, -0.743484, 0.760066, 0.135, 0.635669, 0, -0.978184, 0.207741, 3.06, 4.99871, 7.549)
