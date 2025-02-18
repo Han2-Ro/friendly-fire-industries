@@ -15,7 +15,6 @@ func _physics_process(delta: float) -> void:
 		time_since_last_shot = 0
 
 func launch_mine():
-	print("minenwerfer:", global_position)
 	if targets.size() == 0:
 		printerr("Minenwerfer: No targets.")
 		return
