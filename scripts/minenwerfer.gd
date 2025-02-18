@@ -5,7 +5,7 @@ extends Node3D
 @export var incline: float = 1
 @export var targets: Array[Node3D]
 @export var seconds_between_shots: float = 3
-var time_since_last_shot: float = 0
+var time_since_last_shot: float = seconds_between_shots
 var i_target: int = 0
 
 func _physics_process(delta: float) -> void:

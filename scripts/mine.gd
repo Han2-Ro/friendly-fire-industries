@@ -24,3 +24,7 @@ func move_mine(delta: float):
 	x += speed * delta
 	translate(dir * speed * delta)
 	position.y = incline / distance * (x + 0.25) * (distance - x) # Parabolic formula
+
+func on_hit():
+	print("mine hit")
+	queue_free()
