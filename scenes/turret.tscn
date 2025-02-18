@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://b8lky0yk4q64s"]
 
-[ext_resource type="PackedScene" path="res://scenes/turret_model.tscn" id="1_w0i3n"]
+[ext_resource type="PackedScene" uid="uid://v18ghw3ou3p3" path="res://scenes/turret_model.tscn" id="1_w0i3n"]
 [ext_resource type="Script" path="res://scripts/turret.gd" id="2_su5rc"]
 [ext_resource type="Shader" path="res://shader/vision_cone.gdshader" id="3_2ab0p"]
 [ext_resource type="PackedScene" uid="uid://j11vvc024r4e" path="res://scenes/health_bar_3d.tscn" id="3_qevxr"]

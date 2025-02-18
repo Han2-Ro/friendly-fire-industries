@@ -1,6 +1,6 @@
 extends RayCast3D
 
-@export var MAX_BOUNCES = 1000
+@export var MAX_BOUNCES = 3
 
 var mesh: ImmediateMesh
 var line: MeshInstance3D

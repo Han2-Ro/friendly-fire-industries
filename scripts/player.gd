@@ -39,6 +39,7 @@ func _input(event: InputEvent) -> void:
 		direction.y = 0
 		instance.dir = direction.normalized()
 		instance.global_position = rotation_stange.global_position
+		instance.INH_MAX_BOUNCES = $Player/player_base/player_rotationstange/RayCast3D.MAX_BOUNCES
 		get_parent().get_parent().add_child(instance)
 
 func _on_level_end(_success: bool) -> void:
