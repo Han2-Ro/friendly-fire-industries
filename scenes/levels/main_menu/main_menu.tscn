@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://df51rmxcwwg2c"]
+
+[ext_resource type="PackedScene" uid="uid://diuatrn3fo023" path="res://scenes/levels/main_menu/main_menu_map.tscn" id="2_l6rbc"]
+
+[node name="MainMenu" type="Node3D"]
+
+[node name="Main_menu" parent="." instance=ExtResource("2_l6rbc")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.999263, -0.00520982, -0.0380326, 0, 0.990748, -0.135716, 0.0383878, -0.135616, -0.990018, -0.323, 0.082, -9.184)
+fov = 17.1
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.989474, -0.0968468, -0.107529, 0.00271528, -0.730495, 0.682913, -0.144687, -0.676016, -0.722542, 8.49592, 4.2149, -5.32644)
+shadow_enabled = true
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.282146, 0.0936509, -0.95479, -0.441066, -0.896472, 0.0424069, -0.851971, 0.433091, 0.294242, -7.29489, 3.7493, -4.0792)
+shadow_enabled = true
+shadow_bias = 0.32

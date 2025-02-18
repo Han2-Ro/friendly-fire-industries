@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://diuatrn3fo023"]
+
+[ext_resource type="PackedScene" uid="uid://b3m6lyelqm8b5" path="res://Assets/Main_menu.blend" id="1_yqn4o"]
+
+[node name="Main_menu" instance=ExtResource("1_yqn4o")]
