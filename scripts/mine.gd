@@ -9,9 +9,8 @@ var x: float = 0
 
 func _ready() -> void:
 	distance = global_position.distance_to(target.global_position)
-	move_mine(0.01)
+	move_mine(0.001)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if position.y > 0:
 		move_mine(delta)
@@ -24,4 +23,4 @@ func move_mine(delta: float):
 	dir = dir.normalized()
 	x += speed * delta
 	translate(dir * speed * delta)
-	position.y = incline / distance * x * (distance - x) # Parabolic formula
+	position.y = incline / distance * (x + 0.25) * (distance - x) # Parabolic formula

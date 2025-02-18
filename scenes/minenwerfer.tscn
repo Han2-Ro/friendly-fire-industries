@@ -7,6 +7,6 @@
 [node name="Minenwerfer" type="Node3D"]
 script = ExtResource("1_cyt58")
 mine_scene = ExtResource("2_i5qfd")
-incline = 3.0
+mine_speed = 12.0
 
 [node name="Mienenwerfer" parent="." instance=ExtResource("2_mf71q")]
