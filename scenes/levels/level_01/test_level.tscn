@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="1_ukjkp"]
 [ext_resource type="PackedScene" uid="uid://dn6tsnouahmva" path="res://scenes/levels/level_01/test_map.tscn" id="2_odf3w"]
-[ext_resource type="PackedScene" uid="uid://d4ejkjmy4wv3f" path="res://scenes/enemy.tscn" id="3_h758n"]
+[ext_resource type="PackedScene" path="res://scenes/enemy.tscn" id="3_h758n"]
 [ext_resource type="PackedScene" uid="uid://v18ghw3ou3p3" path="res://scenes/turret.tscn" id="4_w8p2x"]
 
 [node name="Level" type="Node3D"]
