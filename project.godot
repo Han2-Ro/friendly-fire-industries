@@ -34,7 +34,8 @@ shoot={
 
 [layer_names]
 
-3d_physics/layer_1="LaserRay"
+3d_physics/layer_1="Ray Collision Bounce"
+3d_physics/layer_2="Ray Collision Stop"
 
 [rendering]
 

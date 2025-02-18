@@ -18,28 +18,20 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
-	#clear_children()
-	
 	draw_ray_quad()
 	
 	# Only continue if colliding
 	if (!is_colliding()):
 		return
-	# TODO check if really bounce
-	bounce(global_position, get_collision_point(), get_collision_normal())
+	
+	if (is_collider_bouncy(get_collider())):
+		bounce(global_position, get_collision_point(), get_collision_normal())
 
-func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("shoot") and is_colliding():
-		var obj = get_collider().get_parent()
-		if (obj.has_method("on_hit")):
-			obj.on_hit()
-
-#func clear_children() -> void:
-	#for child in get_children():
-		#if child.is_class("RayCast3D"):
-			#child.queue_free()
-	#
-	#add_child(line)
+func is_collider_bouncy(collider: Node3D) -> bool:
+	if (collider.has_method("get_collision_layer_value")):
+		return collider.get_collision_layer_value(1) and not collider.get_collision_layer_value(2)
+	else:
+		return false
 
 func bounce(old_pos: Vector3, hit_pos: Vector3, norm: Vector3):
 	var prev_dir = hit_pos - old_pos
@@ -51,11 +43,14 @@ func bounce(old_pos: Vector3, hit_pos: Vector3, norm: Vector3):
 	query.collide_with_areas = true
 		
 	var result = get_world_3d().direct_space_state.intersect_ray(query)
+	
 	if (result.is_empty()):
 		draw_bounce(to_local(hit_pos), to_local(target))
 	else:
 		draw_bounce(to_local(hit_pos), to_local(result["position"]))
-		bounce(hit_pos, result["position"], result["normal"])
+		# recurse if bouncy
+		if (is_collider_bouncy(result["collider"])):
+			bounce(hit_pos, result["position"], result["normal"])
 
 func draw_bounce(start: Vector3, end: Vector3):
 	var dir = (end - start).normalized()
