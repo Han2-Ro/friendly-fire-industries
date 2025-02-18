@@ -1,13 +1,15 @@
-extends Node3D
+extends Target
 class_name Mine
 
 var target: Node3D
+var target_pos: Vector3
 var speed: float
 var distance: float
 var incline: float
 var x: float = 0
 
 func _ready() -> void:
+	target_pos = target.global_position
 	distance = global_position.distance_to(target.global_position)
 	move_mine(0.001)
 
@@ -22,7 +24,7 @@ func move_mine(delta: float):
 	dir.y = 0
 	dir = dir.normalized()
 	x += speed * delta
-	translate(dir * speed * delta)
+	global_position += (dir * speed * delta)
 	position.y = incline / distance * (x + 0.25) * (distance - x) # Parabolic formula
 
 func on_hit():

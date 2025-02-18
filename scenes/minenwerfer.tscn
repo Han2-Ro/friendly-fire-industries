@@ -1,12 +1,89 @@
-[gd_scene load_steps=4 format=3 uid="uid://2rl6p8dd3sh4"]
+[gd_scene load_steps=9 format=3 uid="uid://oef1c1gyvt62"]
 
 [ext_resource type="Script" path="res://scripts/minenwerfer.gd" id="1_cyt58"]
 [ext_resource type="PackedScene" uid="uid://byxempdciilxd" path="res://scenes/mine.tscn" id="2_i5qfd"]
 [ext_resource type="PackedScene" uid="uid://cbbu62g7myh87" path="res://Assets/Mienenwerfer.blend" id="2_mf71q"]
 
-[node name="Minenwerfer" type="Node3D"]
+[sub_resource type="Animation" id="Animation_xpiyn"]
+resource_name = "Open"
+length = 1.2
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mienenwerfer/BaseMienenwerfer/DeckelMienenwerfer:rotation:z")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 2.24161, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="Animation" id="Animation_68ptn"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mienenwerfer/BaseMienenwerfer/DeckelMienenwerfer:rotation:z")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_qbqwr"]
+resource_name = "Close"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mienenwerfer/BaseMienenwerfer/DeckelMienenwerfer:rotation:z")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(2.24161, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_eq16b"]
+_data = {
+"Close": SubResource("Animation_qbqwr"),
+"Open": SubResource("Animation_xpiyn"),
+"RESET": SubResource("Animation_68ptn")
+}
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_bpc17"]
+height = 1.4
+radius = 0.421768
+
+[node name="Minenwerfer" type="StaticBody3D"]
+collision_layer = 2
+collision_mask = 0
 script = ExtResource("1_cyt58")
 mine_scene = ExtResource("2_i5qfd")
 mine_speed = 12.0
+seconds_between_shots = 1.5
+seconds_being_open = 1.0
 
 [node name="Mienenwerfer" parent="." instance=ExtResource("2_mf71q")]
+
+[node name="BarellMienenwerfer" parent="Mienenwerfer/BaseMienenwerfer" index="0"]
+transform = Transform3D(0.146111, 0, -0.0628311, 0, 0.159048, 0, 0.0628311, 0, 0.146111, 0, 0.913352, 0)
+
+[node name="DeckelMienenwerfer" parent="Mienenwerfer/BaseMienenwerfer" index="1"]
+transform = Transform3D(0.915888, 0, -0.393851, 0, 0.99698, 0, 0.393852, 0, 0.915888, -0.843376, 0.790406, -0.382895)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_eq16b")
+}
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.683169, 0)
+shape = SubResource("CylinderShape3D_bpc17")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_finished"]
+
+[editable path="Mienenwerfer"]
