@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://btirrlxg7cdo1"]
+[gd_scene load_steps=10 format=3 uid="uid://bg8xfgyrgw4md"]
 
 [ext_resource type="Script" path="res://scripts/bullet.gd" id="1_jf0ka"]
 [ext_resource type="PackedScene" uid="uid://cvymwjucmvmaj" path="res://Assets/bulletModel.blend" id="1_symgq"]
@@ -11,10 +11,21 @@ colors = PackedColorArray(0, 0, 0, 0, 1, 0, 0.054902, 1, 1, 1, 0, 1, 1, 1, 1, 0)
 gradient = SubResource("Gradient_o7tbt")
 fill_from = Vector2(1, 1)
 
+[sub_resource type="Gradient" id="Gradient_k20by"]
+offsets = PackedFloat32Array(0.0109091, 0.0545455, 0.509091, 0.905455, 0.978182)
+colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 1, 1, 0.392157, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_3k06p"]
+gradient = SubResource("Gradient_k20by")
+fill_from = Vector2(1, 1)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4u0uf"]
 transparency = 1
 cull_mode = 2
 albedo_texture = SubResource("GradientTexture2D_ddrrs")
+emission_enabled = true
+emission_energy_multiplier = 5.0
+emission_texture = SubResource("GradientTexture2D_3k06p")
 
 [sub_resource type="RibbonTrailMesh" id="RibbonTrailMesh_4nyfs"]
 material = SubResource("StandardMaterial3D_4u0uf")
