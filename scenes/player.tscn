@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://wtl1r2baf1fi"]
+[gd_scene load_steps=7 format=3 uid="uid://wtl1r2baf1fi"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_6100m"]
 [ext_resource type="Script" path="res://scripts/ray.gd" id="2_y0miw"]
 [ext_resource type="PackedScene" uid="uid://be88bwduqfvp2" path="res://Assets/Player.blend" id="3_00mdn"]
+[ext_resource type="PackedScene" uid="uid://h6o2oblxpy6m" path="res://scenes/Particles/muzzleflash.tscn" id="3_gwj78"]
 [ext_resource type="Script" path="res://scripts/player_area_3d.gd" id="4_pxwrx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c57xa"]
@@ -14,6 +15,9 @@ script = ExtResource("1_6100m")
 
 [node name="Player" parent="." instance=ExtResource("3_00mdn")]
 transform = Transform3D(-1.13615e-07, 0, 2.59921, 0, 2.59921, 0, -2.59921, 0, -1.13615e-07, 0, 0.954589, 0)
+
+[node name="Muzzleflash" parent="Player/player_base/player_rotationstange/player_body/player_barrel" index="0" instance=ExtResource("3_gwj78")]
+transform = Transform3D(0.107473, 0, -8.88178e-16, 0, 0.107473, 0, 8.88178e-16, 0, 0.107473, 5.98244e-09, 0, -0.136862)
 
 [node name="RayCast3D" type="RayCast3D" parent="Player/player_base/player_rotationstange" index="1"]
 transform = Transform3D(0.384732, 0, 0, 0, 0.384732, 0, 0, 0, 0.384732, -0.000137465, 0.00415465, 0)
