@@ -40,3 +40,7 @@ func _on_next_level_pressed() -> void:
 func _on_level_end(success: bool) -> void:
 	print(success)
 	end_screen.show()
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("Quit"):
+		get_tree().quit()
