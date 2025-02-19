@@ -1,7 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://df51rmxcwwg2c"]
+[gd_scene load_steps=12 format=3 uid="uid://df51rmxcwwg2c"]
 
 [ext_resource type="PackedScene" uid="uid://diuatrn3fo023" path="res://scenes/levels/main_menu/main_menu_map.tscn" id="2_l6rbc"]
 [ext_resource type="AudioStream" uid="uid://bipgykl4xia41" path="res://Assets/music/Introspective Machine.mp3" id="2_l8r3p"]
+[ext_resource type="Texture2D" uid="uid://d3ers1x7oajoh" path="res://Assets/Textures/FriendlyFireLogo2 mit HG.png" id="3_ewaqj"]
+[ext_resource type="PackedScene" uid="uid://mhd5k3skhprv" path="res://Assets/Toolbox.blend" id="4_d5hos"]
+[ext_resource type="PackedScene" uid="uid://cgm1l4gs3i30g" path="res://Assets/FireExtinguisher.blend" id="5_wqrtu"]
+[ext_resource type="PackedScene" uid="uid://dundx2uw5a7ky" path="res://Assets/PowerDrill.blend" id="6_g7l0b"]
 
 [sub_resource type="Environment" id="Environment_uifkp"]
 glow_enabled = true
@@ -31,6 +35,17 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kf47h"]
+albedo_texture = ExtResource("3_ewaqj")
+emission_enabled = true
+emission_energy_multiplier = 3.0
+emission_texture = ExtResource("3_ewaqj")
+uv1_scale = Vector3(1.05, 0.645, 1)
+uv1_offset = Vector3(-0.04, 0.21, 0.17)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_itibw"]
+material = SubResource("StandardMaterial3D_kf47h")
+
 [node name="MainMenu" type="Node3D"]
 
 [node name="Main_menu" parent="." instance=ExtResource("2_l6rbc")]
@@ -43,16 +58,19 @@ attributes = SubResource("CameraAttributesPractical_j4ior")
 fov = 17.9
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.989474, -0.0968468, -0.107529, 0.00271528, -0.730495, 0.682913, -0.144687, -0.676016, -0.722542, 8.49592, 4.2149, -5.32644)
+transform = Transform3D(0.112887, -0.948425, 0.296221, -0.984431, -0.0663336, 0.162775, -0.13473, -0.309984, -0.941147, 8.49592, 4.2149, -5.32644)
+light_color = Color(0.999997, 0.502305, 0.435515, 1)
 shadow_enabled = true
 
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.282146, 0.0936509, -0.95479, -0.441066, -0.896472, 0.0424069, -0.851971, 0.433091, 0.294242, -7.29489, 3.7493, -4.0792)
+transform = Transform3D(-0.397545, -0.0546972, -0.915951, -0.417697, -0.878011, 0.233722, -0.816999, 0.475505, 0.326202, -3.50583, 4.20123, -4.95982)
+light_color = Color(0.787288, 0.858612, 1, 1)
 shadow_enabled = true
 shadow_bias = 0.32
 
 [node name="MainMenuMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_l8r3p")
+volume_db = -80.0
 autoplay = true
 parameters/looping = true
 
@@ -73,3 +91,16 @@ text = "[font bottom_spacing=\"8\"]Music by Eric Matyas
 fit_content = true
 scroll_active = false
 autowrap_mode = 0
+
+[node name="LogoPlane" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.574269, -0.00934959, 0.0091344, -0.0344116, -0.13358, -0.146081, 0.0105924, -0.940853, 0.0206495, 0.619565, 1.27906, -3.98418)
+mesh = SubResource("PlaneMesh_itibw")
+
+[node name="Toolbox" parent="." instance=ExtResource("4_d5hos")]
+transform = Transform3D(-0.423392, 0, 0.563475, 0, 0.704816, 0, -0.563475, 0, -0.423392, 2.94998, 0, 3.02611)
+
+[node name="FireExtinguisher2" parent="." instance=ExtResource("5_wqrtu")]
+transform = Transform3D(0.255311, 0, 1.02316, 0, 1.05453, 0, -1.02316, 0, 0.255311, 2.26074, 1.19209e-07, -1.01744)
+
+[node name="PowerDrill2" parent="." instance=ExtResource("6_g7l0b")]
+transform = Transform3D(0.587333, -0.301486, -0.751097, -0.0482436, 0.913338, -0.404333, 0.807906, 0.273714, 0.521889, -0.419409, 0, -4.3001)
