@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://df51rmxcwwg2c"]
 
 [ext_resource type="PackedScene" uid="uid://diuatrn3fo023" path="res://scenes/levels/main_menu/main_menu_map.tscn" id="2_l6rbc"]
-[ext_resource type="AudioStream" uid="uid://bdupd02uclhjr" path="res://Assets/music/Introspective Machine.mp3" id="2_l8r3p"]
+[ext_resource type="AudioStream" uid="uid://bipgykl4xia41" path="res://Assets/music/Introspective Machine.mp3" id="2_l8r3p"]
 
 [sub_resource type="Environment" id="Environment_uifkp"]
 glow_enabled = true
@@ -16,6 +16,10 @@ dof_blur_far_enabled = true
 dof_blur_far_distance = 5.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r5icx"]
+content_margin_left = 6.0
+content_margin_top = 2.0
+content_margin_right = 6.0
+content_margin_bottom = 3.0
 bg_color = Color(0, 0, 0, 1)
 border_width_left = 3
 border_width_top = 3
@@ -52,21 +56,20 @@ stream = ExtResource("2_l8r3p")
 autoplay = true
 parameters/looping = true
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="RichTextLabel" parent="."]
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -175.0
-offset_top = -81.0
+offset_left = -181.0
+offset_top = -59.0
 grow_horizontal = 0
 grow_vertical = 0
-scale = Vector2(1.01879, 1.0129)
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_r5icx")
-text = "Music by Eric Matyas
-
-www.soundimage.org  
-"
+bbcode_enabled = true
+text = "[font bottom_spacing=\"8\"]Music by Eric Matyas
+[/font][url]www.soundimage.org[/url]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
