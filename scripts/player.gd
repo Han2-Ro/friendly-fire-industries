@@ -5,6 +5,9 @@ extends PathFollow3D
 @onready var rotation_stange = $Player/player_base/player_rotationstange
 @onready var bullet_scene = preload("res://scenes/bullet.tscn")
 @onready var muzzleflash = $Player/player_base/player_rotationstange/player_body/player_barrel/Muzzleflash
+@onready var player_barrel: MeshInstance3D = $Player/player_base/player_rotationstange/player_body/player_barrel
+@onready var player_body: MeshInstance3D = $Player/player_base/player_rotationstange/player_body
+
 
 var last_cursor_pos: Vector3
 
@@ -35,16 +38,26 @@ func look_at_cursor():
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("shoot"):
-		muzzleflash.shoot()
-		var instance = bullet_scene.instantiate()
-		var direction = last_cursor_pos - rotation_stange.global_position
-		direction.y = 0
-		direction = direction.normalized()
-		instance.dir = direction
-		instance.INH_MAX_BOUNCES = $Player/player_base/player_rotationstange/RayCast3D.MAX_BOUNCES
-		get_parent().get_parent().add_child(instance)
-		instance.global_position = rotation_stange.global_position + direction
-
+		shoot()
+		
+func shoot():
+	muzzleflash.shoot()
+	var instance = bullet_scene.instantiate()
+	var direction = last_cursor_pos - rotation_stange.global_position
+	direction.y = 0
+	direction = direction.normalized()
+	instance.dir = direction
+	instance.INH_MAX_BOUNCES = $Player/player_base/player_rotationstange/RayCast3D.MAX_BOUNCES
+	get_parent().get_parent().add_child(instance)
+	instance.global_position = rotation_stange.global_position + direction
+	
+	var recoil_distance = 0.05
+	var recoil_duration = 0.05
+	
+	player_body.translate_object_local(Vector3(0, 0, recoil_distance))
+	await get_tree().create_timer(recoil_duration).timeout
+	player_body.translate_object_local(Vector3(0, 0, -recoil_distance))
+		
 func _on_level_end(_success: bool) -> void:
 	queue_free()
 

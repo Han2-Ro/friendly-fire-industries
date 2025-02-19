@@ -17,7 +17,7 @@ var targeting: bool = false
 @onready var broken_turret = preload("res://scenes/turret_kaputt_model.tscn")
 @onready var explodeparticle = preload("res://scenes/Particles/explosion.tscn")
 @onready var muzzleflash = $TurretLowPoly/Cylinder/Muzzleflash
-
+@onready var bullet_scene = preload("res://scenes/bullet.tscn")
 
 func _ready():
 	timer.one_shot = true
@@ -106,6 +106,10 @@ func stop_countdown():
 	
 	
 func _on_timer_timeout():
+	shoot()
+	#EventBus.level_end.emit(false)
+	
+func shoot():
 	print("kill")
 	muzzleflash.shoot()
 	var recoil_distance = 0.2
@@ -117,8 +121,14 @@ func _on_timer_timeout():
 	
 	barrel.translate_object_local(Vector3(0, 0, -recoil_distance))
 	
-	EventBus.level_end.emit(false)
-	
+	var instance = bullet_scene.instantiate()
+	var direction =  -barrel.global_transform.basis.z.normalized()
+	direction.y = 0
+	direction = direction.normalized()
+	instance.dir = direction
+	instance.INH_MAX_BOUNCES = 0
+	get_parent().get_parent().add_child(instance)
+	instance.global_position = barrel.global_position + direction
 	
 func on_hit():
 	stop_countdown()
