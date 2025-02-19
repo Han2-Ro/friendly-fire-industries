@@ -15,6 +15,7 @@ var last_cursor_pos: Vector3
 func _ready() -> void:
 	EventBus.level_end.connect(_on_level_end)
 	EventBus.ammo_changed.emit(ammo)
+	Engine.time_scale = 1
 
 func _physics_process(delta: float) -> void:
 	look_at_cursor()
@@ -46,6 +47,12 @@ func _input(event: InputEvent) -> void:
 			shoot()
 		else:
 			print("Out of ammo") # TODO: Play out of ammo sound
+	if event.is_action_pressed("fast_forward"):
+		Engine.time_scale = 4
+	if event.is_action_released("fast_forward"):
+		Engine.time_scale = 1
+	if event.is_action_pressed("reset"):
+		get_tree().reload_current_scene()
 		
 func shoot():
 	muzzleflash.shoot()
