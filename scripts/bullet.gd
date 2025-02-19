@@ -21,7 +21,6 @@ func _physics_process(delta: float) -> void:
 	
 	var coll = move_and_collide(dir * speed * delta)
 	if coll:
-		print(coll.get_collider())
 		# check if object is affected by bullet
 		if coll.get_collider().has_method("on_hit"):
 			coll.get_collider().on_hit()
