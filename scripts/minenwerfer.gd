@@ -45,8 +45,9 @@ func launch_mine():
 func set_hitable(new_hitable: bool):
 	is_hitable = new_hitable
 	
-	set_collision_layer_value(1, !is_hitable)
-	set_collision_layer_value(2, is_hitable)
+	# toggle wether to bounce or stop the bullet
+	#set_collision_layer_value(1, !is_hitable)
+	#set_collision_layer_value(2, is_hitable)
 
 func on_hit():
 	if is_hitable:
