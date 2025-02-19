@@ -27,7 +27,7 @@ func _ready():
 	player = get_parent().find_child("Player")
 	barrel = find_child("Cylinder", true, false)
 	set_visioncone()
-	print("tracking_angle: ", tracking_angle)
+	#print("tracking_angle: ", tracking_angle)
 	
 	
 func set_visioncone():
@@ -60,7 +60,7 @@ func target_player(delta) -> bool:
 	dir.y = 0
 	var barrel_forward = -barrel.global_transform.basis.z.normalized()
 	var angle = rad_to_deg(acos(barrel_forward.dot(dir.normalized())))
-	print(is_player_visible())
+	#print(is_player_visible())
 	if dir.length() <= tracking_distance and angle <= tracking_angle and is_player_visible(): # when player is in range and angle
 		rotate_at_player(barrel, dir, delta)
 		
