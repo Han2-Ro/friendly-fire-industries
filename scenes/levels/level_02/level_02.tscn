@@ -59,4 +59,4 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 12.867
 [node name="Door" parent="." instance=ExtResource("5_g3npw")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 13.43, 0, 3.02139)
 
-[connection signal="button_hit" from="Button" to="Door" method="open_door"]
+[connection signal="button_hit" from="Button" to="Door" method="toggle_door"]
