@@ -34,10 +34,12 @@ func launch_mine():
 		printerr("Minenwerfer: No targets.")
 		return
 	var mine := mine_scene.instantiate() as Mine
-	mine.target = targets[i_target]
+	mine.target = targets[i_target].global_position
 	mine.speed = mine_speed
 	mine.incline = incline
-	add_child(mine)
+	mine.global_position = global_position
+	get_parent().add_child(mine)
+	print("mine thrown")
 	# cycle targets
 	i_target = (i_target + 1) % targets.size()
 

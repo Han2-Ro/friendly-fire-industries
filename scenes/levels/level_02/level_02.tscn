@@ -36,6 +36,7 @@ speed = 2
 
 [node name="Minenwerfer" parent="." node_paths=PackedStringArray("targets") instance=ExtResource("3_yyotb")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.84038, 0, -1.26145)
+incline = 2.0
 targets = [NodePath("Target"), NodePath("Target2")]
 seconds_between_shots = 2.0
 
