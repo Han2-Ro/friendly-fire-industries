@@ -1,14 +1,42 @@
-[gd_scene load_steps=2 format=3 uid="uid://df51rmxcwwg2c"]
+[gd_scene load_steps=6 format=3 uid="uid://df51rmxcwwg2c"]
 
 [ext_resource type="PackedScene" uid="uid://diuatrn3fo023" path="res://scenes/levels/main_menu/main_menu_map.tscn" id="2_l6rbc"]
+[ext_resource type="AudioStream" uid="uid://bdupd02uclhjr" path="res://Assets/music/Introspective Machine.mp3" id="2_l8r3p"]
+
+[sub_resource type="Environment" id="Environment_uifkp"]
+glow_enabled = true
+glow_intensity = 0.66
+glow_bloom = 0.25
+fog_enabled = true
+fog_light_energy = 0.53
+fog_density = 0.0396
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_j4ior"]
+dof_blur_far_enabled = true
+dof_blur_far_distance = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r5icx"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="MainMenu" type="Node3D"]
 
 [node name="Main_menu" parent="." instance=ExtResource("2_l6rbc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0102692, 0, 0)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.999263, -0.00520982, -0.0380326, 0, 0.990748, -0.135716, 0.0383878, -0.135616, -0.990018, -0.323, 0.082, -9.184)
-fov = 17.1
+transform = Transform3D(-1.00093, -0.00521855, -0.0380962, 0, 0.992404, -0.135943, 0.038452, -0.135843, -0.991673, -0.323, 0.082, -9.184)
+environment = SubResource("Environment_uifkp")
+attributes = SubResource("CameraAttributesPractical_j4ior")
+fov = 17.9
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.989474, -0.0968468, -0.107529, 0.00271528, -0.730495, 0.682913, -0.144687, -0.676016, -0.722542, 8.49592, 4.2149, -5.32644)
@@ -18,3 +46,27 @@ shadow_enabled = true
 transform = Transform3D(-0.282146, 0.0936509, -0.95479, -0.441066, -0.896472, 0.0424069, -0.851971, 0.433091, 0.294242, -7.29489, 3.7493, -4.0792)
 shadow_enabled = true
 shadow_bias = 0.32
+
+[node name="MainMenuMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_l8r3p")
+autoplay = true
+parameters/looping = true
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -175.0
+offset_top = -81.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(1.01879, 1.0129)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_r5icx")
+text = "Music by Eric Matyas
+
+www.soundimage.org  
+"

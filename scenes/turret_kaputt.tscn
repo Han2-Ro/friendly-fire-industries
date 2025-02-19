@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://3uaiu3vyh4am"]
+
+[ext_resource type="PackedScene" uid="uid://htby4u43bmt" path="res://Assets/TurretLowPolyKaputt.blend" id="1_hf5g3"]
+
+[node name="TurretKaputt" type="Node3D"]
+
+[node name="TurretLowPolyKaputt" parent="." instance=ExtResource("1_hf5g3")]
