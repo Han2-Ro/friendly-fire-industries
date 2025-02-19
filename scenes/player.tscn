@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://be88bwduqfvp2" path="res://Assets/Player.blend" id="3_00mdn"]
 [ext_resource type="PackedScene" uid="uid://h6o2oblxpy6m" path="res://scenes/Particles/muzzleflash.tscn" id="3_gwj78"]
 [ext_resource type="Script" path="res://scripts/player_hurt_character.gd" id="5_sefwu"]
-[ext_resource type="PackedScene" uid="uid://cb1ccsqcw5st1" path="res://scenes/ui_ammo.tscn" id="6_ts5m1"]
+[ext_resource type="PackedScene" path="res://scenes/ui_ammo.tscn" id="6_ts5m1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c57xa"]
 size = Vector3(0.78125, 1.74609, 0.706665)

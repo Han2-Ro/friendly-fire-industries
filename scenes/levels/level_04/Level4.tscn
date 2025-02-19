@@ -54,7 +54,6 @@ fov = 42.2
 
 [node name="Turret" parent="." instance=ExtResource("2_xlaix")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.54292, 0, -9.25996)
-collision_layer = 6
 
 [node name="Path3D" type="Path3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.633619, 0, 2.33383)
@@ -63,6 +62,7 @@ curve = SubResource("Curve3D_ef3e0")
 [node name="Player" parent="Path3D" instance=ExtResource("3_arid8")]
 transform = Transform3D(0.999992, 0, -0.00390623, 0, 1, 0, 0.00390623, 0, 0.999992, -0.0637312, 0, 2.4396)
 speed = 1
+ammo = 5
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("6_x3f4p")
@@ -80,6 +80,9 @@ transform = Transform3D(1.0024, 0, 0, 0, 1.0024, 0, 0, 0, 1.0024, 3.12031, 0.241
 
 [node name="Target3" type="Node3D" parent="Rocketsilo"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.13921, 0.132599, 1.23881)
+
+[node name="Turret2" parent="." instance=ExtResource("2_xlaix")]
+transform = Transform3D(0.345085, 0, 0.938571, 0, 1, 0, -0.938571, 0, 0.345085, 16.4868, 0, 0.659938)
 
 [connection signal="button_hit" from="LevelLayoutLeo1/Button" to="LevelLayoutLeo1/Door" method="toggle_door"]
 

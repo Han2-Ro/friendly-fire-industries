@@ -4,7 +4,7 @@ extends Node3D
 @onready var restart_button: Button
 @export var levels: Array[PackedScene]
 var current_level: Node
-
+var paused := false
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CONFINED
 	
@@ -44,3 +44,13 @@ func _on_level_end(success: bool) -> void:
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Quit"):
 		get_tree().quit()
+	if event.is_action_pressed("Pause"):
+		if paused:
+			end_screen.hide()
+			Engine.time_scale = 1
+			paused = false
+		else:
+			end_screen.show()
+			paused = true
+			Engine.time_scale = 0
+		
