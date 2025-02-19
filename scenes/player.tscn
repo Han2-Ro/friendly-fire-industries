@@ -1,12 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://wtl1r2baf1fi"]
+[gd_scene load_steps=8 format=3 uid="uid://wtl1r2baf1fi"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_6100m"]
 [ext_resource type="Script" path="res://scripts/ray.gd" id="2_y0miw"]
 [ext_resource type="PackedScene" uid="uid://be88bwduqfvp2" path="res://Assets/Player.blend" id="3_00mdn"]
 [ext_resource type="PackedScene" uid="uid://h6o2oblxpy6m" path="res://scenes/Particles/muzzleflash.tscn" id="3_gwj78"]
+[ext_resource type="Script" path="res://scripts/player_hurt_character.gd" id="5_sefwu"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c57xa"]
 size = Vector3(0.78125, 1.74609, 0.706665)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_o2xel"]
+height = 1.96907
+radius = 0.349478
 
 [node name="Player" type="PathFollow3D"]
 loop = false
@@ -32,6 +37,16 @@ script = ExtResource("2_y0miw")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00683594, 0.862793, 0.0100708)
 shape = SubResource("BoxShape3D_c57xa")
+
+[node name="PlayerHurtCharacter" type="CharacterBody3D" parent="."]
+collision_layer = 2
+collision_mask = 0
+motion_mode = 1
+script = ExtResource("5_sefwu")
+
+[node name="HurtBox" type="CollisionShape3D" parent="PlayerHurtCharacter"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.966937, 0)
+shape = SubResource("CylinderShape3D_o2xel")
 
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
 

@@ -57,10 +57,12 @@ func shoot():
 	player_body.translate_object_local(Vector3(0, 0, recoil_distance))
 	await get_tree().create_timer(recoil_duration).timeout
 	player_body.translate_object_local(Vector3(0, 0, -recoil_distance))
-		
+
+func on_hit():
+	EventBus.level_end.emit(false)
+
 func _on_level_end(_success: bool) -> void:
 	queue_free()
-
 
 func _on_area_3d_area_entered(area: Area3D) -> void:
 	if area.is_in_group("block_player"):

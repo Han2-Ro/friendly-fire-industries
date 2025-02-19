@@ -21,6 +21,12 @@ func _physics_process(delta: float) -> void:
 	
 	var coll = move_and_collide(dir * speed * delta)
 	if coll:
+		print(coll.get_collider())
+		# check if object is affected by bullet
+		if coll.get_collider().has_method("on_hit"):
+			coll.get_collider().on_hit()
+		
+		# bounce or stop
 		bounce_count += 1
 		if bounce_count > INH_MAX_BOUNCES:
 			queue_free()
@@ -30,8 +36,6 @@ func _physics_process(delta: float) -> void:
 			
 			look_at(get_lookat_point(), Vector3.UP, 0)
 		else:
-			if coll.get_collider().has_method("on_hit"):
-				coll.get_collider().on_hit()
 			queue_free()
 
 

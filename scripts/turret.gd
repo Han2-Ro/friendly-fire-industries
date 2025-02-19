@@ -107,8 +107,7 @@ func stop_countdown():
 	
 func _on_timer_timeout():
 	shoot()
-	#EventBus.level_end.emit(false)
-	
+
 func shoot():
 	print("kill")
 	muzzleflash.shoot()
