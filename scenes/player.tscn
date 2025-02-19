@@ -11,7 +11,7 @@ size = Vector3(0.78125, 1.74609, 0.706665)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_o2xel"]
 height = 1.96907
-radius = 0.349478
+radius = 0.930453
 
 [node name="Player" type="PathFollow3D"]
 loop = false
@@ -24,7 +24,7 @@ transform = Transform3D(-1.13615e-07, 0, 2.59921, 0, 2.59921, 0, -2.59921, 0, -1
 transform = Transform3D(0.107473, 0, -8.88178e-16, 0, 0.107473, 0, 8.88178e-16, 0, 0.107473, 5.98244e-09, 0, -0.136862)
 
 [node name="RayCast3D" type="RayCast3D" parent="Player/player_base/player_rotationstange" index="1"]
-transform = Transform3D(0.384732, 0, 0, 0, 0.384732, 0, 0, 0, 0.384732, -0.000137465, 0.00415465, 0)
+transform = Transform3D(0.384732, 0, 0, 0, 0.384732, 0, 0, 0, 0.384732, -0.000137465, 0.00415465, -8.67362e-19)
 target_position = Vector3(0, 0, -100)
 collision_mask = 3
 collide_with_areas = true
@@ -39,7 +39,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00683594, 0.862793, 0.01007
 shape = SubResource("BoxShape3D_c57xa")
 
 [node name="PlayerHurtCharacter" type="CharacterBody3D" parent="."]
-collision_layer = 2
+collision_layer = 8388610
 collision_mask = 0
 motion_mode = 1
 script = ExtResource("5_sefwu")

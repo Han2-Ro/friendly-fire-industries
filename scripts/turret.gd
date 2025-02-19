@@ -17,6 +17,9 @@ var targeting: bool = false
 @onready var explodeparticle = preload("res://scenes/Particles/explosion.tscn")
 @onready var muzzleflash = $TurretLowPoly/Cylinder/Muzzleflash
 @onready var bullet_scene = preload("res://scenes/bullet.tscn")
+@onready var ray_cast_3d: RayCast3D = $TurretLowPoly/RayCast3D
+@onready var turret_low_poly: Node3D = $TurretLowPoly
+
 
 func _ready():
 	timer.one_shot = true
@@ -25,6 +28,7 @@ func _ready():
 	barrel = find_child("Cylinder", true, false)
 	set_visioncone()
 	print("tracking_angle: ", tracking_angle)
+	
 	
 func set_visioncone():
 	vision_cone.scale = Vector3(tracking_distance * 2, tracking_distance * 2, 1)
@@ -45,6 +49,10 @@ func _process(delta):
 		health_bar.value = (1 - (timer.time_left / death_timer)) * 100
 	
 	update_vision_cone(delta)
+	if is_instance_valid(player):
+		var local_target = ray_cast_3d.to_local(player.global_position)
+		ray_cast_3d.target_position = local_target
+		ray_cast_3d.force_raycast_update()
 
 # tries to track the player and returns false if the player is out of range
 func target_player(delta) -> bool:
@@ -52,8 +60,8 @@ func target_player(delta) -> bool:
 	dir.y = 0
 	var barrel_forward = -barrel.global_transform.basis.z.normalized()
 	var angle = rad_to_deg(acos(barrel_forward.dot(dir.normalized())))
-		
-	if dir.length() <= tracking_distance and angle <= tracking_angle: # when player is in range and angle
+	print(is_player_visible())
+	if dir.length() <= tracking_distance and angle <= tracking_angle and is_player_visible(): # when player is in range and angle
 		rotate_at_player(barrel, dir, delta)
 		
 		if not targeting: # start kill countdown
@@ -137,3 +145,11 @@ func update_vision_cone(delta: float):
 		material.set_shader_parameter("current_angle", new_angle)
 	else:
 		material.set_shader_parameter("current_angle", tracking_angle * 2.0)
+
+func is_player_visible() -> bool:
+	if ray_cast_3d.is_colliding():
+		var collider: CollisionObject3D = ray_cast_3d.get_collider()
+		if collider:
+			return collider.get_collision_layer_value(24)
+		return false
+	return false

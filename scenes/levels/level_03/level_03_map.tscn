@@ -20,7 +20,7 @@ size = Vector3(32, 0.5, 20)
 curve = SubResource("Curve3D_ftpi6")
 
 [node name="Player" parent="Path3D" instance=ExtResource("1_bswsn")]
-transform = Transform3D(-4.37112e-08, 0, -0.999997, 0, 1, 0, 0.999997, 0, -4.37112e-08, -16, 0, 0)
+transform = Transform3D(-4.37113e-08, 0, -0.999997, 0, 1, 0, 0.999997, 0, -4.37113e-08, -16, 0, 0)
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.964558, 0.250237, -0.0837281, 0, 0.317305, 0.948324, 0.263873, -0.914713, 0.306059, -4.24695, 75.9159, 23.6561)
@@ -30,24 +30,28 @@ size = 16.385
 
 [node name="Turret" parent="." instance=ExtResource("2_phuhy")]
 transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0, 0, 4)
+collision_layer = 6
 rotation_speed = -75.0
 tracking_angle = 20.0
 death_timer = 2.0
 
 [node name="Turret2" parent="." instance=ExtResource("2_phuhy")]
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0, 0, 7)
+collision_layer = 6
 rotation_speed = -75.0
 tracking_angle = 20.0
 death_timer = 2.0
 
 [node name="Turret3" parent="." instance=ExtResource("2_phuhy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0, -7.5)
+collision_layer = 6
 rotation_speed = 75.0
 tracking_angle = 20.0
 death_timer = 2.0
 
 [node name="Turret4" parent="." instance=ExtResource("2_phuhy")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 9, 0, -8)
+collision_layer = 6
 rotation_speed = 75.0
 tracking_angle = 20.0
 death_timer = 2.0

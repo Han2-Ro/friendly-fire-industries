@@ -4,7 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://cbj6hobo6r6vd" path="res://scenes/levels/test_mine_level/test_mine_level.tscn" id="3_f16ou"]
 [ext_resource type="PackedScene" uid="uid://dyxaw3lu6lqej" path="res://scenes/levels/level_01/test_level.tscn" id="3_h8t6k"]
 [ext_resource type="PackedScene" uid="uid://cnccgdbee6a2j" path="res://scenes/levels/level_02/level_02.tscn" id="3_vnrch"]
-[ext_resource type="PackedScene" uid="uid://bfnjbkyg4i8kt" path="res://scenes/fps_counter.tscn" id="5_8u4a5"]
+
+[ext_resource type="PackedScene" path="res://scenes/fps_counter.tscn" id="5_8u4a5"]
+[ext_resource type="PackedScene" uid="uid://cl1bxc20rcx32" path="res://scenes/levels/level_04/Level4.tscn" id="5_nmfaa"]
 [ext_resource type="PackedScene" uid="uid://cul6wl06g6wvn" path="res://scenes/ui_level_end.tscn" id="6_8y5au"]
 [ext_resource type="Script" path="res://scripts/ammo_display.gd" id="7_dthgj"]
 [ext_resource type="Texture2D" uid="uid://ogf3s0rd3vqw" path="res://Assets/icons/bullet.svg" id="8_mnl5e"]
@@ -13,7 +15,7 @@
 [node name="Main" type="Node3D" node_paths=PackedStringArray("end_screen")]
 script = ExtResource("1_hlc4r")
 end_screen = NodePath("UILevelEnd")
-levels = Array[PackedScene]([ExtResource("3_h8t6k"), ExtResource("3_f16ou"), ExtResource("3_vnrch")])
+levels = Array[PackedScene]([ExtResource("3_h8t6k"), ExtResource("3_f16ou"), ExtResource("3_vnrch"), ExtResource("5_nmfaa")])
 
 [node name="UILevelEnd" parent="." instance=ExtResource("6_8y5au")]
 z_index = 4096
