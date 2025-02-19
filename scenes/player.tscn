@@ -12,7 +12,7 @@ size = Vector3(0.78125, 1.74609, 0.706665)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_o2xel"]
 height = 1.96907
-radius = 0.930453
+radius = 0.417986
 
 [node name="Player" type="PathFollow3D"]
 loop = false

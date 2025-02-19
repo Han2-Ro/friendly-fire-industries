@@ -1,11 +1,32 @@
-[gd_scene load_steps=12 format=3 uid="uid://df51rmxcwwg2c"]
+[gd_scene load_steps=15 format=3 uid="uid://df51rmxcwwg2c"]
 
 [ext_resource type="PackedScene" uid="uid://diuatrn3fo023" path="res://scenes/levels/main_menu/main_menu_map.tscn" id="2_l6rbc"]
 [ext_resource type="AudioStream" uid="uid://bipgykl4xia41" path="res://Assets/music/Introspective Machine.mp3" id="2_l8r3p"]
+[ext_resource type="FontFile" uid="uid://cb8xjj2e0l24x" path="res://Assets/fonts/Terminal F4.ttf" id="3_8b4bi"]
 [ext_resource type="Texture2D" uid="uid://d3ers1x7oajoh" path="res://Assets/Textures/FriendlyFireLogo2 mit HG.png" id="3_ewaqj"]
 [ext_resource type="PackedScene" uid="uid://mhd5k3skhprv" path="res://Assets/Toolbox.blend" id="4_d5hos"]
+[ext_resource type="StyleBox" uid="uid://boilvtinge0qh" path="res://Assets/ui_themes/normalBUtton.tres" id="4_epwfo"]
 [ext_resource type="PackedScene" uid="uid://cgm1l4gs3i30g" path="res://Assets/FireExtinguisher.blend" id="5_wqrtu"]
 [ext_resource type="PackedScene" uid="uid://dundx2uw5a7ky" path="res://Assets/PowerDrill.blend" id="6_g7l0b"]
+[ext_resource type="PackedScene" uid="uid://c8ohtww5qtrs" path="res://scenes/levels/main_menu/main_menu_UI.tscn" id="7_dds4d"]
+
+[sub_resource type="GDScript" id="GDScript_cy51l"]
+script/source = "extends Node3D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+func _on_start_pressed() -> void:
+	get_tree().change_scene(\"res://scenes/main.tscn\")
+"
 
 [sub_resource type="Environment" id="Environment_uifkp"]
 glow_enabled = true
@@ -19,22 +40,6 @@ fog_density = 0.0396
 dof_blur_far_enabled = true
 dof_blur_far_distance = 5.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r5icx"]
-content_margin_left = 6.0
-content_margin_top = 2.0
-content_margin_right = 6.0
-content_margin_bottom = 3.0
-bg_color = Color(0, 0, 0, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kf47h"]
 albedo_texture = ExtResource("3_ewaqj")
 emission_enabled = true
@@ -47,6 +52,7 @@ uv1_offset = Vector3(-0.04, 0.21, 0.17)
 material = SubResource("StandardMaterial3D_kf47h")
 
 [node name="MainMenu" type="Node3D"]
+script = SubResource("GDScript_cy51l")
 
 [node name="Main_menu" parent="." instance=ExtResource("2_l6rbc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0102692, 0, 0)
@@ -70,7 +76,6 @@ shadow_bias = 0.32
 
 [node name="MainMenuMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_l8r3p")
-volume_db = -80.0
 autoplay = true
 parameters/looping = true
 
@@ -80,11 +85,21 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -181.0
-offset_top = -59.0
+offset_left = -239.0
+offset_top = -80.0
+offset_right = -12.11
+offset_bottom = -8.53003
 grow_horizontal = 0
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_r5icx")
+theme_override_colors/table_border = Color(0, 0, 0, 1)
+theme_override_colors/table_even_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/table_odd_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_8b4bi")
+theme_override_font_sizes/normal_font_size = 20
+theme_override_styles/normal = ExtResource("4_epwfo")
 bbcode_enabled = true
 text = "[font bottom_spacing=\"8\"]Music by Eric Matyas
 [/font][url]www.soundimage.org[/url]"
@@ -104,3 +119,6 @@ transform = Transform3D(0.255311, 0, 1.02316, 0, 1.05453, 0, -1.02316, 0, 0.2553
 
 [node name="PowerDrill2" parent="." instance=ExtResource("6_g7l0b")]
 transform = Transform3D(0.587333, -0.301486, -0.751097, -0.0482436, 0.913338, -0.404333, 0.807906, 0.273714, 0.521889, -0.419409, 0, -4.3001)
+
+[node name="MainMenuUi" parent="." instance=ExtResource("7_dds4d")]
+scale = Vector2(1.00702, 1)
