@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://df6p0issk0o74" path="res://Assets/Level1Base.blend" id="1_oqlni"]
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="2_vuiik"]
 [ext_resource type="PackedScene" uid="uid://b8lky0yk4q64s" path="res://scenes/turret.tscn" id="3_a71fe"]
-[ext_resource type="PackedScene" uid="uid://oef1c1gyvt62" path="res://scenes/minenwerfer.tscn" id="4_m7npm"]
+[ext_resource type="PackedScene" uid="uid://c1ixcnlesdydp" path="res://scenes/rocketsilo.tscn" id="4_rxngc"]
 
 [sub_resource type="Curve3D" id="Curve3D_nhif4"]
 _data = {
@@ -49,13 +49,13 @@ death_timer = 1.5
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.93563, 0, 2.69133)
 death_timer = 1.5
 
-[node name="Minenwerfer" parent="." node_paths=PackedStringArray("targets") instance=ExtResource("4_m7npm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.08532, 0, -4.37688)
-collision_layer = 2
+[node name="Rocketsilo" parent="." node_paths=PackedStringArray("targets") instance=ExtResource("4_rxngc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -4)
+incline = 2.0
 targets = [NodePath("Node3D")]
 
-[node name="Node3D" type="Node3D" parent="Minenwerfer"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.0048, 0, 4.33041)
+[node name="Node3D" type="Node3D" parent="Rocketsilo"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9195, 0, 3.95353)
 
 [node name="Lights" type="Node3D" parent="."]
 
