@@ -1,4 +1,4 @@
-extends Target
+extends Node3D
 
 @export var rotation_speed: float = 100.0
 @export var rotation_speed_awake: float = 50.0
@@ -20,12 +20,11 @@ var targeting: bool = false
 
 
 func _ready():
-	super._ready()
 	timer.one_shot = true
 	timer.timeout.connect(_on_timer_timeout)
 	player = get_parent().find_child("Player")
 	barrel = find_child("Cylinder", true, false)
-	vision_cone.scale = Vector3(tracking_distance*2, tracking_distance*2, 1)
+	vision_cone.scale = Vector3(tracking_distance * 2, tracking_distance * 2, 1)
 	var cone_material = ShaderMaterial.new()
 	cone_material.shader = load("res://shader/vision_cone.gdshader")
 	vision_cone.material_override = cone_material

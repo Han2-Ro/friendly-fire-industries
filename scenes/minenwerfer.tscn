@@ -4,6 +4,20 @@
 [ext_resource type="PackedScene" uid="uid://byxempdciilxd" path="res://scenes/mine.tscn" id="2_i5qfd"]
 [ext_resource type="PackedScene" uid="uid://cbbu62g7myh87" path="res://Assets/Mienenwerfer.blend" id="2_mf71q"]
 
+[sub_resource type="Animation" id="Animation_qbqwr"]
+resource_name = "Close"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mienenwerfer/BaseMienenwerfer/DeckelMienenwerfer:rotation:z")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(2.24161, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
 [sub_resource type="Animation" id="Animation_xpiyn"]
 resource_name = "Open"
 length = 1.2
@@ -33,20 +47,6 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0)
 }
 
-[sub_resource type="Animation" id="Animation_qbqwr"]
-resource_name = "Close"
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Mienenwerfer/BaseMienenwerfer/DeckelMienenwerfer:rotation:z")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(2.24161, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 1)
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_eq16b"]
 _data = {
 "Close": SubResource("Animation_qbqwr"),
@@ -73,7 +73,7 @@ seconds_being_open = 1.0
 transform = Transform3D(0.146111, 0, -0.0628311, 0, 0.159048, 0, 0.0628311, 0, 0.146111, 0, 0.913352, 0)
 
 [node name="DeckelMienenwerfer" parent="Mienenwerfer/BaseMienenwerfer" index="1"]
-transform = Transform3D(0.915888, 0, -0.393851, 0, 0.99698, 0, 0.393852, 0, 0.915888, -0.843376, 0.790406, -0.382895)
+transform = Transform3D(0.915888, 0, -0.393852, 0, 0.99698, 0, 0.393852, 0, 0.915888, -0.843376, 0.790406, -0.382895)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
