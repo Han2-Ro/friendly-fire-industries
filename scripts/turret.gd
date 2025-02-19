@@ -6,7 +6,6 @@ extends Node3D
 @export var tracking_angle: float = 45.0
 @export var death_timer: float = 3.0
 var end_angle: float = 0.0
-
 var player: Node3D
 var barrel: Node3D
 var targeting: bool = false
@@ -24,6 +23,10 @@ func _ready():
 	timer.timeout.connect(_on_timer_timeout)
 	player = get_parent().find_child("Player")
 	barrel = find_child("Cylinder", true, false)
+	set_visioncone()
+	print("tracking_angle: ", tracking_angle)
+	
+func set_visioncone():
 	vision_cone.scale = Vector3(tracking_distance * 2, tracking_distance * 2, 1)
 	var cone_material = ShaderMaterial.new()
 	cone_material.shader = load("res://shader/vision_cone.gdshader")
@@ -31,37 +34,17 @@ func _ready():
 	
 	cone_material.set_shader_parameter("cone_angle", tracking_angle)
 	cone_material.set_shader_parameter("min_angle", end_angle)
-	cone_material.set_shader_parameter("current_angle", tracking_angle)
-	print("tracking_angle: ", tracking_angle)
-
+	cone_material.set_shader_parameter("current_angle", tracking_angle * 2.0)
+	
 func _process(delta):
+	
 	if player == null or !target_player(delta):
 		rotate_turret(barrel, delta)
 		
 	if timer.time_left > 0:
 		health_bar.value = (1 - (timer.time_left / death_timer)) * 100
 	
-	if targeting and timer.time_left > 0:
-		# Wie viel vom Timer ist schon abgelaufen?
-		var fraction = 1.0 - (timer.time_left / death_timer)
-		
-		# Zwischen Startwinkel (tracking_angle * 2) und Minwinkel (z.B. 5.0) interpolieren
-		var start_angle = tracking_angle * 2.0
-		
-		var new_angle = lerp(start_angle, end_angle, fraction)
-		
-		# Shader updaten
-		var mat = vision_cone.material_override
-		if mat:
-			mat.set_shader_parameter("current_angle", new_angle)
-	else:
-		# Falls der Timer abgelaufen ist oder wir gerade nicht targeten:
-		# Winkel wieder auf Standard zurücksetzen
-		if not targeting:
-			var mat2 = vision_cone.material_override
-			if mat2:
-				mat2.set_shader_parameter("current_angle", tracking_angle * 2.0)
-
+	update_vision_cone(delta)
 
 # tries to track the player and returns false if the player is out of range
 func target_player(delta) -> bool:
@@ -72,15 +55,15 @@ func target_player(delta) -> bool:
 		
 	if dir.length() <= tracking_distance and angle <= tracking_angle: # when player is in range and angle
 		rotate_at_player(barrel, dir, delta)
-		update_vision_cone(true, delta)
-		if targeting == false: # start kill countdown
+		
+		if not targeting: # start kill countdown
 			start_countdown(death_timer)
 			targeting = true
 		return true
 	else:
 		if targeting:
 			targeting = false
-		update_vision_cone(false, delta) # Neue Zeile
+			stop_countdown()
 		return false
 
 func rotate_at_player(barrel, direction, delta):
@@ -109,16 +92,14 @@ func _on_timer_timeout():
 	shoot()
 
 func shoot():
+	if not targeting:
+		return
 	print("kill")
 	muzzleflash.shoot()
 	var recoil_distance = 0.2
 	var recoil_duration = 0.05
 	
-	barrel.translate_object_local(Vector3(0, 0, recoil_distance))
 	
-	await get_tree().create_timer(recoil_duration).timeout
-	
-	barrel.translate_object_local(Vector3(0, 0, -recoil_distance))
 	
 	var instance = bullet_scene.instantiate()
 	var direction =  -barrel.global_transform.basis.z.normalized()
@@ -128,6 +109,12 @@ func shoot():
 	instance.INH_MAX_BOUNCES = 0
 	get_parent().get_parent().add_child(instance)
 	instance.global_position = barrel.global_position + direction
+	
+	barrel.translate_object_local(Vector3(0, 0, recoil_distance))
+	
+	await get_tree().create_timer(recoil_duration).timeout
+	
+	barrel.translate_object_local(Vector3(0, 0, -recoil_distance))
 	
 func on_hit():
 	stop_countdown()
@@ -141,15 +128,12 @@ func on_hit():
 	get_parent().add_child(broken_turret_instance)
 	queue_free()
 	
-func update_vision_cone(player_detected: bool, delta: float):
+func update_vision_cone(delta: float):
 	var material = vision_cone.material_override
-	var current_angle = material.get_shader_parameter("current_angle")
-	
-	if player_detected:
-		# Verkleinere den Winkel wenn Spieler erkannt
-		current_angle = move_toward(current_angle, 10.0, delta * 90.0)
+	if targeting and timer.time_left > 0:
+		var fraction = 1.0 - (timer.time_left / death_timer)
+		var start_angle = tracking_angle * 2.0
+		var new_angle = lerp(start_angle, end_angle, fraction)
+		material.set_shader_parameter("current_angle", new_angle)
 	else:
-		# Setze den Winkel zurück
-		current_angle = move_toward(current_angle, tracking_angle, delta * 90.0)
-	
-	material.set_shader_parameter("current_angle", current_angle)
+		material.set_shader_parameter("current_angle", tracking_angle * 2.0)

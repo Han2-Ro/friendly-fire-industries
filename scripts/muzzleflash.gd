@@ -11,4 +11,3 @@ func shoot():
 	debris_mf.emitting = true
 	fire_mf.emitting = true
 	shot_sound.play()
-	await get_tree().create_timer(3.0).timeout
