@@ -48,6 +48,7 @@ death_timer = 1.5
 
 [node name="Minenwerfer" parent="." node_paths=PackedStringArray("targets") instance=ExtResource("4_m7npm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.08532, 0, -4.37688)
+collision_layer = 2
 targets = [NodePath("Node3D")]
 
 [node name="Node3D" type="Node3D" parent="Minenwerfer"]
