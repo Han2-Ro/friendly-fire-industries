@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://b8lky0yk4q64s"]
+[gd_scene load_steps=11 format=3 uid="uid://b8lky0yk4q64s"]
 
 [ext_resource type="PackedScene" path="res://scenes/turret_model.tscn" id="1_w0i3n"]
 [ext_resource type="Script" path="res://scripts/turret.gd" id="2_su5rc"]
 [ext_resource type="Shader" path="res://shader/vision_cone.gdshader" id="3_2ab0p"]
-[ext_resource type="PackedScene" uid="uid://j11vvc024r4e" path="res://scenes/health_bar_3d.tscn" id="3_qevxr"]
+[ext_resource type="PackedScene" path="res://scenes/health_bar_3d.tscn" id="3_qevxr"]
 [ext_resource type="PackedScene" uid="uid://h6o2oblxpy6m" path="res://scenes/Particles/muzzleflash.tscn" id="5_cmabb"]
+[ext_resource type="Script" path="res://scripts/vision_cone_new.gd" id="5_scbw6"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_d7fub"]
 
@@ -42,6 +43,9 @@ texture = SubResource("ViewportTexture_jocne")
 
 [node name="Muzzleflash" parent="TurretLowPoly/Cylinder" index="2" instance=ExtResource("5_cmabb")]
 transform = Transform3D(-0.00331624, 0, 0.999995, 0, 1, 0, -0.999995, 0, -0.00331624, -0.00544231, 0.854439, -1.64112)
+
+[node name="Node3D" type="Node3D" parent="TurretLowPoly/Cylinder" index="3"]
+script = ExtResource("5_scbw6")
 
 [node name="RayCast3D" type="RayCast3D" parent="TurretLowPoly"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0.826843, 0)
