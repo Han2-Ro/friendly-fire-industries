@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://c5n66hh5s0t4i"]
+[gd_scene load_steps=7 format=3 uid="uid://c5n66hh5s0t4i"]
 
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="1_1pdn7"]
 [ext_resource type="PackedScene" uid="uid://datd7wg6v4r42" path="res://scenes/rocketsilo.tscn" id="2_j8sfm"]
 [ext_resource type="PackedScene" uid="uid://dt2b2acdq52cw" path="res://scenes/button.tscn" id="3_i31m0"]
 [ext_resource type="PackedScene" uid="uid://dnfpmel15rp0g" path="res://scenes/door.tscn" id="4_3y0s4"]
+[ext_resource type="Environment" uid="uid://viph0n6bgkui" path="res://Assets/HDRI/standard_env.tres" id="5_qws8j"]
 
 [sub_resource type="Curve3D" id="Curve3D_ftpi6"]
 _data = {
@@ -79,7 +80,7 @@ light_energy = 2.0
 omni_range = 8.0
 
 [node name="Rocketsilo" parent="." node_paths=PackedStringArray("targets") instance=ExtResource("2_j8sfm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, -3.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8, 0, -3.5)
 targets = [NodePath("Node3D2"), NodePath("Node3D")]
 
 [node name="Node3D" type="Node3D" parent="Rocketsilo"]
@@ -99,7 +100,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10.5)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 0, 7)
 
 [node name="Rocketsilo4" parent="." node_paths=PackedStringArray("targets") instance=ExtResource("2_j8sfm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, -5.25)
 targets = [NodePath("Node3D2"), NodePath("Node3D")]
 
 [node name="Node3D" type="Node3D" parent="Rocketsilo4"]
@@ -129,7 +130,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10.5)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 6)
 
 [node name="Rocketsilo5" parent="." node_paths=PackedStringArray("targets") instance=ExtResource("2_j8sfm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.25)
 targets = [NodePath("Node3D2"), NodePath("Node3D")]
 
 [node name="Node3D" type="Node3D" parent="Rocketsilo5"]
@@ -159,6 +160,9 @@ transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -9, 0, 7
 
 [node name="Door2" parent="." instance=ExtResource("4_3y0s4")]
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -12.5, 0, 7)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("5_qws8j")
 
 [connection signal="button_hit" from="Button" to="Door" method="toggle_door"]
 [connection signal="button_hit" from="Button2" to="Door2" method="toggle_door"]

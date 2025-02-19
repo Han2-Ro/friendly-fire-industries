@@ -1,0 +1,13 @@
+[gd_resource type="Environment" load_steps=4 format=3 uid="uid://viph0n6bgkui"]
+
+[ext_resource type="Texture2D" uid="uid://cbsbfqkn1reai" path="res://Assets/HDRI/hospital_room_2_1k.exr" id="1_beptr"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_cd46w"]
+panorama = ExtResource("1_beptr")
+
+[sub_resource type="Sky" id="Sky_kiybk"]
+sky_material = SubResource("PanoramaSkyMaterial_cd46w")
+
+[resource]
+background_mode = 2
+sky = SubResource("Sky_kiybk")
