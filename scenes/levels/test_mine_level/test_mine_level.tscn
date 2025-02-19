@@ -1,0 +1,83 @@
+[gd_scene load_steps=8 format=3 uid="uid://cbj6hobo6r6vd"]
+
+[ext_resource type="PackedScene" uid="uid://df6p0issk0o74" path="res://Assets/Level1Base.blend" id="1_oqlni"]
+[ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="2_vuiik"]
+[ext_resource type="PackedScene" uid="uid://b8lky0yk4q64s" path="res://scenes/turret.tscn" id="3_a71fe"]
+[ext_resource type="PackedScene" uid="uid://oef1c1gyvt62" path="res://scenes/minenwerfer.tscn" id="4_m7npm"]
+
+[sub_resource type="Curve3D" id="Curve3D_nhif4"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -11.592, 0, -0.0125307, 0, 0, 0, 0, 0, 0, 11.5669, 0, -0.00637299),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_dfd0n"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_jdbi4"]
+
+[node name="TestMineLevel" type="Node3D"]
+
+[node name="Path3D" type="Path3D" parent="."]
+curve = SubResource("Curve3D_nhif4")
+
+[node name="Player" parent="Path3D" instance=ExtResource("2_vuiik")]
+transform = Transform3D(-0.00026588, 0, -0.999997, 0, 1, 0, 0.999997, 0, -0.00026588, -11.592, 0, -0.0125307)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.964558, 0.250237, -0.0837281, 0, 0.317305, 0.948324, 0.263873, -0.914713, 0.306059, -5.88502, 59.837, 18.6061)
+current = true
+fov = 15.9
+size = 16.385
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="Level1Base2" parent="StaticBody3D" instance=ExtResource("1_oqlni")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.202463, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_dfd0n")
+
+[node name="Turret" parent="." instance=ExtResource("3_a71fe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.96089, 0, -2.63843)
+death_timer = 1.5
+
+[node name="Turret2" parent="." instance=ExtResource("3_a71fe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.93563, 0, 2.69133)
+death_timer = 1.5
+
+[node name="Minenwerfer" parent="." node_paths=PackedStringArray("targets") instance=ExtResource("4_m7npm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.08532, 0, -4.37688)
+targets = [NodePath("Node3D")]
+
+[node name="Node3D" type="Node3D" parent="Minenwerfer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.0048, 0, 4.33041)
+
+[node name="Lights" type="Node3D" parent="."]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.14597, 0)
+light_energy = 2.0
+omni_range = 8.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.83577, 4.14597, 0)
+light_energy = 2.0
+omni_range = 8.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.36107, 4.14597, 0)
+light_energy = 2.0
+omni_range = 8.0
+
+[node name="TestArea3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.08086, 0, -0.869149)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TestArea3D"]
+shape = SubResource("SphereShape3D_jdbi4")
+
+[node name="TestBody" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.18832, 0, -3.3153)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TestBody"]
+shape = SubResource("SphereShape3D_jdbi4")

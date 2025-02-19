@@ -39,7 +39,6 @@ func launch_mine():
 	mine.incline = incline
 	mine.global_position = global_position
 	get_parent().add_child(mine)
-	print("mine thrown")
 	# cycle targets
 	i_target = (i_target + 1) % targets.size()
 

@@ -6,10 +6,10 @@ var speed: float
 var distance: float
 var incline: float
 var x: float = 0
+@onready var kill_area: Area3D = $KillArea
 @onready var explodeparticle = preload("res://scenes/Particles/explosion.tscn")
 
 func _ready() -> void:
-	print("mine ready")
 	distance = global_position.distance_to(target)
 	move_mine(0.001)
 
@@ -28,9 +28,12 @@ func move_mine(delta: float):
 	position.y = incline / distance * (x + 0.25) * (distance - x) # Parabolic formula
 
 func on_hit():
-	print("mine hit")
 	var explosion_instance = explodeparticle.instantiate()
 	explosion_instance.global_transform = self.global_transform
 	get_parent().add_child(explosion_instance)
 	explosion_instance.explode()
+	var bodies = kill_area.get_overlapping_bodies()
+	for body in bodies:
+		if body.has_method("on_hit"):
+			body.on_hit()
 	queue_free()
