@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://jn22a2o5sevi"]
+[gd_scene load_steps=6 format=3 uid="uid://jn22a2o5sevi"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_hlc4r"]
 [ext_resource type="PackedScene" uid="uid://dyxaw3lu6lqej" path="res://scenes/levels/level_01/test_level.tscn" id="3_h8t6k"]
 [ext_resource type="PackedScene" uid="uid://cnccgdbee6a2j" path="res://scenes/levels/level_02/level_02.tscn" id="3_vnrch"]
+[ext_resource type="PackedScene" uid="uid://bfnjbkyg4i8kt" path="res://scenes/fps_counter.tscn" id="5_8u4a5"]
 [ext_resource type="PackedScene" uid="uid://cul6wl06g6wvn" path="res://scenes/ui_level_end.tscn" id="6_8y5au"]
 
 [node name="Main" type="Node3D" node_paths=PackedStringArray("end_screen")]
@@ -11,3 +12,5 @@ end_screen = NodePath("UILevelEnd")
 levels = Array[PackedScene]([ExtResource("3_h8t6k"), ExtResource("3_vnrch")])
 
 [node name="UILevelEnd" parent="." instance=ExtResource("6_8y5au")]
+
+[node name="FpsCounter" parent="." instance=ExtResource("5_8u4a5")]
