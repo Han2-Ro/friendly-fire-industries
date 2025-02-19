@@ -46,5 +46,5 @@ func on_hit():
 	var bodies = kill_area.get_overlapping_bodies()
 	for body in bodies:
 		if body.has_method("on_hit"):
-			body.on_hit()
+			get_tree().create_timer(.1).timeout.connect(body.on_hit)
 	queue_free()

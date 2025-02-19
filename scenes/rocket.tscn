@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://byxempdciilxd"]
+[gd_scene load_steps=5 format=3 uid="uid://cf8pivhpqj2mv"]
 
 [ext_resource type="Script" path="res://scripts/rocket.gd" id="1_wduoi"]
 [ext_resource type="PackedScene" uid="uid://cecvu28s6wm8l" path="res://Assets/Rocket.blend" id="2_rnh1f"]
@@ -13,7 +13,7 @@ radius = 2.99019
 
 [node name="Rocket" type="StaticBody3D"]
 top_level = true
-collision_layer = 2
+collision_layer = 6
 script = ExtResource("1_wduoi")
 
 [node name="Rocket" parent="." instance=ExtResource("2_rnh1f")]

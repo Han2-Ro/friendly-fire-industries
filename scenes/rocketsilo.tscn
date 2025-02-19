@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c1ixcnlesdydp"]
+[gd_scene load_steps=8 format=3 uid="uid://datd7wg6v4r42"]
 
 [ext_resource type="Script" path="res://scripts/rocketsilo.gd" id="1_sadew"]
 [ext_resource type="PackedScene" uid="uid://hyiovj3pyx5w" path="res://Assets/Rocketsilo.blend" id="3_ogab7"]
@@ -62,6 +62,7 @@ collision_mask = 0
 script = ExtResource("1_sadew")
 
 [node name="Rocketsilo" parent="." instance=ExtResource("3_ogab7")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 
 [node name="BarellRocketsilo" parent="Rocketsilo/BaseRocketsilo" index="0"]
 transform = Transform3D(0.146111, 0, -0.0628311, 0, 0.159048, 0, 0.0628311, 0, 0.146111, 0, 0.913352, 0)

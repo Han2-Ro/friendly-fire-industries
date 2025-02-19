@@ -148,7 +148,7 @@ func update_vision_cone(delta: float):
 
 func is_player_visible() -> bool:
 	if ray_cast_3d.is_colliding():
-		var collider: CollisionObject3D = ray_cast_3d.get_collider()
+		var collider: Node3D = ray_cast_3d.get_collider()
 		if collider:
 			return collider.get_collision_layer_value(24)
 		return false

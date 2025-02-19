@@ -11,6 +11,7 @@ albedo_color = Color(0.51, 0.0306, 0.0306, 1)
 height = 0.286445
 
 [node name="Button" type="StaticBody3D"]
+collision_layer = 5
 script = ExtResource("1_lkfdi")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]

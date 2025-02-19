@@ -67,6 +67,7 @@ seconds_between_shots = 1.5
 seconds_being_open = 1.0
 
 [node name="Mienenwerfer" parent="." instance=ExtResource("2_mf71q")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 
 [node name="BarellMienenwerfer" parent="Mienenwerfer/BaseMienenwerfer" index="0"]
 transform = Transform3D(0.146111, 0, -0.0628311, 0, 0.159048, 0, 0.0628311, 0, 0.146111, 0, 0.913352, 0)
