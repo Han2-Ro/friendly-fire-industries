@@ -50,5 +50,5 @@ func _on_level_end(_success: bool) -> void:
 
 
 func _on_area_3d_area_entered(area: Area3D) -> void:
-	if area.is_in_group("mine"):
+	if area.is_in_group("block_player"):
 		EventBus.level_end.emit(false)

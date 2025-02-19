@@ -1,12 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://cnccgdbee6a2j"]
+[gd_scene load_steps=8 format=3 uid="uid://cnccgdbee6a2j"]
 
 [ext_resource type="PackedScene" uid="uid://x2sc06tp2kpu" path="res://scenes/levels/level_02/level_02_map.tscn" id="1_2pvps"]
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="2_ifvsw"]
 [ext_resource type="PackedScene" uid="uid://oef1c1gyvt62" path="res://scenes/minenwerfer.tscn" id="3_yyotb"]
+[ext_resource type="PackedScene" uid="uid://dt2b2acdq52cw" path="res://scenes/button.tscn" id="4_u7nnf"]
+[ext_resource type="PackedScene" uid="uid://dnfpmel15rp0g" path="res://scenes/door.tscn" id="5_g3npw"]
 
 [sub_resource type="Curve3D" id="Curve3D_225gm"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.99976, 0, -5.53392, 0, 0, -2, 0, 0, 2, -1, 0, -1, -2.5, 0, 0, 2.5, 0, 0, 2.81533, 0, 2.99909, 0, 0, 0, 0, 0, 0, 13.5067, 0, 2.99709),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.99976, 0, -5.53392, 0, 0, -2, 0, 0, 2, -1, 0, -1, -2.5, 0, 0, 2.5, 0, 0, 2.81533, 0, 2.99909, 0, 0, 0, 0, 0, 0, 13.991, 0, 2.997),
 "tilts": PackedFloat32Array(0, 0, 0, 0)
 }
 point_count = 4
@@ -17,7 +19,7 @@ data = PackedVector3Array(0, 2.26, -6, 4, 2.26, -5, 0, 2.26, -5, 0, 2.26, -6, 5,
 [node name="Level02" type="Node3D"]
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.964558, 0.250237, -0.0837281, 0, 0.317305, 0.948323, 0.263873, -0.914713, 0.306058, -0.493, 39.997, 12.652)
+transform = Transform3D(0.964558, 0.250237, -0.0837281, 0, 0.317305, 0.948323, 0.263873, -0.914713, 0.306058, -0.746953, 47.4159, 15.1561)
 current = true
 fov = 15.9
 size = 16.385
@@ -49,3 +51,11 @@ transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.4327
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_ajnk0")
+
+[node name="Button" parent="." instance=ExtResource("4_u7nnf")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 12.867, 1.02935, 0.93241)
+
+[node name="Door" parent="." instance=ExtResource("5_g3npw")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 13.43, 0, 3.02139)
+
+[connection signal="button_hit" from="Button" to="Door" method="open_door"]

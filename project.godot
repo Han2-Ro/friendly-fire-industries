@@ -24,6 +24,10 @@ GameState="*res://scripts/game_state.gd"
 
 window/size/always_on_top=true
 
+[global_group]
+
+block_player="if the player drive into this he dies"
+
 [input]
 
 shoot={
