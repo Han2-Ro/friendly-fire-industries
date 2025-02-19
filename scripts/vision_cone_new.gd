@@ -68,5 +68,5 @@ func ray_cast(origin: Vector3, dir: Vector3, length: float, space_state):
 	if result.is_empty():
 		return origin + (dir * length)
 	else:
-		print(result)
+		#print(result)
 		return result.position
