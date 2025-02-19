@@ -59,7 +59,6 @@ height = 1.4
 radius = 0.421768
 
 [node name="Minenwerfer" type="StaticBody3D"]
-collision_layer = 2
 collision_mask = 0
 script = ExtResource("1_cyt58")
 mine_scene = ExtResource("2_i5qfd")

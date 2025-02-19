@@ -1,4 +1,4 @@
-extends Node3D
+extends StaticBody3D
 
 @export var mine_scene: PackedScene
 @export var mine_speed: float = 10
@@ -26,7 +26,7 @@ func _physics_process(delta: float) -> void:
 		AnimPlayer.play("Open")
 		time_since_last_action = 0
 		
-		is_hitable = true
+		set_hitable(true)
 
 
 func launch_mine():
@@ -43,6 +43,12 @@ func launch_mine():
 	# cycle targets
 	i_target = (i_target + 1) % targets.size()
 
+func set_hitable(new_hitable: bool):
+	is_hitable = new_hitable
+	
+	set_collision_layer_value(1, !is_hitable)
+	set_collision_layer_value(2, is_hitable)
+
 func on_hit():
 	if is_hitable:
 		print("mine thrower hit")
@@ -58,5 +64,5 @@ func _on_animation_finished(anim_name: StringName) -> void:
 		time_since_last_action = 0
 	else:
 		is_open = false
-		is_hitable = false
+		set_hitable(false)
 		time_since_last_action = 0
