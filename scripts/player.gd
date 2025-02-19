@@ -14,6 +14,7 @@ var last_cursor_pos: Vector3
 
 func _ready() -> void:
 	EventBus.level_end.connect(_on_level_end)
+	EventBus.ammo_changed.emit(ammo)
 
 func _physics_process(delta: float) -> void:
 	look_at_cursor()
@@ -41,6 +42,7 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("shoot"):
 		if (ammo > 0):
 			ammo -= 1
+			EventBus.ammo_changed.emit(ammo)
 			shoot()
 		else:
 			print("Out of ammo") # TODO: Play out of ammo sound
