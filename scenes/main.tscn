@@ -12,5 +12,7 @@ end_screen = NodePath("UILevelEnd")
 levels = Array[PackedScene]([ExtResource("3_h8t6k"), ExtResource("3_vnrch")])
 
 [node name="UILevelEnd" parent="." instance=ExtResource("6_8y5au")]
+z_index = 4096
 
 [node name="FpsCounter" parent="." instance=ExtResource("5_8u4a5")]
+mouse_filter = 2
