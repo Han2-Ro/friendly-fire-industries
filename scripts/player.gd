@@ -1,6 +1,7 @@
 extends PathFollow3D
 
 @export var speed = 3
+@export var ammo = 3
 
 @onready var rotation_stange = $Player/player_base/player_rotationstange
 @onready var bullet_scene = preload("res://scenes/bullet.tscn")
@@ -38,7 +39,11 @@ func look_at_cursor():
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("shoot"):
-		shoot()
+		if (ammo > 0):
+			ammo -= 1
+			shoot()
+		else:
+			print("Out of ammo") # TODO: Play out of ammo sound
 		
 func shoot():
 	muzzleflash.shoot()
