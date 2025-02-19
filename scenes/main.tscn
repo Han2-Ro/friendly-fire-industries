@@ -1,16 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://jn22a2o5sevi"]
+[gd_scene load_steps=8 format=3 uid="uid://jn22a2o5sevi"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_hlc4r"]
 [ext_resource type="PackedScene" uid="uid://cbj6hobo6r6vd" path="res://scenes/levels/test_mine_level/test_mine_level.tscn" id="3_f16ou"]
 [ext_resource type="PackedScene" uid="uid://dyxaw3lu6lqej" path="res://scenes/levels/level_01/test_level.tscn" id="3_h8t6k"]
 [ext_resource type="PackedScene" uid="uid://cnccgdbee6a2j" path="res://scenes/levels/level_02/level_02.tscn" id="3_vnrch"]
-
 [ext_resource type="PackedScene" path="res://scenes/fps_counter.tscn" id="5_8u4a5"]
 [ext_resource type="PackedScene" uid="uid://cl1bxc20rcx32" path="res://scenes/levels/level_04/Level4.tscn" id="5_nmfaa"]
 [ext_resource type="PackedScene" uid="uid://cul6wl06g6wvn" path="res://scenes/ui_level_end.tscn" id="6_8y5au"]
-[ext_resource type="Script" path="res://scripts/ammo_display.gd" id="7_dthgj"]
-[ext_resource type="Texture2D" uid="uid://ogf3s0rd3vqw" path="res://Assets/icons/bullet.svg" id="8_mnl5e"]
-[ext_resource type="Texture2D" uid="uid://dynmweyr6a8d1" path="res://Assets/icons/bullet_empty.svg" id="9_xpboo"]
 
 [node name="Main" type="Node3D" node_paths=PackedStringArray("end_screen")]
 script = ExtResource("1_hlc4r")
@@ -22,27 +18,3 @@ z_index = 4096
 
 [node name="FpsCounter" parent="." instance=ExtResource("5_8u4a5")]
 mouse_filter = 2
-
-[node name="AmmoDisplay" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_right = 152.0
-grow_vertical = 2
-script = ExtResource("7_dthgj")
-ammo_available_icon = ExtResource("8_mnl5e")
-ammo_unavailable_icon = ExtResource("9_xpboo")
-
-[node name="BulletIcon" type="TextureRect" parent="AmmoDisplay"]
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 120.0
-offset_top = -83.0
-offset_right = 214.0
-offset_bottom = 13.0
-grow_vertical = 0
-rotation = 1.57079
-texture = ExtResource("8_mnl5e")
-expand_mode = 1
