@@ -6,6 +6,8 @@ extends Node3D
 var current_level: Node
 
 func _ready() -> void:
+	Input.mouse_mode = Input.MOUSE_MODE_CONFINED
+	
 	current_level = levels[GameState.current_level].instantiate()
 	add_child(current_level)
 	EventBus.level_end.connect(_on_level_end)
