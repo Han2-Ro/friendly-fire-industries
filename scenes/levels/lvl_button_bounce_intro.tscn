@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=3 uid="uid://722jpmvdusma"]
+
+[ext_resource type="PackedScene" uid="uid://bunadnfmh33vq" path="res://scenes/level_camera.tscn" id="2_4yf57"]
+[ext_resource type="PackedScene" uid="uid://dnfpmel15rp0g" path="res://scenes/door.tscn" id="3_b7rl2"]
+[ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="4_wir5o"]
+[ext_resource type="PackedScene" uid="uid://dldwm6qwbhk35" path="res://Assets/button_bounce_intro_map.blend" id="5_ca2m0"]
+[ext_resource type="PackedScene" uid="uid://dt2b2acdq52cw" path="res://scenes/button.tscn" id="5_d1364"]
+
+[sub_resource type="Curve3D" id="Curve3D_ystvf"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -16.5461, 0, 0, 0, 0, 0, 0, 0, 0, 11.0506, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_fl48n"]
+data = PackedVector3Array(-7, 2, -4, 38.8, 2, -38.8, 8, 2, -4, -7, 2, -4, -39.8, 2, -38.8, 38.8, 2, -38.8, 38.8, 2, -38.8, 8, 2, -1, 8, 2, -4, 38.8, 2, -38.8, 38.8, 2, -1, 8, 2, -1, 38.8, 2, 1, 8, 2, 7.2, 8, 2, 1, 38.8, 2, 1, 38.8, 2, 40, 8, 2, 7.2, -7, 2, 1.8, -39.8, 2, 1, -7, 2, 1, -7, 2, 1.8, -39.8, 2, 40, -39.8, 2, 1, -7, 2, 1.8, 0.2, 2, 7.2, -39.8, 2, 40, -7, 2, 1.8, 0.2, 2, 2.6, 0.2, 2, 7.2, -7, 2, 1.8, 4.4, 2, 2.6, 0.2, 2, 2.6, -7, 2, 1.8, 4.4, 2, 1.8, 4.4, 2, 2.6, -7, 2, -4, -39.8, 2, -1, -39.8, 2, -38.8, -7, 2, -4, -7, 2, -1, -39.8, 2, -1, -39.8, 2, 40, 8, 2, 7.2, 38.8, 2, 40, -39.8, 2, 40, 0.2, 2, 7.2, 8, 2, 7.2, -7, 0, -4, 38.8, 0, -38.8, -39.8, 0, -38.8, -7, 0, -4, 8, 0, -4, 38.8, 0, -38.8, 38.8, 0, -38.8, 8, 0, -1, 38.8, 0, -1, 38.8, 0, -38.8, 8, 0, -4, 8, 0, -1, 38.8, 0, 1, 8, 0, 7.2, 38.8, 0, 40, 38.8, 0, 1, 8, 0, 1, 8, 0, 7.2, -7, 0, 1.8, -39.8, 0, 1, -39.8, 0, 40, -7, 0, 1.8, -7, 0, 1, -39.8, 0, 1, -7, 0, 1.8, 0.2, 0, 7.2, 0.2, 0, 2.6, -7, 0, 1.8, -39.8, 0, 40, 0.2, 0, 7.2, -7, 0, 1.8, 4.4, 0, 2.6, 4.4, 0, 1.8, -7, 0, 1.8, 0.2, 0, 2.6, 4.4, 0, 2.6, -7, 0, -4, -39.8, 0, -1, -7, 0, -1, -7, 0, -4, -39.8, 0, -38.8, -39.8, 0, -1, -39.8, 0, 40, 8, 0, 7.2, 0.2, 0, 7.2, -39.8, 0, 40, 38.8, 0, 40, 8, 0, 7.2, 8, 2, -4, -7, 0, -4, -7, 2, -4, 8, 2, -4, 8, 0, -4, -7, 0, -4, -39.8, 2, -38.8, 38.8, 0, -38.8, 38.8, 2, -38.8, -39.8, 2, -38.8, -39.8, 0, -38.8, 38.8, 0, -38.8, 38.8, 2, -1, 8, 0, -1, 8, 2, -1, 38.8, 2, -1, 38.8, 0, -1, 8, 0, -1, 38.8, 2, -38.8, 38.8, 0, -1, 38.8, 2, -1, 38.8, 2, -38.8, 38.8, 0, -38.8, 38.8, 0, -1, 8, 2, -1, 8, 0, -4, 8, 2, -4, 8, 2, -1, 8, 0, -1, 8, 0, -4, 8, 2, 1, 38.8, 0, 1, 38.8, 2, 1, 8, 2, 1, 8, 0, 1, 38.8, 0, 1, 38.8, 2, 1, 38.8, 0, 40, 38.8, 2, 40, 38.8, 2, 1, 38.8, 0, 1, 38.8, 0, 40, 8, 2, 7.2, 8, 0, 1, 8, 2, 1, 8, 2, 7.2, 8, 0, 7.2, 8, 0, 1, 0.2, 2, 7.2, 8, 0, 7.2, 8, 2, 7.2, 0.2, 2, 7.2, 0.2, 0, 7.2, 8, 0, 7.2, 0.2, 2, 2.6, 0.2, 0, 7.2, 0.2, 2, 7.2, 0.2, 2, 2.6, 0.2, 0, 2.6, 0.2, 0, 7.2, 4.4, 2, 1.8, 4.4, 0, 2.6, 4.4, 2, 2.6, 4.4, 2, 1.8, 4.4, 0, 1.8, 4.4, 0, 2.6, -7, 2, 1.8, 4.4, 0, 1.8, 4.4, 2, 1.8, -7, 2, 1.8, -7, 0, 1.8, 4.4, 0, 1.8, 4.4, 2, 2.6, 0.2, 0, 2.6, 0.2, 2, 2.6, 4.4, 2, 2.6, 4.4, 0, 2.6, 0.2, 0, 2.6, -39.8, 2, -1, -39.8, 0, -38.8, -39.8, 2, -38.8, -39.8, 2, -1, -39.8, 0, -1, -39.8, 0, -38.8, -7, 2, -1, -39.8, 0, -1, -39.8, 2, -1, -7, 2, -1, -7, 0, -1, -39.8, 0, -1, -7, 2, -4, -7, 0, -1, -7, 2, -1, -7, 2, -4, -7, 0, -4, -7, 0, -1, 38.8, 2, 40, -39.8, 0, 40, -39.8, 2, 40, 38.8, 2, 40, 38.8, 0, 40, -39.8, 0, 40, -39.8, 2, 1, -7, 0, 1, -7, 2, 1, -39.8, 2, 1, -39.8, 0, 1, -7, 0, 1, -39.8, 2, 40, -39.8, 0, 1, -39.8, 2, 1, -39.8, 2, 40, -39.8, 0, 40, -39.8, 0, 1, -7, 2, 1, -7, 0, 1.8, -7, 2, 1.8, -7, 2, 1, -7, 0, 1, -7, 0, 1.8)
+
+[node name="Level_ButtonIntro" type="Node3D"]
+
+[node name="Camera3D" parent="." instance=ExtResource("2_4yf57")]
+
+[node name="Door" parent="." instance=ExtResource("3_b7rl2")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 8.16634, 0, 0)
+
+[node name="Path3D" type="Path3D" parent="."]
+curve = SubResource("Curve3D_ystvf")
+
+[node name="Player" parent="Path3D" instance=ExtResource("4_wir5o")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -16.5461, 0, 0)
+
+[node name="Button" parent="." instance=ExtResource("5_d1364")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.278164, 1.1423, 4.98082)
+
+[node name="button_bounce_intro_map" parent="." instance=ExtResource("5_ca2m0")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="button_bounce_intro_map/Walls" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="button_bounce_intro_map/Walls/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_fl48n")
+
+[connection signal="button_hit" from="Button" to="Door" method="toggle_door"]
+
+[editable path="button_bounce_intro_map"]

@@ -8,9 +8,9 @@ func toggle_door() -> void:
 	print("toggle laser-door")
 	# ToDo hide lasers
 	if is_open:
-		coll.disabled = true
-	else:
 		coll.disabled = false
+	else:
+		coll.disabled = true
 	is_open = not is_open
 
 #func toggle_door() -> void:

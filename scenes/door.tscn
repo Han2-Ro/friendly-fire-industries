@@ -48,11 +48,9 @@ script = ExtResource("1_cn5x8")
 [node name="Area3D" type="Area3D" parent="." groups=["block_player"]]
 
 [node name="Tuer2" parent="Area3D" instance=ExtResource("1_ej4xw")]
-visible = false
 
 [node name="Tuer3" parent="Area3D" instance=ExtResource("1_ej4xw")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
-visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.10193, -0.0241699)
