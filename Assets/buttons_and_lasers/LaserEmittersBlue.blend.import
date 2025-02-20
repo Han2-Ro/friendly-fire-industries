@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://d4bpii0v8ucam"
-path="res://.godot/imported/LaserEmittersBlue.blend-3428b59fc376cc423986a5398f03d851.scn"
+path="res://.godot/imported/LaserEmittersBlue.blend-be2400d477694caec45448bc96c0a34d.scn"
 
 [deps]
 
-source_file="res://Assets/LaserEmittersBlue.blend"
-dest_files=["res://.godot/imported/LaserEmittersBlue.blend-3428b59fc376cc423986a5398f03d851.scn"]
+source_file="res://Assets/buttons_and_lasers/LaserEmittersBlue.blend"
+dest_files=["res://.godot/imported/LaserEmittersBlue.blend-be2400d477694caec45448bc96c0a34d.scn"]
 
 [params]
 

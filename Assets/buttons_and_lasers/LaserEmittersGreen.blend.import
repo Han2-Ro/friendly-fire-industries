@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://chx3hxggi0k3l"
-path="res://.godot/imported/LaserEmittersPink.blend-a2ac0acca3ee249325932e7b03265c2c.scn"
+uid="uid://dpubojd46bvpl"
+path="res://.godot/imported/LaserEmittersGreen.blend-65686617a36b082273becab8bf1168f5.scn"
 
 [deps]
 
-source_file="res://Assets/LaserEmittersPink.blend"
-dest_files=["res://.godot/imported/LaserEmittersPink.blend-a2ac0acca3ee249325932e7b03265c2c.scn"]
+source_file="res://Assets/buttons_and_lasers/LaserEmittersGreen.blend"
+dest_files=["res://.godot/imported/LaserEmittersGreen.blend-65686617a36b082273becab8bf1168f5.scn"]
 
 [params]
 
