@@ -64,7 +64,6 @@ func _process(delta):
 
 # tries to track the player and returns false if the player is out of range
 func target_player(delta) -> bool:
-	print(is_instance_valid(player))
 	var dir = player.global_position - global_position
 	dir.y = 0
 	var barrel_forward = -barrel.global_transform.basis.z.normalized()
@@ -121,7 +120,7 @@ func shoot():
 	var recoil_duration = 0.05
 	
 	var instance = bullet_scene.instantiate()
-	var direction =  -barrel.global_transform.basis.z.normalized()
+	var direction = -barrel.global_transform.basis.z.normalized()
 	direction.y = 0
 	direction = direction.normalized()
 	instance.dir = direction

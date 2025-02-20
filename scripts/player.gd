@@ -11,11 +11,13 @@ extends PathFollow3D
 @onready var no_ammo_player: AudioStreamPlayer = $NoAmmoPlayer
 @onready var player_kaputt = preload("res://scenes/player_kaputt.tscn")
 @onready var explodeparticle = preload("res://scenes/Particles/explosion.tscn")
+@onready var ui: UIPlayer = $UI
+
 var last_cursor_pos: Vector3
 
 func _ready() -> void:
 	EventBus.level_end.connect(_on_level_end)
-	EventBus.ammo_changed.emit(ammo)
+	ui.setup_ammo(ammo)
 	Engine.time_scale = 1
 
 func _physics_process(delta: float) -> void:
@@ -45,10 +47,10 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("shoot") and Engine.time_scale != 0: # don't shoot when paused
 		if (ammo > 0):
 			ammo -= 1
-			EventBus.ammo_changed.emit(ammo)
+			ui.update_ammo(ammo)
 			shoot()
 		else:
-			print("Out of ammo") # TODO: Play out of ammo sound
+			print("Out of ammo")
 			no_ammo_player.play()
 	
 	var speedup = 4
@@ -60,6 +62,7 @@ func _input(event: InputEvent) -> void:
 		timescale = speedup
 	if event.is_action_pressed("slow_motion", true): # has prio
 		timescale = slow_down
+		ui.slowmotion_start()
 	if event.is_action_released("fast_forward") and not timescale == slow_down:
 		timescale = 1
 	if event.is_action_released("slow_motion"):
