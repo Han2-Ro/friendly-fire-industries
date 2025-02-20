@@ -9,8 +9,8 @@ extends PathFollow3D
 @onready var player_barrel: MeshInstance3D = $Player/player_base/player_rotationstange/player_body/player_barrel
 @onready var player_body: MeshInstance3D = $Player/player_base/player_rotationstange/player_body
 @onready var no_ammo_player: AudioStreamPlayer = $NoAmmoPlayer
-
-
+@onready var player_kaputt = preload("res://scenes/player_kaputt.tscn")
+@onready var explodeparticle = preload("res://scenes/Particles/explosion.tscn")
 var last_cursor_pos: Vector3
 
 func _ready() -> void:
@@ -83,8 +83,18 @@ func on_hit():
 	EventBus.level_end.emit(false)
 
 func _on_level_end(_success: bool) -> void:
+	if not _success:
+		death()
 	queue_free()
-
+func death():
+	var explosion_instance = explodeparticle.instantiate()
+	explosion_instance.global_transform = self.global_transform
+	get_parent().add_child(explosion_instance)
+	explosion_instance.explode()
+	print("death")
+	var broken_player_instance = player_kaputt.instantiate()
+	broken_player_instance.global_transform = player_body.global_transform
+	get_parent().add_child(broken_player_instance)
 func _on_area_3d_area_entered(area: Area3D) -> void:
 	if area.is_in_group("block_player"):
 		if area.get_parent().has_method("on_hit"):
