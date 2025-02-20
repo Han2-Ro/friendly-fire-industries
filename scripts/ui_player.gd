@@ -23,6 +23,9 @@ func _process(delta: float) -> void:
 		slowmotion_bar.size.x -= delta * bar_width / duration / Engine.time_scale
 		slowmotion_bar.position.x += delta * bar_width / duration / Engine.time_scale / 2
 
+func slowmotion_reset():
+	slowmotion_bar.size.x = 0
+
 func slowmotion_start(duration: float = 2):
 	slowmotion_bar.size.x = bar_width
 	slowmotion_bar.position.x = bar_pos_x

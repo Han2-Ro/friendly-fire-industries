@@ -14,6 +14,9 @@ extends PathFollow3D
 @onready var ui: UIPlayer = $UI
 
 var last_cursor_pos: Vector3
+var slowmotion_pressed: bool = false
+var slowmotion_time_left: float = 0
+var slowmotion_duration: float = 5
 
 func _ready() -> void:
 	EventBus.level_end.connect(_on_level_end)
@@ -26,6 +29,10 @@ func _physics_process(delta: float) -> void:
 	progress += speed * delta
 	if (progress_ratio >= 1.0):
 		EventBus.level_end.emit(true)
+	if (slowmotion_time_left > 0):
+		slowmotion_time_left -= delta / Engine.time_scale
+	elif (slowmotion_pressed):
+		Engine.time_scale = 1
 
 func look_at_cursor():
 	var camera := get_viewport().get_camera_3d()
@@ -53,25 +60,32 @@ func _input(event: InputEvent) -> void:
 			print("Out of ammo")
 			no_ammo_player.play()
 	
-	var speedup = 4
-	var slow_down = 0.1
-	
-	var timescale = Engine.time_scale
-	
-	if event.is_action_pressed("fast_forward", true) and not timescale == slow_down:
-		timescale = speedup
-	if event.is_action_pressed("slow_motion", true): # has prio
-		timescale = slow_down
-		ui.slowmotion_start()
-	if event.is_action_released("fast_forward") and not timescale == slow_down:
-		timescale = 1
-	if event.is_action_released("slow_motion"):
-		timescale = 1
-	
-	Engine.time_scale = timescale
+	handle_timescale(event)
 	
 	if event.is_action_pressed("reset"):
 		get_tree().reload_current_scene()
+
+func handle_timescale(event: InputEvent):
+	var speedup = 4
+	var slow_down = 0.1
+	var timescale = Engine.time_scale
+	#print("timescale: ", timescale, " slowmotion: ", slowmotion_pressed)
+
+	if event.is_action_pressed("fast_forward", true) and timescale != slow_down:
+		timescale = speedup
+	if event.is_action_pressed("slow_motion", true) and !slowmotion_pressed: # has prio & don't tirgger when already active
+		slowmotion_pressed = true
+		timescale = slow_down
+		slowmotion_time_left = slowmotion_duration
+		ui.slowmotion_start(slowmotion_duration)
+	if event.is_action_released("fast_forward") and timescale != slow_down:
+		timescale = 1
+	if event.is_action_released("slow_motion"):
+		slowmotion_pressed = false
+		ui.slowmotion_reset()
+		timescale = 1
+	Engine.time_scale = timescale
+	
 		
 func shoot():
 	muzzleflash.shoot()
