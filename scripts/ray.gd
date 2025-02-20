@@ -27,7 +27,7 @@ func _physics_process(delta: float) -> void:
 		return
 	
 	if (is_collider_bouncy(get_collider())):
-		bounce(global_position, get_collision_point(), get_collision_normal(), 1)
+		bounce(global_position, get_collision_point(), project_normal(get_collision_normal()), 1)
 
 func is_collider_bouncy(collider: Node3D) -> bool:
 	if (collider.has_method("get_collision_layer_value")):
@@ -56,7 +56,11 @@ func bounce(old_pos: Vector3, hit_pos: Vector3, norm: Vector3, count: int):
 		draw_bounce(to_local(hit_pos), to_local(result["position"]))
 		# recurse if bouncy
 		if (is_collider_bouncy(result["collider"])):
-			bounce(hit_pos, result["position"], result["normal"], count + 1)
+			bounce(hit_pos, result["position"], project_normal(result["normal"]), count + 1)
+
+func project_normal(norm: Vector3):
+	norm.y = 0
+	return norm.normalized()
 
 func draw_bounce(start: Vector3, end: Vector3):
 	var dir = (end - start).normalized()

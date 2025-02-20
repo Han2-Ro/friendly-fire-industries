@@ -32,7 +32,7 @@ func _physics_process(delta: float) -> void:
 			queue_free()
 		
 		if is_collider_bouncy(coll.get_collider()):
-			var norm = coll.get_normal()
+			var norm = project_normal(coll.get_normal())
 			dir = dir.bounce(norm).normalized()                                   
 			
 			global_position = coll.get_position()
@@ -41,7 +41,9 @@ func _physics_process(delta: float) -> void:
 		else:
 			queue_free()
 
-
+func project_normal(norm: Vector3):
+	norm.y = 0
+	return norm.normalized()
 
 func get_lookat_point() -> Vector3:
 	return global_position + Vector3(dir.x, 0, dir.z)
