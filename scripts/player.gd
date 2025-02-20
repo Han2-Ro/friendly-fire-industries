@@ -18,7 +18,8 @@ func _ready() -> void:
 	Engine.time_scale = 1
 
 func _physics_process(delta: float) -> void:
-	look_at_cursor()
+	if (Engine.time_scale != 0): # don't aim when paused
+		look_at_cursor()
 	progress += speed * delta
 	if (progress_ratio >= 1.0):
 		EventBus.level_end.emit(true)
@@ -40,7 +41,7 @@ func look_at_cursor():
 		last_cursor_pos = cursor_position_on_plane
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("shoot"):
+	if event.is_action_pressed("shoot") and Engine.time_scale != 0: # don't shoot when paused
 		if (ammo > 0):
 			ammo -= 1
 			EventBus.ammo_changed.emit(ammo)
