@@ -1,7 +1,7 @@
 extends PathFollow3D
 
-@export var speed = 3
-@export var ammo = 3
+@export var speed: float = 3
+@export var ammo: int = 3
 
 @onready var rotation_stange = $Player/player_base/player_rotationstange
 @onready var bullet_scene = preload("res://scenes/bullet.tscn")

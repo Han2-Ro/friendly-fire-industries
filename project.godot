@@ -67,7 +67,7 @@ slow_motion={
 
 3d_physics/layer_1="Ray Collision Bounce"
 3d_physics/layer_2="Ray Collision Stop"
-3d_physics/layer_3="Mine Explosion"
+3d_physics/layer_3="Explosion"
 3d_physics/layer_24="Player"
 
 [rendering]

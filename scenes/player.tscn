@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://be88bwduqfvp2" path="res://Assets/Player.blend" id="3_00mdn"]
 [ext_resource type="PackedScene" uid="uid://h6o2oblxpy6m" path="res://scenes/Particles/muzzleflash.tscn" id="3_gwj78"]
 [ext_resource type="Script" path="res://scripts/player_hurt_character.gd" id="5_sefwu"]
-[ext_resource type="PackedScene" path="res://scenes/ui_ammo.tscn" id="6_ts5m1"]
+[ext_resource type="PackedScene" uid="uid://cb1ccsqcw5st1" path="res://scenes/ui_ammo.tscn" id="6_ts5m1"]
 [ext_resource type="AudioStream" uid="uid://dae1acu65rn81" path="res://Assets/sounds/UI sounds/emptygun.mp3" id="7_gyvqs"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c57xa"]
@@ -41,7 +41,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00683594, 0.862793, 0.01007
 shape = SubResource("BoxShape3D_c57xa")
 
 [node name="PlayerHurtCharacter" type="CharacterBody3D" parent="."]
-collision_layer = 8388610
+collision_layer = 8388614
 collision_mask = 0
 motion_mode = 1
 script = ExtResource("5_sefwu")
