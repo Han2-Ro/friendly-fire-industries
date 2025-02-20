@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://c8ohtww5qtrs"]
 
 [ext_resource type="Script" path="res://scripts/main_menu_ui.gd" id="1_w5mdj"]
-[ext_resource type="Theme" uid="uid://dhgodsmrdod46" path="res://Assets/ui_themes/main_menu_UI.tres" id="2_khgka"]
-[ext_resource type="AudioStream" uid="uid://btiooojjkfty" path="res://Assets/sounds/UI sounds/hover.mp3" id="4_v1fhq"]
-[ext_resource type="AudioStream" uid="uid://chbnwkoqsievv" path="res://Assets/sounds/UI sounds/click.mp3" id="5_jyjyw"]
+[ext_resource type="Theme" uid="uid://dhgodsmrdod46" path="res://assets/ui_themes/main_menu_UI.tres" id="2_khgka"]
+[ext_resource type="AudioStream" uid="uid://btiooojjkfty" path="res://assets/sounds/ui_sounds/hover.mp3" id="4_v1fhq"]
+[ext_resource type="AudioStream" uid="uid://chbnwkoqsievv" path="res://assets/sounds/ui_sounds/click.mp3" id="5_jyjyw"]
 
 [sub_resource type="Theme" id="Theme_h3sv6"]
 

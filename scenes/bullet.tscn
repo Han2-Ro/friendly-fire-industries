@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://bg8xfgyrgw4md"]
 
 [ext_resource type="Script" path="res://scripts/bullet.gd" id="1_jf0ka"]
-[ext_resource type="PackedScene" uid="uid://cvymwjucmvmaj" path="res://Assets/bulletModel.blend" id="1_symgq"]
+[ext_resource type="PackedScene" uid="uid://cvymwjucmvmaj" path="res://assets/bulletModel.blend" id="1_symgq"]
 
 [sub_resource type="Gradient" id="Gradient_o7tbt"]
 offsets = PackedFloat32Array(0.0654545, 0.461818, 0.974545, 1)

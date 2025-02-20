@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://cbj6hobo6r6vd"]
 
-[ext_resource type="PackedScene" uid="uid://df6p0issk0o74" path="res://Assets/Level1Base.blend" id="1_oqlni"]
+[ext_resource type="PackedScene" uid="uid://df6p0issk0o74" path="res://assets/Level1Base.blend" id="1_oqlni"]
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="2_vuiik"]
 [ext_resource type="PackedScene" uid="uid://b8lky0yk4q64s" path="res://scenes/turret.tscn" id="3_a71fe"]
 [ext_resource type="PackedScene" uid="uid://datd7wg6v4r42" path="res://scenes/rocketsilo.tscn" id="4_rxngc"]
@@ -23,7 +23,7 @@ data = PackedVector3Array(-11.616, 3.6644, -6.3593, -11.217, 3.6644, 6.0188, -11
 curve = SubResource("Curve3D_nhif4")
 
 [node name="Player" parent="Path3D" instance=ExtResource("2_vuiik")]
-transform = Transform3D(-0.000265999, 0, -0.999997, 0, 1, 0, 0.999997, 0, -0.000265999, -11.592, 0, -0.0125307)
+transform = Transform3D(-0.00026588, 0, -0.999997, 0, 1, 0, 0.999997, 0, -0.00026588, -11.592, 0, -0.0125307)
 ammo = 1
 
 [node name="Camera3D" type="Camera3D" parent="."]

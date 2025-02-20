@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://datd7wg6v4r42" path="res://scenes/rocketsilo.tscn" id="2_j8sfm"]
 [ext_resource type="PackedScene" uid="uid://dt2b2acdq52cw" path="res://scenes/button.tscn" id="3_i31m0"]
 [ext_resource type="PackedScene" uid="uid://dnfpmel15rp0g" path="res://scenes/door.tscn" id="4_3y0s4"]
-[ext_resource type="Environment" uid="uid://viph0n6bgkui" path="res://Assets/HDRI/standard_env.tres" id="5_qws8j"]
+[ext_resource type="Environment" uid="uid://viph0n6bgkui" path="res://assets/hdri/standard_env.tres" id="5_qws8j"]
 
 [sub_resource type="Curve3D" id="Curve3D_ftpi6"]
 _data = {
