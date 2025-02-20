@@ -8,6 +8,7 @@ extends PathFollow3D
 @onready var muzzleflash = $Player/player_base/player_rotationstange/player_body/player_barrel/Muzzleflash
 @onready var player_barrel: MeshInstance3D = $Player/player_base/player_rotationstange/player_body/player_barrel
 @onready var player_body: MeshInstance3D = $Player/player_base/player_rotationstange/player_body
+@onready var no_ammo_player: AudioStreamPlayer = $NoAmmoPlayer
 
 
 var last_cursor_pos: Vector3
@@ -48,6 +49,7 @@ func _input(event: InputEvent) -> void:
 			shoot()
 		else:
 			print("Out of ammo") # TODO: Play out of ammo sound
+			no_ammo_player.play()
 	if event.is_action_pressed("fast_forward"):
 		Engine.time_scale = 4
 	if event.is_action_released("fast_forward"):

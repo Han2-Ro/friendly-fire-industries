@@ -19,6 +19,9 @@ var targeting: bool = false
 @onready var bullet_scene = preload("res://scenes/bullet.tscn")
 @onready var ray_cast_3d: RayCast3D = $TurretLowPoly/RayCast3D
 @onready var turret_low_poly: Node3D = $TurretLowPoly
+@onready var beep_player: AudioStreamPlayer3D = $BeepPlayer
+@onready var music_player: AudioStreamPlayer = $"../MusicPlayer"
+
 
 
 func _ready():
@@ -65,7 +68,9 @@ func target_player(delta) -> bool:
 		rotate_at_player(barrel, dir, delta)
 		
 		if not targeting: # start kill countdown
+			beep_player.play()
 			start_countdown(death_timer)
+			
 			targeting = true
 		return true
 	else:

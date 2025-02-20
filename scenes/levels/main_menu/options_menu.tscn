@@ -87,6 +87,10 @@ popup/item_3/id = 3
 popup/item_4/text = "1280x720"
 popup/item_4/id = 4
 
+[node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(5.705, 13.71)
+layout_mode = 2
+
 [node name="Fullscreen" type="CheckBox" parent="VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("2_8rxjc")
@@ -116,10 +120,6 @@ theme_override_styles/pressed = ExtResource("2_d0d6q")
 theme_override_styles/normal_mirrored = ExtResource("2_d0d6q")
 theme_override_styles/normal = ExtResource("2_d0d6q")
 text = "Fullscreen"
-
-[node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer"]
-custom_minimum_size = Vector2(5.705, 13.71)
-layout_mode = 2
 
 [connection signal="value_changed" from="VBoxContainer/Volume" to="." method="_on_volume_value_changed"]
 [connection signal="item_selected" from="VBoxContainer/Resolutions" to="." method="_on_resolutions_item_selected"]
