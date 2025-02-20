@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://2ojdnxre5y7k" path="res://scenes/levels/lvl_button_bounce_intro.tscn" id="2_xyf22"]
 [ext_resource type="PackedScene" uid="uid://rpmycin7vdrd" path="res://scenes/levels/lvl_button_intro.tscn" id="3_k8pro"]
 [ext_resource type="PackedScene" uid="uid://cnccgdbee6a2j" path="res://scenes/levels/level_02/level_02.tscn" id="3_vnrch"]
-[ext_resource type="PackedScene" uid="uid://jn3bitp36ead" path="res://scenes/fps_counter.tscn" id="5_8u4a5"]
+[ext_resource type="PackedScene" path="res://scenes/fps_counter.tscn" id="5_8u4a5"]
 [ext_resource type="PackedScene" uid="uid://cl1bxc20rcx32" path="res://scenes/levels/level_04/Level4.tscn" id="5_nmfaa"]
 [ext_resource type="PackedScene" uid="uid://cul6wl06g6wvn" path="res://scenes/ui_level_end.tscn" id="6_8y5au"]
 [ext_resource type="PackedScene" uid="uid://c5n66hh5s0t4i" path="res://scenes/levels/level_05/level_05.tscn" id="6_fdjyy"]

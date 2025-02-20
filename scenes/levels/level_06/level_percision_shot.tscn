@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://drxasfdgsnv3a"]
 
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="1_fjpag"]
-[ext_resource type="PackedScene" path="res://scenes/level_camera.tscn" id="1_yru10"]
+[ext_resource type="PackedScene" uid="uid://c38ebp5143i5x" path="res://scenes/level_camera.tscn" id="1_yru10"]
 [ext_resource type="PackedScene" uid="uid://b8lky0yk4q64s" path="res://scenes/turret.tscn" id="3_clcgj"]
 
 [sub_resource type="Curve3D" id="Curve3D_1l8yk"]
