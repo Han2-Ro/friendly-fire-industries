@@ -1,9 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://bunadnfmh33vq"]
+[gd_scene load_steps=2 format=3 uid="uid://c38ebp5143i5x"]
 
 [ext_resource type="Environment" uid="uid://viph0n6bgkui" path="res://Assets/HDRI/standard_env.tres" id="1_nrl03"]
 
 [node name="Camera3D" type="Camera3D"]
-transform = Transform3D(1, 0, 0, 0, 0.224951, 0.97437, 0, -0.97437, 0.224951, 0, 20, 0)
+transform = Transform3D(1, 0, 0, 0, 0.224951, 0.97437, 0, -0.97437, 0.224951, 0, 20, 5)
 fov = 42.2
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
