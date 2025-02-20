@@ -8,8 +8,8 @@ var bounce_count: int
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	#print("new bullet")
 	bounce_count = 0
-	
 	look_at(get_lookat_point(), Vector3.UP, 0)
 
 
@@ -21,6 +21,7 @@ func _physics_process(delta: float) -> void:
 	
 	var coll = move_and_collide(dir * speed * delta)
 	if coll:
+		#print("bounce")
 		# check if object is affected by bullet
 		if coll.get_collider().has_method("on_hit"):
 			coll.get_collider().on_hit()
@@ -31,7 +32,10 @@ func _physics_process(delta: float) -> void:
 			queue_free()
 		
 		if is_collider_bouncy(coll.get_collider()):
-			dir = dir.bounce(coll.get_normal()).normalized()
+			var norm = coll.get_normal()
+			dir = dir.bounce(norm).normalized()                                   
+			
+			global_position = coll.get_position()
 			
 			look_at(get_lookat_point(), Vector3.UP, 0)
 		else:

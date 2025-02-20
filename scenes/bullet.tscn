@@ -34,8 +34,9 @@ sections = 2
 section_length = 0.5
 section_segments = 1
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_dveay"]
-radius = 0.002
+[sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_tcbhh"]
+length = 0.2
+slide_on_slope = true
 
 [node name="Bullet" type="CharacterBody3D"]
 collision_layer = 16
@@ -56,7 +57,7 @@ mesh = SubResource("RibbonTrailMesh_4nyfs")
 skeleton = NodePath("../bulletModel")
 
 [node name="bulletCollision" type="CollisionShape3D" parent="."]
-transform = Transform3D(-6.90469, 0, -6.03627e-07, 0, 6.90469, 0, 6.03627e-07, 0, -6.90469, 0, 0, -0.0375293)
-shape = SubResource("SphereShape3D_dveay")
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 0)
+shape = SubResource("SeparationRayShape3D_tcbhh")
 
 [editable path="bulletModel"]
