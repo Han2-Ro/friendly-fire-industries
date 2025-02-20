@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://cl1bxc20rcx32"]
+[gd_scene load_steps=13 format=3 uid="uid://cl1bxc20rcx32"]
 
 [ext_resource type="PackedScene" uid="uid://17mrxbrjgrh1" path="res://Assets/LevelLayoutLeo1.blend" id="1_k43me"]
 [ext_resource type="PackedScene" uid="uid://b8lky0yk4q64s" path="res://scenes/turret.tscn" id="2_xlaix"]
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="3_arid8"]
 [ext_resource type="PackedScene" uid="uid://dt2b2acdq52cw" path="res://scenes/button.tscn" id="3_pnso8"]
+[ext_resource type="PackedScene" uid="uid://bunadnfmh33vq" path="res://scenes/level_camera.tscn" id="4_1prdj"]
 [ext_resource type="PackedScene" uid="uid://dnfpmel15rp0g" path="res://scenes/door.tscn" id="4_62p2j"]
 [ext_resource type="Environment" uid="uid://viph0n6bgkui" path="res://Assets/HDRI/standard_env.tres" id="6_x3f4p"]
 [ext_resource type="PackedScene" uid="uid://datd7wg6v4r42" path="res://scenes/rocketsilo.tscn" id="7_jgxdr"]
@@ -48,9 +49,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 1.67352, 0.400393, -0.7
 [node name="Door" parent="LevelLayoutLeo1" instance=ExtResource("4_62p2j")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 7.33708, 0.00204043, -4.30012)
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.224951, 0.97437, 0, -0.97437, 0.224951, 9.29, 20, 0.14)
-fov = 42.2
+[node name="Camera3D" parent="." instance=ExtResource("4_1prdj")]
 
 [node name="Turret" parent="." instance=ExtResource("2_xlaix")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.54292, 0, -9.25996)
