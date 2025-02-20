@@ -54,6 +54,10 @@ func _input(event: InputEvent) -> void:
 		Engine.time_scale = 4
 	if event.is_action_released("fast_forward"):
 		Engine.time_scale = 1
+	if event.is_action_pressed("slow_motion"):
+		Engine.time_scale = 0.1
+	if event.is_action_released("slow_motion"):
+		Engine.time_scale = 1
 	if event.is_action_pressed("reset"):
 		get_tree().reload_current_scene()
 		
