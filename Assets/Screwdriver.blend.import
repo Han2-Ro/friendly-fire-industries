@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://vdmpwrelyiyp"
-path="res://.godot/imported/Screwdriver.blend-d8fbaed4fd675257eaee8ae6f5475b43.scn"
+path="res://.godot/imported/Screwdriver.blend-7ea97f8e7c838b974692e51c77178063.scn"
 
 [deps]
 
-source_file="res://Assets/Screwdriver.blend"
-dest_files=["res://.godot/imported/Screwdriver.blend-d8fbaed4fd675257eaee8ae6f5475b43.scn"]
+source_file="res://assets/Screwdriver.blend"
+dest_files=["res://.godot/imported/Screwdriver.blend-7ea97f8e7c838b974692e51c77178063.scn"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cgm1l4gs3i30g"
-path="res://.godot/imported/FireExtinguisher.blend-1e8d40912671dc98a81925255afc14d3.scn"
+path="res://.godot/imported/FireExtinguisher.blend-ee6ebf989f595e28ea04348199a6917e.scn"
 
 [deps]
 
-source_file="res://Assets/FireExtinguisher.blend"
-dest_files=["res://.godot/imported/FireExtinguisher.blend-1e8d40912671dc98a81925255afc14d3.scn"]
+source_file="res://assets/FireExtinguisher.blend"
+dest_files=["res://.godot/imported/FireExtinguisher.blend-ee6ebf989f595e28ea04348199a6917e.scn"]
 
 [params]
 

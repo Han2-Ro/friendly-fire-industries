@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dundx2uw5a7ky"
-path="res://.godot/imported/PowerDrill.blend-205bd5895298db9becd789263b908d5a.scn"
+path="res://.godot/imported/PowerDrill.blend-4f494f423c4fc164b94cbeb1c949ad28.scn"
 
 [deps]
 
-source_file="res://Assets/PowerDrill.blend"
-dest_files=["res://.godot/imported/PowerDrill.blend-205bd5895298db9becd789263b908d5a.scn"]
+source_file="res://assets/PowerDrill.blend"
+dest_files=["res://.godot/imported/PowerDrill.blend-4f494f423c4fc164b94cbeb1c949ad28.scn"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ck2sw0217b4cw"
-path="res://.godot/imported/FreindlyFireLogo2.png-9f72430cdc384a0c9bfd39da47fa7198.ctex"
+path="res://.godot/imported/FreindlyFireLogo2.png-afca55fd9540978177d2213003b2d7b3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Textures/FreindlyFireLogo2.png"
-dest_files=["res://.godot/imported/FreindlyFireLogo2.png-9f72430cdc384a0c9bfd39da47fa7198.ctex"]
+source_file="res://assets/textures/FreindlyFireLogo2.png"
+dest_files=["res://.godot/imported/FreindlyFireLogo2.png-afca55fd9540978177d2213003b2d7b3.ctex"]
 
 [params]
 

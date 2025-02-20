@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dx7lyhbtsvvhv"
-path="res://.godot/imported/Drohne.blend-1b2e06b31b9049eb71687269461d1392.scn"
+path="res://.godot/imported/Drohne.blend-3a9e2c792f639414463871aa5dce415e.scn"
 
 [deps]
 
-source_file="res://Assets/Drohne.blend"
-dest_files=["res://.godot/imported/Drohne.blend-1b2e06b31b9049eb71687269461d1392.scn"]
+source_file="res://assets/Drohne.blend"
+dest_files=["res://.godot/imported/Drohne.blend-3a9e2c792f639414463871aa5dce415e.scn"]
 
 [params]
 

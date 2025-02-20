@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bwi423juv3tb2"
-path="res://.godot/imported/ButtonOnYellow.blend-13bcb49d88472b4d9a7f7c6d1a579f8b.scn"
+path="res://.godot/imported/ButtonOnYellow.blend-5fad9702b98da53e08888fb014cc0f99.scn"
 
 [deps]
 
-source_file="res://Assets/buttons_and_lasers/ButtonOnYellow.blend"
-dest_files=["res://.godot/imported/ButtonOnYellow.blend-13bcb49d88472b4d9a7f7c6d1a579f8b.scn"]
+source_file="res://assets/buttons_and_lasers/ButtonOnYellow.blend"
+dest_files=["res://.godot/imported/ButtonOnYellow.blend-5fad9702b98da53e08888fb014cc0f99.scn"]
 
 [params]
 

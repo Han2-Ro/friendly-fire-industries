@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://xq7beckd7qfh"
-path="res://.godot/imported/Tuer.blend-b5c02292dc26aa847208e81c52f000d1.scn"
+path="res://.godot/imported/Tuer.blend-9ed100b5825a2b623739d0230c8472a5.scn"
 
 [deps]
 
-source_file="res://Assets/Tuer.blend"
-dest_files=["res://.godot/imported/Tuer.blend-b5c02292dc26aa847208e81c52f000d1.scn"]
+source_file="res://assets/Tuer.blend"
+dest_files=["res://.godot/imported/Tuer.blend-9ed100b5825a2b623739d0230c8472a5.scn"]
 
 [params]
 

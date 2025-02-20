@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cbbu62g7myh87"
-path="res://.godot/imported/Mienenwerfer.blend-e2db0a6ec7f02502e47927ba2fc047b9.scn"
+path="res://.godot/imported/Mienenwerfer.blend-41c539dfc53b1160e3a9b66a86b878b8.scn"
 
 [deps]
 
-source_file="res://Assets/Mienenwerfer.blend"
-dest_files=["res://.godot/imported/Mienenwerfer.blend-e2db0a6ec7f02502e47927ba2fc047b9.scn"]
+source_file="res://assets/Mienenwerfer.blend"
+dest_files=["res://.godot/imported/Mienenwerfer.blend-41c539dfc53b1160e3a9b66a86b878b8.scn"]
 
 [params]
 

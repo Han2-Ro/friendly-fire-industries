@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://bipgykl4xia41"
-path="res://.godot/imported/Introspective Machine.mp3-10490e39dec68b9e67c1166210036af5.mp3str"
+path="res://.godot/imported/Introspective Machine.mp3-ebc762b5f798e52d02953eda18763735.mp3str"
 
 [deps]
 
-source_file="res://Assets/music/Introspective Machine.mp3"
-dest_files=["res://.godot/imported/Introspective Machine.mp3-10490e39dec68b9e67c1166210036af5.mp3str"]
+source_file="res://assets/music/Introspective Machine.mp3"
+dest_files=["res://.godot/imported/Introspective Machine.mp3-ebc762b5f798e52d02953eda18763735.mp3str"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b57nootbu4au6"
-path="res://.godot/imported/TurretLowPoly.blend-a59204af76d300c9a10c7931cdd5ff0e.scn"
+path="res://.godot/imported/TurretLowPoly.blend-3ddafd1a52c6efe4330683de092a6584.scn"
 
 [deps]
 
-source_file="res://Assets/TurretLowPoly.blend"
-dest_files=["res://.godot/imported/TurretLowPoly.blend-a59204af76d300c9a10c7931cdd5ff0e.scn"]
+source_file="res://assets/TurretLowPoly.blend"
+dest_files=["res://.godot/imported/TurretLowPoly.blend-3ddafd1a52c6efe4330683de092a6584.scn"]
 
 [params]
 

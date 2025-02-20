@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://htby4u43bmt"
-path="res://.godot/imported/TurretLowPolyKaputt.blend-cc27b514b5b20b1bb2678be84d3e53f8.scn"
+path="res://.godot/imported/TurretLowPolyKaputt.blend-c435b586d681a261842891ee96207ad4.scn"
 
 [deps]
 
-source_file="res://Assets/TurretLowPolyKaputt.blend"
-dest_files=["res://.godot/imported/TurretLowPolyKaputt.blend-cc27b514b5b20b1bb2678be84d3e53f8.scn"]
+source_file="res://assets/TurretLowPolyKaputt.blend"
+dest_files=["res://.godot/imported/TurretLowPolyKaputt.blend-c435b586d681a261842891ee96207ad4.scn"]
 
 [params]
 

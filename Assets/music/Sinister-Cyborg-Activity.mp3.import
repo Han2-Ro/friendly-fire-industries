@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://cjuh16lenujw4"
-path="res://.godot/imported/Sinister-Cyborg-Activity.mp3-10d17a1c84cf55e94d43538ea47c71dc.mp3str"
+path="res://.godot/imported/Sinister-Cyborg-Activity.mp3-9b58d48330a8b03d0a44141b840543ab.mp3str"
 
 [deps]
 
-source_file="res://Assets/music/Sinister-Cyborg-Activity.mp3"
-dest_files=["res://.godot/imported/Sinister-Cyborg-Activity.mp3-10d17a1c84cf55e94d43538ea47c71dc.mp3str"]
+source_file="res://assets/music/Sinister-Cyborg-Activity.mp3"
+dest_files=["res://.godot/imported/Sinister-Cyborg-Activity.mp3-9b58d48330a8b03d0a44141b840543ab.mp3str"]
 
 [params]
 

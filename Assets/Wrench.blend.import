@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dv6iy3otapwuv"
-path="res://.godot/imported/Wrench.blend-eb1ad252d52a6d3e8effcb5b4991df28.scn"
+path="res://.godot/imported/Wrench.blend-35d4599534beab0278c05238477182a4.scn"
 
 [deps]
 
-source_file="res://Assets/Wrench.blend"
-dest_files=["res://.godot/imported/Wrench.blend-eb1ad252d52a6d3e8effcb5b4991df28.scn"]
+source_file="res://assets/Wrench.blend"
+dest_files=["res://.godot/imported/Wrench.blend-35d4599534beab0278c05238477182a4.scn"]
 
 [params]
 

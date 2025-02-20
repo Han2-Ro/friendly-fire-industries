@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://mhd5k3skhprv"
-path="res://.godot/imported/Toolbox.blend-4a3fa6bfb3d71fe6046b880d428585f7.scn"
+path="res://.godot/imported/Toolbox.blend-63a87b033e1135aa4500c75826a24842.scn"
 
 [deps]
 
-source_file="res://Assets/Toolbox.blend"
-dest_files=["res://.godot/imported/Toolbox.blend-4a3fa6bfb3d71fe6046b880d428585f7.scn"]
+source_file="res://assets/Toolbox.blend"
+dest_files=["res://.godot/imported/Toolbox.blend-63a87b033e1135aa4500c75826a24842.scn"]
 
 [params]
 

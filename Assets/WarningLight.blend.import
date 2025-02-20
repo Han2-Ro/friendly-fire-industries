@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bofhxr0l6vrdt"
-path="res://.godot/imported/WarningLight.blend-15b5563918d4a1f625d423b66a4b3c78.scn"
+path="res://.godot/imported/WarningLight.blend-b9c9f463f0eaf7cdb5f91841d1fc6c02.scn"
 
 [deps]
 
-source_file="res://Assets/WarningLight.blend"
-dest_files=["res://.godot/imported/WarningLight.blend-15b5563918d4a1f625d423b66a4b3c78.scn"]
+source_file="res://assets/WarningLight.blend"
+dest_files=["res://.godot/imported/WarningLight.blend-b9c9f463f0eaf7cdb5f91841d1fc6c02.scn"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d3ers1x7oajoh"
-path.s3tc="res://.godot/imported/FriendlyFireLogo2 mit HG.png-8e49d2429641090cd901424451856d8f.s3tc.ctex"
+path.s3tc="res://.godot/imported/FriendlyFireLogo2 mit HG.png-66f7a7b2784547a7ad8bc2567bc8a64d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Textures/FriendlyFireLogo2 mit HG.png"
-dest_files=["res://.godot/imported/FriendlyFireLogo2 mit HG.png-8e49d2429641090cd901424451856d8f.s3tc.ctex"]
+source_file="res://assets/textures/FriendlyFireLogo2 mit HG.png"
+dest_files=["res://.godot/imported/FriendlyFireLogo2 mit HG.png-66f7a7b2784547a7ad8bc2567bc8a64d.s3tc.ctex"]
 
 [params]
 

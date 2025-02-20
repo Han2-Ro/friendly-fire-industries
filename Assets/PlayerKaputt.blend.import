@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cmoka2tusfbbi"
-path="res://.godot/imported/PlayerKaputt.blend-ab98f5a41d318793d37a4ebc678d9dc2.scn"
+path="res://.godot/imported/PlayerKaputt.blend-e4a41e0e5efc55a5c707a86cfb3bf3ee.scn"
 
 [deps]
 
-source_file="res://Assets/PlayerKaputt.blend"
-dest_files=["res://.godot/imported/PlayerKaputt.blend-ab98f5a41d318793d37a4ebc678d9dc2.scn"]
+source_file="res://assets/PlayerKaputt.blend"
+dest_files=["res://.godot/imported/PlayerKaputt.blend-e4a41e0e5efc55a5c707a86cfb3bf3ee.scn"]
 
 [params]
 

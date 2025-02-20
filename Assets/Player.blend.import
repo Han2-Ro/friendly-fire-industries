@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://be88bwduqfvp2"
-path="res://.godot/imported/Player.blend-b9034d4ba7cebe4bcaba0fba24d521eb.scn"
+path="res://.godot/imported/Player.blend-8429b7f705fa99c1e653f16e8e2a799d.scn"
 
 [deps]
 
-source_file="res://Assets/Player.blend"
-dest_files=["res://.godot/imported/Player.blend-b9034d4ba7cebe4bcaba0fba24d521eb.scn"]
+source_file="res://assets/Player.blend"
+dest_files=["res://.godot/imported/Player.blend-8429b7f705fa99c1e653f16e8e2a799d.scn"]
 
 [params]
 
