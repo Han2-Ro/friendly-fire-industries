@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 @export var speed = 100
 
-@onready var explodeparticle = preload("res://scenes/Particles/explosion.tscn")
+@onready var explodeparticle = preload("res://scenes/particles/explosion.tscn")
 @onready var kill_area: Area3D = $KillArea
 var player: Node3D
 
