@@ -23,9 +23,10 @@ func toggle_door() -> void:
 	
 	var coll = $Area3D/CollisionShape3D
 	if is_open:
+		$"Laser-Bars".visible = true
 		coll.disabled = false
 	else:
-		# ToDo hide lasers
+		$"Laser-Bars".visible = false
 		coll.disabled = true
 	is_open = not is_open
 
