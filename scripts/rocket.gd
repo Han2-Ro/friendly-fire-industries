@@ -2,7 +2,7 @@ extends Node3D
 class_name Rocket
 
 @onready var kill_area: Area3D = $KillArea
-@onready var explodeparticle = preload("res://scenes/Particles/explosion.tscn")
+@onready var explodeparticle = preload("res://scenes/particles/explosion.tscn")
 @onready var model = $Rocket
 
 var target: Vector3

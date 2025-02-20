@@ -14,7 +14,7 @@ var player_alive: bool
 @onready var timer = $Timer
 @onready var vision_cone = $VisionCone
 @onready var broken_turret = preload("res://scenes/turret_kaputt_model.tscn")
-@onready var explodeparticle = preload("res://scenes/Particles/explosion.tscn")
+@onready var explodeparticle = preload("res://scenes/particles/explosion.tscn")
 @onready var muzzleflash = $TurretLowPoly/Cylinder/Muzzleflash
 @onready var bullet_scene = preload("res://scenes/bullet.tscn")
 @onready var ray_cast_3d: RayCast3D = $TurretLowPoly/RayCast3D

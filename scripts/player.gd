@@ -10,7 +10,7 @@ extends PathFollow3D
 @onready var player_body: MeshInstance3D = $Player/player_base/player_rotationstange/player_body
 @onready var no_ammo_player: AudioStreamPlayer = $NoAmmoPlayer
 @onready var player_kaputt = preload("res://scenes/player_kaputt.tscn")
-@onready var explodeparticle = preload("res://scenes/Particles/explosion.tscn")
+@onready var explodeparticle = preload("res://scenes/particles/explosion.tscn")
 @onready var ui: UIPlayer = $UI
 
 var last_cursor_pos: Vector3
