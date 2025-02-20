@@ -1,53 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://c8ohtww5qtrs"]
+[gd_scene load_steps=6 format=3 uid="uid://c8ohtww5qtrs"]
 
 [ext_resource type="Script" path="res://scripts/main_menu_ui.gd" id="1_w5mdj"]
-[ext_resource type="FontFile" uid="uid://cb8xjj2e0l24x" path="res://Assets/fonts/Terminal F4.ttf" id="2_7wgi3"]
-[ext_resource type="StyleBox" uid="uid://boilvtinge0qh" path="res://Assets/ui_themes/normalBUtton.tres" id="2_oet5i"]
+[ext_resource type="Theme" uid="uid://dhgodsmrdod46" path="res://Assets/ui_themes/main_menu_UI.tres" id="2_khgka"]
+[ext_resource type="AudioStream" uid="uid://btiooojjkfty" path="res://Assets/sounds/UI sounds/hover.mp3" id="4_v1fhq"]
+[ext_resource type="AudioStream" uid="uid://chbnwkoqsievv" path="res://Assets/sounds/UI sounds/click.mp3" id="5_jyjyw"]
 
 [sub_resource type="Theme" id="Theme_h3sv6"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wsiv0"]
-bg_color = Color(0.650128, 0.650128, 0.650128, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 10
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
-expand_margin_left = 3.0
-expand_margin_top = 3.0
-expand_margin_right = 3.0
-expand_margin_bottom = 3.0
-shadow_size = 5
-shadow_offset = Vector2(0, 5)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0oiry"]
-bg_color = Color(1, 1, 1, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 10
-border_color = Color(0.205117, 0.205117, 0.205117, 1)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
-expand_margin_left = 3.0
-expand_margin_top = 3.0
-expand_margin_right = 3.0
-expand_margin_bottom = 3.0
-shadow_size = 5
-shadow_offset = Vector2(0, 5)
-
-[sub_resource type="Theme" id="Theme_l4q3f"]
-default_font = ExtResource("2_7wgi3")
-default_font_size = 50
-Button/styles/hover = SubResource("StyleBoxFlat_wsiv0")
-Button/styles/normal = ExtResource("2_oet5i")
-Button/styles/pressed = SubResource("StyleBoxFlat_0oiry")
 
 [node name="MainMenuUi" type="Control"]
 layout_mode = 3
@@ -71,7 +29,7 @@ offset_top = -80.9999
 offset_right = 278.0
 offset_bottom = 71.0
 grow_vertical = 2
-theme = SubResource("Theme_l4q3f")
+theme = ExtResource("2_khgka")
 
 [node name="start" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -105,6 +63,20 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 text = "QUIT"
 
+[node name="HoverAudioPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_v1fhq")
+volume_db = -10.0
+max_polyphony = 5
+
+[node name="ClickAudioPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_jyjyw")
+volume_db = -10.0
+max_polyphony = 5
+
+[connection signal="mouse_entered" from="VBoxContainer/start" to="." method="_on_start_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/start" to="." method="_on_start_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/options" to="." method="_on_options_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/options" to="." method="_on_options_pressed"]
+[connection signal="toggled" from="VBoxContainer/options" to="." method="_on_options_toggled"]
+[connection signal="mouse_entered" from="VBoxContainer/quit" to="." method="_on_quit_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_quit_pressed"]

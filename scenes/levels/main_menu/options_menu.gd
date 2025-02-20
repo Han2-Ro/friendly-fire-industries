@@ -1,4 +1,6 @@
 extends Control
+@onready var main_menu_ui: Control = $"../MainMenuUi"
+@onready var options_menu: Control = $"."
 
 var master_bus = AudioServer.get_bus_index("Master")
 # Called when the node enters the scene tree for the first time.
@@ -43,7 +45,3 @@ func _on_fullscreen_toggled(toggled_on: bool) -> void:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
-
-
-func _on_back_button_button_down() -> void:
-	get_tree().change_scene_to_file("res://scenes/levels/main_menu/main_menu.tscn")

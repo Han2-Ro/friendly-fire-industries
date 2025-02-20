@@ -22,7 +22,7 @@ viewport_path = NodePath("SubViewport")
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_r338k"]
 height = 0.798872
-radius = 0.368816
+radius = 0.500564
 
 [node name="Turret" type="StaticBody3D"]
 collision_layer = 5

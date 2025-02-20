@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://df51rmxcwwg2c"]
+[gd_scene load_steps=16 format=3 uid="uid://df51rmxcwwg2c"]
 
 [ext_resource type="PackedScene" uid="uid://diuatrn3fo023" path="res://scenes/levels/main_menu/main_menu_map.tscn" id="2_l6rbc"]
 [ext_resource type="AudioStream" uid="uid://bipgykl4xia41" path="res://Assets/music/Introspective Machine.mp3" id="2_l8r3p"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cgm1l4gs3i30g" path="res://Assets/FireExtinguisher.blend" id="5_wqrtu"]
 [ext_resource type="PackedScene" uid="uid://dundx2uw5a7ky" path="res://Assets/PowerDrill.blend" id="6_g7l0b"]
 [ext_resource type="PackedScene" uid="uid://c8ohtww5qtrs" path="res://scenes/levels/main_menu/main_menu_UI.tscn" id="7_dds4d"]
+[ext_resource type="PackedScene" uid="uid://dmsrpbpete03w" path="res://scenes/levels/main_menu/options_menu.tscn" id="10_vhtd2"]
 
 [sub_resource type="GDScript" id="GDScript_cy51l"]
 script/source = "extends Node3D
@@ -122,3 +123,6 @@ transform = Transform3D(0.587333, -0.301486, -0.751097, -0.0482436, 0.913338, -0
 
 [node name="MainMenuUi" parent="." instance=ExtResource("7_dds4d")]
 scale = Vector2(1.00702, 1)
+
+[node name="OptionsMenu" parent="." instance=ExtResource("10_vhtd2")]
+mouse_filter = 2

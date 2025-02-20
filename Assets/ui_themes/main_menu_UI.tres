@@ -1,0 +1,47 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://dhgodsmrdod46"]
+
+[ext_resource type="StyleBox" uid="uid://boilvtinge0qh" path="res://Assets/ui_themes/normalBUtton.tres" id="1_0cxpf"]
+[ext_resource type="FontFile" uid="uid://cb8xjj2e0l24x" path="res://Assets/fonts/Terminal F4.ttf" id="2_2mt5f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wsiv0"]
+bg_color = Color(0.650128, 0.650128, 0.650128, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 3.0
+expand_margin_top = 3.0
+expand_margin_right = 3.0
+expand_margin_bottom = 3.0
+shadow_size = 5
+shadow_offset = Vector2(0, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0oiry"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 10
+border_color = Color(0.205117, 0.205117, 0.205117, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 3.0
+expand_margin_top = 3.0
+expand_margin_right = 3.0
+expand_margin_bottom = 3.0
+shadow_size = 5
+shadow_offset = Vector2(0, 5)
+
+[resource]
+default_font = ExtResource("2_2mt5f")
+default_font_size = 50
+Button/styles/hover = SubResource("StyleBoxFlat_wsiv0")
+Button/styles/normal = ExtResource("1_0cxpf")
+Button/styles/pressed = SubResource("StyleBoxFlat_0oiry")
