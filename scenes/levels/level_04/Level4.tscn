@@ -1,14 +1,14 @@
 [gd_scene load_steps=13 format=3 uid="uid://cl1bxc20rcx32"]
 
-[ext_resource type="PackedScene" uid="uid://17mrxbrjgrh1" path="res://Assets/LevelLayoutLeo1.blend" id="1_k43me"]
+[ext_resource type="PackedScene" uid="uid://17mrxbrjgrh1" path="res://assets/LevelLayoutLeo1.blend" id="1_k43me"]
 [ext_resource type="PackedScene" uid="uid://b8lky0yk4q64s" path="res://scenes/turret.tscn" id="2_xlaix"]
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="3_arid8"]
 [ext_resource type="PackedScene" uid="uid://dt2b2acdq52cw" path="res://scenes/button.tscn" id="3_pnso8"]
 [ext_resource type="PackedScene" uid="uid://c38ebp5143i5x" path="res://scenes/level_camera.tscn" id="4_1prdj"]
 [ext_resource type="PackedScene" uid="uid://dnfpmel15rp0g" path="res://scenes/door.tscn" id="4_62p2j"]
 [ext_resource type="PackedScene" uid="uid://datd7wg6v4r42" path="res://scenes/rocketsilo.tscn" id="7_jgxdr"]
-[ext_resource type="PackedScene" uid="uid://dx7lyhbtsvvhv" path="res://Assets/Drohne.blend" id="8_g2dof"]
-[ext_resource type="AudioStream" uid="uid://cjuh16lenujw4" path="res://Assets/music/Sinister-Cyborg-Activity.mp3" id="9_h8i6x"]
+[ext_resource type="PackedScene" uid="uid://dx7lyhbtsvvhv" path="res://assets/Drohne.blend" id="8_g2dof"]
+[ext_resource type="AudioStream" uid="uid://cjuh16lenujw4" path="res://assets/music/Sinister-Cyborg-Activity.mp3" id="9_h8i6x"]
 
 [sub_resource type="Curve3D" id="Curve3D_ef3e0"]
 _data = {
