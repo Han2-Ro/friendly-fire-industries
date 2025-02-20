@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cf8pivhpqj2mv"]
 
 [ext_resource type="Script" path="res://scripts/rocket.gd" id="1_wduoi"]
-[ext_resource type="PackedScene" uid="uid://cecvu28s6wm8l" path="res://Assets/Rocket.blend" id="2_rnh1f"]
+[ext_resource type="PackedScene" uid="uid://cecvu28s6wm8l" path="res://assets/Rocket.blend" id="2_rnh1f"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_0ncmc"]
 height = 1.8978

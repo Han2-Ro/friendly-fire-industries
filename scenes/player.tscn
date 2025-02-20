@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_6100m"]
 [ext_resource type="Script" path="res://scripts/ray.gd" id="2_y0miw"]
 [ext_resource type="PackedScene" uid="uid://be88bwduqfvp2" path="res://assets/Player.blend" id="3_00mdn"]
-[ext_resource type="PackedScene" uid="uid://h6o2oblxpy6m" path="res://scenes/Particles/muzzleflash.tscn" id="3_gwj78"]
+[ext_resource type="PackedScene" uid="uid://h6o2oblxpy6m" path="res://scenes/particles/muzzleflash.tscn" id="3_gwj78"]
 [ext_resource type="Script" path="res://scripts/player_hurt_character.gd" id="5_sefwu"]
 [ext_resource type="PackedScene" uid="uid://cb1ccsqcw5st1" path="res://scenes/ui_player.tscn" id="6_ts5m1"]
 [ext_resource type="AudioStream" uid="uid://dae1acu65rn81" path="res://assets/sounds/ui_sounds/emptygun.mp3" id="7_gyvqs"]

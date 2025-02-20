@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://datd7wg6v4r42"]
 
 [ext_resource type="Script" path="res://scripts/rocketsilo.gd" id="1_sadew"]
-[ext_resource type="PackedScene" uid="uid://hyiovj3pyx5w" path="res://Assets/Rocketsilo.blend" id="3_ogab7"]
+[ext_resource type="PackedScene" uid="uid://hyiovj3pyx5w" path="res://assets/Rocketsilo.blend" id="3_ogab7"]
 
 [sub_resource type="Animation" id="Animation_qbqwr"]
 resource_name = "Close"
