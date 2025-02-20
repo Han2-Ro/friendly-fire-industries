@@ -7,6 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://h6o2oblxpy6m" path="res://scenes/Particles/muzzleflash.tscn" id="5_cmabb"]
 [ext_resource type="Script" path="res://scripts/vision_cone_new.gd" id="5_scbw6"]
 [ext_resource type="AudioStream" uid="uid://ddmghcuomqppp" path="res://Assets/sounds/UI sounds/beep.mp3" id="7_5v6ey"]
+[ext_resource type="Script" path="res://scripts/vision_cone_plane.gd" id="6_kghs8"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_jocne"]
+viewport_path = NodePath("SubViewport")
 
 [sub_resource type="QuadMesh" id="QuadMesh_d7fub"]
 
@@ -16,10 +20,8 @@ shader = ExtResource("3_2ab0p")
 shader_parameter/cone_angle = 90.0
 shader_parameter/min_angle = 5.0
 shader_parameter/current_angle = 90.0
+shader_parameter/turret_rotation = 0.0
 shader_parameter/cone_color = Color(1, 0, 0, 0.2)
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_jocne"]
-viewport_path = NodePath("SubViewport")
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_r338k"]
 height = 0.798872
@@ -33,19 +35,14 @@ death_timer = 1.0
 
 [node name="TurretLowPoly" parent="." instance=ExtResource("1_w0i3n")]
 
-[node name="VisionCone" type="MeshInstance3D" parent="TurretLowPoly/Cylinder" index="0"]
-transform = Transform3D(-4.37722e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37722e-08, 1.91513e-15, 0, 0.656, 0)
-mesh = SubResource("QuadMesh_d7fub")
-surface_material_override/0 = SubResource("ShaderMaterial_yvxql")
-
-[node name="Sprite3D" type="Sprite3D" parent="TurretLowPoly/Cylinder" index="1"]
+[node name="Sprite3D" type="Sprite3D" parent="TurretLowPoly/Cylinder" index="0"]
 transform = Transform3D(-3.21306e-08, 1.30937, -5.71509e-08, 0, -5.72344e-08, -1.30746, -0.7309, -5.54137e-08, 2.56739e-15, -0.00391434, 0.994822, -1.18036)
 texture = SubResource("ViewportTexture_jocne")
 
-[node name="Muzzleflash" parent="TurretLowPoly/Cylinder" index="2" instance=ExtResource("5_cmabb")]
+[node name="Muzzleflash" parent="TurretLowPoly/Cylinder" index="1" instance=ExtResource("5_cmabb")]
 transform = Transform3D(-0.00331624, 0, 0.999995, 0, 1, 0, -0.999995, 0, -0.00331624, -0.00544231, 0.854439, -1.64112)
 
-[node name="VisionConeNew" type="Node3D" parent="TurretLowPoly/Cylinder" index="3"]
+[node name="VisionConeNew" type="Node3D" parent="TurretLowPoly/Cylinder" index="2"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
 visible = false
 script = ExtResource("5_scbw6")
@@ -54,6 +51,13 @@ script = ExtResource("5_scbw6")
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0.826843, 0)
 target_position = Vector3(0, 0, -10)
 collision_mask = 3
+
+[node name="VisionCone" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.999999, 0, -8.74228e-08, 0, 0.999999, 0, 8.74227e-08, 0, -1, 0, 0, 0)
+mesh = SubResource("QuadMesh_d7fub")
+skeleton = NodePath("../TurretLowPoly/Cylinder")
+surface_material_override/0 = SubResource("ShaderMaterial_yvxql")
+script = ExtResource("6_kghs8")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1.75171, 0, -2.13163e-14, 0, 1.75171, 0, 2.13163e-14, 0, 1.75171, 0, 0.619358, 0)
