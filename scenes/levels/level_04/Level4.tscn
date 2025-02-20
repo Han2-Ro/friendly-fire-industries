@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cl1bxc20rcx32"]
+[gd_scene load_steps=12 format=3 uid="uid://cl1bxc20rcx32"]
 
 [ext_resource type="PackedScene" uid="uid://17mrxbrjgrh1" path="res://assets/LevelLayoutLeo1.blend" id="1_k43me"]
 [ext_resource type="PackedScene" uid="uid://b8lky0yk4q64s" path="res://scenes/turret.tscn" id="2_xlaix"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://c38ebp5143i5x" path="res://scenes/level_camera.tscn" id="4_1prdj"]
 [ext_resource type="PackedScene" uid="uid://dnfpmel15rp0g" path="res://scenes/door.tscn" id="4_62p2j"]
 [ext_resource type="PackedScene" uid="uid://datd7wg6v4r42" path="res://scenes/rocketsilo.tscn" id="7_jgxdr"]
-[ext_resource type="PackedScene" uid="uid://dx7lyhbtsvvhv" path="res://assets/Drohne.blend" id="8_g2dof"]
 [ext_resource type="AudioStream" uid="uid://cjuh16lenujw4" path="res://assets/music/Sinister-Cyborg-Activity.mp3" id="9_h8i6x"]
 
 [sub_resource type="Curve3D" id="Curve3D_ef3e0"]
@@ -68,9 +67,6 @@ transform = Transform3D(1.0024, 0, 0, 0, 1.0024, 0, 0, 0, 1.0024, 3.12031, 0.241
 
 [node name="Target3" type="Node3D" parent="Rocketsilo"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.13921, 0.132599, 1.23881)
-
-[node name="Drohne" parent="." instance=ExtResource("8_g2dof")]
-transform = Transform3D(-0.980608, 0, 0.19598, 0, 1, 0, -0.19598, 0, -0.980608, 0.16334, 1.82615, -4.54792)
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_h8i6x")

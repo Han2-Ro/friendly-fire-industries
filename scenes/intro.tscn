@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://dv5pfy40mavce"]
+[gd_scene load_steps=7 format=3 uid="uid://5p5yqwo7owhf"]
 
+[ext_resource type="Script" path="res://scenes/intro.gd" id="1_0l7bt"]
 [ext_resource type="Theme" uid="uid://dhgodsmrdod46" path="res://assets/ui_themes/main_menu_UI.tres" id="1_qf3pt"]
 [ext_resource type="Texture2D" uid="uid://csyc2iepvyemc" path="res://assets/images/backgroundintro.png" id="2_p2srq"]
 
@@ -47,6 +48,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_0l7bt")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 1
@@ -119,3 +121,5 @@ visible_characters = 0
 visible_ratio = 0.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

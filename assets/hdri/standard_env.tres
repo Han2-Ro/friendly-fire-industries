@@ -9,5 +9,6 @@ panorama = ExtResource("1_beptr")
 sky_material = SubResource("PanoramaSkyMaterial_cd46w")
 
 [resource]
-background_mode = 2
 sky = SubResource("Sky_kiybk")
+ambient_light_source = 3
+reflected_light_source = 2

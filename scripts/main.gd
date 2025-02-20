@@ -7,7 +7,7 @@ var current_level: Node
 var paused := false
 func _ready() -> void:
 	#Input.mouse_mode = Input.MOUSE_MODE_CONFINED
-	
+	EventBus.next_level.connect(_on_next_level_pressed)
 	current_level = levels[GameState.current_level].instantiate()
 	add_child(current_level)
 	EventBus.level_end.connect(_on_level_end)
@@ -27,7 +27,7 @@ func _on_restart_pressed() -> void:
 	get_tree().reload_current_scene()
 
 func _on_next_level_pressed() -> void:
-	current_level.free()
+	current_level.queue_free()
 	GameState.current_level += 1
 	if GameState.current_level >= levels.size():
 		printerr("No more levels: Exiting")
