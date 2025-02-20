@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://b8lky0yk4q64s" path="res://scenes/turret.tscn" id="2_xlaix"]
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="3_arid8"]
 [ext_resource type="PackedScene" uid="uid://dt2b2acdq52cw" path="res://scenes/button.tscn" id="3_pnso8"]
-[ext_resource type="PackedScene" path="res://scenes/level_camera.tscn" id="4_1prdj"]
+[ext_resource type="PackedScene" uid="uid://c38ebp5143i5x" path="res://scenes/level_camera.tscn" id="4_1prdj"]
 [ext_resource type="PackedScene" uid="uid://dnfpmel15rp0g" path="res://scenes/door.tscn" id="4_62p2j"]
 [ext_resource type="PackedScene" uid="uid://datd7wg6v4r42" path="res://scenes/rocketsilo.tscn" id="7_jgxdr"]
 [ext_resource type="PackedScene" uid="uid://dx7lyhbtsvvhv" path="res://Assets/Drohne.blend" id="8_g2dof"]

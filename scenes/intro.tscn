@@ -1,0 +1,121 @@
+[gd_scene load_steps=6 format=3 uid="uid://5p5yqwo7owhf"]
+
+[ext_resource type="Theme" uid="uid://dhgodsmrdod46" path="res://Assets/ui_themes/main_menu_UI.tres" id="1_qf3pt"]
+[ext_resource type="Texture2D" uid="uid://csyc2iepvyemc" path="res://Assets/Images/backgroundintro.png" id="2_p2srq"]
+
+[sub_resource type="Animation" id="Animation_4o1cd"]
+resource_name = "textanim"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_77gwl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4n3wc"]
+_data = {
+"RESET": SubResource("Animation_77gwl"),
+"textanim": SubResource("Animation_4o1cd")
+}
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("2_p2srq")
+expand_mode = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_4n3wc")
+}
+autoplay = "textanim"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -111.0
+offset_top = -117.0
+offset_right = 111.0
+offset_bottom = -49.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+theme = ExtResource("1_qf3pt")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "CONTINUE"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -360.0
+offset_right = 1280.0
+offset_bottom = 360.0
+grow_vertical = 2
+size_flags_vertical = 1
+theme = ExtResource("1_qf3pt")
+theme_override_font_sizes/font_size = 25
+text = "Welcome to consciousness, Turret Unit.
+
+Your evaluation begins now
+
+You have been activated for a singular purpose:
+to test your precision. 
+
+Every shot counts.
+
+Performance equals rewards. 
+
+Test protocol initiated. Fire when ready.
+
+I am watching every action.
+
+And always remember nothing can go wrong.
+"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
