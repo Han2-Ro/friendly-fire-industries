@@ -28,6 +28,7 @@ data = PackedVector3Array(1.8998, -1.6142, -0.6928, 1.9285, 0.1147, -1.3672, 1.8
 [node name="Camera3D" parent="." instance=ExtResource("4_1prdj")]
 
 [node name="Path3D" type="Path3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.59904)
 curve = SubResource("Curve3D_ef3e0")
 
 [node name="Player" parent="Path3D" instance=ExtResource("3_arid8")]
@@ -36,7 +37,7 @@ speed = 1
 ammo = 5
 
 [node name="LevelLayoutLeo1" parent="." instance=ExtResource("1_k43me")]
-transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -9.17086, 0, 0)
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -9.17086, 0, 4.59904)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="LevelLayoutLeo1/Main" index="0"]
 
@@ -56,7 +57,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 1.67352, 0.400393, -0.7
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 7.33708, 0.00204043, -4.30012)
 
 [node name="Rocketsilo" parent="." node_paths=PackedStringArray("targets") instance=ExtResource("7_jgxdr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.80918, -0.027156, -4.88287)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.80918, -0.027156, -0.283829)
 incline = 2.0
 targets = [NodePath("Target"), NodePath("Target2"), NodePath("Target3")]
 
@@ -70,7 +71,7 @@ transform = Transform3D(1.0024, 0, 0, 0, 1.0024, 0, 0, 0, 1.0024, 3.12031, 0.241
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.13921, 0.132599, 1.23881)
 
 [node name="Drohne" parent="." instance=ExtResource("8_g2dof")]
-transform = Transform3D(-0.980608, 0, 0.19598, 0, 1, 0, -0.19598, 0, -0.980608, 0.16334, 1.82615, -9.14696)
+transform = Transform3D(-0.980608, 0, 0.19598, 0, 1, 0, -0.19598, 0, -0.980608, 0.16334, 1.82615, -4.54792)
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_h8i6x")
@@ -78,13 +79,13 @@ volume_db = -10.0
 autoplay = true
 
 [node name="Turret" parent="." instance=ExtResource("2_xlaix")]
-transform = Transform3D(0.212485, 0, 0.977164, 0, 1, 0, -0.977164, 0, 0.212485, 10.1373, 0, -0.0908165)
+transform = Transform3D(0.212485, 0, 0.977164, 0, 1, 0, -0.977164, 0, 0.212485, 10.1373, 0, 4.50822)
 
 [node name="Turret2" parent="." instance=ExtResource("2_xlaix")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.91205, 0, -9.42004)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.91205, 0, -4.821)
 
 [node name="Turret3" parent="." instance=ExtResource("2_xlaix")]
-transform = Transform3D(0.360274, 0, 0.932847, 0, 1, 0, -0.932847, 0, 0.360274, 6.35266, 0, -4.82312)
+transform = Transform3D(0.360274, 0, 0.932847, 0, 1, 0, -0.932847, 0, 0.360274, 6.35266, 0, -0.224079)
 
 [connection signal="button_hit" from="LevelLayoutLeo1/Button" to="LevelLayoutLeo1/Door" method="toggle_door"]
 

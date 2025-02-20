@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://drxasfdgsnv3a"]
 
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="1_fjpag"]
-[ext_resource type="PackedScene" uid="uid://bunadnfmh33vq" path="res://scenes/level_camera.tscn" id="1_yru10"]
+[ext_resource type="PackedScene" uid="uid://c38ebp5143i5x" path="res://scenes/level_camera.tscn" id="1_yru10"]
 [ext_resource type="PackedScene" uid="uid://b8lky0yk4q64s" path="res://scenes/turret.tscn" id="3_clcgj"]
 
 [sub_resource type="Curve3D" id="Curve3D_1l8yk"]
@@ -14,6 +14,7 @@ point_count = 4
 [node name="LevelPercisionShot" type="Node3D"]
 
 [node name="PlayerPath" type="Path3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
 curve = SubResource("Curve3D_1l8yk")
 
 [node name="Player" parent="PlayerPath" instance=ExtResource("1_fjpag")]
@@ -24,7 +25,7 @@ ammo = 1
 [node name="Camera3D" parent="." instance=ExtResource("1_yru10")]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.992)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0079999)
 use_collision = true
 size = Vector3(50, 2.5, 50)
 
@@ -54,6 +55,7 @@ operation = 2
 size = Vector3(20, 2, 3)
 
 [node name="Lights" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 2, 1)
@@ -96,10 +98,10 @@ omni_range = 10.0
 omni_attenuation = 0.5
 
 [node name="Turret" parent="." instance=ExtResource("3_clcgj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -5.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -0.5)
 
 [node name="Turret2" parent="." instance=ExtResource("3_clcgj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -5.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -0.5)
 
 [node name="Turret3" parent="." instance=ExtResource("3_clcgj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -9.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -4.5)
