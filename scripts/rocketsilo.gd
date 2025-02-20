@@ -37,7 +37,7 @@ func launch_explosive():
 	explosive.target = targets[i_target].global_position
 	explosive.speed = explosive_speed
 	explosive.incline = incline
-	explosive.global_position = global_position
+	explosive.set_transform(get_transform())
 	get_parent().add_child(explosive)
 	# cycle targets
 	i_target = (i_target + 1) % targets.size()

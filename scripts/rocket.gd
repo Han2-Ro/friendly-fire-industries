@@ -35,7 +35,9 @@ func move_mine(delta: float):
 	
 	#rotate
 	var flight_dir = (global_position - old_pos).normalized()
-	look_at(global_position + flight_dir, Vector3.UP, 0)
+	var at = global_position + flight_dir
+	if (at.dot(Vector3.UP) > 0.001):
+		look_at(at, Vector3.UP, 0)
 	old_pos = global_position
 
 func on_hit():
