@@ -9,7 +9,7 @@ var end_angle: float = 0.0
 var player: Node3D
 var barrel: Node3D
 var targeting: bool = false
-
+var player_alive: bool
 @onready var health_bar = $SubViewport/HealthBar3d
 @onready var timer = $Timer
 @onready var vision_cone = $VisionCone
@@ -60,9 +60,11 @@ func _process(delta):
 		var local_target = ray_cast_3d.to_local(player.global_position)
 		ray_cast_3d.target_position = local_target
 		ray_cast_3d.force_raycast_update()
+	
 
 # tries to track the player and returns false if the player is out of range
 func target_player(delta) -> bool:
+	print(is_instance_valid(player))
 	var dir = player.global_position - global_position
 	dir.y = 0
 	var barrel_forward = -barrel.global_transform.basis.z.normalized()
@@ -81,6 +83,7 @@ func target_player(delta) -> bool:
 		if targeting:
 			targeting = false
 			stop_countdown()
+			
 		return false
 
 func rotate_at_player(barrel, direction, delta):
@@ -107,7 +110,10 @@ func _on_timer_timeout():
 	shoot()
 
 func shoot():
-	if not targeting:
+	if !is_instance_valid(player):
+		targeting = false
+		stop_countdown()
+		health_bar.value = 0
 		return
 	print("kill")
 	muzzleflash.shoot()
@@ -128,7 +134,7 @@ func shoot():
 	await get_tree().create_timer(recoil_duration).timeout
 	
 	barrel.translate_object_local(Vector3(0, 0, -recoil_distance))
-
+	health_bar.value = 0
 func on_hit():
 	stop_countdown()
 	var explosion_instance = explodeparticle.instantiate()

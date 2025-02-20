@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b8lky0yk4q64s"]
+[gd_scene load_steps=13 format=3 uid="uid://b8lky0yk4q64s"]
 
 [ext_resource type="PackedScene" uid="uid://du5auqcka6ert" path="res://scenes/turret_model.tscn" id="1_w0i3n"]
 [ext_resource type="Script" path="res://scripts/turret.gd" id="2_su5rc"]
@@ -6,8 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://j11vvc024r4e" path="res://scenes/health_bar_3d.tscn" id="3_qevxr"]
 [ext_resource type="PackedScene" uid="uid://h6o2oblxpy6m" path="res://scenes/Particles/muzzleflash.tscn" id="5_cmabb"]
 [ext_resource type="Script" path="res://scripts/vision_cone_new.gd" id="5_scbw6"]
-[ext_resource type="AudioStream" uid="uid://ddmghcuomqppp" path="res://Assets/sounds/UI sounds/beep.mp3" id="7_5v6ey"]
 [ext_resource type="Script" path="res://scripts/vision_cone_plane.gd" id="6_kghs8"]
+[ext_resource type="AudioStream" uid="uid://ddmghcuomqppp" path="res://Assets/sounds/UI sounds/beep.mp3" id="7_5v6ey"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_jocne"]
 viewport_path = NodePath("SubViewport")
