@@ -166,4 +166,4 @@ environment = ExtResource("5_qws8j")
 
 [connection signal="button_hit" from="Button" to="Door" method="toggle_door"]
 [connection signal="button_hit" from="Button2" to="Door2" method="toggle_door"]
-[connection signal="ready" from="Door2" to="Door2" method="toggle_door"]
+[connection signal="ready" from="Door" to="Door" method="toggle_door"]
