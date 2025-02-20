@@ -50,14 +50,23 @@ func _input(event: InputEvent) -> void:
 		else:
 			print("Out of ammo") # TODO: Play out of ammo sound
 			no_ammo_player.play()
-	if event.is_action_pressed("fast_forward"):
-		Engine.time_scale = 4
-	if event.is_action_released("fast_forward"):
-		Engine.time_scale = 1
-	if event.is_action_pressed("slow_motion"):
-		Engine.time_scale = 0.1
+	
+	var speedup = 4
+	var slow_down = 0.1
+	
+	var timescale = Engine.time_scale
+	
+	if event.is_action_pressed("fast_forward", true) and not timescale == slow_down:
+		timescale = speedup
+	if event.is_action_pressed("slow_motion", true): # has prio
+		timescale = slow_down
+	if event.is_action_released("fast_forward") and not timescale == slow_down:
+		timescale = 1
 	if event.is_action_released("slow_motion"):
-		Engine.time_scale = 1
+		timescale = 1
+	
+	Engine.time_scale = timescale
+	
 	if event.is_action_pressed("reset"):
 		get_tree().reload_current_scene()
 		
