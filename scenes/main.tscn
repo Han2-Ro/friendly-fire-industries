@@ -11,12 +11,12 @@
 [ext_resource type="PackedScene" uid="uid://cul6wl06g6wvn" path="res://scenes/ui_level_end.tscn" id="6_8y5au"]
 [ext_resource type="PackedScene" uid="uid://c5n66hh5s0t4i" path="res://scenes/levels/level_05/level_05.tscn" id="6_fdjyy"]
 [ext_resource type="PackedScene" uid="uid://blaupr70ttbg4" path="res://scenes/levels/lvl_multiple_turrets_intro.tscn" id="6_qw3fj"]
-[ext_resource type="AudioStream" uid="uid://cofl8v8h3qh00" path="res://assets/music/Future-Industry-1.mp3" id="11_5jbei"]
+[ext_resource type="PackedScene" uid="uid://bf57hwg3x1t0m" path="res://scenes/levels/lvl_turret_button_bounce.tscn" id="7_ushab"]
 
 [node name="Main" type="Node3D" node_paths=PackedStringArray("end_screen")]
 script = ExtResource("1_hlc4r")
 end_screen = NodePath("UILevelEnd")
-levels = Array[PackedScene]([ExtResource("2_unlv0"), ExtResource("3_k8pro"), ExtResource("2_xyf22"), ExtResource("4_fetjn"), ExtResource("6_qw3fj"), ExtResource("5_nmfaa"), ExtResource("3_vnrch"), ExtResource("6_fdjyy")])
+levels = Array[PackedScene]([ExtResource("2_unlv0"), ExtResource("3_k8pro"), ExtResource("2_xyf22"), ExtResource("4_fetjn"), ExtResource("7_ushab"), ExtResource("6_qw3fj"), ExtResource("5_nmfaa"), ExtResource("3_vnrch"), ExtResource("6_fdjyy")])
 
 [node name="UILevelEnd" parent="." instance=ExtResource("6_8y5au")]
 z_index = 4096

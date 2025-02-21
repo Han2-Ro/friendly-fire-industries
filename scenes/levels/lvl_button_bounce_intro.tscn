@@ -24,7 +24,7 @@ point_count = 2
 shape = SubResource("ConcavePolygonShape3D_8tdts")
 
 [node name="Camera3D" parent="." instance=ExtResource("2_4yf57")]
-transform = Transform3D(1, 0, 0, 0, 0.224951, 0.97437, 0, -0.97437, 0.224951, 0, 20, 6.425)
+transform = Transform3D(1, 0, 0, 0, 0.224951, 0.97437, 0, -0.97437, 0.224951, 0, 20, 4.31)
 current = true
 
 [node name="Door" parent="." instance=ExtResource("3_b7rl2")]

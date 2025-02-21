@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://blgctndk6av8o"]
+[gd_scene load_steps=10 format=3 uid="uid://bf57hwg3x1t0m"]
 
-[ext_resource type="PackedScene" uid="uid://c38ebp5143i5x" path="res://scenes/level_camera.tscn" id="1_8bney"]
-[ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="3_sgl6h"]
-[ext_resource type="PackedScene" uid="uid://c4cr0cmorqvx2" path="res://assets/levels_blend/turret_intro_map.blend" id="5_56sju"]
-[ext_resource type="PackedScene" uid="uid://b8lky0yk4q64s" path="res://scenes/turret.tscn" id="6_g7p1d"]
+[ext_resource type="PackedScene" uid="uid://c38ebp5143i5x" path="res://scenes/level_camera.tscn" id="1_xb481"]
+[ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="2_ltpxp"]
+[ext_resource type="PackedScene" uid="uid://c4cr0cmorqvx2" path="res://assets/levels_blend/turret_intro_map.blend" id="3_2uyrs"]
+[ext_resource type="PackedScene" uid="uid://b8lky0yk4q64s" path="res://scenes/turret.tscn" id="4_kh4ld"]
+[ext_resource type="PackedScene" uid="uid://dt2b2acdq52cw" path="res://scenes/button.tscn" id="5_53jqv"]
+[ext_resource type="PackedScene" uid="uid://dnfpmel15rp0g" path="res://scenes/door.tscn" id="6_q722j"]
 
 [sub_resource type="Curve3D" id="Curve3D_ystvf"]
 _data = {
@@ -20,7 +22,7 @@ viewport_path = NodePath("SubViewport")
 
 [node name="Level_ButtonIntro" type="Node3D"]
 
-[node name="Camera3D" parent="." instance=ExtResource("1_8bney")]
+[node name="Camera3D" parent="." instance=ExtResource("1_xb481")]
 transform = Transform3D(1, 0, 0, 0, 0.224951, 0.97437, 0, -0.97437, 0.224951, 0, 20, 6.425)
 current = true
 
@@ -28,26 +30,31 @@ current = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00134277, -0.0864754, -0.0320168)
 curve = SubResource("Curve3D_ystvf")
 
-[node name="Player" parent="Path3D" instance=ExtResource("3_sgl6h")]
-transform = Transform3D(-0.999961, 0, -0.00495004, 0, 0.999986, 0, 0.00495005, 0, -0.99996, -8.28076, 0.188526, -1.93722)
+[node name="Player" parent="Path3D" instance=ExtResource("2_ltpxp")]
+transform = Transform3D(-0.999961, 0, -0.00495004, 0, 0.999986, 0, 0.00495004, 0, -0.99996, -8.28076, 0.188526, -1.93722)
 
-[node name="turret_intro_map" parent="." instance=ExtResource("5_56sju")]
+[node name="turret_intro_map" parent="." instance=ExtResource("3_2uyrs")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="turret_intro_map/Wall" index="3"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="turret_intro_map/Wall/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_5tk27")
 
-[node name="Turret" parent="." instance=ExtResource("6_g7p1d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.36315, 0, -0.177002)
+[node name="Turret" parent="." instance=ExtResource("4_kh4ld")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.02113, 0, -0.177002)
 rotation_speed = 0.0
-tracking_angle = 30.0
 
 [node name="Cylinder" parent="Turret/TurretLowPoly" index="1"]
 transform = Transform3D(0.98506, 0, 0.172204, 0, 1, 0, -0.172204, 0, 0.98506, 0, 0, 0)
 
 [node name="Sprite3D" parent="Turret/TurretLowPoly/Cylinder" index="0"]
 texture = SubResource("ViewportTexture_gd5eq")
+
+[node name="Button" parent="." instance=ExtResource("5_53jqv")]
+transform = Transform3D(-7.39508e-06, 0, -1, 0, 1, 0, 1, 0, -7.39508e-06, -5.4066, 1, -0.803585)
+
+[node name="Door" parent="." instance=ExtResource("6_q722j")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.18217, -0.359916, 2.60505)
 
 [editable path="turret_intro_map"]
 [editable path="Turret"]
