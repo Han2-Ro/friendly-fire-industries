@@ -1,6 +1,6 @@
 extends PathFollow3D
 
-@export var speed: float = 3
+@export var speed: float = 1.5
 @export var ammo: int = 3
 @export var slowmotion_uses: int = 3
 
@@ -31,10 +31,15 @@ func _physics_process(delta: float) -> void:
 	progress += speed * delta
 	if (progress_ratio >= 1.0):
 		EventBus.level_end.emit(true)
+	
+	# slowmotion timer
 	if (slowmotion_time_left > 0):
-		slowmotion_time_left -= delta / Engine.time_scale
-	elif (slowmotion_pressed):
+		if (Engine.time_scale != 0):
+			slowmotion_time_left -= delta / Engine.time_scale
+	elif (slowmotion_pressed and slowmotion_time_left != -100):
+		print("slowmotion timeout")
 		Engine.time_scale = 1
+		slowmotion_time_left = -100
 
 func look_at_cursor():
 	var camera := get_viewport().get_camera_3d()
@@ -67,27 +72,31 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("reset"):
 		get_tree().reload_current_scene()
 
+#terrible if statements that almost work
 func handle_timescale(event: InputEvent):
 	var speedup = 4
 	var slow_down = 0.1
 	var timescale = Engine.time_scale
 	#print("timescale: ", timescale, " slowmotion: ", slowmotion_pressed)
 
-	if event.is_action_pressed("fast_forward", true) and timescale != slow_down:
+	if event.is_action_pressed("fast_forward", true) and timescale == 1:
 		timescale = speedup
-	if event.is_action_pressed("slow_motion", true) and !slowmotion_pressed and slowmotion_uses > 0: # has prio & don't tirgger when already active
+	if event.is_action_pressed("slow_motion", true) and !slowmotion_pressed and slowmotion_uses > 0 and timescale != 0: # has prio & don't tirgger when already active
 		slowmotion_uses -= 1
 		ui.update_time(slowmotion_uses)
 		slowmotion_pressed = true
 		timescale = slow_down
 		slowmotion_time_left = slowmotion_duration
 		ui.slowmotion_start(slowmotion_duration)
-	if event.is_action_released("fast_forward") and timescale != slow_down:
+	if event.is_action_released("fast_forward") and timescale == speedup:
+		print("fast_forward release")
 		timescale = 1
-	if event.is_action_released("slow_motion"):
+	if event.is_action_released("slow_motion") and slowmotion_pressed:
+		print("slowmotion release")
 		slowmotion_pressed = false
 		ui.slowmotion_reset()
-		timescale = 1
+		if (timescale != 0):
+			timescale = 1
 	Engine.time_scale = timescale
 	
 		

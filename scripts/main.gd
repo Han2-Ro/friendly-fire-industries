@@ -52,10 +52,12 @@ func _input(event: InputEvent) -> void:
 		get_tree().quit()
 	if event.is_action_pressed("Pause"):
 		if paused:
+			print("unpause")
 			end_screen.hide()
 			Engine.time_scale = 1
 			paused = false
 		else:
+			print("pause")
 			end_screen.reset()
 			end_screen.show()
 			paused = true
