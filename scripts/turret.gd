@@ -21,7 +21,7 @@ var player_alive: bool
 @onready var turret_low_poly: Node3D = $TurretLowPoly
 @onready var turret_tower: Node3D = $TurretLowPoly/Cylinder
 @onready var beep_player: AudioStreamPlayer3D = $BeepPlayer
-@onready var music_player: AudioStreamPlayer = $"../MusicPlayer"
+@onready var music_player: AudioStreamPlayer = $MusicPlayer
 
 func _ready():
 	timer.one_shot = true
