@@ -9,7 +9,7 @@ func _ready() -> void:
 	var mat = StandardMaterial3D.new()
 	mat.albedo_color = color
 	mat.emission_enabled = true
-	mat.emission_energy_multiplier = 5
+	mat.emission_energy_multiplier = 7
 	mat.emission = color
 	
 	$"Laser-Emitters/LaserEmitters-Far/LaserEmittersColor".material_override = mat
