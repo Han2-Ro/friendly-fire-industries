@@ -5,6 +5,7 @@ func _ready() -> void:
 	AudioServer.set_bus_mute(master_bus, true)
 	
 	$Button.on_hit()
+	$Button.on_hit()
 	$Turret.on_hit()
 	$Rocket.on_hit()
 	

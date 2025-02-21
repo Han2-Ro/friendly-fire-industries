@@ -10,7 +10,8 @@ var bounce_count: int
 func _ready() -> void:
 	#print("new bullet")
 	bounce_count = 0
-	look_at(get_lookat_point(), Vector3.UP, 0)
+	if not dir.is_zero_approx():
+		look_at(get_lookat_point(), Vector3.UP, 0)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
