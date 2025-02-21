@@ -12,7 +12,7 @@ func _ready() -> void:
 	mat = StandardMaterial3D.new()
 	mat.albedo_color = color
 	mat.emission = color
-	
+	mat.emission_energy_multiplier = 8
 	$Button/ButtonSwitch.material_override = mat
 
 func on_hit():

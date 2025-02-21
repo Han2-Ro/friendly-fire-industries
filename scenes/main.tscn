@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cul6wl06g6wvn" path="res://scenes/ui_level_end.tscn" id="6_8y5au"]
 [ext_resource type="PackedScene" uid="uid://blaupr70ttbg4" path="res://scenes/levels/lvl_multiple_turrets_intro.tscn" id="6_qw3fj"]
 [ext_resource type="PackedScene" uid="uid://cidnep6m6bpdf" path="res://scenes/levels/lvl_turret_button_bounce.tscn" id="7_ushab"]
-[ext_resource type="PackedScene" path="res://scenes/levels/lvl_rocket_intro.tscn" id="8_x1r6n"]
+[ext_resource type="PackedScene" uid="uid://q5840d0hslr3" path="res://scenes/levels/lvl_rocket_intro.tscn" id="8_x1r6n"]
 [ext_resource type="PackedScene" uid="uid://c618q5dlcwdr" path="res://scenes/levels/lvl_chain_reaction1/lvl_chain_reaction1.tscn" id="9_p7c4y"]
 
 [node name="Main" type="Node3D" node_paths=PackedStringArray("end_screen")]
