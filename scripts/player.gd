@@ -125,6 +125,7 @@ func death():
 	var broken_player_instance = player_kaputt.instantiate()
 	broken_player_instance.global_transform = player_body.global_transform
 	get_parent().add_child(broken_player_instance)
+
 func _on_area_3d_area_entered(area: Area3D) -> void:
 	if area.is_in_group("block_player"):
 		if area.get_parent().has_method("on_hit"):
