@@ -1,6 +1,5 @@
-[gd_scene load_steps=18 format=3 uid="uid://rpmycin7vdrd"]
+[gd_scene load_steps=17 format=3 uid="uid://rpmycin7vdrd"]
 
-[ext_resource type="Script" path="res://scenes/levels/lvl_button_intro.gd" id="1_ip3df"]
 [ext_resource type="PackedScene" uid="uid://cyd8t3qn34lmk" path="res://assets/button_intro_map.blend" id="1_kf7s6"]
 [ext_resource type="PackedScene" uid="uid://c38ebp5143i5x" path="res://scenes/level_camera.tscn" id="2_4yf57"]
 [ext_resource type="PackedScene" uid="uid://dhqp7mex168hw" path="res://assets/ToolCart.blend" id="2_cyr88"]
@@ -27,7 +26,6 @@ _data = {
 point_count = 2
 
 [node name="Level_ButtonIntro" type="Node3D"]
-script = ExtResource("1_ip3df")
 
 [node name="button_intro_map" parent="." instance=ExtResource("1_kf7s6")]
 

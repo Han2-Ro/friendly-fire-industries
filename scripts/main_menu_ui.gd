@@ -10,7 +10,7 @@ extends Control
 func _ready() -> void:
 	main_menu_ui.visible = true
 	options_menu.visible = true
-	GlobalPlayer.stream_paused = true
+	GlobalPlayer.stop()
 	
 func _on_start_pressed() -> void:
 	click_audio_player.play()
