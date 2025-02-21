@@ -14,7 +14,7 @@ func _physics_process(delta: float) -> void:
 	if player != null:
 		look_at(player.global_position, Vector3.UP)
 		velocity = (player.global_position - global_position).normalized() * speed * delta
-		if global_position.distance_to(player.position) < 2:
+		if global_position.distance_to(player.position) < 1.5:
 			on_hit()
 	move_and_slide()
 

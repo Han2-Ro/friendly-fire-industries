@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://dme01ctmicfat"]
+[gd_scene load_steps=10 format=3 uid="uid://dme01ctmicfat"]
 
 [ext_resource type="Script" path="res://scripts/drone.gd" id="1_c5x0s"]
-[ext_resource type="PackedScene" uid="uid://dx7lyhbtsvvhv" path="res://Assets/Drohne.blend" id="2_4tilh"]
+[ext_resource type="PackedScene" uid="uid://dx7lyhbtsvvhv" path="res://assets/Drohne.blend" id="2_4tilh"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_uonj2"]
 height = 2.87292
@@ -45,7 +45,15 @@ _data = {
 }
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_33lkn"]
-radius = 2.5
+radius = 2.04802
+
+[sub_resource type="TorusMesh" id="TorusMesh_mciy3"]
+inner_radius = 1.05
+outer_radius = 1.1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_is3e5"]
+transparency = 1
+albedo_color = Color(1, 0, 0, 0.643137)
 
 [node name="Drone" type="CharacterBody3D"]
 script = ExtResource("1_c5x0s")
@@ -70,5 +78,10 @@ collision_mask = 8388612
 [node name="CollisionShape3D" type="CollisionShape3D" parent="KillArea"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.06848, 0)
 shape = SubResource("SphereShape3D_33lkn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="KillArea"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1.5929, 0)
+mesh = SubResource("TorusMesh_mciy3")
+surface_material_override/0 = SubResource("StandardMaterial3D_is3e5")
 
 [editable path="Drohne"]
