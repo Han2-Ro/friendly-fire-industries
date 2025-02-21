@@ -12,15 +12,10 @@ func _ready() -> void:
 	options_menu.visible = true
 	GlobalPlayer.stream_paused = true
 	
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-		pass
-
 func _on_start_pressed() -> void:
 	click_audio_player.play()
 	get_tree().change_scene_to_file("res://scenes/main.tscn")
-	EventBus.in_menu.emit()
+	GameState.current_level = 0
 
 func _on_options_pressed() -> void:
 	click_audio_player.play()
