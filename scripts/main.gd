@@ -56,8 +56,10 @@ func _input(event: InputEvent) -> void:
 			Engine.time_scale = 1
 			paused = false
 		else:
+			end_screen.reset()
 			end_screen.show()
 			paused = true
 			Engine.time_scale = 0
+
 func reset_game():
 	pass

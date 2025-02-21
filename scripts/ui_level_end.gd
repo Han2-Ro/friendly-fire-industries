@@ -6,7 +6,7 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	EventBus.level_end.connect(_on_level_end)
-	next_level_button.visible = false
+	reset()
 
 func _on_level_end(success: bool) -> void:
 	if status_label != null:
@@ -16,3 +16,7 @@ func _on_level_end(success: bool) -> void:
 	
 func _on_menu_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/levels/main_menu/main_menu.tscn")
+
+func reset():
+	next_level_button.visible = false
+	status_label.text = "In Progress"
