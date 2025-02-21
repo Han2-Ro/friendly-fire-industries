@@ -6,6 +6,7 @@ extends StaticBody3D
 @export var targets: Array[Node3D]
 @export var seconds_between_shots: float = 3
 @export var seconds_being_open: float = 2
+@export var seconds_before_first_shot: float = 2
 
 @onready var AnimPlayer = $AnimationPlayer
 @onready var explodeparticle = preload("res://scenes/particles/explosion.tscn")
@@ -15,18 +16,24 @@ var i_target: int = 0
 
 var is_open: bool = false
 var is_hitable: bool = false
-
+var first_shot: bool = true
 func _physics_process(delta: float) -> void:
 	time_since_last_action += delta
 	
 	if is_open and time_since_last_action >= seconds_being_open:
 		AnimPlayer.play("Close")
 		time_since_last_action = 0
-	elif !is_open and time_since_last_action >= seconds_between_shots:
-		AnimPlayer.play("Open")
-		time_since_last_action = 0
-		
-		set_hitable(true)
+	elif !is_open:
+		var wait_time: float = 0
+		if first_shot:
+			wait_time = seconds_before_first_shot
+		else:
+			wait_time = seconds_between_shots
+		if time_since_last_action >= wait_time:
+			AnimPlayer.play("Open")
+			time_since_last_action = 0
+			
+			set_hitable(true)
 
 
 func launch_mine():

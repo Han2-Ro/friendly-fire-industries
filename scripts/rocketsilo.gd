@@ -10,11 +10,13 @@ extends StaticBody3D
 @onready var explodeparticle = preload("res://scenes/particles/explosion.tscn")
 @onready var explosive_scene = preload("res://scenes/rocket.tscn")
 @onready var  silo_broken = preload("res://scenes/rocket_silo_broken.tscn")
+@export var seconds_before_first_shot: float = 2
 var time_since_last_action: float = seconds_between_shots
 var i_target: int = 0
 
 var is_open: bool = false
 var is_hitable: bool = false
+var first_shot: bool = true
 
 func _physics_process(delta: float) -> void:
 	time_since_last_action += delta
@@ -22,11 +24,17 @@ func _physics_process(delta: float) -> void:
 	if is_open and time_since_last_action >= seconds_being_open:
 		AnimPlayer.play("Close")
 		time_since_last_action = 0
-	elif !is_open and time_since_last_action >= seconds_between_shots:
-		AnimPlayer.play("Open")
-		time_since_last_action = 0
-		
-		set_hitable(true)
+	elif !is_open:
+		var wait_time: float = 0
+		if first_shot:
+			wait_time = seconds_before_first_shot
+		else:
+			wait_time = seconds_between_shots
+		if time_since_last_action >= wait_time:
+			AnimPlayer.play("Open")
+			time_since_last_action = 0
+			
+			set_hitable(true)
 
 
 func launch_explosive():
@@ -71,6 +79,7 @@ func _on_animation_finished(anim_name: StringName) -> void:
 		launch_explosive()
 		is_open = true
 		time_since_last_action = 0
+		first_shot = false
 	else:
 		is_open = false
 		set_hitable(false)

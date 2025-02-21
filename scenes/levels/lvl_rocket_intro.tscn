@@ -56,13 +56,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.60949)
 shape = SubResource("ConcavePolygonShape3D_6p4fc")
 
 [node name="Rocketsilo" parent="." node_paths=PackedStringArray("targets") instance=ExtResource("9_t83oj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.601039, 0, -3.09464)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.601039, 0, -3.0099)
 incline = 5.0
 targets = [NodePath("Target")]
-seconds_between_shots = 5.0
+seconds_between_shots = 10.0
+seconds_being_open = 1.0
 
 [node name="Target" type="Node3D" parent="Rocketsilo"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.81343, 0.205444, 3.09234)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.81343, 0.0818197, 3.09234)
 
 [node name="Turret" parent="." instance=ExtResource("10_g5reg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.21248, 0, 2.09716)
@@ -91,10 +92,10 @@ transform = Transform3D(0.976015, 0, 0.2177, 0, 1, 0, -0.2177, 0, 0.976015, 0, 0
 texture = SubResource("ViewportTexture_btqvs")
 
 [node name="TrafficCone2" parent="." instance=ExtResource("12_tunet")]
-transform = Transform3D(0.86481, 0, -0.5021, 0, 1, 0, 0.5021, 0, 0.86481, 2.16591, 0, -2.29514)
+transform = Transform3D(0.86481, 0, -0.5021, 0, 1, 0, 0.5021, 0, 0.86481, 2.39092, 0, -2.58091)
 
 [node name="TrafficCone3" parent="." instance=ExtResource("12_tunet")]
-transform = Transform3D(0.86481, 0, -0.5021, 0, 1, 0, 0.5021, 0, 0.86481, 0.489697, 0, -1.10459)
+transform = Transform3D(0.86481, 0, -0.5021, 0, 1, 0, 0.5021, 0, 0.86481, 0.204281, 0, -1.10459)
 
 [node name="WarningTape2" parent="." instance=ExtResource("13_nrj5f")]
 transform = Transform3D(0.386421, 0, 0.922322, 0, 1, 0, -0.922322, 0, 0.386421, 2.04915, 0.871041, -2.75338)
@@ -106,13 +107,13 @@ transform = Transform3D(0.151382, 0, 0.988475, 0, 1, 0, -0.988475, 0, 0.151382, 
 transform = Transform3D(0.151382, 0, 0.988475, 0, 1, 0, -0.988475, 0, 0.151382, 2.3542, 0, -3.64828)
 
 [node name="WarningTape3" parent="." instance=ExtResource("13_nrj5f")]
-transform = Transform3D(0.926391, 0, -0.376564, 0, 1, 0, 0.376564, 0, 0.926391, -3.01336, 0.871041, -1.27975)
+transform = Transform3D(0.926391, 0, -0.376564, 0, 1, 0, 0.376564, 0, 0.926391, -3.01336, 0.871041, -1.23367)
 
 [node name="WarningTapePole4" parent="." instance=ExtResource("14_6vcdd")]
-transform = Transform3D(0.990034, 0, -0.140832, 0, 1, 0, 0.140832, 0, 0.990034, -3.86014, 0, -1.67476)
+transform = Transform3D(0.990034, 0, -0.140832, 0, 1, 0, 0.140832, 0, 0.990034, -3.86014, 0, -1.63248)
 
 [node name="WarningTapePole5" parent="." instance=ExtResource("14_6vcdd")]
-transform = Transform3D(0.90187, 0, -0.432007, 0, 1, 0, 0.432007, 0, 0.90187, -2.15313, 0, -1.03991)
+transform = Transform3D(0.90187, 0, -0.432007, 0, 1, 0, 0.432007, 0, 0.90187, -2.22561, 0, -0.965935)
 
 [connection signal="button_hit" from="Button" to="Door" method="toggle_door"]
 
