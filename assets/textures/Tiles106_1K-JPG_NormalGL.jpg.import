@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://26ps007xm7rr"
-path.s3tc="res://.godot/imported/Tiles107_1K-JPG_NormalDX.jpg-0134adc95cb0fefb303fdb7f538f324c.s3tc.ctex"
+uid="uid://q1xhg3ay3184"
+path.s3tc="res://.godot/imported/Tiles106_1K-JPG_NormalGL.jpg-61c65019d6341d8d9640de1c8975e355.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/textures/Tiles107_1K-JPG_NormalDX.jpg"
-dest_files=["res://.godot/imported/Tiles107_1K-JPG_NormalDX.jpg-0134adc95cb0fefb303fdb7f538f324c.s3tc.ctex"]
+source_file="res://assets/textures/Tiles106_1K-JPG_NormalGL.jpg"
+dest_files=["res://.godot/imported/Tiles106_1K-JPG_NormalGL.jpg-61c65019d6341d8d9640de1c8975e355.s3tc.ctex"]
 
 [params]
 
@@ -25,7 +25,7 @@ compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=1
-roughness/src_normal="res://assets/textures/Tiles107_1K-JPG_NormalDX.jpg"
+roughness/src_normal="res://assets/textures/Tiles106_1K-JPG_NormalGL.jpg"
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false
