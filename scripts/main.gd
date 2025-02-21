@@ -29,10 +29,6 @@ func _on_restart_pressed() -> void:
 func _on_next_level_pressed() -> void:
 	current_level.queue_free()
 	GameState.current_level += 1
-	# Start playing Music in First Level after Intro
-	# TODO: don't hard code
-	if GameState.current_level == 1:
-		$LevelMusic.play()
 	if GameState.current_level >= levels.size():
 		printerr("No more levels: Exiting")
 		get_tree().quit()

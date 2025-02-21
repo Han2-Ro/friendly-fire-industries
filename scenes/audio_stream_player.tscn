@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bh7ig1mgtt2fq"]
+
+[ext_resource type="Script" path="res://scripts/audio_stream_player.gd" id="1_yjhhs"]
+[ext_resource type="AudioStream" uid="uid://cofl8v8h3qh00" path="res://assets/music/Future-Industry-1.mp3" id="2_7tts8"]
+
+[node name="audio_player" type="AudioStreamPlayer"]
+stream = ExtResource("2_7tts8")
+script = ExtResource("1_yjhhs")
+
+[connection signal="finished" from="." to="." method="_on_finished"]
