@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=3 uid="uid://cmmn7bm0k3epj"]
+
+[ext_resource type="PackedScene" uid="uid://c38ebp5143i5x" path="res://scenes/level_camera.tscn" id="1_uhk1p"]
+[ext_resource type="PackedScene" uid="uid://dnfpmel15rp0g" path="res://scenes/door.tscn" id="2_8gyle"]
+[ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="3_vbcmm"]
+[ext_resource type="PackedScene" uid="uid://dt2b2acdq52cw" path="res://scenes/button.tscn" id="4_uxkrm"]
+[ext_resource type="PackedScene" uid="uid://d3nou6cf5g10q" path="res://assets/levels_blend/drone_intro_map.blend" id="5_4ku25"]
+[ext_resource type="PackedScene" uid="uid://dme01ctmicfat" path="res://scenes/drone.tscn" id="6_e7fom"]
+
+[sub_resource type="Curve3D" id="Curve3D_ystvf"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -9.0677, 0.188526, 8.9571, 0, 0, 0, 0, 0, 0, -8.98388, 0.188526, 0.0277618, 0, 0, 0, 0, 0, 0, -8.04101, 0.188526, -0.962636, 0, 0, 0, 0, 0, 0, -4.36578, 0.188526, -0.976718, 0, 0, 0, 0, 0, 0, -3.38009, 0.188526, 0.0934616, 0, 0, 0, 0, 0, 0, -3.39581, 0.188526, 5.54786, 0, 0, 0, 0, 0, 0, -2.3118, 0.188526, 6.48406, 0, 0, 0, 0, 0, 0, 6.37673, 0.188526, 6.54976, 0, 0, 0, 0, 0, 0, 7.44431, 0.188526, 5.46574, 0, 0, 0, 0, 0, 0, 7.46739, 0.188404, -5.53826),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 10
+
+[node name="Level_DrroneIntro" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="Camera3D" parent="." instance=ExtResource("1_uhk1p")]
+transform = Transform3D(1, 0, 0, 0, 0.224951, 0.97437, 0, -0.97437, 0.224951, 0, 20, 4.31)
+current = true
+
+[node name="Door" parent="." instance=ExtResource("2_8gyle")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.84462, 0, -1.01818)
+
+[node name="Path3D" type="Path3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00134277, -0.0864754, -0.0320168)
+curve = SubResource("Curve3D_ystvf")
+
+[node name="Player" parent="Path3D" instance=ExtResource("3_vbcmm")]
+transform = Transform3D(0.999941, 0, -0.00938619, 0, 0.999986, 0, 0.0093862, 0, 0.99994, -9.0677, 0.188526, 8.9571)
+ammo = 4
+slowmotion_uses = 1
+
+[node name="Button" parent="." instance=ExtResource("4_uxkrm")]
+transform = Transform3D(-1, 0, 7.26395e-06, 0, 1, 0, -7.26395e-06, 0, -1, -5.82178, 1.06674, 1.72689)
+
+[node name="drone_intro_map" parent="." instance=ExtResource("5_4ku25")]
+
+[node name="Drone" parent="." instance=ExtResource("6_e7fom")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 69.9089, 0, 179.056)
+speed = 120
+
+[node name="Drone2" parent="." instance=ExtResource("6_e7fom")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74.0011, 0, 0)
+
+[node name="Drone3" parent="." instance=ExtResource("6_e7fom")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.7352, 0, -7.97024)
+
+[connection signal="button_hit" from="Button" to="Door" method="toggle_door"]
