@@ -58,5 +58,5 @@ func on_hit():
 				print("skipping self")
 				continue
 			print("destroying frfr: ", body)
-			get_tree().create_timer(.3).timeout.connect(body.on_hit)
+			get_tree().create_timer(.15).timeout.connect(body.on_hit)
 	queue_free()
