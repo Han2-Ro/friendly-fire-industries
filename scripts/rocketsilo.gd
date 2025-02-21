@@ -9,7 +9,7 @@ extends StaticBody3D
 @onready var AnimPlayer = $AnimationPlayer
 @onready var explodeparticle = preload("res://scenes/particles/explosion.tscn")
 @onready var explosive_scene = preload("res://scenes/rocket.tscn")
-
+@onready var  silo_broken = preload("res://scenes/rocket_silo_broken.tscn")
 var time_since_last_action: float = seconds_between_shots
 var i_target: int = 0
 
@@ -52,6 +52,15 @@ func set_hitable(new_hitable: bool):
 func on_hit():
 	if is_hitable:
 		print("explosive thrower hit")
+		var broken_silo_instance = silo_broken.instantiate()
+		broken_silo_instance.global_transform = self.global_transform
+		get_parent().add_child(broken_silo_instance)
+		
+		var explosion_instance = explodeparticle.instantiate()
+		explosion_instance.global_transform = self.global_transform
+		get_parent().add_child(explosion_instance)
+		explosion_instance.explode()
+	
 		queue_free()
 	else:
 		print("explosive thrower blocked")

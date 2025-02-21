@@ -10,6 +10,7 @@ extends Control
 func _ready() -> void:
 	main_menu_ui.visible = true
 	options_menu.visible = false
+	GlobalPlayer.stream_paused = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

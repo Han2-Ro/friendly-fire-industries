@@ -4,6 +4,7 @@ extends CharacterBody3D
 
 @onready var explodeparticle = preload("res://scenes/particles/explosion.tscn")
 @onready var kill_area: Area3D = $KillArea
+@onready var drone_broken = preload("res://scenes/drone_broken.tscn")
 var player: Node3D
 
 func _ready() -> void:
@@ -28,5 +29,9 @@ func on_hit():
 	for body in bodies:
 		if body.has_method("on_hit"):
 			get_tree().create_timer(.1).timeout.connect(body.on_hit)
-
+	
+	var broken_drone_instance = drone_broken.instantiate()
+	broken_drone_instance.global_transform = self.global_transform
+	get_parent().add_child(broken_drone_instance)
+	
 	queue_free()

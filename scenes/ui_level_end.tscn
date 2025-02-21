@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cul6wl06g6wvn"]
+[gd_scene load_steps=6 format=3 uid="uid://cul6wl06g6wvn"]
 
 [ext_resource type="Script" path="res://scripts/ui_level_end.gd" id="1_dt46y"]
 [ext_resource type="Texture2D" uid="uid://dtagpag7eaum5" path="res://assets/icons/restart.svg" id="1_thasw"]
+[ext_resource type="Theme" uid="uid://dhgodsmrdod46" path="res://assets/ui_themes/main_menu_UI.tres" id="2_k206l"]
 [ext_resource type="Texture2D" uid="uid://ck7y0b7v033if" path="res://assets/icons/arrow_right.svg" id="3_2sd8s"]
 [ext_resource type="Texture2D" uid="uid://cguhrvreotte0" path="res://assets/icons/haus.svg" id="4_8xs06"]
 
@@ -23,12 +24,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -220.5
-offset_top = -106.5
-offset_right = 220.5
-offset_bottom = -17.5
+offset_left = -242.008
+offset_top = -95.485
+offset_right = 242.007
+offset_bottom = -6.48499
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_k206l")
 
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 1
@@ -37,6 +39,7 @@ anchor_bottom = 1.0
 offset_left = 17.0
 offset_right = 257.0
 grow_vertical = 2
+theme = ExtResource("2_k206l")
 theme_override_font_sizes/font_size = 36
 text = "Test Result:"
 vertical_alignment = 1
@@ -53,7 +56,6 @@ grow_horizontal = 0
 grow_vertical = 2
 theme_override_font_sizes/font_size = 36
 text = "In Progress"
-horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="RestartButton" type="Button" parent="."]
@@ -93,16 +95,20 @@ flat = true
 
 [node name="MenuButton" type="Button" parent="."]
 layout_mode = 1
-anchors_preset = 4
+anchors_preset = 8
+anchor_left = 0.5
 anchor_top = 0.5
+anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 400.0
+offset_left = -224.0
 offset_top = 16.0
-offset_right = 1208.0
+offset_right = 584.0
 offset_bottom = 824.0
+grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.16, 0.16)
+scale = Vector2(0.159998, 0.159998)
+tooltip_text = "go to menu"
 icon = ExtResource("4_8xs06")
 flat = true
 
-[connection signal="pressed" from="MenuButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]

@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 EventBus="*res://scripts/event_bus.gd"
 GameState="*res://scripts/game_state.gd"
+GlobalPlayer="*res://scripts/audio_stream_player.gd"
 
 [display]
 
@@ -73,7 +74,7 @@ slow_motion={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
-environment/defaults/default_clear_color=Color(0, 0, 0, 1)
+environment/defaults/default_clear_color=Color(0.18359, 0.18359, 0.18359, 1)
 anti_aliasing/quality/msaa_3d=2
 anti_aliasing/quality/screen_space_aa=1
 lights_and_shadows/quality/msaa_3d=0

@@ -13,7 +13,6 @@ func _on_level_end(success: bool) -> void:
 		status_label.text = "Success" if success else "Fail"
 	if next_level_button != null:
 		next_level_button.visible = success
-
-
-func _on_button_pressed() -> void:
+	
+func _on_menu_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/levels/main_menu/main_menu.tscn")

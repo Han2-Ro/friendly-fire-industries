@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://evncl20sqe0j"]
+
+[ext_resource type="PackedScene" uid="uid://bw4jcts1j3fqv" path="res://assets/Drohne_broken.blend" id="1_hnp7u"]
+
+[node name="DroneBroken" type="Node3D"]
+
+[node name="Drohne_broken" parent="." instance=ExtResource("1_hnp7u")]
