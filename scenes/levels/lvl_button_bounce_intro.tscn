@@ -30,7 +30,7 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 8.166,
 curve = SubResource("Curve3D_ystvf")
 
 [node name="Player" parent="Path3D" instance=ExtResource("4_wir5o")]
-transform = Transform3D(8.90046e-05, 4.49099e-06, -0.999987, -2.27371e-13, 0.999986, 4.491e-06, 0.999988, -3.99496e-10, 8.90045e-05, -8.25281, 0.188477, -1.79224)
+transform = Transform3D(8.88854e-05, 4.49693e-06, -0.999987, 0, 0.999986, 4.49693e-06, 0.999988, -3.99716e-10, 8.88853e-05, -8.25281, 0.188477, -1.79224)
 
 [node name="Button" parent="." instance=ExtResource("5_d1364")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.278164, 1.1423, 3.25899)
