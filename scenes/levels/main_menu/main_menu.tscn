@@ -129,3 +129,4 @@ scale = Vector2(1.00702, 1)
 mouse_filter = 2
 
 [node name="Preload" parent="." instance=ExtResource("11_xrwn4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -73.9924, 28.1329)
