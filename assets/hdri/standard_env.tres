@@ -12,3 +12,4 @@ sky_material = SubResource("PanoramaSkyMaterial_cd46w")
 sky = SubResource("Sky_kiybk")
 ambient_light_source = 3
 reflected_light_source = 2
+glow_enabled = true

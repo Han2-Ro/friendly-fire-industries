@@ -38,7 +38,7 @@ curve = SubResource("Curve3D_ystvf")
 transform = Transform3D(8.88854e-05, 4.49693e-06, -0.999987, 0, 0.999986, 4.49693e-06, 0.999988, -3.99716e-10, 8.88853e-05, -8.25281, 0.188477, -1.79224)
 
 [node name="Button" parent="." instance=ExtResource("5_d1364")]
-transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0.278164, 1.1423, 3.25899)
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0.328396, 1.1423, 3.25899)
 
 [node name="button_bounce_intro_map" parent="." instance=ExtResource("5_ca2m0")]
 
