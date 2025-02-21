@@ -1,6 +1,5 @@
 extends AudioStreamPlayer
 
-
 const level_music = preload("res://assets/music/Future-Industry-1.mp3")
 
 func _play_music(music: AudioStream, volume = -10.0):
