@@ -4,6 +4,7 @@ class_name Rocket
 @onready var kill_area: Area3D = $KillArea
 @onready var explodeparticle = preload("res://scenes/particles/explosion.tscn")
 @onready var model = $Rocket
+@onready var particles = $FireParticles
 
 var target: Vector3 = global_position
 var speed: float
@@ -27,6 +28,7 @@ func _process(delta: float) -> void:
 		radius_visible = true
 		$AnimationPlayer.play("show_radius")
 	if position.y < 0:
+		particles.amount_ratio = .15
 		global_position = target
 		#rotation_degrees.x = -90
 
