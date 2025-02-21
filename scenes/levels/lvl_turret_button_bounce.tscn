@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bf57hwg3x1t0m"]
+[gd_scene load_steps=10 format=3 uid="uid://cidnep6m6bpdf"]
 
 [ext_resource type="PackedScene" uid="uid://c38ebp5143i5x" path="res://scenes/level_camera.tscn" id="1_xb481"]
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="2_ltpxp"]
@@ -31,7 +31,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00134277, -0.0864754, -0.03
 curve = SubResource("Curve3D_ystvf")
 
 [node name="Player" parent="Path3D" instance=ExtResource("2_ltpxp")]
-transform = Transform3D(-0.999961, 0, -0.00495004, 0, 0.999986, 0, 0.00495004, 0, -0.99996, -8.28076, 0.188526, -1.93722)
+transform = Transform3D(-0.999961, 0, -0.00495004, 0, 0.999986, 0, 0.00495005, 0, -0.99996, -8.28076, 0.188526, -1.93722)
 
 [node name="turret_intro_map" parent="." instance=ExtResource("3_2uyrs")]
 
@@ -55,6 +55,8 @@ transform = Transform3D(-7.39508e-06, 0, -1, 0, 1, 0, 1, 0, -7.39508e-06, -5.406
 
 [node name="Door" parent="." instance=ExtResource("6_q722j")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.18217, -0.359916, 2.60505)
+
+[connection signal="button_hit" from="Button" to="Door" method="toggle_door"]
 
 [editable path="turret_intro_map"]
 [editable path="Turret"]
