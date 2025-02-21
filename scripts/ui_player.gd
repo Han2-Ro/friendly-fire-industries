@@ -15,8 +15,8 @@ var duration: float = 2
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	bar_width = size.x
-	bar_pos_x = position.x
+	bar_width = slowmotion_bar.size.x
+	bar_pos_x = slowmotion_bar.position.x
 	slowmotion_bar.size.x = 0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
