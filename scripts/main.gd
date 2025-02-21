@@ -5,6 +5,7 @@ extends Node3D
 @export var levels: Array[PackedScene]
 var current_level: Node
 var paused := false
+
 func _ready() -> void:
 	#Input.mouse_mode = Input.MOUSE_MODE_CONFINED
 	EventBus.next_level.connect(_on_next_level_pressed)
@@ -33,6 +34,7 @@ func _on_next_level_pressed() -> void:
 	# Start playing Music in First Level after Intro
 	# TODO: don't hard code
 	if GameState.current_level == 1:
+		AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), false) # if player presses start to quickly
 		GlobalPlayer.play_music_level()
 
 	if GameState.current_level >= levels.size():
