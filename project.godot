@@ -27,6 +27,10 @@ window/size/viewport_width=1280
 window/size/viewport_height=720
 window/size/always_on_top=true
 
+[global_group]
+
+block_player="if the player drive into this he dies"
+
 [input]
 
 shoot={

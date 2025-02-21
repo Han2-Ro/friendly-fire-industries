@@ -39,7 +39,7 @@ collision_layer = 8388608
 collision_mask = 8388608
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00683594, 0.862793, 0.0100708)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00683594, 0.868277, 0.0100708)
 shape = SubResource("BoxShape3D_c57xa")
 
 [node name="PlayerHurtCharacter" type="CharacterBody3D" parent="."]
