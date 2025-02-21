@@ -17,11 +17,11 @@ var old_pos: Vector3
 func _ready() -> void:
 	old_pos = global_position
 	distance = global_position.distance_to(target)
-	move_mine(0.001)
+	move(0.001)
 
 func _process(delta: float) -> void:
 	if position.y > 0:
-		move_mine(delta)
+		move(delta)
 	if position.y <= 0 and not radius_visible:
 		print("showing radius")
 		radius_visible = true
@@ -30,7 +30,7 @@ func _process(delta: float) -> void:
 		global_position = target
 		#rotation_degrees.x = -90
 
-func move_mine(delta: float):
+func move(delta: float):
 	var dir = (target - global_position)
 	dir.y = 0
 	dir = dir.normalized()
@@ -41,7 +41,7 @@ func move_mine(delta: float):
 	#rotate
 	var flight_dir = (global_position - old_pos).normalized()
 	var at = global_position + flight_dir
-	if (at.dot(Vector3.UP) > 0.001):
+	if (at.dot(Vector3.UP) > 0.001) or position == at:
 		look_at(at, Vector3.UP, 0)
 	old_pos = global_position
 

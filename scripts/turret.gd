@@ -21,7 +21,6 @@ var player_alive: bool
 @onready var turret_low_poly: Node3D = $TurretLowPoly
 @onready var turret_tower: Node3D = $TurretLowPoly/Cylinder
 @onready var beep_player: AudioStreamPlayer3D = $BeepPlayer
-@onready var music_player: AudioStreamPlayer = $MusicPlayer
 
 func _ready():
 	timer.one_shot = true
@@ -126,7 +125,7 @@ func shoot():
 	instance.dir = direction
 	instance.INH_MAX_BOUNCES = 0
 	get_parent().get_parent().add_child(instance)
-	instance.global_position = barrel.global_position + direction
+	instance.global_position = barrel.global_position + direction + Vector3(0, .84, 0)
 	
 	barrel.translate_object_local(Vector3(0, 0, recoil_distance))
 	
@@ -134,6 +133,7 @@ func shoot():
 	
 	barrel.translate_object_local(Vector3(0, 0, -recoil_distance))
 	health_bar.value = 0
+
 func on_hit():
 	stop_countdown()
 	var explosion_instance = explodeparticle.instantiate()
