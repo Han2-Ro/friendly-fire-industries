@@ -5,7 +5,7 @@ uniform float cone_angle : hint_range(0.0, 360.0) = 90.0;
 uniform float min_angle : hint_range(0.0, 360.0) = 5.0;
 uniform float current_angle : hint_range(0.0, 360.0) = 90.0;
 uniform float turret_rotation : hint_range(0.0, 360.0) = 0.0;
-uniform vec4 cone_color : source_color = vec4(1.0, 0.0, 0.0, 1.0); // Rotes RGBA
+uniform vec4 cone_color : source_color = vec4(1.0, 0.0, 0.0, .2); // Rotes RGBA
 
 void fragment() {
     // Map UV origin to center of plane
