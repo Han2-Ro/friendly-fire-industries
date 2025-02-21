@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://b6qld0vjlight"]
+
+[ext_resource type="Script" path="res://scripts/preload.gd" id="1_67uhk"]
+[ext_resource type="PackedScene" uid="uid://bg8xfgyrgw4md" path="res://scenes/bullet.tscn" id="1_lvvpc"]
+[ext_resource type="PackedScene" uid="uid://dt2b2acdq52cw" path="res://scenes/button.tscn" id="2_68j88"]
+[ext_resource type="PackedScene" uid="uid://b8lky0yk4q64s" path="res://scenes/turret.tscn" id="3_8jaiv"]
+[ext_resource type="PackedScene" uid="uid://cf8pivhpqj2mv" path="res://scenes/rocket.tscn" id="4_surv5"]
+
+[node name="Preload" type="Node3D"]
+script = ExtResource("1_67uhk")
+
+[node name="Bullet" parent="." instance=ExtResource("1_lvvpc")]
+
+[node name="Button" parent="." instance=ExtResource("2_68j88")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6705, 0, -0.0599753)
+
+[node name="Turret" parent="." instance=ExtResource("3_8jaiv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.18147, 0, 0.0489408)
+
+[node name="Rocket" parent="." instance=ExtResource("4_surv5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.10904, 0, 0)
+top_level = false
