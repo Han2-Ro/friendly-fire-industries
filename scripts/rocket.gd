@@ -5,7 +5,7 @@ class_name Rocket
 @onready var explodeparticle = preload("res://scenes/particles/explosion.tscn")
 @onready var model = $Rocket
 
-var target: Vector3
+var target: Vector3 = global_position
 var speed: float
 var distance: float
 var incline: float
