@@ -54,5 +54,9 @@ func on_hit():
 	print(self, "destroying: ", bodies)
 	for body in bodies:
 		if body.has_method("on_hit"):
-			get_tree().create_timer(.1).timeout.connect(body.on_hit)
+			if body == self:
+				print("skipping self")
+				continue
+			print("destroying frfr: ", body)
+			get_tree().create_timer(.3).timeout.connect(body.on_hit)
 	queue_free()
