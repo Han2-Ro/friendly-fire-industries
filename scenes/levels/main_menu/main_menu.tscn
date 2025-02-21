@@ -60,7 +60,7 @@ script = SubResource("GDScript_cy51l")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0102692, 0, 0)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-1.00093, -0.00521855, -0.0380962, 0, 0.992404, -0.135943, 0.038452, -0.135843, -0.991673, -0.323, 0.082, -9.184)
+transform = Transform3D(-0.999263, -0.00520987, -0.0380328, 0, 0.990748, -0.135716, 0.038388, -0.135616, -0.990017, -0.323, 0.082, -9.184)
 environment = SubResource("Environment_uifkp")
 attributes = SubResource("CameraAttributesPractical_j4ior")
 fov = 17.9
@@ -129,4 +129,4 @@ scale = Vector2(1.00702, 1)
 mouse_filter = 2
 
 [node name="Preload" parent="." instance=ExtResource("11_xrwn4")]
-transform = Transform3D(0.14254, 0, 0, 0, 0.14254, 0, 0, 0, 0.14254, 0.693782, 0.327118, -0.185077)
+transform = Transform3D(-6.05817e-10, -0.0138595, 0, 0.0138595, -6.05817e-10, 0, 0, 0, 0.0138595, -2.38045, 0.846408, 0.949211)

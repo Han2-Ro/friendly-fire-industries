@@ -19,5 +19,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.18147, 0, 0.0489408)
 rotation_speed = 0.0
 
 [node name="Rocket" parent="." instance=ExtResource("4_surv5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.18795, 0.0622878, -0.0107441)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.188, 0, -0.011)
+top_level = false
+
+[node name="Rocket2" parent="." instance=ExtResource("4_surv5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.188, 0, -0.011)
 top_level = false

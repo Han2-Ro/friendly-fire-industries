@@ -9,5 +9,5 @@ func _ready() -> void:
 	$Turret.on_hit()
 	$Rocket.on_hit()
 	
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(1.2).timeout
 	AudioServer.set_bus_mute(master_bus, false)
