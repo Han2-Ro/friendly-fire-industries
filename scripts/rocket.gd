@@ -10,6 +10,7 @@ var speed: float
 var distance: float
 var incline: float
 var x: float = 0
+var radius_visible: bool = false
 
 var old_pos: Vector3
 
@@ -21,6 +22,10 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if position.y > 0:
 		move_mine(delta)
+	if position.y <= 0 and not radius_visible:
+		print("showing radius")
+		radius_visible = true
+		$AnimationPlayer.play("show_radius")
 	if position.y < 0:
 		global_position = target
 		#rotation_degrees.x = -90

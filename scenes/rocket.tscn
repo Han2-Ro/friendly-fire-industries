@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cf8pivhpqj2mv"]
+[gd_scene load_steps=10 format=3 uid="uid://cf8pivhpqj2mv"]
 
 [ext_resource type="Script" path="res://scripts/rocket.gd" id="1_wduoi"]
 [ext_resource type="PackedScene" uid="uid://cecvu28s6wm8l" path="res://assets/Rocket.blend" id="2_rnh1f"]
@@ -8,7 +8,52 @@ height = 1.8978
 radius = 0.377113
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_7dhua"]
-radius = 2.5
+radius = 2.01786
+
+[sub_resource type="TorusMesh" id="TorusMesh_hmdlm"]
+inner_radius = 1.05
+outer_radius = 1.1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a4cvu"]
+transparency = 1
+albedo_color = Color(1, 0, 0, 0.643137)
+
+[sub_resource type="Animation" id="Animation_sr0tw"]
+resource_name = "show_radius"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(2, 2, 2)]
+}
+
+[sub_resource type="Animation" id="Animation_p34mr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_30ony"]
+_data = {
+"RESET": SubResource("Animation_p34mr"),
+"show_radius": SubResource("Animation_sr0tw")
+}
 
 [node name="Rocket" type="StaticBody3D"]
 top_level = true
@@ -35,9 +80,19 @@ collision_layer = 4
 collision_mask = 4
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="KillArea"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.66175, 0)
 shape = SubResource("SphereShape3D_7dhua")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="KillArea"]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+mesh = SubResource("TorusMesh_hmdlm")
+surface_material_override/0 = SubResource("StandardMaterial3D_a4cvu")
 
 [node name="RemoteTransform3D" type="RemoteTransform3D" parent="."]
 remote_path = NodePath("../KillArea")
 update_rotation = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../KillArea")
+libraries = {
+"": SubResource("AnimationLibrary_30ony")
+}
