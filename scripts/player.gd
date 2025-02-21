@@ -116,6 +116,7 @@ func _on_level_end(_success: bool) -> void:
 	if not _success:
 		death()
 	queue_free()
+
 func death():
 	var explosion_instance = explodeparticle.instantiate()
 	explosion_instance.global_transform = self.global_transform
@@ -127,7 +128,6 @@ func death():
 	get_parent().add_child(broken_player_instance)
 
 func _on_area_3d_area_entered(area: Area3D) -> void:
-	if area.is_in_group("block_player"):
-		if area.get_parent().has_method("on_hit"):
-			area.get_parent().on_hit()
-		EventBus.level_end.emit(false)
+	if area.get_parent().has_method("on_hit"):
+		area.get_parent().on_hit()
+	EventBus.level_end.emit(false)

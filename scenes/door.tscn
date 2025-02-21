@@ -51,8 +51,8 @@ height = 1.76
 [node name="Door" type="Node3D"]
 script = ExtResource("1_cn5x8")
 
-[node name="Area3D" type="Area3D" parent="." groups=["block_player"]]
-collision_layer = 2
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 8388610
 collision_mask = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]

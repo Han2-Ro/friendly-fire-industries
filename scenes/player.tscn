@@ -35,6 +35,8 @@ debug_shape_thickness = 5
 script = ExtResource("2_y0miw")
 
 [node name="Area3D" type="Area3D" parent="."]
+collision_layer = 8388608
+collision_mask = 8388608
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00683594, 0.862793, 0.0100708)

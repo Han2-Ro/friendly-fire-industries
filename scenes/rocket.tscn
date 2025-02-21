@@ -21,7 +21,9 @@ script = ExtResource("1_wduoi")
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0.148577)
 shape = SubResource("CylinderShape3D_0ncmc")
 
-[node name="TriggerArea" type="Area3D" parent="." groups=["block_player"]]
+[node name="TriggerArea" type="Area3D" parent="."]
+collision_layer = 8388608
+collision_mask = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TriggerArea"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0.148577)
