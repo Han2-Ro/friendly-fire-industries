@@ -34,6 +34,9 @@ death_timer = 1.0
 
 [node name="TurretLowPoly" parent="." instance=ExtResource("1_w0i3n")]
 
+[node name="Cylinder" parent="TurretLowPoly" index="1"]
+transform = Transform3D(-4.37113e-08, 0, -0.999999, 0, 1, 0, 0.999999, 0, -4.37113e-08, 0, 0, 0)
+
 [node name="Sprite3D" type="Sprite3D" parent="TurretLowPoly/Cylinder" index="0"]
 transform = Transform3D(-3.21306e-08, 1.30937, -5.71509e-08, 0, -5.72344e-08, -1.30746, -0.7309, -5.54137e-08, 2.56739e-15, -0.00391434, 0.994822, -1.18036)
 texture = SubResource("ViewportTexture_jocne")

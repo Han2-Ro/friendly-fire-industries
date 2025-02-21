@@ -5,11 +5,15 @@ extends Node3D
 @export var tracking_distance: float = 10.0
 @export var tracking_angle: float = 45.0
 @export var death_timer: float = 3.0
+@export_range(-360, 360) var starting_rotation: float = 270
+@export var debug_force_rotation: bool = false
+
 var end_angle: float = 0.0
 var player: Node3D
 var barrel: Node3D
 var targeting: bool = false
 var player_alive: bool
+
 @onready var health_bar = $SubViewport/HealthBar3d
 @onready var timer = $Timer
 @onready var vision_cone = $VisionCone
@@ -27,6 +31,9 @@ func _ready():
 	timer.timeout.connect(_on_timer_timeout)
 	player = get_parent().find_child("Player")
 	barrel = find_child("Cylinder", true, false)
+	
+	barrel.rotation_degrees.y = starting_rotation
+	
 	set_visioncone()
 	
 	var scene_tree = get_tree()
@@ -48,6 +55,10 @@ func set_visioncone():
 	cone_material.set_shader_parameter("turret_rotation", -turret_tower.rotation_degrees.y)
 
 func _process(delta):
+	# for debug
+	if debug_force_rotation:
+		barrel.rotation_degrees.y = starting_rotation
+	
 	if player == null or !target_player(delta):
 		rotate_turret(barrel, delta)
 		

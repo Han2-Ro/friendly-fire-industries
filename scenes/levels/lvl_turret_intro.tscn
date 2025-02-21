@@ -40,10 +40,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.36315, 0, -0.177002)
 rotation_speed = 0.0
 tracking_angle = 30.0
 death_timer = 2.0
-
-[node name="Cylinder" parent="Turret/TurretLowPoly" index="1"]
-transform = Transform3D(0.98506, 0, 0.172204, 0, 1, 0, -0.172204, 0, 0.98506, 0, 0, 0)
+starting_rotation = 10.0
 
 [editable path="turret_intro_map"]
-[editable path="Turret"]
-[editable path="Turret/TurretLowPoly"]
