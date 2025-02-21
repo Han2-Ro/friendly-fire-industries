@@ -23,9 +23,8 @@ shader_parameter/current_angle = 90.0
 shader_parameter/turret_rotation = 0.0
 shader_parameter/cone_color = Color(1, 0, 0, 0.2)
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_r338k"]
-height = 0.798872
-radius = 0.500564
+[sub_resource type="BoxShape3D" id="BoxShape3D_ojes2"]
+size = Vector3(0.920349, 1, 0.918091)
 
 [node name="Turret" type="StaticBody3D"]
 collision_layer = 5
@@ -60,8 +59,8 @@ surface_material_override/0 = SubResource("ShaderMaterial_yvxql")
 script = ExtResource("6_kghs8")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1.75171, 0, -2.13163e-14, 0, 1.75171, 0, 2.13163e-14, 0, 1.75171, 0, 0.619358, 0)
-shape = SubResource("CylinderShape3D_r338k")
+transform = Transform3D(1.75171, 0, -2.13163e-14, 0, 1.75171, 0, 2.13163e-14, 0, 1.75171, -0.00229869, 0.619358, 0.00609421)
+shape = SubResource("BoxShape3D_ojes2")
 
 [node name="Timer" type="Timer" parent="."]
 
