@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d45g7hevvd5m"
-path="res://.godot/imported/Tiles107_1K-JPG_Displacement.jpg-1c732f398a6d52e97eda1e1b2ee8a968.ctex"
+uid="uid://cgon5jbidsth"
+path="res://.godot/imported/Tiles106_1K-JPG_Roughness.jpg-012f989fa109b91341f5a3abec3e8951.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/Tiles107_1K-JPG_Displacement.jpg"
-dest_files=["res://.godot/imported/Tiles107_1K-JPG_Displacement.jpg-1c732f398a6d52e97eda1e1b2ee8a968.ctex"]
+source_file="res://assets/textures/Tiles106_1K-JPG_Roughness.jpg"
+dest_files=["res://.godot/imported/Tiles106_1K-JPG_Roughness.jpg-012f989fa109b91341f5a3abec3e8951.ctex"]
 
 [params]
 
