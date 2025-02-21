@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c38ebp5143i5x" path="res://scenes/level_camera.tscn" id="2_4yf57"]
 [ext_resource type="PackedScene" uid="uid://dnfpmel15rp0g" path="res://scenes/door.tscn" id="3_b7rl2"]
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="4_wir5o"]
-[ext_resource type="PackedScene" uid="uid://dldwm6qwbhk35" path="res://assets/button_bounce_intro_map.blend" id="5_ca2m0"]
+[ext_resource type="PackedScene" uid="uid://dldwm6qwbhk35" path="res://assets/levels_blend/button_bounce_intro_map.blend" id="5_ca2m0"]
 [ext_resource type="PackedScene" uid="uid://dt2b2acdq52cw" path="res://scenes/button.tscn" id="5_d1364"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_8tdts"]
@@ -35,7 +35,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00134277, -0.0864754, -0.03
 curve = SubResource("Curve3D_ystvf")
 
 [node name="Player" parent="Path3D" instance=ExtResource("4_wir5o")]
-transform = Transform3D(8.88854e-05, 4.49693e-06, -0.999987, 0, 0.999986, 4.49693e-06, 0.999988, -3.99716e-10, 8.88852e-05, -8.25281, 0.188477, -1.79224)
+transform = Transform3D(8.88854e-05, 4.49693e-06, -0.999987, 0, 0.999986, 4.49693e-06, 0.999988, -3.99716e-10, 8.88853e-05, -8.25281, 0.188477, -1.79224)
 
 [node name="Button" parent="." instance=ExtResource("5_d1364")]
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0.278164, 1.1423, 3.25899)

@@ -1,8 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://blaupr70ttbg4"]
+[gd_scene load_steps=10 format=3 uid="uid://dfd5bs4tbulo7"]
 
 [ext_resource type="PackedScene" uid="uid://c38ebp5143i5x" path="res://scenes/level_camera.tscn" id="1_scho0"]
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="2_uqumt"]
-[ext_resource type="PackedScene" uid="uid://cgnsxioll86no" path="res://assets/tripple_turret_map.blend" id="3_miupo"]
+[ext_resource type="PackedScene" uid="uid://cgnsxioll86no" path="res://assets/levels_blend/tripple_turret_map.blend" id="3_miupo"]
 [ext_resource type="PackedScene" uid="uid://b8lky0yk4q64s" path="res://scenes/turret.tscn" id="4_p7tmx"]
 
 [sub_resource type="Curve3D" id="Curve3D_ystvf"]
@@ -35,7 +35,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00134277, -0.0864754, -0.03
 curve = SubResource("Curve3D_ystvf")
 
 [node name="Player" parent="Path3D" instance=ExtResource("2_uqumt")]
-transform = Transform3D(1.35456e-05, 1.09876e-05, -0.999964, 0, 0.999979, 1.09875e-05, 0.999962, -1.4884e-10, 1.35457e-05, -10.1346, 0.231739, 2.09237)
+transform = Transform3D(1.3188e-05, 1.09853e-05, -0.999964, 4.5473e-13, 0.999979, 1.09851e-05, 0.999962, -1.45335e-10, 1.3188e-05, -10.1346, 0.231739, 2.09237)
 
 [node name="tripple_turret_map" parent="Path3D" instance=ExtResource("3_miupo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00134277, 0.0864754, 0.0320168)

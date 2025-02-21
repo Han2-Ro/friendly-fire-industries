@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cyd8t3qn34lmk"
-path="res://.godot/imported/button_intro_map.blend-f087a985847061d77825b6ad8952d59a.scn"
+uid="uid://cgnsxioll86no"
+path="res://.godot/imported/tripple_turret_map.blend-7ee6ab858f76b5eb1b32393d8d9401a9.scn"
 
 [deps]
 
-source_file="res://assets/button_intro_map.blend"
-dest_files=["res://.godot/imported/button_intro_map.blend-f087a985847061d77825b6ad8952d59a.scn"]
+source_file="res://assets/levels_blend/tripple_turret_map.blend"
+dest_files=["res://.godot/imported/tripple_turret_map.blend-7ee6ab858f76b5eb1b32393d8d9401a9.scn"]
 
 [params]
 
