@@ -92,11 +92,11 @@ libraries = {
 
 [node name="Sounds" type="Node3D" parent="."]
 
-[node name="NoAccessSound" type="AudioStreamPlayer3D" parent="Sounds"]
+[node name="NoAccessSound" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource("3_73fh8")
 max_polyphony = 10
 
-[node name="AccessSound" type="AudioStreamPlayer3D" parent="Sounds"]
+[node name="AccessSound" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource("4_y44b7")
 max_polyphony = 10
 
