@@ -9,8 +9,9 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	main_menu_ui.visible = true
-	options_menu.visible = false
+	options_menu.visible = true
 	GlobalPlayer.stream_paused = true
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -19,7 +20,7 @@ func _process(delta: float) -> void:
 func _on_start_pressed() -> void:
 	click_audio_player.play()
 	get_tree().change_scene_to_file("res://scenes/main.tscn")
-
+	EventBus.in_menu.emit()
 
 func _on_options_pressed() -> void:
 	click_audio_player.play()

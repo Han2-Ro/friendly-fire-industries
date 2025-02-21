@@ -16,6 +16,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_uqr2g")
 ammo_available_icon = ExtResource("2_07jj8")
 ammo_unavailable_icon = ExtResource("3_guscg")
