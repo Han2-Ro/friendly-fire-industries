@@ -57,7 +57,7 @@ seconds_between_shots = 10.0
 seconds_being_open = 1.0
 
 [node name="Target" type="Node3D" parent="Rocketsilo"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.81343, 0.0818197, 3.09234)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.81343, 0.246701, 3.09234)
 
 [node name="Turret" parent="." instance=ExtResource("10_g5reg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.21248, 0, 2.09716)
