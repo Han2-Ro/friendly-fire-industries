@@ -11,6 +11,7 @@ extends StaticBody3D
 @onready var explosive_scene = preload("res://scenes/rocket.tscn")
 @onready var  silo_broken = preload("res://scenes/rocket_silo_broken.tscn")
 @export var seconds_before_first_shot: float = 2
+@onready var launchsoundplayer: AudioStreamPlayer = $launchsoundplayer
 var time_since_last_action: float = seconds_between_shots
 var i_target: int = 0
 
@@ -49,6 +50,7 @@ func launch_explosive():
 	get_parent().add_child(explosive)
 	# cycle targets
 	i_target = (i_target + 1) % targets.size()
+	launchsoundplayer.play()
 
 func set_hitable(new_hitable: bool):
 	is_hitable = new_hitable

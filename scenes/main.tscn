@@ -16,7 +16,8 @@
 [node name="Main" type="Node3D" node_paths=PackedStringArray("end_screen")]
 script = ExtResource("1_hlc4r")
 end_screen = NodePath("UILevelEnd")
-levels = Array[PackedScene]([ExtResource("2_unlv0"), ExtResource("3_k8pro"), ExtResource("2_xyf22"), ExtResource("4_fetjn"), ExtResource("7_ushab"), ExtResource("6_qw3fj"), ExtResource("8_x1r6n"), ExtResource("9_n3u3s"), ExtResource("9_21sp1")])
+
+levels = Array[PackedScene]([ExtResource("2_unlv0"), ExtResource("3_k8pro"), ExtResource("2_xyf22"), ExtResource("4_fetjn"), ExtResource("7_ushab"), ExtResource("6_qw3fj"), ExtResource("8_x1r6n"), ExtResource("9_21sp1")])
 
 [node name="UILevelEnd" parent="." instance=ExtResource("6_8y5au")]
 z_index = 4096

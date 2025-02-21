@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://datd7wg6v4r42"]
+[gd_scene load_steps=9 format=3 uid="uid://datd7wg6v4r42"]
 
 [ext_resource type="Script" path="res://scripts/rocketsilo.gd" id="1_sadew"]
+[ext_resource type="AudioStream" uid="uid://dibpx6i7lmvul" path="res://assets/sounds/futuristic-grenade-launcher-98474.mp3" id="3_260ay"]
 [ext_resource type="PackedScene" uid="uid://hyiovj3pyx5w" path="res://assets/Rocketsilo.blend" id="3_ogab7"]
 
 [sub_resource type="Animation" id="Animation_qbqwr"]
@@ -77,6 +78,10 @@ libraries = {
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.683169, 0)
 shape = SubResource("CylinderShape3D_bpc17")
+
+[node name="launchsoundplayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_260ay")
+volume_db = -15.0
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_finished"]
 
