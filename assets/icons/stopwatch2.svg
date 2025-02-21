@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   width="800"
+   height="800"
+   viewBox="0 0 24 24"
+   fill="none"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <path
+     d="m 12,14 v -3 m 0,-5 c -4.14214,0 -7.5,3.35786 -7.5,7.5 0,4.1421 3.35786,7.5 7.5,7.5 4.1421,0 7.5,-3.3579 7.5,-7.5 0,-1.9439 -0.7395,-3.71506 -1.9526,-5.0475 M 12,6 c 2.1982,0 4.1756,0.94572 5.5474,2.4525 M 12,6 V 3 m 7.5,3.5 -1.9526,1.9525 M 12,3 H 9 m 3,0 h 3"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     id="path1"
+     style="display:inline;opacity:0.5" />
+</svg>

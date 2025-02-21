@@ -2,6 +2,7 @@ extends PathFollow3D
 
 @export var speed: float = 3
 @export var ammo: int = 3
+@export var slowmotion_uses: int = 3
 
 @onready var rotation_stange = $Player/player_base/player_rotationstange
 @onready var bullet_scene = preload("res://scenes/bullet.tscn")
@@ -21,6 +22,7 @@ var slowmotion_duration: float = 5
 func _ready() -> void:
 	EventBus.level_end.connect(_on_level_end)
 	ui.setup_ammo(ammo)
+	ui.setup_time(slowmotion_uses)
 	Engine.time_scale = 1
 
 func _physics_process(delta: float) -> void:
@@ -73,7 +75,9 @@ func handle_timescale(event: InputEvent):
 
 	if event.is_action_pressed("fast_forward", true) and timescale != slow_down:
 		timescale = speedup
-	if event.is_action_pressed("slow_motion", true) and !slowmotion_pressed: # has prio & don't tirgger when already active
+	if event.is_action_pressed("slow_motion", true) and !slowmotion_pressed and slowmotion_uses > 0: # has prio & don't tirgger when already active
+		slowmotion_uses -= 1
+		ui.update_time(slowmotion_uses)
 		slowmotion_pressed = true
 		timescale = slow_down
 		slowmotion_time_left = slowmotion_duration
