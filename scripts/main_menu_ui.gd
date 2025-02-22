@@ -13,12 +13,12 @@ func _ready() -> void:
 	GlobalPlayer.stop()
 	
 func _on_start_pressed() -> void:
-	click_audio_player.play()
+	play_on_mouse_click()
 	get_tree().change_scene_to_file("res://scenes/main.tscn")
 	GameState.current_level = 0
 
 func _on_options_pressed() -> void:
-	click_audio_player.play()
+	play_on_mouse_click()
 	if options_menu.visible:
 		options_menu.visible = false
 	else:
@@ -26,7 +26,7 @@ func _on_options_pressed() -> void:
 	
 
 func _on_quit_pressed() -> void:
-	click_audio_player.play()
+	play_on_mouse_click()
 	get_tree().quit()
 
 
@@ -38,14 +38,8 @@ func _on_options_toggled(toggled_on: bool) -> void:
 		#options_menu.visible = false
 	pass
 
-
-func _on_start_mouse_entered() -> void:
+func play_on_mouse_entered() -> void:
 	hover_audio_player.play()
-
-
-func _on_options_mouse_entered() -> void:
-	hover_audio_player.play()
-
-
-func _on_quit_mouse_entered() -> void:
-	hover_audio_player.play()
+	
+func play_on_mouse_click() -> void:
+	click_audio_player.play()

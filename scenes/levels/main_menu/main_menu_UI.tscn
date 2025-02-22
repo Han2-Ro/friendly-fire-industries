@@ -29,6 +29,17 @@ offset_bottom = 202.0
 grow_vertical = 2
 theme = ExtResource("2_khgka")
 
+[node name="continue" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "CONTINUE"
+
 [node name="start" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
@@ -71,10 +82,11 @@ stream = ExtResource("5_jyjyw")
 volume_db = -10.0
 max_polyphony = 5
 
-[connection signal="mouse_entered" from="VBoxContainer/start" to="." method="_on_start_mouse_entered"]
+[connection signal="mouse_entered" from="VBoxContainer/continue" to="." method="play_on_mouse_entered"]
+[connection signal="mouse_entered" from="VBoxContainer/start" to="." method="play_on_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/start" to="." method="_on_start_pressed"]
-[connection signal="mouse_entered" from="VBoxContainer/options" to="." method="_on_options_mouse_entered"]
+[connection signal="mouse_entered" from="VBoxContainer/options" to="." method="play_on_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/options" to="." method="_on_options_pressed"]
 [connection signal="toggled" from="VBoxContainer/options" to="." method="_on_options_toggled"]
-[connection signal="mouse_entered" from="VBoxContainer/quit" to="." method="_on_quit_mouse_entered"]
+[connection signal="mouse_entered" from="VBoxContainer/quit" to="." method="play_on_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_quit_pressed"]
