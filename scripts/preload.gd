@@ -10,5 +10,5 @@ func _ready() -> void:
 	$Rocket.on_hit()
 	$Rocket2.target = $Rocket2.global_position
 	
-	await get_tree().create_timer(1.2).timeout
+	await get_tree().create_timer(1).timeout
 	AudioServer.set_bus_mute(master_bus, false)

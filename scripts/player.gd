@@ -43,7 +43,7 @@ func _physics_process(delta: float) -> void:
 
 func look_at_cursor():
 	var camera := get_viewport().get_camera_3d()
-	var target_plane := Plane(Vector3(0, 1, 0), position.y)
+	var target_plane := Plane(Vector3(0, 1, 0), player_barrel.global_position.y)
 	
 	var mouse_position = get_viewport().get_mouse_position()
 	var from = camera.project_ray_origin(mouse_position)

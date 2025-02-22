@@ -26,8 +26,8 @@ GlobalPlayer="*res://scripts/audio_stream_player.gd"
 window/size/viewport_width=1280
 window/size/viewport_height=720
 window/size/always_on_top=true
-mouse_cursor/custom_image="/home/flo/Games/GodotProjects/brackeys-game-jam/assets/images/cursor-crosshair-64.png"
-mouse_cursor/custom_image_hotspot=Vector2(32, 40)
+mouse_cursor/custom_image="res://assets/images/cursor-crosshair-32.png"
+mouse_cursor/custom_image_hotspot=Vector2(16, 18)
 
 [global_group]
 
