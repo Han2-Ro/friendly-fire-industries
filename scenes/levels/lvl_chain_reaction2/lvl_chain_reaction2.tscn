@@ -65,7 +65,7 @@ transform = Transform3D(1, -4.37114e-08, 0, 4.37114e-08, 1, 4.37114e-08, -3.5527
 curve = SubResource("Curve3D_i5d4w")
 
 [node name="Player" parent="Path3D" instance=ExtResource("3_msfge")]
-transform = Transform3D(-0.00400627, 0, -0.999985, 0, 1, 0, 0.999985, 0, -0.00400627, -11.6516, 0, -2.08894)
+transform = Transform3D(-0.00400615, 0, -0.999985, 0, 1, 0, 0.999985, 0, -0.00400615, -11.6516, 0, -2.08894)
 ammo = 2
 slowmotion_uses = 2
 
