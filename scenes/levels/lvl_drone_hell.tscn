@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://cso632t46y25l"]
+[gd_scene load_steps=8 format=3 uid="uid://cso632t46y25l"]
 
 [ext_resource type="PackedScene" uid="uid://c38ebp5143i5x" path="res://scenes/level_camera.tscn" id="1_2wasf"]
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="3_q55hm"]
 [ext_resource type="PackedScene" uid="uid://buq1pqv6iid72" path="res://assets/levels_blend/drone_hell_map.blend" id="4_qli7v"]
+[ext_resource type="PackedScene" uid="uid://b8lky0yk4q64s" path="res://scenes/turret.tscn" id="5_cedrh"]
 [ext_resource type="PackedScene" uid="uid://dme01ctmicfat" path="res://scenes/drone.tscn" id="6_gvl05"]
 
 [sub_resource type="Curve3D" id="Curve3D_ystvf"]
@@ -130,5 +131,14 @@ transform = Transform3D(0.985615, 0, -0.169005, 0, 1, 0, 0.169005, 0, 0.985615, 
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="drone_hell_map/Walls/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_oilnr")
+
+[node name="Turret" parent="." instance=ExtResource("5_cedrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.61138, 0, -4.25539)
+
+[node name="Turret2" parent="." instance=ExtResource("5_cedrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.60044, 0, -0.405131)
+
+[node name="Turret3" parent="." instance=ExtResource("5_cedrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.65651, 0, 7.76573)
 
 [editable path="drone_hell_map"]
