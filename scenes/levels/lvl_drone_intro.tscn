@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cmmn7bm0k3epj"]
+[gd_scene load_steps=8 format=3 uid="uid://d0x8arf3cgd07"]
 
 [ext_resource type="PackedScene" uid="uid://c38ebp5143i5x" path="res://scenes/level_camera.tscn" id="1_uhk1p"]
 [ext_resource type="PackedScene" uid="uid://dnfpmel15rp0g" path="res://scenes/door.tscn" id="2_8gyle"]
@@ -19,7 +19,7 @@ point_count = 10
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
 [node name="Camera3D" parent="." instance=ExtResource("1_uhk1p")]
-transform = Transform3D(1, 0, 0, 0, 0.224951, 0.97437, 0, -0.97437, 0.224951, 0, 20, 4.31)
+transform = Transform3D(1, 0, 0, 0, 0.224951, 0.97437, 0, -0.97437, 0.224951, 0, 20, 6.47222)
 current = true
 
 [node name="Door" parent="." instance=ExtResource("2_8gyle")]
@@ -40,7 +40,7 @@ transform = Transform3D(-1, 0, 7.26395e-06, 0, 1, 0, -7.26395e-06, 0, -1, -5.821
 [node name="drone_intro_map" parent="." instance=ExtResource("5_4ku25")]
 
 [node name="Drone" parent="." instance=ExtResource("6_e7fom")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 69.9089, 0, 179.056)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.38, 0, 190.918)
 speed = 7
 
 [node name="Drone2" parent="." instance=ExtResource("6_e7fom")]
