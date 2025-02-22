@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dundx2uw5a7ky" path="res://assets/PowerDrill.blend" id="6_g7l0b"]
 [ext_resource type="PackedScene" uid="uid://c8ohtww5qtrs" path="res://scenes/levels/main_menu/main_menu_UI.tscn" id="7_dds4d"]
 [ext_resource type="PackedScene" uid="uid://dmsrpbpete03w" path="res://scenes/levels/main_menu/options_menu.tscn" id="10_vhtd2"]
-[ext_resource type="PackedScene" path="res://scenes/preload.tscn" id="11_xrwn4"]
+[ext_resource type="PackedScene" uid="uid://b6qld0vjlight" path="res://scenes/preload.tscn" id="11_xrwn4"]
 
 [sub_resource type="GDScript" id="GDScript_cy51l"]
 script/source = "extends Node3D
@@ -129,4 +129,4 @@ scale = Vector2(1.00702, 1)
 mouse_filter = 2
 
 [node name="Preload" parent="." instance=ExtResource("11_xrwn4")]
-transform = Transform3D(-6.05817e-10, -0.0138595, 0, 0.0138595, -6.05817e-10, 0, 0, 0, 0.0138595, -2.38045, 0.846408, 0.949211)
+transform = Transform3D(0.000865022, 0, 0, 0, 0.000865022, 0, 0, 0, 0.000865022, -2.46809, 0.866998, 1.12492)

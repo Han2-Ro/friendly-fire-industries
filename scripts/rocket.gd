@@ -8,7 +8,7 @@ class_name Rocket
 @onready var audio_flight = $Flight
 @onready var audio_landing = $Landing
 
-var target: Vector3 = get_transform().origin
+var target: Vector3
 var speed: float
 var distance: float
 var incline: float
@@ -49,7 +49,7 @@ func move(delta: float):
 	#rotate
 	var flight_dir = (global_position - old_pos).normalized()
 	var at = global_position + flight_dir
-	if (at.dot(Vector3.UP) > 0.001) or position == at:
+	if (at.dot(Vector3.UP) > 0.001) and old_pos != at:
 		look_at(at, Vector3.UP, 0)
 	old_pos = global_position
 
