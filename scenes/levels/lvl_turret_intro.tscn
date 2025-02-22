@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://blgctndk6av8o"]
+[gd_scene load_steps=8 format=3 uid="uid://blgctndk6av8o"]
 
 [ext_resource type="PackedScene" uid="uid://c38ebp5143i5x" path="res://scenes/level_camera.tscn" id="1_8bney"]
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="3_sgl6h"]
 [ext_resource type="PackedScene" uid="uid://c4cr0cmorqvx2" path="res://assets/levels_blend/turret_intro_map.blend" id="5_56sju"]
+[ext_resource type="PackedScene" uid="uid://cf5alfw8hcrmg" path="res://scenes/ui_space_hint.tscn" id="5_m7f2y"]
 [ext_resource type="PackedScene" uid="uid://b8lky0yk4q64s" path="res://scenes/turret.tscn" id="6_g7p1d"]
 
 [sub_resource type="Curve3D" id="Curve3D_ystvf"]
@@ -41,5 +42,7 @@ rotation_speed = 0.0
 tracking_angle = 30.0
 death_timer = 2.0
 starting_rotation = 10.0
+
+[node name="UiMouseHint" parent="." instance=ExtResource("5_m7f2y")]
 
 [editable path="turret_intro_map"]

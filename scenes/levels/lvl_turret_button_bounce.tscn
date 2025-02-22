@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cidnep6m6bpdf"]
+[gd_scene load_steps=10 format=3 uid="uid://cidnep6m6bpdf"]
 
 [ext_resource type="PackedScene" uid="uid://c38ebp5143i5x" path="res://scenes/level_camera.tscn" id="1_xb481"]
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="2_ltpxp"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b8lky0yk4q64s" path="res://scenes/turret.tscn" id="4_kh4ld"]
 [ext_resource type="PackedScene" uid="uid://dt2b2acdq52cw" path="res://scenes/button.tscn" id="5_53jqv"]
 [ext_resource type="PackedScene" uid="uid://dnfpmel15rp0g" path="res://scenes/door.tscn" id="6_q722j"]
+[ext_resource type="PackedScene" uid="uid://cf5alfw8hcrmg" path="res://scenes/ui_space_hint.tscn" id="7_wq4hk"]
 
 [sub_resource type="Curve3D" id="Curve3D_ystvf"]
 _data = {
@@ -49,6 +50,8 @@ transform = Transform3D(-4.37112e-08, 0, 1, 0, 1, 0, -1, 0, -4.37112e-08, 8.1821
 
 [node name="Button" parent="." instance=ExtResource("5_53jqv")]
 transform = Transform3D(-7.39508e-06, 0, -1, 0, 1, 0, 1, 0, -7.39508e-06, -5.4066, 1, -0.803585)
+
+[node name="UiMouseHint" parent="." instance=ExtResource("7_wq4hk")]
 
 [connection signal="button_hit" from="Button" to="Door" method="toggle_door"]
 
