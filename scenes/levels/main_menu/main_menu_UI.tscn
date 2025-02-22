@@ -83,6 +83,7 @@ volume_db = -10.0
 max_polyphony = 5
 
 [connection signal="mouse_entered" from="VBoxContainer/continue" to="." method="play_on_mouse_entered"]
+[connection signal="pressed" from="VBoxContainer/continue" to="." method="_on_continue_pressed"]
 [connection signal="mouse_entered" from="VBoxContainer/start" to="." method="play_on_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/start" to="." method="_on_start_pressed"]
 [connection signal="mouse_entered" from="VBoxContainer/options" to="." method="play_on_mouse_entered"]

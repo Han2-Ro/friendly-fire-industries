@@ -27,6 +27,9 @@ func _ready() -> void:
 	end_screen.next_level_button.pressed.connect(_on_next_level_pressed)
 	
 	end_screen.menu_button.pressed.connect(_on_menu_button_pressed)
+	
+	if GameState.current_level >= 1:
+		GlobalPlayer.play_music_level()
 
 func _on_menu_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/levels/main_menu/main_menu.tscn")
