@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://efxdmdettrjx"]
+[gd_scene load_steps=5 format=3 uid="uid://efxdmdettrjx"]
 
 [ext_resource type="Theme" uid="uid://dhgodsmrdod46" path="res://assets/ui_themes/main_menu_UI.tres" id="1_o6w6d"]
 [ext_resource type="Script" path="res://scripts/ui_end_screen.gd" id="2_wa747"]
+[ext_resource type="AudioStream" uid="uid://btiooojjkfty" path="res://assets/sounds/ui_sounds/hover.mp3" id="3_g148x"]
+[ext_resource type="AudioStream" uid="uid://chbnwkoqsievv" path="res://assets/sounds/ui_sounds/click.mp3" id="4_vym4o"]
 
 [node name="UiEndMenu" type="Control"]
 layout_mode = 3
@@ -74,4 +76,15 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 25
 text = "Main Menu"
 
+[node name="HoverAudioPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_g148x")
+volume_db = -10.0
+max_polyphony = 5
+
+[node name="ClickAudioPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_vym4o")
+volume_db = -10.0
+max_polyphony = 5
+
+[connection signal="mouse_entered" from="MainMenuButton" to="." method="play_on_mouse_entered"]
 [connection signal="pressed" from="MainMenuButton" to="." method="_on_main_menu_button_pressed"]
