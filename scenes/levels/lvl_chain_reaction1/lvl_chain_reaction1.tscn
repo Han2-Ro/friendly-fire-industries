@@ -68,7 +68,7 @@ transform = Transform3D(0.000470356, 0, -0.999999, 0, 1, 0, 0.999999, 0, 0.00047
 speed = 1.0
 
 [node name="Button" parent="." instance=ExtResource("6_ftqw3")]
-transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 4.32279, 1.01825, 3.13092)
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 4.15536, 1.01825, 3.13092)
 
 [node name="Target" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.18503, 0, 3.03625)
