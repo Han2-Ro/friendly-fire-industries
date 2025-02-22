@@ -6,7 +6,7 @@ class_name Rocket
 @onready var model = $Rocket
 @onready var particles = $FireParticles
 
-var target: Vector3 = global_position
+var target: Vector3 = get_transform().origin
 var speed: float
 var distance: float
 var incline: float
