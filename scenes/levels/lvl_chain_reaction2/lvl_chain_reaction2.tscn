@@ -1,9 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://72kqm48wdsjp"]
+[gd_scene load_steps=15 format=3 uid="uid://72kqm48wdsjp"]
 
 [ext_resource type="PackedScene" uid="uid://dcb5hcolq4iu3" path="res://assets/levels_blend/chain_reaction2_map.blend" id="1_bjwjq"]
+[ext_resource type="PackedScene" uid="uid://dhqp7mex168hw" path="res://assets/ToolCart.blend" id="2_5na18"]
 [ext_resource type="PackedScene" uid="uid://c38ebp5143i5x" path="res://scenes/level_camera.tscn" id="2_hah8l"]
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="3_msfge"]
+[ext_resource type="PackedScene" uid="uid://vdmpwrelyiyp" path="res://assets/Screwdriver.blend" id="3_py4bn"]
+[ext_resource type="PackedScene" uid="uid://cgm1l4gs3i30g" path="res://assets/FireExtinguisher.blend" id="3_thjm1"]
 [ext_resource type="PackedScene" uid="uid://datd7wg6v4r42" path="res://scenes/rocketsilo.tscn" id="4_4vr34"]
+[ext_resource type="PackedScene" uid="uid://mhd5k3skhprv" path="res://assets/Toolbox.blend" id="5_7lsiu"]
+[ext_resource type="PackedScene" uid="uid://dv6iy3otapwuv" path="res://assets/Wrench.blend" id="5_dg5y1"]
 [ext_resource type="PackedScene" uid="uid://dt2b2acdq52cw" path="res://scenes/button.tscn" id="5_sjduq"]
 [ext_resource type="PackedScene" uid="uid://dnfpmel15rp0g" path="res://scenes/door.tscn" id="6_2shlk"]
 
@@ -35,6 +40,24 @@ collision_mask = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="chain_reaction2_map/Cube/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_5obg3")
+
+[node name="ToolCart2" parent="chain_reaction2_map" instance=ExtResource("2_5na18")]
+transform = Transform3D(-0.840661, 2.36724e-08, 0.541561, -2.36724e-08, 1, -8.04579e-08, -0.541561, -8.04579e-08, -0.840661, 9.05291, 0, -5.24887)
+
+[node name="Screwdriver" parent="chain_reaction2_map/ToolCart2" instance=ExtResource("3_py4bn")]
+transform = Transform3D(0.752817, -5.88112e-08, -0.65823, 4.71083e-08, 1, -3.54697e-08, 0.65823, -4.30592e-09, 0.752817, 0.153122, 0.817087, 0.0974932)
+
+[node name="Toolbox" parent="chain_reaction2_map/ToolCart2" instance=ExtResource("5_7lsiu")]
+transform = Transform3D(0.716376, -3.13138e-08, 0.450637, 1.72961e-08, 0.846327, 3.13138e-08, -0.450637, -1.72961e-08, 0.716376, -1.02736, 0.00393986, -0.47516)
+
+[node name="ToolCart3" parent="chain_reaction2_map" instance=ExtResource("2_5na18")]
+transform = Transform3D(-0.999315, -1.61776e-09, -0.03701, 1.61776e-09, 1, -8.73928e-08, 0.03701, -8.73928e-08, -0.999315, 8.00964, 0, -5.45)
+
+[node name="Wrench2" parent="chain_reaction2_map/ToolCart3" instance=ExtResource("5_dg5y1")]
+transform = Transform3D(0.778627, 5.5196e-08, 0.627488, -5.44798e-08, 1, -2.03616e-08, -0.627488, -1.83313e-08, 0.778627, 0.195793, 0.800852, 0.0954785)
+
+[node name="FireExtinguisher2" parent="chain_reaction2_map" instance=ExtResource("3_thjm1")]
+transform = Transform3D(1, -4.37114e-08, 0, 4.37114e-08, 1, 4.37114e-08, -3.55271e-15, -4.37114e-08, 1, -10.7536, 0.905682, -4.74153)
 
 [node name="Camera3D" parent="." instance=ExtResource("2_hah8l")]
 
