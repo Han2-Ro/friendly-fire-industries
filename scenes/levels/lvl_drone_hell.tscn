@@ -134,11 +134,13 @@ shape = SubResource("ConcavePolygonShape3D_oilnr")
 
 [node name="Turret" parent="." instance=ExtResource("5_cedrh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.61138, 0, -4.25539)
+starting_rotation = 153.215
 
 [node name="Turret2" parent="." instance=ExtResource("5_cedrh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.60044, 0, -0.405131)
 
 [node name="Turret3" parent="." instance=ExtResource("5_cedrh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.65651, 0, 7.76573)
+starting_rotation = 36.936
 
 [editable path="drone_hell_map"]
