@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://d014rcmkejwxp"]
+[gd_scene load_steps=4 format=3 uid="uid://d014rcmkejwxp"]
 
 [ext_resource type="Theme" uid="uid://dhgodsmrdod46" path="res://assets/ui_themes/main_menu_UI.tres" id="1_hfkoy"]
+[ext_resource type="Script" path="res://scripts/ui_hint.gd" id="2_12a1a"]
 [ext_resource type="PackedScene" uid="uid://bri0on4cqodjd" path="res://scenes/ui_keybinds_reset.tscn" id="2_nhp1b"]
 
 [node name="UiResetHint" type="Panel"]
@@ -15,6 +16,8 @@ offset_bottom = 262.0
 grow_horizontal = 2
 mouse_filter = 2
 theme = ExtResource("1_hfkoy")
+script = ExtResource("2_12a1a")
+hint_status_level = 3
 
 [node name="Reset" parent="." instance=ExtResource("2_nhp1b")]
 layout_mode = 0

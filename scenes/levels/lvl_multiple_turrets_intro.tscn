@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://blaupr70ttbg4"]
+[gd_scene load_steps=11 format=3 uid="uid://blaupr70ttbg4"]
 
 [ext_resource type="PackedScene" uid="uid://c38ebp5143i5x" path="res://scenes/level_camera.tscn" id="1_scho0"]
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="2_uqumt"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dt2b2acdq52cw" path="res://scenes/button.tscn" id="5_7grsj"]
 [ext_resource type="PackedScene" uid="uid://dnfpmel15rp0g" path="res://scenes/door.tscn" id="6_gt0bi"]
 [ext_resource type="PackedScene" uid="uid://cd0kih764xane" path="res://assets/ammobx.blend" id="7_5yaut"]
+[ext_resource type="PackedScene" uid="uid://dtxtvx60ecw26" path="res://scenes/ui_menu_hint.tscn" id="8_g071g"]
 
 [sub_resource type="Curve3D" id="Curve3D_ystvf"]
 _data = {
@@ -80,6 +81,16 @@ transform = Transform3D(0.942186, 0, -0.33509, 0, 1, 0, 0.33509, 0, 0.942186, -3
 
 [node name="ammobx2" parent="." instance=ExtResource("7_5yaut")]
 transform = Transform3D(0.886057, -0.00148891, 0.463574, 0.0020563, 0.999998, -0.000718531, -0.463572, 0.00158991, 0.886058, -6.51099, 0, -5.23116)
+
+[node name="UiHint" parent="." instance=ExtResource("8_g071g")]
+anchors_preset = -1
+anchor_left = 0.539
+anchor_right = 0.539
+offset_left = -136.92
+offset_top = 45.0
+offset_right = 321.08
+offset_bottom = 181.0
+scale = Vector2(0.6, 0.6)
 
 [connection signal="button_hit" from="Button" to="Door" method="toggle_door"]
 
