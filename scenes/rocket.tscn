@@ -113,9 +113,10 @@ scale_curve = SubResource("CurveTexture_e3hrh")
 color = Color(0, 0, 0, 1)
 alpha_curve = SubResource("CurveTexture_315k1")
 
-[node name="Rocket" type="StaticBody3D"]
+[node name="Rocket" type="CharacterBody3D"]
 top_level = true
 collision_layer = 6
+collision_mask = 0
 script = ExtResource("1_wduoi")
 
 [node name="Rocket" parent="." instance=ExtResource("2_rnh1f")]
@@ -135,7 +136,7 @@ shape = SubResource("SphereShape3D_21g3k")
 [node name="KillArea" type="Area3D" parent="."]
 top_level = true
 collision_layer = 4
-collision_mask = 4
+collision_mask = 8388612
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="KillArea"]
 shape = SubResource("SphereShape3D_7dhua")

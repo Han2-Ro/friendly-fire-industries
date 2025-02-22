@@ -1,4 +1,4 @@
-extends Node3D
+extends CharacterBody3D
 class_name Rocket
 
 @onready var kill_area: Area3D = $KillArea

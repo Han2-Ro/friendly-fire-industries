@@ -57,8 +57,8 @@ transparency = 1
 albedo_color = Color(1, 0, 0, 0.643137)
 
 [node name="Drone" type="CharacterBody3D"]
-collision_layer = 2
-collision_mask = 3
+collision_layer = 6
+collision_mask = 0
 motion_mode = 1
 script = ExtResource("1_c5x0s")
 
