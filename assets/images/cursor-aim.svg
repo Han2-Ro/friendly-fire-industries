@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="120"
+   height="120"
+   viewBox="0 0 120 120"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   sodipodi:docname="cursor-aim.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="px"
+     inkscape:zoom="3.545"
+     inkscape:cx="38.081805"
+     inkscape:cy="51.763047"
+     inkscape:window-width="2347"
+     inkscape:window-height="1410"
+     inkscape:window-x="1964"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       d="M 60,10 A 50,50 0 0 0 10,60 50,50 0 0 0 60,109 50,50 0 0 0 109,60 50,50 0 0 0 60,10 Z m 0,8 a 42,42 0 0 1 42,42 42,42 0 0 1 -42,42 42,42 0 0 1 -42,-42 42,42 0 0 1 42,-42 z"
+       style="display:inline;stroke-width:0.991537"
+       id="path45" />
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke-width:0.887938"
+       id="rect45"
+       width="7.5"
+       height="30"
+       x="56.25"
+       y="0" />
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke-width:0.887938"
+       id="rect45-2"
+       width="7.5"
+       height="30"
+       x="56.25"
+       y="90" />
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke-width:0.887938"
+       id="rect45-2-7"
+       width="7.5"
+       height="30"
+       x="56.25"
+       y="-30"
+       ry="0"
+       transform="rotate(90)" />
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke-width:0.887938"
+       id="rect45-2-7-6"
+       width="7.5"
+       height="30"
+       x="56.25"
+       y="-120"
+       ry="0"
+       transform="rotate(90)" />
+  </g>
+</svg>
