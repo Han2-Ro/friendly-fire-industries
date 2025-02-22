@@ -35,7 +35,7 @@ func _process(delta: float) -> void:
 		audio_flight.stop()
 		audio_landing.play()
 		particles.amount_ratio = .15
-		#global_position = target
+		global_position = target
 		#rotation_degrees.x = -90
 
 func move(delta: float):

@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cn2uujo4p8fh1" path="res://assets/buttons_and_lasers/LaserEmitters.blend" id="3_3n4qs"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ckiqm"]
-size = Vector3(2, 2.19653, 0.316895)
+size = Vector3(2, 2.19653, 0.119019)
 
 [sub_resource type="Animation" id="Animation_lys2x"]
 length = 0.001
@@ -50,6 +50,14 @@ height = 1.76
 
 [node name="Door" type="Node3D"]
 script = ExtResource("1_cn5x8")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.10193, -0.0159301)
+shape = SubResource("BoxShape3D_ckiqm")
 
 [node name="Area3D" type="Area3D" parent="."]
 collision_layer = 8388610
