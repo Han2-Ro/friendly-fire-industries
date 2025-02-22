@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dundx2uw5a7ky" path="res://assets/PowerDrill.blend" id="6_g7l0b"]
 [ext_resource type="PackedScene" uid="uid://c8ohtww5qtrs" path="res://scenes/levels/main_menu/main_menu_UI.tscn" id="7_dds4d"]
 [ext_resource type="PackedScene" uid="uid://dmsrpbpete03w" path="res://scenes/levels/main_menu/options_menu.tscn" id="10_vhtd2"]
-[ext_resource type="PackedScene" path="res://scenes/preload.tscn" id="11_xrwn4"]
+[ext_resource type="PackedScene" uid="uid://b6qld0vjlight" path="res://scenes/preload.tscn" id="11_xrwn4"]
 [ext_resource type="PackedScene" uid="uid://cecvu28s6wm8l" path="res://assets/Rocket.blend" id="12_fb2vg"]
 [ext_resource type="PackedScene" uid="uid://hyiovj3pyx5w" path="res://assets/Rocketsilo.blend" id="12_u17jf"]
 
@@ -20,7 +20,9 @@ script/source = "extends Node3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	if OS.get_name() == \"Web\":
+		var mat: StandardMaterial3D = ($LogoPlane as MeshInstance3D).mesh.surface_get_material(0)
+		mat.emission_energy_multiplier = 1
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -413,7 +415,7 @@ mouse_filter = 2
 transform = Transform3D(-0.0453479, -0.291001, 0.44163, -0.0787712, 0.442023, 0.283171, -0.522985, -0.0413442, -0.0809444, -2.92321, 2.67125, 3.07463)
 
 [node name="Rocket4" parent="." instance=ExtResource("12_fb2vg")]
-transform = Transform3D(-0.086204, 0.0757051, 0.518279, -0.0288225, 0.52377, -0.0813011, -0.522986, -0.0413442, -0.0809476, -1.08712, 3.17265, 3.07463)
+transform = Transform3D(-0.0862041, 0.0757051, 0.518279, -0.0288225, 0.52377, -0.0813011, -0.522986, -0.0413442, -0.0809476, -1.08712, 3.17265, 3.07463)
 
 [node name="Rocket3" parent="." instance=ExtResource("12_fb2vg")]
 transform = Transform3D(0.0221347, 0.438797, 0.239914, 0.0337137, 0.238293, -0.438944, -0.498964, 0.0355665, -0.0190154, 0.249379, 1.56745, 3.13062)
