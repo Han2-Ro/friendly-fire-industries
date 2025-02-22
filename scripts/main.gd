@@ -3,8 +3,10 @@ extends Node3D
 @export var end_screen: Control
 @onready var restart_button: Button
 @export var levels: Array[PackedScene]
+
 var current_level: Node
 var paused := false
+var has_level_ended: bool = false
 
 func _ready() -> void:
 	#Input.mouse_mode = Input.MOUSE_MODE_CONFINED
@@ -43,16 +45,20 @@ func _on_next_level_pressed() -> void:
 		return
 	current_level = levels[GameState.current_level].instantiate()
 	add_child(current_level)
+	
+	has_level_ended = false
 	end_screen.hide()
 
 func _on_level_end(success: bool) -> void:
 	print(success)
+	has_level_ended = true
 	end_screen.show()
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Quit"):
 		get_tree().quit()
-	if event.is_action_pressed("Pause"):
+	
+	if not has_level_ended and event.is_action_pressed("Pause"):
 		if paused:
 			print("unpause")
 			end_screen.hide()
