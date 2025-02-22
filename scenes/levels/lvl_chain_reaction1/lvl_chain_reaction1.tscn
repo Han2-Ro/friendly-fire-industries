@@ -56,6 +56,8 @@ curve = SubResource("Curve3D_dthi2")
 [node name="Player" parent="Path3D" instance=ExtResource("5_td3vh")]
 transform = Transform3D(0.000470356, 0, -0.999999, 0, 1, 0, 0.999999, 0, 0.000470356, -10.2402, 0, 2.06179)
 speed = 1.0
+ammo = 1
+slowmotion_uses = 1
 
 [node name="Button" parent="." instance=ExtResource("6_ftqw3")]
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 4.15536, 1.01825, 3.13092)
@@ -64,10 +66,10 @@ transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 4.15536,
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.18503, 0, 3.03625)
 
 [node name="Target2" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.18253, 0, 1.6431)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.48329, 0, 1.6431)
 
 [node name="Target3" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.18253, 0, -0.144729)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.48329, 0, -0.144729)
 
 [connection signal="button_hit" from="Button" to="Door" method="toggle_door"]
 

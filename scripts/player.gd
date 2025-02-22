@@ -109,7 +109,7 @@ func shoot():
 	instance.dir = direction
 	instance.INH_MAX_BOUNCES = $Player/player_base/player_rotationstange/RayCast3D.MAX_BOUNCES
 	get_parent().get_parent().add_child(instance)
-	instance.global_position = rotation_stange.global_position + direction
+	instance.global_position = rotation_stange.global_position + direction * 0.2
 	
 	var recoil_distance = 0.05
 	var recoil_duration = 0.05
