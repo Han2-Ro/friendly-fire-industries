@@ -3,8 +3,8 @@ extends Node3D
 @export var color: Color = Color.RED
 
 @onready var laser_bars = $"Laser-Bars"
-@onready var bullet_collision: StaticBody3D = $StaticBody3D
-@onready var player_collision: Area3D = $"Player-Area3D"
+@onready var bullet_collision: CollisionShape3D = $"Bullet-StaticBody3D/Bullet-CollisionShape3D"
+@onready var player_collision: CollisionShape3D = $"Player-Area3D/Player-CollisionShape3D"
 
 var is_open: bool = false
 

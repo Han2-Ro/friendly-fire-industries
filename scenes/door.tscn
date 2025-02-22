@@ -51,11 +51,11 @@ height = 1.76
 [node name="Door" type="Node3D"]
 script = ExtResource("1_cn5x8")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="Bullet-StaticBody3D" type="StaticBody3D" parent="."]
 collision_layer = 2
 collision_mask = 0
 
-[node name="Bullet-CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="Bullet-CollisionShape3D" type="CollisionShape3D" parent="Bullet-StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.10193, -0.0159301)
 shape = SubResource("BoxShape3D_ckiqm")
 
@@ -63,7 +63,7 @@ shape = SubResource("BoxShape3D_ckiqm")
 collision_layer = 8388610
 collision_mask = 0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Player-Area3D"]
+[node name="Player-CollisionShape3D" type="CollisionShape3D" parent="Player-Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.10193, -0.0241699)
 shape = SubResource("BoxShape3D_ckiqm")
 
