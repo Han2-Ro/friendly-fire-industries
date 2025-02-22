@@ -29,10 +29,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00134277, -0.0864754, -0.03
 curve = SubResource("Curve3D_ystvf")
 
 [node name="Player" parent="Path3D" instance=ExtResource("2_mb8ye")]
-transform = Transform3D(-0.00335529, 0, -0.999885, 0, 0.999979, 0, 0.999883, 0, -0.00335529, -12.3661, 0.231739, 3.03954)
+transform = Transform3D(-0.00335517, 0, -0.999885, 0, 0.999979, 0, 0.999883, 0, -0.00335517, -12.3661, 0.231739, 3.03954)
 
 [node name="Button" parent="." instance=ExtResource("3_1by03")]
-transform = Transform3D(7.30766e-06, 0, 1, 0, 1, 0, -1, 0, 7.30766e-06, 2.0804, 1.03137, -0.53862)
+transform = Transform3D(7.30766e-06, 0, 1, 0, 1, 0, -1, 0, 7.30766e-06, 2.0804, 1.03137, -0.0481567)
 
 [node name="Door" parent="." instance=ExtResource("4_1wvax")]
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 2.9944, -0.285573, 2.9943)
