@@ -42,7 +42,7 @@ shape = SubResource("ConcavePolygonShape3D_5obg3")
 curve = SubResource("Curve3D_i5d4w")
 
 [node name="Player" parent="Path3D" instance=ExtResource("3_msfge")]
-transform = Transform3D(-0.00400627, 0, -0.999985, 0, 1, 0, 0.999985, 0, -0.00400627, -11.6516, 0, -2.08894)
+transform = Transform3D(-0.00400615, 0, -0.999985, 0, 1, 0, 0.999985, 0, -0.00400615, -11.6516, 0, -2.08894)
 ammo = 2
 slowmotion_uses = 2
 
@@ -100,7 +100,7 @@ transform = Transform3D(-4.37114e-08, -4.37114e-08, -1, 4.37114e-08, 1, -4.37114
 color = Color(0.320169, 0.648596, 0.193781, 1)
 
 [connection signal="button_hit" from="ButtonRed" to="DoorRed" method="toggle_door"]
-[connection signal="ready" from="ButtonRed" to="ButtonRed" method="on_hit"]
+[connection signal="ready" from="ButtonRed" to="ButtonRed" method="on_hit" flags=3]
 [connection signal="button_hit" from="ButtonGreen" to="DoorGreen" method="toggle_door"]
 
 [editable path="chain_reaction2_map"]
