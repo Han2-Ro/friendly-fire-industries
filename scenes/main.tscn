@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://jn22a2o5sevi"]
+[gd_scene load_steps=19 format=3 uid="uid://jn22a2o5sevi"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_hlc4r"]
 [ext_resource type="PackedScene" uid="uid://5p5yqwo7owhf" path="res://scenes/intro.tscn" id="2_unlv0"]
@@ -9,18 +9,20 @@
 [ext_resource type="PackedScene" uid="uid://cul6wl06g6wvn" path="res://scenes/ui_level_end.tscn" id="6_8y5au"]
 [ext_resource type="PackedScene" uid="uid://blaupr70ttbg4" path="res://scenes/levels/lvl_multiple_turrets_intro.tscn" id="6_qw3fj"]
 [ext_resource type="PackedScene" uid="uid://cidnep6m6bpdf" path="res://scenes/levels/lvl_turret_button_bounce.tscn" id="7_ushab"]
-[ext_resource type="PackedScene" uid="uid://q5840d0hslr3" path="res://scenes/levels/lvl_rocket_intro.tscn" id="8_x1r6n"]
+[ext_resource type="PackedScene" uid="uid://hc71av05y6fd" path="res://scenes/levels/lvl_rocket_intro.tscn" id="8_x1r6n"]
 [ext_resource type="PackedScene" uid="uid://da18ggk3xu0fa" path="res://scenes/levels/lvl_complex_1.tscn" id="9_21sp1"]
+[ext_resource type="PackedScene" uid="uid://dgxfq7jood1v5" path="res://scenes/levels/lvl_rocket_intro3.tscn" id="9_nv3px"]
 [ext_resource type="PackedScene" uid="uid://d0x8arf3cgd07" path="res://scenes/levels/lvl_drone_intro.tscn" id="9_owac5"]
 [ext_resource type="PackedScene" path="res://scenes/levels/lvl_drone_hell.tscn" id="10_ke817"]
 [ext_resource type="PackedScene" uid="uid://fwddsiktn3pp" path="res://scenes/levels/lvl_2_doors.tscn" id="10_usj1q"]
 [ext_resource type="PackedScene" uid="uid://c618q5dlcwdr" path="res://scenes/levels/lvl_chain_reaction1/lvl_chain_reaction1.tscn" id="11_dd7db"]
 [ext_resource type="PackedScene" uid="uid://72kqm48wdsjp" path="res://scenes/levels/lvl_chain_reaction2/lvl_chain_reaction2.tscn" id="12_1we0f"]
+[ext_resource type="PackedScene" uid="uid://cn7qwyf70a2og" path="res://scenes/levels/lvl_rocket_intro2.tscn" id="12_x1mpu"]
 
 [node name="Main" type="Node3D" node_paths=PackedStringArray("end_screen")]
 script = ExtResource("1_hlc4r")
 end_screen = NodePath("UILevelEnd")
-levels = Array[PackedScene]([ExtResource("2_unlv0"), ExtResource("3_k8pro"), ExtResource("2_xyf22"), ExtResource("4_fetjn"), ExtResource("7_ushab"), ExtResource("6_qw3fj"), ExtResource("8_x1r6n"), ExtResource("9_owac5"), ExtResource("10_ke817"), ExtResource("10_usj1q"), ExtResource("11_dd7db"), ExtResource("12_1we0f"), ExtResource("9_21sp1")])
+levels = Array[PackedScene]([ExtResource("2_unlv0"), ExtResource("3_k8pro"), ExtResource("2_xyf22"), ExtResource("4_fetjn"), ExtResource("7_ushab"), ExtResource("6_qw3fj"), ExtResource("12_x1mpu"), ExtResource("9_nv3px"), ExtResource("8_x1r6n"), ExtResource("9_owac5"), ExtResource("10_ke817"), ExtResource("10_usj1q"), ExtResource("11_dd7db"), ExtResource("12_1we0f"), ExtResource("9_21sp1")])
 
 [node name="UILevelEnd" parent="." instance=ExtResource("6_8y5au")]
 z_index = 4096
