@@ -34,6 +34,7 @@ incline = 5.0
 targets = [NodePath("../Target"), NodePath("../Target2")]
 seconds_between_shots = 0.75
 seconds_being_open = 1.0
+seconds_before_first_shot = 4.0
 
 [node name="Path3D" type="Path3D" parent="."]
 curve = SubResource("Curve3D_rsl50")

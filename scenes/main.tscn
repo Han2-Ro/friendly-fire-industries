@@ -13,11 +13,11 @@
 [ext_resource type="PackedScene" uid="uid://da18ggk3xu0fa" path="res://scenes/levels/lvl_complex_1.tscn" id="9_21sp1"]
 [ext_resource type="PackedScene" uid="uid://dgxfq7jood1v5" path="res://scenes/levels/lvl_rocket_intro3.tscn" id="9_nv3px"]
 [ext_resource type="PackedScene" uid="uid://d0x8arf3cgd07" path="res://scenes/levels/lvl_drone_intro.tscn" id="9_owac5"]
-[ext_resource type="PackedScene" path="res://scenes/levels/lvl_drone_hell.tscn" id="10_ke817"]
+[ext_resource type="PackedScene" uid="uid://tth8rg04h3i2" path="res://scenes/levels/lvl_drone_hell.tscn" id="10_ke817"]
 [ext_resource type="PackedScene" uid="uid://fwddsiktn3pp" path="res://scenes/levels/lvl_2_doors.tscn" id="10_usj1q"]
 [ext_resource type="PackedScene" uid="uid://c618q5dlcwdr" path="res://scenes/levels/lvl_chain_reaction1/lvl_chain_reaction1.tscn" id="11_dd7db"]
 [ext_resource type="PackedScene" uid="uid://72kqm48wdsjp" path="res://scenes/levels/lvl_chain_reaction2/lvl_chain_reaction2.tscn" id="12_1we0f"]
-[ext_resource type="PackedScene" uid="uid://cn7qwyf70a2og" path="res://scenes/levels/lvl_rocket_intro2.tscn" id="12_x1mpu"]
+[ext_resource type="PackedScene" uid="uid://bof0cw4bqi4rj" path="res://scenes/levels/lvl_rocket_intro2.tscn" id="12_x1mpu"]
 
 [node name="Main" type="Node3D" node_paths=PackedStringArray("end_screen")]
 script = ExtResource("1_hlc4r")
