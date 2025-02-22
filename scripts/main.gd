@@ -25,9 +25,16 @@ func _ready() -> void:
 		return
 	restart_button.pressed.connect(_on_restart_pressed)
 	end_screen.next_level_button.pressed.connect(_on_next_level_pressed)
+	
+	end_screen.menu_button.pressed.connect(_on_menu_button_pressed)
+
+func _on_menu_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/levels/main_menu/main_menu.tscn")
+	#set_paused(false)
 
 func _on_restart_pressed() -> void:
 	get_tree().reload_current_scene()
+	set_paused(false)
 
 func _on_next_level_pressed() -> void:
 	current_level.queue_free()
@@ -62,14 +69,16 @@ func _input(event: InputEvent) -> void:
 		if paused:
 			print("unpause")
 			end_screen.hide()
-			Engine.time_scale = 1
-			paused = false
+			set_paused(false)
 		else:
 			print("pause")
 			end_screen.reset()
 			end_screen.show()
-			paused = true
-			Engine.time_scale = 0
+			set_paused(true)
+
+func set_paused(is_paused: bool) -> void:
+	Engine.time_scale = not is_paused
+	paused = is_paused
 
 func reset_game():
 	pass
