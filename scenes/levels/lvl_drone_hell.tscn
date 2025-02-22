@@ -1,0 +1,134 @@
+[gd_scene load_steps=7 format=3 uid="uid://cso632t46y25l"]
+
+[ext_resource type="PackedScene" uid="uid://c38ebp5143i5x" path="res://scenes/level_camera.tscn" id="1_2wasf"]
+[ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="3_q55hm"]
+[ext_resource type="PackedScene" uid="uid://buq1pqv6iid72" path="res://assets/levels_blend/drone_hell_map.blend" id="4_qli7v"]
+[ext_resource type="PackedScene" uid="uid://dme01ctmicfat" path="res://scenes/drone.tscn" id="6_gvl05"]
+
+[sub_resource type="Curve3D" id="Curve3D_ystvf"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 7.43782, 0.188526, 10.1302, 0, 0, 0, 0, 0, 0, 7.4734, 0.188526, -2.7511, 0, 0, 0, 0, 0, 0, 6.48124, 0.188526, -3.74326, 0, 0, 0, 0, 0, 0, -8.05909, 0.188526, -3.70905, 0, 0, 0, 0, 0, 0, -8.98283, 0.188526, -2.78531, 0, 0, 0, 0, 0, 0, -9.01704, 0.188526, 5.20332, 0, 0, 0, 0, 0, 0, -8.05909, 0.188526, 6.19548, 0, 0, 0, 0, 0, 0, 3.9324, 0.188526, 6.26391, 0, 0, 0, 0, 0, 0, 4.89035, 0.188526, 5.22042, 0, 0, 0, 0, 0, 0, 4.9179, 0.188404, -0.781591, 0, 0, 0, 0, 0, 0, 3.91201, 0.188404, -1.76233, 0, 0, 0, 0, 0, 0, -5.05155, 0.188404, -1.73532, 0, 0, 0, 0, 0, 0, -6.0433, 0.188404, -0.754357, 0, 0, 0, 0, 0, 0, -6.0433, 0.188404, 3.21263, 0, 0, 0, 0, 0, 0, -5.04077, 0.188404, 4.22593, 0, 0, 0, 0, 0, 0, 1.35168, 0.188404, 4.24749, 0, 0, 0, 0, 0, 0, 2.34343, 0.188404, 3.22341, 0, 0, 0, 0, 0, 0, 2.34343, 0.188404, 2.23166, 0, 0, 0, 0, 0, 0, 1.35168, 0.188404, 1.23992, 0, 0, 0, 0, 0, 0, -0.998328, 0.188404, 1.17524),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 20
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_oilnr"]
+data = PackedVector3Array(-10.8003, 0, 8.8, 6.4998, 0.5, 8.8, -10.8003, 0.5, 8.8, -10.8003, 0, 8.8, 6.4998, 0, 8.8, 6.4998, 0.5, 8.8, -10.8003, 0, 9.5, -10.8003, 0.5, 8.8, -10.8003, 0.5, 9.5, -10.8003, 0, 9.5, -10.8003, 0, 8.8, -10.8003, 0.5, 8.8, 6.4998, 0, 9.5, -10.8003, 0.5, 9.5, 6.4998, 0.5, 9.5, 6.4998, 0, 9.5, -10.8003, 0, 9.5, -10.8003, 0.5, 9.5, 6.4998, 0, 8.8, 6.4998, 0.5, 9.5, 6.4998, 0.5, 8.8, 6.4998, 0, 8.8, 6.4998, 0, 9.5, 6.4998, 0.5, 9.5, -11.6, 0, -5.9, -10.8003, 0.5, -5.9, -11.6, 0.5, -5.9, -11.6, 0, -5.9, -10.8003, 0, -5.9, -10.8003, 0.5, -5.9, -11.6, 0, 9.5, -11.6, 0.5, -5.9, -11.6, 0.5, 9.5, -11.6, 0, 9.5, -11.6, 0, -5.9, -11.6, 0.5, -5.9, -10.8003, 0, 9.5, -11.6, 0.5, 9.5, -10.8003, 0.5, 9.5, -10.8003, 0, 9.5, -11.6, 0, 9.5, -11.6, 0.5, 9.5, -10.8003, 0, -5.9, -10.8003, 0.5, 9.5, -10.8003, 0.5, -5.9, -10.8003, 0, -5.9, -10.8003, 0, 9.5, -10.8003, 0.5, 9.5, 0.3998, 0, 0.1, 0.3998, 2, 2.2999, 0.3998, 2, 0.1, 0.3998, 0, 0.1, 0.3998, 0, 2.2999, 0.3998, 2, 2.2999, 0.3998, 0, 2.2999, -1.9003, 2, 2.2999, 0.3998, 2, 2.2999, 0.3998, 0, 2.2999, -1.9003, 0, 2.2999, -1.9003, 2, 2.2999, -1.9003, 0, 2.2999, -1.9003, 2, 0.1, -1.9003, 2, 2.2999, -1.9003, 0, 2.2999, -1.9003, 0, 0.1, -1.9003, 2, 0.1, -1.9003, 0, 0.1, 0.3998, 2, 0.1, -1.9003, 2, 0.1, -1.9003, 0, 0.1, 0.3998, 0, 0.1, 0.3998, 2, 0.1, 8.3999, 0, 8.8, 9.5, 0.5, 8.8, 8.3999, 0.5, 8.8, 8.3999, 0, 8.8, 9.5, 0, 8.8, 9.5, 0.5, 8.8, 9.5, 0, 8.8, 9.5, 0.5, 9.5, 9.5, 0.5, 8.8, 9.5, 0, 8.8, 9.5, 0, 9.5, 9.5, 0.5, 9.5, 8.3999, 0, 8.8, 8.3999, 0.5, 9.5, 8.3999, 0, 9.5, 8.3999, 0, 8.8, 8.3999, 0.5, 8.8, 8.3999, 0.5, 9.5, 8.3999, 0, 9.5, 9.5, 0, 8.8, 8.3999, 0, 8.8, 8.3999, 0, 9.5, 9.5, 0, 9.5, 9.5, 0, 8.8, 8.3999, 0.5, 9.5, 9.5, 0, 9.5, 8.3999, 0, 9.5, 8.3999, 0.5, 9.5, 9.5, 0.5, 9.5, 9.5, 0, 9.5, -10.8003, 0, -5.9, 9.5, 0.5, -5.9, -10.8003, 0.5, -5.9, -10.8003, 0, -5.9, 9.5, 0, -5.9, 9.5, 0.5, -5.9, -10.8003, 0, -5.2002, -10.8003, 0.5, -5.9, -10.8003, 0.5, -5.2002, -10.8003, 0, -5.2002, -10.8003, 0, -5.9, -10.8003, 0.5, -5.9, 9.5, 0, -5.2002, -10.8003, 0.5, -5.2002, 9.5, 0.5, -5.2002, 9.5, 0, -5.2002, -10.8003, 0, -5.2002, -10.8003, 0.5, -5.2002, 9.5, 0, -5.9, 9.5, 0.5, -5.2002, 9.5, 0.5, -5.9, 9.5, 0, -5.9, 9.5, 0, -5.2002, 9.5, 0.5, -5.2002, 9.5, 0, -5.9, 10.3, 0.5, -5.9, 9.5, 0.5, -5.9, 9.5, 0, -5.9, 10.3, 0, -5.9, 10.3, 0.5, -5.9, 9.5, 0, 9.5, 9.5, 0.5, -5.9, 9.5, 0.5, 9.5, 9.5, 0, 9.5, 9.5, 0, -5.9, 9.5, 0.5, -5.9, 10.3, 0, 9.5, 9.5, 0.5, 9.5, 10.3, 0.5, 9.5, 10.3, 0, 9.5, 9.5, 0, 9.5, 9.5, 0.5, 9.5, 10.3, 0, -5.9, 10.3, 0.5, 9.5, 10.3, 0.5, -5.9, 10.3, 0, -5.9, 10.3, 0, 9.5, 10.3, 0.5, 9.5, -10.8003, 0, 8.8, 6.4998, 0, 9.5, 6.4998, 0, 8.8, -10.8003, 0, 8.8, -10.8003, 0, 9.5, 6.4998, 0, 9.5, 6.4998, 0.5, 8.8, -10.8003, 0.5, 9.5, -10.8003, 0.5, 8.8, 6.4998, 0.5, 8.8, 6.4998, 0.5, 9.5, -10.8003, 0.5, 9.5, -11.6, 0, -5.9, -10.8003, 0, 9.5, -10.8003, 0, -5.9, -11.6, 0, -5.9, -11.6, 0, 9.5, -10.8003, 0, 9.5, -10.8003, 0.5, -5.9, -11.6, 0.5, 9.5, -11.6, 0.5, -5.9, -10.8003, 0.5, -5.9, -10.8003, 0.5, 9.5, -11.6, 0.5, 9.5, 0.3998, 0, 2.2999, -1.9003, 0, 0.1, -1.9003, 0, 2.2999, 0.3998, 0, 2.2999, 0.3998, 0, 0.1, -1.9003, 0, 0.1, -1.9003, 2, 2.2999, 0.3998, 2, 0.1, 0.3998, 2, 2.2999, -1.9003, 2, 2.2999, -1.9003, 2, 0.1, 0.3998, 2, 0.1, 8.3999, 0.5, 8.8, 9.5, 0.5, 9.5, 8.3999, 0.5, 9.5, 8.3999, 0.5, 8.8, 9.5, 0.5, 8.8, 9.5, 0.5, 9.5, -10.8003, 0, -5.9, 9.5, 0, -5.2002, 9.5, 0, -5.9, -10.8003, 0, -5.9, -10.8003, 0, -5.2002, 9.5, 0, -5.2002, 9.5, 0.5, -5.9, -10.8003, 0.5, -5.2002, -10.8003, 0.5, -5.9, 9.5, 0.5, -5.9, 9.5, 0.5, -5.2002, -10.8003, 0.5, -5.2002, 9.5, 0, -5.9, 10.3, 0, 9.5, 10.3, 0, -5.9, 9.5, 0, -5.9, 9.5, 0, 9.5, 10.3, 0, 9.5, 10.3, 0.5, -5.9, 9.5, 0.5, 9.5, 9.5, 0.5, -5.9, 10.3, 0.5, -5.9, 10.3, 0.5, 9.5, 9.5, 0.5, 9.5)
+
+[node name="Level_DrroneIntro" type="Node3D"]
+
+[node name="Camera3D" parent="." instance=ExtResource("1_2wasf")]
+transform = Transform3D(1, 0, 0, 0, 0.224951, 0.97437, 0, -0.97437, 0.224951, 0, 20, 6.47222)
+current = true
+
+[node name="Path3D" type="Path3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00134277, -0.0864754, -0.0320168)
+curve = SubResource("Curve3D_ystvf")
+
+[node name="Player" parent="Path3D" instance=ExtResource("3_q55hm")]
+transform = Transform3D(0.999978, 0, -0.00276227, 0, 0.999986, 0, 0.00276227, 0, 0.999977, 7.43782, 0.188526, 10.1302)
+ammo = 35
+slowmotion_uses = 1
+
+[node name="Drone" parent="." instance=ExtResource("6_gvl05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 230.284, 0, -202.255)
+speed = 7
+
+[node name="Drone2" parent="." instance=ExtResource("6_gvl05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 96.2273, 0, -6.55856)
+
+[node name="Drone3" parent="." instance=ExtResource("6_gvl05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.8196, 0, -4.89725)
+
+[node name="Drone13" parent="." instance=ExtResource("6_gvl05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -72.2815, 0, 58.865)
+
+[node name="Drone14" parent="." instance=ExtResource("6_gvl05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.3105, 0, 101.057)
+
+[node name="Drone15" parent="." instance=ExtResource("6_gvl05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 167.26, 0, 15.7882)
+
+[node name="Drone4" parent="." instance=ExtResource("6_gvl05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.4866, 0, -113.552)
+
+[node name="Drone31" parent="." instance=ExtResource("6_gvl05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.39532, 0, -175.605)
+
+[node name="Drone5" parent="." instance=ExtResource("6_gvl05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -298.398, 0, -72.7709)
+
+[node name="Drone6" parent="." instance=ExtResource("6_gvl05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 209.121, 0, 169.214)
+
+[node name="Drone7" parent="." instance=ExtResource("6_gvl05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -291.968, 0, 88.0491)
+
+[node name="Drone8" parent="." instance=ExtResource("6_gvl05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -307.728, 0, 14.2325)
+
+[node name="Drone9" parent="." instance=ExtResource("6_gvl05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 309.967, 0, -3.46329)
+
+[node name="Drone10" parent="." instance=ExtResource("6_gvl05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -146.642, 0, -93.9877)
+
+[node name="Drone11" parent="." instance=ExtResource("6_gvl05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 297.219, 0, 91.7251)
+
+[node name="Drone12" parent="." instance=ExtResource("6_gvl05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 259.005, 0, -90.2407)
+
+[node name="Drone16" parent="." instance=ExtResource("6_gvl05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.4442, 0, -247.149)
+
+[node name="Drone17" parent="." instance=ExtResource("6_gvl05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 150.964, 0, -242.605)
+
+[node name="Drone18" parent="." instance=ExtResource("6_gvl05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -225.189, 0, -208.206)
+
+[node name="Drone19" parent="." instance=ExtResource("6_gvl05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -124.147, 0, 208.909)
+
+[node name="Drone20" parent="." instance=ExtResource("6_gvl05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -267.034, 0, -143.444)
+
+[node name="Drone21" parent="." instance=ExtResource("6_gvl05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 148.481, 0, -199.531)
+
+[node name="Drone22" parent="." instance=ExtResource("6_gvl05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 242.767, 0, 194.67)
+
+[node name="Drone23" parent="." instance=ExtResource("6_gvl05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -269.337, 0, 150.669)
+
+[node name="Drone24" parent="." instance=ExtResource("6_gvl05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 252.959, 0, -150.725)
+
+[node name="Drone25" parent="." instance=ExtResource("6_gvl05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -224.326, 0, 198.606)
+
+[node name="Drone26" parent="." instance=ExtResource("6_gvl05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.802, 0, 277.198)
+
+[node name="Drone27" parent="." instance=ExtResource("6_gvl05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 291.402, 0, -91.0042)
+
+[node name="Drone28" parent="." instance=ExtResource("6_gvl05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.9422, 0, 302.712)
+
+[node name="Drone29" parent="." instance=ExtResource("6_gvl05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 164.019, 0, 255.296)
+
+[node name="Drone30" parent="." instance=ExtResource("6_gvl05")]
+transform = Transform3D(0.985615, 0, -0.169005, 0, 1, 0, 0.169005, 0, 0.985615, 213.179, 0, 76.4054)
+
+[node name="drone_hell_map" parent="." instance=ExtResource("4_qli7v")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="drone_hell_map/Walls" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="drone_hell_map/Walls/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_oilnr")
+
+[editable path="drone_hell_map"]
