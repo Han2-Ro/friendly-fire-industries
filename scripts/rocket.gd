@@ -5,13 +5,15 @@ class_name Rocket
 @onready var explodeparticle = preload("res://scenes/particles/explosion.tscn")
 @onready var model = $Rocket
 @onready var particles = $FireParticles
+@onready var audio_flight = $Flight
+@onready var audio_landing = $Landing
 
 var target: Vector3 = get_transform().origin
 var speed: float
 var distance: float
 var incline: float
 var x: float = 0
-var radius_visible: bool = false
+var already_landed: bool = false
 
 var old_pos: Vector3
 
@@ -21,15 +23,19 @@ func _ready() -> void:
 	move(0.001)
 
 func _process(delta: float) -> void:
-	if position.y > 0:
+	if position.y > target.y:
 		move(delta)
-	if position.y <= 0 and not radius_visible:
+	
+	if position.y <= target.y and not already_landed:
+		already_landed = true
+		
 		print("showing radius")
-		radius_visible = true
 		$AnimationPlayer.play("show_radius")
-	if position.y < 0:
+		
+		audio_flight.stop()
+		audio_landing.play()
 		particles.amount_ratio = .15
-		global_position = target
+		#global_position = target
 		#rotation_degrees.x = -90
 
 func move(delta: float):

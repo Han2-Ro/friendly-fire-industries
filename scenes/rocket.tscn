@@ -1,7 +1,9 @@
-[gd_scene load_steps=19 format=3 uid="uid://cf8pivhpqj2mv"]
+[gd_scene load_steps=21 format=3 uid="uid://cf8pivhpqj2mv"]
 
 [ext_resource type="Script" path="res://scripts/rocket.gd" id="1_wduoi"]
 [ext_resource type="PackedScene" uid="uid://cecvu28s6wm8l" path="res://assets/Rocket.blend" id="2_rnh1f"]
+[ext_resource type="AudioStream" uid="uid://xnghiy1qu1gj" path="res://assets/sounds/rocket_flight.mp3" id="3_nrnun"]
+[ext_resource type="AudioStream" uid="uid://nhgcqpkvo447" path="res://assets/sounds/rocket_landing.mp3" id="4_eo7ap"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_0ncmc"]
 height = 1.8978
@@ -163,3 +165,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.888194)
 amount = 6
 process_material = SubResource("ParticleProcessMaterial_1l56d")
 draw_pass_1 = SubResource("SphereMesh_5fwix")
+
+[node name="Flight" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_nrnun")
+volume_db = -14.0
+pitch_scale = 0.9
+autoplay = true
+mix_target = 2
+
+[node name="Landing" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_eo7ap")
+volume_db = -24.0
+pitch_scale = 0.6
+mix_target = 2
