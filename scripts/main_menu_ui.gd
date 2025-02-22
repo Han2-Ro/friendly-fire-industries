@@ -12,7 +12,7 @@ func _ready() -> void:
 	options_menu.visible = true
 	continue_button.visible = GameState.current_level != 0
 	GlobalPlayer.stop()
-	
+
 func _on_start_pressed() -> void:
 	play_on_mouse_click()
 	get_tree().change_scene_to_file("res://scenes/main.tscn")

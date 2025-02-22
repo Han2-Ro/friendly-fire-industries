@@ -30,6 +30,8 @@ func _ready() -> void:
 	
 	if GameState.current_level >= 1:
 		GlobalPlayer.play_music_level()
+	
+	AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), false) # if player presses start to quickly
 
 func _on_menu_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/levels/main_menu/main_menu.tscn")
@@ -46,7 +48,6 @@ func _on_next_level_pressed() -> void:
 	# Start playing Music in First Level after Intro
 	# TODO: don't hard code
 	if GameState.current_level == 1:
-		AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), false) # if player presses start to quickly
 		GlobalPlayer.play_music_level()
 
 	if GameState.current_level >= levels.size():
@@ -67,7 +68,7 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Quit"):
 		get_tree().quit()
 	
-	if not has_level_ended and event.is_action_pressed("Pause"):
+	if GameState.current_level != 0 and not has_level_ended and event.is_action_pressed("Pause"):
 		if paused:
 			print("unpause")
 			end_screen.hide()

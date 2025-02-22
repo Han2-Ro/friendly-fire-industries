@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cul6wl06g6wvn"]
+[gd_scene load_steps=9 format=3 uid="uid://cul6wl06g6wvn"]
 
 [ext_resource type="Script" path="res://scripts/ui_level_end.gd" id="1_dt46y"]
 [ext_resource type="Texture2D" uid="uid://dtagpag7eaum5" path="res://assets/icons/restart.svg" id="1_thasw"]
@@ -113,7 +113,6 @@ offset_top = -20.0
 offset_bottom = -20.0
 scale = Vector2(0.65, 0.65)
 
-[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [node name="HoverAudioPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_i0mxp")
 volume_db = -10.0
@@ -124,6 +123,7 @@ stream = ExtResource("7_rsmh3")
 volume_db = -10.0
 max_polyphony = 5
 
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="mouse_entered" from="RestartButton" to="." method="play_on_mouse_entered"]
 [connection signal="pressed" from="RestartButton" to="." method="play_on_mouse_click"]
 [connection signal="mouse_entered" from="MenuButton" to="." method="play_on_mouse_entered"]
