@@ -43,7 +43,11 @@ transform = Transform3D(-1, 0, 7.26395e-06, 0, 1, 0, -7.26395e-06, 0, -1, -5.821
 [node name="StaticBody3D" type="StaticBody3D" parent="drone_intro_map/Walls" index="0"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="drone_intro_map/Walls/StaticBody3D"]
+<<<<<<< HEAD
 shape = SubResource("ConcavePolygonShape3D_bie56")
+=======
+shape = SubResource("ConcavePolygonShape3D_tmdnq")
+>>>>>>> 0a4e666 (new level finished)
 
 [node name="Drone" parent="." instance=ExtResource("6_e7fom")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.38, 0, 190.918)
