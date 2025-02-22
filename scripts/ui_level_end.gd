@@ -2,6 +2,8 @@ extends Control
 
 @export var status_label: Label
 @export var next_level_button: Button
+@onready var hover_audio_player: AudioStreamPlayer = $HoverAudioPlayer
+@onready var click_audio_player: AudioStreamPlayer = $ClickAudioPlayer
 
 @onready var menu_button: Button = $MenuButton
 
@@ -21,7 +23,6 @@ func reset():
 	next_level_button.visible = false
 	status_label.text = "In Progress"
 
-
 func _on_visibility_changed() -> void:
 	var hint: Panel = get_tree().root.find_child("UiHint", true, false)
 	if hint:
@@ -29,3 +30,9 @@ func _on_visibility_changed() -> void:
 			hint.hide()
 		else:
 			hint.show()
+	
+func play_on_mouse_entered() -> void:
+	hover_audio_player.play()
+	
+func play_on_mouse_click() -> void:
+	click_audio_player.play()
