@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://cf5alfw8hcrmg"]
+[gd_scene load_steps=2 format=3 uid="uid://cf6iagau1wkgo"]
+
+[ext_resource type="Theme" uid="uid://dhgodsmrdod46" path="res://assets/ui_themes/main_menu_UI.tres" id="1_33mtl"]
 
 [node name="UiMouseHint" type="Panel"]
 custom_minimum_size = Vector2(50, 50)
@@ -11,6 +13,7 @@ offset_right = 256.0
 offset_bottom = 122.0
 grow_horizontal = 2
 mouse_filter = 2
+theme = ExtResource("1_33mtl")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -25,5 +28,6 @@ offset_right = 230.0
 offset_bottom = 27.5
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_33mtl")
 theme_override_font_sizes/font_size = 36
 text = "hold space for slowmotion"

@@ -55,35 +55,6 @@ uv1_offset = Vector3(-0.04, 0.21, 0.17)
 [sub_resource type="PlaneMesh" id="PlaneMesh_itibw"]
 material = SubResource("StandardMaterial3D_kf47h")
 
-[sub_resource type="Animation" id="Animation_opvmf"]
-resource_name = "noise"
-length = 8.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Rocket3:position")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 4, 8),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector3(0.403925, 1.56745, 3.13062), Vector3(0.33672, 1.71333, 3.20412), Vector3(0.403925, 1.56745, 3.13062)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Rocket3:rotation")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 4, 8),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector3(1.28318, 1.70511, 0.20002), Vector3(1.22864, 1.8412, 0.231101), Vector3(1.28318, 1.70511, 0.20002)]
-}
-
 [sub_resource type="Animation" id="Animation_taoud"]
 length = 0.001
 tracks/0/type = "value"
@@ -159,6 +130,35 @@ tracks/5/keys = {
 "values": [Vector3(-0.56268, 1.75207, -0.176355)]
 }
 
+[sub_resource type="Animation" id="Animation_opvmf"]
+resource_name = "noise"
+length = 8.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Rocket3:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4, 8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0.403925, 1.56745, 3.13062), Vector3(0.33672, 1.71333, 3.20412), Vector3(0.403925, 1.56745, 3.13062)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Rocket3:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4, 8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(1.28318, 1.70511, 0.20002), Vector3(1.22864, 1.8412, 0.231101), Vector3(1.28318, 1.70511, 0.20002)]
+}
+
 [sub_resource type="Animation" id="Animation_ab5jx"]
 resource_name = "noise rocket 2"
 length = 6.0
@@ -225,6 +225,33 @@ _data = {
 "noise rocket 3": SubResource("Animation_cy7w6")
 }
 
+[sub_resource type="Animation" id="Animation_5su1d"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Main_menu/player_base/player_rotationstange:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.00299802, -0.0354445, -0.00693416)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Main_menu/player_base/player_rotationstange:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.186542, 2.38419e-07)]
+}
+
 [sub_resource type="Animation" id="Animation_gs1nj"]
 resource_name = "player_anim"
 length = 10.0
@@ -254,37 +281,25 @@ tracks/1/keys = {
 "values": [Vector3(0, 0.186542, 2.38419e-07), Vector3(-2.38419e-07, 0.186542, 3.57628e-07), Vector3(0, 0.186542, 2.38419e-07)]
 }
 
-[sub_resource type="Animation" id="Animation_5su1d"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ote0t"]
+_data = {
+"RESET": SubResource("Animation_5su1d"),
+"player_anim": SubResource("Animation_gs1nj")
+}
+
+[sub_resource type="Animation" id="Animation_4f4cd"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Main_menu/player_base/player_rotationstange:rotation")
+tracks/0/path = NodePath("Main_menu/Cylinder_001:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(-0.00299802, -0.0354445, -0.00693416)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Main_menu/player_base/player_rotationstange:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0.186542, 2.38419e-07)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_ote0t"]
-_data = {
-"RESET": SubResource("Animation_5su1d"),
-"player_anim": SubResource("Animation_gs1nj")
+"values": [Vector3(0, -0.349036, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_b4fiq"]
@@ -304,21 +319,6 @@ tracks/0/keys = {
 "values": [Vector3(0, -0.349036, 0), Vector3(0, -0.639982, 0), Vector3(0, -0.349036, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_4f4cd"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Main_menu/Cylinder_001:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, -0.349036, 0)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ps18e"]
 _data = {
 "RESET": SubResource("Animation_4f4cd"),
@@ -332,7 +332,7 @@ script = SubResource("GDScript_cy51l")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0102692, 0, 0)
 
 [node name="player_rotationstange" parent="Main_menu/player_base" index="0"]
-transform = Transform3D(0.999348, 0.007036, -0.0354369, -0.00693408, 0.999973, 0.00299801, 0.035457, -0.00275034, 0.999368, 0, 0.186542, 2.38419e-07)
+transform = Transform3D(0.999348, 0.007036, -0.0354369, -0.00693408, 0.999973, 0.00299802, 0.035457, -0.00275034, 0.999368, 0, 0.186542, 2.38419e-07)
 
 [node name="player_body" parent="Main_menu/player_base/player_rotationstange" index="0"]
 transform = Transform3D(0.88793, 0.219829, 0.404048, -0.154478, 0.969903, -0.188212, -0.433262, 0.104703, 0.895166, 0.0239391, -0.00917262, 0.0658368)
@@ -410,13 +410,13 @@ scale = Vector2(1.00702, 1)
 mouse_filter = 2
 
 [node name="Rocket2" parent="." instance=ExtResource("12_fb2vg")]
-transform = Transform3D(-0.0453488, -0.291001, 0.44163, -0.0787715, 0.442023, 0.283171, -0.522985, -0.0413439, -0.0809453, -2.92321, 2.67125, 3.07463)
+transform = Transform3D(-0.0453479, -0.291001, 0.44163, -0.0787712, 0.442023, 0.283171, -0.522985, -0.0413442, -0.0809444, -2.92321, 2.67125, 3.07463)
 
 [node name="Rocket4" parent="." instance=ExtResource("12_fb2vg")]
-transform = Transform3D(-0.0862017, 0.0757052, 0.518279, -0.0288225, 0.52377, -0.0813011, -0.522986, -0.0413439, -0.0809453, -1.08712, 3.17265, 3.07463)
+transform = Transform3D(-0.086204, 0.0757051, 0.518279, -0.0288225, 0.52377, -0.081301, -0.522986, -0.0413442, -0.0809475, -1.08712, 3.17265, 3.07463)
 
 [node name="Rocket3" parent="." instance=ExtResource("12_fb2vg")]
-transform = Transform3D(0.0221328, 0.438797, 0.239915, 0.0337137, 0.238294, -0.438943, -0.498964, 0.0355648, -0.0190162, 0.249379, 1.56745, 3.13062)
+transform = Transform3D(0.0221347, 0.438797, 0.239914, 0.0337137, 0.238293, -0.438944, -0.498964, 0.0355665, -0.0190153, 0.249379, 1.56745, 3.13062)
 
 [node name="Rocketsilo" parent="." instance=ExtResource("12_u17jf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.597138, 0, 3.11829)

@@ -123,12 +123,9 @@ And always remember nothing can go wrong or you will be eliminated.
 visible_characters = 0
 visible_ratio = 0.0
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_xxa14")
 volume_db = -10.0
 autoplay = true
-parameters/looping = false
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

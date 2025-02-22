@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://da7tqvcdnlunp"]
+[gd_scene load_steps=2 format=3 uid="uid://dn616rm8lgx61"]
+
+[ext_resource type="Theme" uid="uid://dhgodsmrdod46" path="res://assets/ui_themes/main_menu_UI.tres" id="1_5a25v"]
 
 [node name="UiMouseHint" type="Panel"]
 custom_minimum_size = Vector2(50, 50)
@@ -25,6 +27,7 @@ offset_right = 172.0
 offset_bottom = 51.5
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_5a25v")
 theme_override_font_sizes/font_size = 36
 text = "move mouse to aim
 left-click to shoot"
