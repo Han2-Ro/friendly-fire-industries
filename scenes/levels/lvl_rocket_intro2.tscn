@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bof0cw4bqi4rj"]
+[gd_scene load_steps=10 format=3 uid="uid://dwdssc612s0bh"]
 
 [ext_resource type="PackedScene" uid="uid://ds2irli2tj4wi" path="res://assets/levels_blend/rocket_intro2.blend" id="1_xr2dl"]
 [ext_resource type="PackedScene" uid="uid://c38ebp5143i5x" path="res://scenes/level_camera.tscn" id="2_jml5a"]
