@@ -90,14 +90,14 @@ transform = Transform3D(1.31134e-07, 4.37114e-08, 1, -4.37114e-08, 1, -4.37114e-
 
 [node name="ButtonGreen" parent="." instance=ExtResource("5_sjduq")]
 transform = Transform3D(-4.37114e-08, -4.37114e-08, -1, 4.37114e-08, 1, -4.37114e-08, 1, -4.37114e-08, -4.37114e-08, -3.88546, 1, 6.0088)
-color = Color(0.320169, 0.648596, 0.193781, 1)
+color = Color(0, 0, 1, 1)
 
 [node name="DoorRed" parent="." instance=ExtResource("6_2shlk")]
 transform = Transform3D(-4.37114e-08, -4.37114e-08, -1, 4.37114e-08, 1, -4.37114e-08, 1, -4.37114e-08, -4.37114e-08, -7, 0, 3)
 
 [node name="DoorGreen" parent="." instance=ExtResource("6_2shlk")]
 transform = Transform3D(-4.37114e-08, -4.37114e-08, -1, 4.37114e-08, 1, -4.37114e-08, 1, -4.37114e-08, -4.37114e-08, -9, 0, 3)
-color = Color(0.320169, 0.648596, 0.193781, 1)
+color = Color(0, 0, 1, 1)
 
 [connection signal="button_hit" from="ButtonRed" to="DoorRed" method="toggle_door"]
 [connection signal="ready" from="ButtonRed" to="ButtonRed" method="on_hit" flags=3]
