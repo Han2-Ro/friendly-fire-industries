@@ -33,7 +33,7 @@ func _ready() -> void:
 
 func _on_menu_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/levels/main_menu/main_menu.tscn")
-	#set_paused(false)
+	set_paused(false)
 
 func _on_restart_pressed() -> void:
 	get_tree().reload_current_scene()
