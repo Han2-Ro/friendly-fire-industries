@@ -42,6 +42,9 @@ shadow_offset = Vector2(0, 5)
 [resource]
 default_font = ExtResource("2_2mt5f")
 default_font_size = 50
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
 Button/styles/hover = SubResource("StyleBoxFlat_wsiv0")
 Button/styles/normal = ExtResource("1_0cxpf")
 Button/styles/pressed = SubResource("StyleBoxFlat_0oiry")

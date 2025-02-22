@@ -50,8 +50,7 @@ func _on_next_level_pressed() -> void:
 		GlobalPlayer.play_music_level()
 
 	if GameState.current_level >= levels.size():
-		printerr("No more levels: Exiting")
-		get_tree().quit()
+		get_tree().change_scene_to_file("res://scenes/end_screen.tscn")
 		return
 	current_level = levels[GameState.current_level].instantiate()
 	add_child(current_level)

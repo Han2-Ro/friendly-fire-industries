@@ -1,0 +1,431 @@
+[gd_scene load_steps=27 format=3 uid="uid://ocb4mkjhatgf"]
+
+[ext_resource type="PackedScene" uid="uid://diuatrn3fo023" path="res://scenes/levels/main_menu/main_menu_map.tscn" id="1_h28c4"]
+[ext_resource type="AudioStream" uid="uid://bipgykl4xia41" path="res://assets/music/Introspective Machine.mp3" id="2_3lvvp"]
+[ext_resource type="Texture2D" uid="uid://d3ers1x7oajoh" path="res://assets/textures/FriendlyFireLogo2 mit HG.png" id="5_r5yxu"]
+[ext_resource type="PackedScene" uid="uid://mhd5k3skhprv" path="res://assets/Toolbox.blend" id="6_xllnq"]
+[ext_resource type="PackedScene" uid="uid://cgm1l4gs3i30g" path="res://assets/FireExtinguisher.blend" id="7_iq3yi"]
+[ext_resource type="PackedScene" uid="uid://dundx2uw5a7ky" path="res://assets/PowerDrill.blend" id="8_dcj1u"]
+[ext_resource type="PackedScene" uid="uid://cecvu28s6wm8l" path="res://assets/Rocket.blend" id="11_ofxvw"]
+[ext_resource type="PackedScene" uid="uid://hyiovj3pyx5w" path="res://assets/Rocketsilo.blend" id="12_rewmc"]
+[ext_resource type="PackedScene" uid="uid://b6qld0vjlight" path="res://scenes/preload.tscn" id="13_e3byb"]
+[ext_resource type="PackedScene" uid="uid://efxdmdettrjx" path="res://scenes/ui_end_screen.tscn" id="14_6tknn"]
+
+[sub_resource type="GDScript" id="GDScript_cy51l"]
+script/source = "extends Node3D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+func _on_start_pressed() -> void:
+	GameState.current_level = 0
+	get_tree().change_scene(\"res://scenes/main.tscn\")
+"
+
+[sub_resource type="Environment" id="Environment_uifkp"]
+glow_enabled = true
+glow_intensity = 0.66
+glow_bloom = 0.25
+fog_enabled = true
+fog_light_energy = 0.53
+fog_density = 0.0396
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_j4ior"]
+dof_blur_far_enabled = true
+dof_blur_far_distance = 5.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kf47h"]
+albedo_texture = ExtResource("5_r5yxu")
+emission_enabled = true
+emission_energy_multiplier = 3.0
+emission_texture = ExtResource("5_r5yxu")
+uv1_scale = Vector3(1.05, 0.645, 1)
+uv1_offset = Vector3(-0.04, 0.21, 0.17)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_itibw"]
+material = SubResource("StandardMaterial3D_kf47h")
+
+[sub_resource type="Animation" id="Animation_taoud"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Rocket3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.249379, 1.56745, 3.13062)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Rocket3:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.06927, 1.64989, 0.140547)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Rocket4:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.153765, 1.72573, -0.0549734)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Rocket4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.08712, 3.17265, 3.07463)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Rocket2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2.92321, 2.67125, 3.07463)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Rocket2:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.56268, 1.75207, -0.176355)]
+}
+
+[sub_resource type="Animation" id="Animation_opvmf"]
+resource_name = "noise"
+length = 8.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Rocket3:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4, 8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0.403925, 1.56745, 3.13062), Vector3(0.33672, 1.71333, 3.20412), Vector3(0.403925, 1.56745, 3.13062)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Rocket3:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4, 8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(1.28318, 1.70511, 0.20002), Vector3(1.22864, 1.8412, 0.231101), Vector3(1.28318, 1.70511, 0.20002)]
+}
+
+[sub_resource type="Animation" id="Animation_ab5jx"]
+resource_name = "noise rocket 2"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Rocket4:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 5.96667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0.153765, 1.72573, -0.0549734), Vector3(-0.0556937, 1.72412, -0.0874917), Vector3(0.153765, 1.72573, -0.0549734)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Rocket4:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3, 5.96667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.08712, 3.17265, 3.07463), Vector3(-1.16217, 3.17265, 3.07463), Vector3(-1.08712, 3.17265, 3.07463)]
+}
+
+[sub_resource type="Animation" id="Animation_cy7w6"]
+resource_name = "noise rocket 3"
+length = 9.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Rocket2:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 4.5, 9.03333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-3.0783, 2.51915, 3.07463), Vector3(-2.92321, 2.67125, 3.07463), Vector3(-3.0783, 2.51915, 3.07463)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Rocket2:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0333333, 4.5, 9.03333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.758515, 1.92063, -0.259517), Vector3(-0.56268, 1.75207, -0.176355), Vector3(-0.758515, 1.92063, -0.259517)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k185f"]
+_data = {
+"RESET": SubResource("Animation_taoud"),
+"noise": SubResource("Animation_opvmf"),
+"noise rocket 2": SubResource("Animation_ab5jx"),
+"noise rocket 3": SubResource("Animation_cy7w6")
+}
+
+[sub_resource type="Animation" id="Animation_5su1d"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Main_menu/player_base/player_rotationstange:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.00299802, -0.0354445, -0.00693416)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Main_menu/player_base/player_rotationstange:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.186542, 2.38419e-07)]
+}
+
+[sub_resource type="Animation" id="Animation_gs1nj"]
+resource_name = "player_anim"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Main_menu/player_base/player_rotationstange:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5, 10),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.00299802, -0.0354445, -0.00693416), Vector3(0.11741, 0.102002, -0.0706223), Vector3(-0.00299802, -0.0354445, -0.00693416)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Main_menu/player_base/player_rotationstange:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5, 10),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0.186542, 2.38419e-07), Vector3(-2.38419e-07, 0.186542, 3.57628e-07), Vector3(0, 0.186542, 2.38419e-07)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ote0t"]
+_data = {
+"RESET": SubResource("Animation_5su1d"),
+"player_anim": SubResource("Animation_gs1nj")
+}
+
+[sub_resource type="Animation" id="Animation_4f4cd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Main_menu/Cylinder_001:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -0.349036, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_b4fiq"]
+resource_name = "turretanim"
+length = 11.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Main_menu/Cylinder_001:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5.5, 11),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -0.349036, 0), Vector3(0, -0.639982, 0), Vector3(0, -0.349036, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ps18e"]
+_data = {
+"RESET": SubResource("Animation_4f4cd"),
+"turretanim": SubResource("Animation_b4fiq")
+}
+
+[node name="MainMenu" type="Node3D"]
+script = SubResource("GDScript_cy51l")
+
+[node name="Main_menu" parent="." instance=ExtResource("1_h28c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0102692, 0, 0)
+
+[node name="player_rotationstange" parent="Main_menu/player_base" index="0"]
+transform = Transform3D(0.999348, 0.007036, -0.0354369, -0.00693408, 0.999973, 0.00299802, 0.035457, -0.00275034, 0.999368, 0, 0.186542, 2.38419e-07)
+
+[node name="player_body" parent="Main_menu/player_base/player_rotationstange" index="0"]
+transform = Transform3D(0.88793, 0.219829, 0.404048, -0.154478, 0.969903, -0.188212, -0.433262, 0.104703, 0.895166, 0.0239391, -0.00917262, 0.0658368)
+
+[node name="Cylinder_001" parent="Main_menu" index="5"]
+transform = Transform3D(0.939703, 0, -0.341992, 0, 1, 0, 0.341992, 0, 0.939703, -3.05667, 0, 2.76685)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.999263, -0.00520987, -0.0380328, 0, 0.990748, -0.135716, 0.038388, -0.135616, -0.990017, -0.323, 0.082, -9.184)
+environment = SubResource("Environment_uifkp")
+attributes = SubResource("CameraAttributesPractical_j4ior")
+fov = 17.9
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.112887, -0.948425, 0.296221, -0.984431, -0.0663336, 0.162775, -0.13473, -0.309984, -0.941147, 8.49592, 4.2149, -5.32644)
+light_color = Color(0.999997, 0.502305, 0.435515, 1)
+shadow_enabled = true
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.397545, -0.0546972, -0.915951, -0.417697, -0.878011, 0.233722, -0.816999, 0.475505, 0.326202, -3.50583, 4.20123, -4.95982)
+light_color = Color(0.787288, 0.858612, 1, 1)
+shadow_enabled = true
+shadow_bias = 0.32
+
+[node name="MainMenuMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_3lvvp")
+autoplay = true
+parameters/looping = true
+
+[node name="LogoPlane" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.574269, -0.00934959, 0.0091344, -0.0344116, -0.13358, -0.146081, 0.0105924, -0.940853, 0.0206495, 0.619565, 1.27906, -3.98418)
+mesh = SubResource("PlaneMesh_itibw")
+
+[node name="Toolbox" parent="." instance=ExtResource("6_xllnq")]
+transform = Transform3D(-0.423392, 0, 0.563475, 0, 0.704816, 0, -0.563475, 0, -0.423392, 2.94998, 0, 3.02611)
+
+[node name="FireExtinguisher2" parent="." instance=ExtResource("7_iq3yi")]
+transform = Transform3D(0.255311, 0, 1.02316, 0, 1.05453, 0, -1.02316, 0, 0.255311, 2.26074, 1.19209e-07, -1.01744)
+
+[node name="PowerDrill2" parent="." instance=ExtResource("8_dcj1u")]
+transform = Transform3D(0.587333, -0.301486, -0.751097, -0.0482436, 0.913338, -0.404333, 0.807906, 0.273714, 0.521889, -0.419409, 0, -4.3001)
+
+[node name="Rocket2" parent="." instance=ExtResource("11_ofxvw")]
+transform = Transform3D(-0.0453479, -0.291001, 0.44163, -0.0787712, 0.442023, 0.283171, -0.522985, -0.0413442, -0.0809444, -2.92321, 2.67125, 3.07463)
+
+[node name="Rocket4" parent="." instance=ExtResource("11_ofxvw")]
+transform = Transform3D(-0.0862041, 0.0757051, 0.518279, -0.0288225, 0.52377, -0.0813011, -0.522986, -0.0413442, -0.0809476, -1.08712, 3.17265, 3.07463)
+
+[node name="Rocket3" parent="." instance=ExtResource("11_ofxvw")]
+transform = Transform3D(0.0221347, 0.438797, 0.239914, 0.0337137, 0.238293, -0.438944, -0.498964, 0.0355665, -0.0190154, 0.249379, 1.56745, 3.13062)
+
+[node name="Rocketsilo" parent="." instance=ExtResource("12_rewmc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.597138, 0, 3.11829)
+
+[node name="BaseRocketsilo" parent="Rocketsilo" index="0"]
+transform = Transform3D(-0.74113, 0, 0.671362, 0, 1, 0, -0.671362, 0, -0.74113, 0, 0, 0)
+
+[node name="DeckelRocketsilo" parent="Rocketsilo/BaseRocketsilo" index="1"]
+transform = Transform3D(-0.912592, -0.105429, -0.395044, 0.114764, -0.993393, -7.45058e-09, -0.392434, -0.0453367, 0.918662, -0.569501, 0.533732, -0.258555)
+
+[node name="AnimationR1" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_k185f")
+}
+autoplay = "noise"
+
+[node name="AnimationR2" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_k185f")
+}
+autoplay = "noise rocket 2"
+
+[node name="AnimationR3" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_k185f")
+}
+autoplay = "noise rocket 3"
+
+[node name="PlayerAnim" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ote0t")
+}
+autoplay = "player_anim"
+
+[node name="TurretAnim" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ps18e")
+}
+autoplay = "turretanim"
+
+[node name="Preload" parent="." instance=ExtResource("13_e3byb")]
+transform = Transform3D(-6.04049e-10, -0.0138191, 0.00105798, 0.0138595, -6.05817e-10, 0, 4.62458e-11, 0.00105798, 0.0138191, 0.643412, 0.730835, 3.13286)
+
+[node name="UiEndMenu" parent="." instance=ExtResource("14_6tknn")]
+
+[editable path="Main_menu"]
+[editable path="Rocketsilo"]
+[editable path="Preload"]

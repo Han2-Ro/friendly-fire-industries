@@ -1,0 +1,77 @@
+[gd_scene load_steps=3 format=3 uid="uid://efxdmdettrjx"]
+
+[ext_resource type="Theme" uid="uid://dhgodsmrdod46" path="res://assets/ui_themes/main_menu_UI.tres" id="1_o6w6d"]
+[ext_resource type="Script" path="res://scripts/ui_end_screen.gd" id="2_wa747"]
+
+[node name="UiEndMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_o6w6d")
+script = ExtResource("2_wa747")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -358.5
+offset_top = -182.5
+offset_right = 358.5
+offset_bottom = 182.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -283.5
+offset_top = 39.0
+offset_right = 283.5
+offset_bottom = 94.0
+grow_horizontal = 2
+text = "Thank you for Playing!"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -292.0
+offset_top = 138.0
+offset_right = 275.0
+offset_bottom = 320.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
+text = "Created by:
+a-toast
+anybuddy
+geldautomat312
+Han2"
+horizontal_alignment = 1
+
+[node name="MainMenuButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -82.0
+offset_top = -97.0
+offset_right = 82.0
+offset_bottom = -25.53
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 25
+text = "Main Menu"
+
+[connection signal="pressed" from="MainMenuButton" to="." method="_on_main_menu_button_pressed"]
