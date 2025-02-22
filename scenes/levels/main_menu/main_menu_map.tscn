@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://diuatrn3fo023"]
+[gd_scene load_steps=3 format=3 uid="uid://diuatrn3fo023"]
 
-[ext_resource type="PackedScene" uid="uid://b3m6lyelqm8b5" path="res://Assets/Main_menu.blend" id="1_yqn4o"]
+[ext_resource type="PackedScene" uid="uid://b3m6lyelqm8b5" path="res://assets/Main_menu.blend" id="1_yqn4o"]
+[ext_resource type="Texture2D" uid="uid://cqits2h8pwfsp" path="res://assets/textures/testGesicht.png" id="2_2nte4"]
 
 [node name="Main_menu" instance=ExtResource("1_yqn4o")]
 
@@ -10,20 +11,14 @@ transform = Transform3D(1.48865, 0.170216, -1.47636, 0.16682, 2.05731, 0.405406,
 [node name="player_rotationstange" parent="player_base" index="0"]
 transform = Transform3D(0.999348, 0.0070359, -0.0354363, -0.00693408, 0.999973, 0.00299802, 0.035457, -0.00275034, 0.999368, 0, 0.186542, 2.38419e-07)
 
+[node name="Sprite3D" type="Sprite3D" parent="player_base/player_rotationstange/player_body/Cylinder/Cube" index="0"]
+transform = Transform3D(-1.00116e-05, -0.148201, -240.201, -3.16345e-06, 240.201, -0.148201, 240.201, 3.15727e-06, -1.00136e-05, -0.0549006, 0.00438392, 0.00482325)
+pixel_size = 0.0001
+texture_filter = 0
+texture = ExtResource("2_2nte4")
+
 [node name="Cube_001" parent="." index="4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.05458, 0, 2.76685)
 
 [node name="Cylinder_001" parent="." index="5"]
 transform = Transform3D(0.939703, 0, -0.341992, 0, 1, 0, 0.341992, 0, 0.939703, -3.05667, 0, 2.76685)
-
-[node name="BaseMienenwerfer" parent="." index="8"]
-transform = Transform3D(-0.370535, 0, 0.391048, 0, 0.538716, 0, -0.391048, 0, -0.370535, 0.616493, 0, 3.66344)
-
-[node name="MieneBody" parent="." index="9"]
-transform = Transform3D(0.0508306, -0.0165952, -0.114255, 0.188997, 0.0067038, -0.00076648, 0.0365099, -0.0115982, 0.163039, 0.280068, 1.47309, 2.01392)
-
-[node name="MieneBody_001" parent="." index="10"]
-transform = Transform3D(0.194454, 0.00424811, -0.0158621, -0.0240184, 0.0174262, 0.112239, 0.035317, -0.0115387, 0.163668, -1.09242, 2.97351, 2.63813)
-
-[node name="MieneBody_002" parent="." index="11"]
-transform = Transform3D(-0.0754438, 0.0140355, -0.129532, 0.164598, -0.00160234, -0.110996, -0.0827779, -0.0159781, -0.102653, -2.39415, 1.98265, 1.3118)

@@ -158,6 +158,7 @@ libraries = {
 
 [node name="FireParticles" type="GPUParticles3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.888194)
+amount = 22
 process_material = SubResource("ParticleProcessMaterial_l6hnl")
 draw_pass_1 = SubResource("SphereMesh_5fwix")
 
