@@ -60,6 +60,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="PanelContainer"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 4
 texture = ExtResource("2_ti5rx")
@@ -101,6 +102,7 @@ offset_bottom = 440.0
 grow_vertical = 2
 size_flags_vertical = 1
 theme = ExtResource("1_qf3pt")
+theme_override_colors/font_color = Color(0, 1, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
 theme_override_font_sizes/font_size = 25
