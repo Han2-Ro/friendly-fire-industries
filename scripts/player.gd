@@ -79,8 +79,9 @@ func handle_timescale(event: InputEvent):
 	var timescale = Engine.time_scale
 	#print("timescale: ", timescale, " slowmotion: ", slowmotion_pressed)
 
-	if event.is_action_pressed("fast_forward", true) and timescale == 1:
+	if OS.is_debug_build() and event.is_action_pressed("fast_forward", true) and timescale == 1:
 		timescale = speedup
+	
 	if event.is_action_pressed("slow_motion", true) and !slowmotion_pressed and slowmotion_uses > 0 and timescale != 0: # has prio & don't tirgger when already active
 		slowmotion_uses -= 1
 		ui.update_time(slowmotion_uses)
@@ -88,7 +89,7 @@ func handle_timescale(event: InputEvent):
 		timescale = slow_down
 		slowmotion_time_left = slowmotion_duration
 		ui.slowmotion_start(slowmotion_duration)
-	if event.is_action_released("fast_forward") and timescale == speedup:
+	if OS.is_debug_build() and event.is_action_released("fast_forward") and timescale == speedup:
 		print("fast_forward release")
 		timescale = 1
 	if event.is_action_released("slow_motion") and slowmotion_pressed:
