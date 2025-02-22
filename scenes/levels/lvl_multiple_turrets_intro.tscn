@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://blaupr70ttbg4"]
+[gd_scene load_steps=10 format=3 uid="uid://blaupr70ttbg4"]
 
 [ext_resource type="PackedScene" uid="uid://c38ebp5143i5x" path="res://scenes/level_camera.tscn" id="1_scho0"]
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="2_uqumt"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b8lky0yk4q64s" path="res://scenes/turret.tscn" id="4_p7tmx"]
 [ext_resource type="PackedScene" uid="uid://dt2b2acdq52cw" path="res://scenes/button.tscn" id="5_7grsj"]
 [ext_resource type="PackedScene" uid="uid://dnfpmel15rp0g" path="res://scenes/door.tscn" id="6_gt0bi"]
+[ext_resource type="PackedScene" uid="uid://cd0kih764xane" path="res://assets/ammobx.blend" id="7_5yaut"]
 
 [sub_resource type="Curve3D" id="Curve3D_ystvf"]
 _data = {
@@ -64,6 +65,21 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9.4553
 
 [node name="Door" parent="." instance=ExtResource("6_gt0bi")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9.75134, -0.182938, 2.03464)
+
+[node name="ammobx" parent="." instance=ExtResource("7_5yaut")]
+transform = Transform3D(0.865929, 0, -0.500166, 0, 1, 0, 0.500166, 0, 0.865929, 8.83542, -4.76837e-07, -5.33582)
+
+[node name="ammobx5" parent="." instance=ExtResource("7_5yaut")]
+transform = Transform3D(-0.336602, 0, 0.941647, 0, 1, 0, -0.941647, 0, -0.336602, -1.08586, -4.76837e-07, 7.84786)
+
+[node name="ammobx3" parent="." instance=ExtResource("7_5yaut")]
+transform = Transform3D(0.672561, 0, 0.740042, 0, 1, 0, -0.740042, 0, 0.672561, 5.50203, -4.76837e-07, -5.27835)
+
+[node name="ammobx4" parent="." instance=ExtResource("7_5yaut")]
+transform = Transform3D(0.942186, 0, -0.33509, 0, 1, 0, 0.33509, 0, 0.942186, -3.38702, -4.76837e-07, -5.27835)
+
+[node name="ammobx2" parent="." instance=ExtResource("7_5yaut")]
+transform = Transform3D(0.886057, -0.00148891, 0.463574, 0.0020563, 0.999998, -0.000718531, -0.463572, 0.00158991, 0.886058, -6.51099, 0, -5.23116)
 
 [connection signal="button_hit" from="Button" to="Door" method="toggle_door"]
 
