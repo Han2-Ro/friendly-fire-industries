@@ -12,7 +12,11 @@ extends StaticBody3D
 @onready var  silo_broken = preload("res://scenes/rocket_silo_broken.tscn")
 @export var seconds_before_first_shot: float = 2
 @onready var launchsoundplayer: AudioStreamPlayer = $launchsoundplayer
+@onready var metal_ping_player: AudioStreamPlayer = $metalPingPlayer
+
 var time_since_last_action: float = seconds_between_shots
+
+
 var i_target: int = 0
 
 var is_open: bool = false
@@ -74,6 +78,8 @@ func on_hit():
 		queue_free()
 	else:
 		print("explosive thrower blocked")
+		metal_ping_player.play()
+		
 
 
 func _on_animation_finished(anim_name: StringName) -> void:
