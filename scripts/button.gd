@@ -2,6 +2,8 @@ extends StaticBody3D
 
 @export var color: Color = Color.RED
 
+@export var sound_muted: bool = false
+
 var mat: StandardMaterial3D
 var is_enabled: bool
 
@@ -14,6 +16,10 @@ func _ready() -> void:
 	mat.emission = color
 	mat.emission_energy_multiplier = 8
 	$Button/ButtonSwitch.material_override = mat
+	
+	if sound_muted:
+		$Sounds/NoAccessSound.volume_db = -100
+		$Sounds/AccessSound.volume_db = -100
 
 func on_hit():
 	print("button hit")

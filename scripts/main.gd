@@ -30,8 +30,6 @@ func _ready() -> void:
 	
 	if GameState.current_level >= 1:
 		GlobalPlayer.play_music_level()
-	
-	AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), false) # if player presses start to quickly
 
 func _on_menu_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/levels/main_menu/main_menu.tscn")

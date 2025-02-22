@@ -8,6 +8,8 @@ extends Node3D
 @export_range(-360, 360) var starting_rotation: float = 270
 @export var debug_force_rotation: bool = false
 
+@export var sound_muted: bool = false
+
 var end_angle: float = 0.0
 var player: Node3D
 var barrel: Node3D
@@ -41,6 +43,9 @@ func _ready():
 	await scene_tree.physics_frame
 	vision_cone.calculate_plane()
 	#print("tracking_angle: ", tracking_angle)
+	
+	if sound_muted:
+		beep_player.volume_db = -100
 
 
 func set_visioncone():
@@ -150,6 +155,8 @@ func on_hit():
 	var explosion_instance = explodeparticle.instantiate()
 	explosion_instance.global_transform = self.global_transform
 	get_parent().add_child(explosion_instance)
+	if sound_muted:
+		explosion_instance.find_child("ExplosionSound").volume_db = -100
 	explosion_instance.explode()
 	
 	var broken_turret_instance = broken_turret.instantiate()

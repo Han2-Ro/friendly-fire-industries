@@ -1,12 +1,14 @@
 extends CharacterBody3D
 class_name Rocket
 
+@export var sound_muted: bool = false
+
 @onready var kill_area: Area3D = $KillArea
 @onready var explodeparticle = preload("res://scenes/particles/explosion.tscn")
 @onready var model = $Rocket
 @onready var particles = $FireParticles
-@onready var audio_flight = $Flight
-@onready var audio_landing = $Landing
+@onready var audio_flight: AudioStreamPlayer  = $Flight
+@onready var audio_landing: AudioStreamPlayer = $Landing
 
 var target: Vector3
 var speed: float
@@ -21,6 +23,10 @@ func _ready() -> void:
 	old_pos = global_position
 	distance = global_position.distance_to(target)
 	move(0.001)
+	
+	if sound_muted:
+		audio_flight.volume_db = -100
+		audio_landing.volume_db = -100
 
 func _process(delta: float) -> void:
 	if position.y > target.y:
@@ -57,7 +63,11 @@ func on_hit():
 	var explosion_instance = explodeparticle.instantiate()
 	explosion_instance.global_transform = self.global_transform
 	get_parent().add_child(explosion_instance)
+	if sound_muted:
+		explosion_instance.find_child("ExplosionSound").volume_db = -100
 	explosion_instance.explode()
+	
+	
 	var bodies = kill_area.get_overlapping_bodies()
 	print(self, "destroying: ", bodies)
 	for body in bodies:

@@ -13,15 +13,19 @@ script = ExtResource("1_67uhk")
 
 [node name="Button" parent="." instance=ExtResource("2_68j88")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6705, 0, -0.0599753)
+sound_muted = true
 
 [node name="Turret" parent="." instance=ExtResource("3_8jaiv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.18147, 0, 0.0489408)
 rotation_speed = 0.0
+sound_muted = true
 
 [node name="Rocket" parent="." instance=ExtResource("4_surv5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.188, 0, -0.011)
 top_level = false
+sound_muted = true
 
 [node name="Rocket2" parent="." instance=ExtResource("4_surv5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.188, 0, -0.011)
 top_level = false
+sound_muted = true
