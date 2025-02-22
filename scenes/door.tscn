@@ -12,7 +12,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Area3D:position")
+tracks/0/path = NodePath("Player-Area3D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -27,7 +27,7 @@ resource_name = "open_door"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Area3D:position")
+tracks/0/path = NodePath("Player-Area3D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -55,15 +55,15 @@ script = ExtResource("1_cn5x8")
 collision_layer = 2
 collision_mask = 0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="Bullet-CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.10193, -0.0159301)
 shape = SubResource("BoxShape3D_ckiqm")
 
-[node name="Area3D" type="Area3D" parent="."]
+[node name="Player-Area3D" type="Area3D" parent="."]
 collision_layer = 8388610
 collision_mask = 0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player-Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.10193, -0.0241699)
 shape = SubResource("BoxShape3D_ckiqm")
 

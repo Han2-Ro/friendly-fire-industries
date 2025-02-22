@@ -2,6 +2,10 @@ extends Node3D
 
 @export var color: Color = Color.RED
 
+@onready var laser_bars = $"Laser-Bars"
+@onready var bullet_collision: StaticBody3D = $StaticBody3D
+@onready var player_collision: Area3D = $"Player-Area3D"
+
 var is_open: bool = false
 
 func _ready() -> void:
@@ -21,13 +25,14 @@ func _ready() -> void:
 func toggle_door() -> void:
 	print("toggle laser-door")
 	
-	var coll = $Area3D/CollisionShape3D
 	if is_open:
-		$"Laser-Bars".visible = true
-		coll.disabled = false
+		laser_bars.visible = true
+		bullet_collision.disabled = false
+		player_collision.disabled = false
 	else:
-		$"Laser-Bars".visible = false
-		coll.disabled = true
+		laser_bars.visible = false
+		bullet_collision.disabled = true
+		player_collision.disabled = true
 	is_open = not is_open
 
 #func toggle_door() -> void:
