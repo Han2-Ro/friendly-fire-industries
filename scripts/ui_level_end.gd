@@ -10,6 +10,7 @@ func _ready() -> void:
 	EventBus.level_end.connect(_on_level_end)
 	reset()
 
+
 func _on_level_end(success: bool) -> void:
 	if status_label != null:
 		status_label.text = "Success" if success else "Fail"
@@ -19,3 +20,12 @@ func _on_level_end(success: bool) -> void:
 func reset():
 	next_level_button.visible = false
 	status_label.text = "In Progress"
+
+
+func _on_visibility_changed() -> void:
+	var hint: Panel = get_tree().root.find_child("UiHint", true, false)
+	if hint:
+		if visible:
+			hint.hide()
+		else:
+			hint.show()

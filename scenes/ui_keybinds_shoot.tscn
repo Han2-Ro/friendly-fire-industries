@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://cx7g1wqhq73g7"]
+
+[ext_resource type="Theme" uid="uid://dhgodsmrdod46" path="res://assets/ui_themes/main_menu_UI.tres" id="1_h8mcm"]
+
+[node name="Shoot" type="RichTextLabel"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -456.0
+offset_top = -96.0
+offset_right = -248.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("1_h8mcm")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[img width=96 height=96]res://assets/icons/mouse-click.png[/img] Shoot"
+fit_content = true
+scroll_active = false

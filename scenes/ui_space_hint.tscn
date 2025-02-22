@@ -1,33 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://cf6iagau1wkgo"]
+[gd_scene load_steps=3 format=3 uid="uid://cf6iagau1wkgo"]
 
 [ext_resource type="Theme" uid="uid://dhgodsmrdod46" path="res://assets/ui_themes/main_menu_UI.tres" id="1_33mtl"]
+[ext_resource type="PackedScene" uid="uid://be7f5bfaxhbwg" path="res://scenes/ui_keybinds_slowmo.tscn" id="2_xsg1w"]
 
 [node name="UiMouseHint" type="Panel"]
 custom_minimum_size = Vector2(50, 50)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -255.0
+offset_left = -360.0
 offset_top = 29.0
-offset_right = 256.0
-offset_bottom = 122.0
+offset_right = 360.0
+offset_bottom = 170.0
 grow_horizontal = 2
 mouse_filter = 2
 theme = ExtResource("1_33mtl")
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -230.0
-offset_top = -27.5
-offset_right = 230.0
-offset_bottom = 27.5
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("1_33mtl")
-theme_override_font_sizes/font_size = 36
-text = "hold space for slowmotion"
+[node name="Slowmo" parent="." instance=ExtResource("2_xsg1w")]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 22.0
+offset_right = 715.0
+offset_bottom = 118.0

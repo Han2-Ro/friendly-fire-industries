@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c38ebp5143i5x" path="res://scenes/level_camera.tscn" id="1_8bney"]
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="3_sgl6h"]
 [ext_resource type="PackedScene" uid="uid://c4cr0cmorqvx2" path="res://assets/levels_blend/turret_intro_map.blend" id="5_56sju"]
-[ext_resource type="PackedScene" uid="uid://cf5alfw8hcrmg" path="res://scenes/ui_space_hint.tscn" id="5_m7f2y"]
+[ext_resource type="PackedScene" uid="uid://cf6iagau1wkgo" path="res://scenes/ui_space_hint.tscn" id="5_m7f2y"]
 [ext_resource type="PackedScene" uid="uid://b8lky0yk4q64s" path="res://scenes/turret.tscn" id="6_g7p1d"]
 
 [sub_resource type="Curve3D" id="Curve3D_ystvf"]
@@ -27,7 +27,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00134277, -0.0864754, -0.03
 curve = SubResource("Curve3D_ystvf")
 
 [node name="Player" parent="Path3D" instance=ExtResource("3_sgl6h")]
-transform = Transform3D(-0.99996, 0, -0.00495003, 0, 0.999986, 0, 0.00495004, 0, -0.999959, -8.28076, 0.188526, -1.93722)
+transform = Transform3D(-0.999959, 0, -0.00495003, 0, 0.999986, 0, 0.00495004, 0, -0.999958, -8.28076, 0.188526, -1.93722)
 
 [node name="turret_intro_map" parent="." instance=ExtResource("5_56sju")]
 
@@ -43,6 +43,8 @@ tracking_angle = 30.0
 death_timer = 2.0
 starting_rotation = 10.0
 
-[node name="UiMouseHint" parent="." instance=ExtResource("5_m7f2y")]
+[node name="UiHint" parent="." instance=ExtResource("5_m7f2y")]
+offset_top = 25.0
+offset_bottom = 166.0
 
 [editable path="turret_intro_map"]

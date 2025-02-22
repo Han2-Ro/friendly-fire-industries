@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://dt3jnvlwscwo1"]
+
+[ext_resource type="PackedScene" uid="uid://cmq8n3776l71b" path="res://scenes/ui_keybinds_aim.tscn" id="1_oyqrk"]
+[ext_resource type="PackedScene" uid="uid://cx7g1wqhq73g7" path="res://scenes/ui_keybinds_shoot.tscn" id="2_jlryc"]
+[ext_resource type="PackedScene" uid="uid://be7f5bfaxhbwg" path="res://scenes/ui_keybinds_slowmo.tscn" id="3_48vhm"]
+[ext_resource type="PackedScene" uid="uid://bri0on4cqodjd" path="res://scenes/ui_keybinds_reset.tscn" id="4_t643q"]
+
+[node name="Keybinds" type="Control"]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+mouse_filter = 2
+
+[node name="Aim" parent="." instance=ExtResource("1_oyqrk")]
+layout_mode = 1
+offset_left = -416.0
+offset_top = -232.0
+offset_right = -232.0
+offset_bottom = -136.0
+
+[node name="Shoot" parent="." instance=ExtResource("2_jlryc")]
+layout_mode = 1
+offset_left = -416.0
+offset_right = -208.0
+
+[node name="Slowmo" parent="." instance=ExtResource("3_48vhm")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -48.0
+offset_top = -232.0
+offset_right = 631.0
+offset_bottom = -136.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Reset" parent="." instance=ExtResource("4_t643q")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -48.0
+offset_right = 287.0
+grow_horizontal = 2
+grow_vertical = 0

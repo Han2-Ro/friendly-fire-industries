@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cul6wl06g6wvn"]
+[gd_scene load_steps=7 format=3 uid="uid://cul6wl06g6wvn"]
 
 [ext_resource type="Script" path="res://scripts/ui_level_end.gd" id="1_dt46y"]
 [ext_resource type="Texture2D" uid="uid://dtagpag7eaum5" path="res://assets/icons/restart.svg" id="1_thasw"]
 [ext_resource type="Theme" uid="uid://dhgodsmrdod46" path="res://assets/ui_themes/main_menu_UI.tres" id="2_k206l"]
 [ext_resource type="Texture2D" uid="uid://ck7y0b7v033if" path="res://assets/icons/arrow_right.svg" id="3_2sd8s"]
 [ext_resource type="Texture2D" uid="uid://cguhrvreotte0" path="res://assets/icons/haus.svg" id="4_8xs06"]
+[ext_resource type="PackedScene" uid="uid://dt3jnvlwscwo1" path="res://scenes/ui_keybinds.tscn" id="6_brjrr"]
 
 [node name="UILevelEnd" type="Control" node_paths=PackedStringArray("status_label", "next_level_button")]
 layout_mode = 3
@@ -96,3 +97,11 @@ offset_top = 376.0
 offset_right = 880.0
 offset_bottom = 517.0
 icon = ExtResource("3_2sd8s")
+
+[node name="Keybinds" parent="." instance=ExtResource("6_brjrr")]
+layout_mode = 1
+offset_top = -20.0
+offset_bottom = -20.0
+scale = Vector2(0.65, 0.65)
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]

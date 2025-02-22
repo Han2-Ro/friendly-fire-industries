@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="48"
+   height="48"
+   viewBox="0 0 48 48"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="mouse.svg"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   inkscape:export-filename="mouse.png"
+   inkscape:export-xdpi="768"
+   inkscape:export-ydpi="768"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="px"
+     inkscape:zoom="12.510417"
+     inkscape:cx="18.024979"
+     inkscape:cy="26.338051"
+     inkscape:window-width="2154"
+     inkscape:window-height="1410"
+     inkscape:window-x="341"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     showgrid="false" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#b2b2b2;fill-opacity:1;stroke:#ffffff;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       id="rect2-5"
+       width="47"
+       height="47"
+       x="0.5"
+       y="0.5"
+       ry="2.0912926"
+       inkscape:label="Background" />
+    <path
+       d="m 24,6.9785 c -7.531805,0 -13.63754,8.963931 -13.63754,20.0215 -1e-6,5.528784 0.525888,10.612154 2.993797,14.235332 2.46791,3.62318 6.87784,5.786168 10.643743,5.786168 3.765904,0 8.175834,-2.162988 10.643743,-5.786168 C 37.111652,37.612154 37.637541,32.528784 37.637541,27 37.637541,15.942431 31.531806,6.9785 24,6.9785 Z m 0,1.6684583 c 6.527566,0 11.81919,8.2169377 11.81919,18.3530417 0,5.068053 -0.322352,9.734308 -2.461207,13.055555 -2.138854,3.321246 -6.0942,5.297487 -9.357983,5.297487 -3.263782,0 -7.219128,-1.976241 -9.357983,-5.297487 C 12.503163,36.734308 12.180798,32.068053 12.180798,27 12.180798,16.863896 17.472435,8.6469583 24,8.6469583 Z"
+       style="stroke-width:0.870893"
+       id="path2"
+       inkscape:label="Outer Ring"
+       sodipodi:nodetypes="ssssssssssssss" />
+    <rect
+       style="fill:#000000;stroke-width:0.975595"
+       id="rect2"
+       width="24.614851"
+       height="1.8183386"
+       x="11.78941"
+       y="19.311516"
+       inkscape:label="hor-rec" />
+    <rect
+       style="fill:#000000;stroke-width:0.909179"
+       id="rect3"
+       width="1.8183386"
+       height="12.728373"
+       x="23.090828"
+       y="7.1326628"
+       inkscape:label="vert-rec" />
+  </g>
+</svg>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="14.5"
+   height="14.5"
+   viewBox="0 0 14.5 14.5"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   sodipodi:docname="R-Key.svg"
+   inkscape:export-filename="R-Key.png"
+   inkscape:export-xdpi="635.58618"
+   inkscape:export-ydpi="635.58618"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="px"
+     inkscape:zoom="17.692401"
+     inkscape:cx="2.0065112"
+     inkscape:cy="9.80647"
+     inkscape:window-width="2238"
+     inkscape:window-height="1410"
+     inkscape:window-x="287"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-16.75,-17.15)">
+    <rect
+       style="fill:#5a5a5a;fill-opacity:1;stroke:#ffffff;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       id="rect2"
+       width="14"
+       height="14"
+       x="17"
+       y="17.4"
+       ry="2.0912926" />
+    <rect
+       style="display:inline;fill:#b2b2b2;fill-opacity:1;stroke:#272727;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       id="rect1"
+       width="10"
+       height="10"
+       x="19"
+       y="19"
+       ry="1.0739075" />
+    <text
+       xml:space="preserve"
+       style="text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;white-space:pre;inline-size:40.1602;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       x="9.8912525"
+       y="23.060747"
+       id="text2"
+       transform="matrix(0.66371749,0,0,0.66371749,14.3923,11.597295)"><tspan
+         x="9.8912525"
+         y="23.060747"
+         id="tspan2">R</tspan></text>
+  </g>
+</svg>
