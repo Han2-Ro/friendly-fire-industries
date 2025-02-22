@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cf8pivhpqj2mv"]
+[gd_scene load_steps=19 format=3 uid="uid://cf8pivhpqj2mv"]
 
 [ext_resource type="Script" path="res://scripts/rocket.gd" id="1_wduoi"]
 [ext_resource type="PackedScene" uid="uid://cecvu28s6wm8l" path="res://assets/Rocket.blend" id="2_rnh1f"]
@@ -78,10 +78,10 @@ emission_shape_scale = Vector3(0.5, 0.5, 0.5)
 direction = Vector3(0, 0, 1)
 spread = 20.0
 initial_velocity_min = 1.0
-initial_velocity_max = 2.0
+initial_velocity_max = 2.2
 gravity = Vector3(0, 2, 0)
-scale_min = 0.4
-scale_max = 0.75
+scale_min = 0.3
+scale_max = 0.6
 scale_curve = SubResource("CurveTexture_e3hrh")
 color = Color(0.705882, 0.27451, 0.0941176, 1)
 alpha_curve = SubResource("CurveTexture_315k1")
@@ -96,6 +96,20 @@ radius = 0.2
 height = 0.4
 radial_segments = 8
 rings = 4
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_1l56d"]
+lifetime_randomness = 0.2
+emission_shape_scale = Vector3(0.5, 0.5, 0.5)
+direction = Vector3(0, 0, 1)
+spread = 30.0
+initial_velocity_min = 1.0
+initial_velocity_max = 1.8
+gravity = Vector3(0, 1.5, 0)
+scale_min = 0.5
+scale_max = 0.8
+scale_curve = SubResource("CurveTexture_e3hrh")
+color = Color(0, 0, 0, 1)
+alpha_curve = SubResource("CurveTexture_315k1")
 
 [node name="Rocket" type="StaticBody3D"]
 top_level = true
@@ -141,6 +155,11 @@ libraries = {
 
 [node name="FireParticles" type="GPUParticles3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.888194)
-amount = 16
 process_material = SubResource("ParticleProcessMaterial_l6hnl")
+draw_pass_1 = SubResource("SphereMesh_5fwix")
+
+[node name="SmokeParticles" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.888194)
+amount = 6
+process_material = SubResource("ParticleProcessMaterial_1l56d")
 draw_pass_1 = SubResource("SphereMesh_5fwix")
