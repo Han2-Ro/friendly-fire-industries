@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://ocb4mkjhatgf"]
+[gd_scene load_steps=27 format=3 uid="uid://7vy4bw8smj0a"]
 
 [ext_resource type="PackedScene" uid="uid://diuatrn3fo023" path="res://scenes/levels/main_menu/main_menu_map.tscn" id="1_h28c4"]
 [ext_resource type="AudioStream" uid="uid://bipgykl4xia41" path="res://assets/music/Introspective Machine.mp3" id="2_3lvvp"]
@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cecvu28s6wm8l" path="res://assets/Rocket.blend" id="11_ofxvw"]
 [ext_resource type="PackedScene" uid="uid://hyiovj3pyx5w" path="res://assets/Rocketsilo.blend" id="12_rewmc"]
 [ext_resource type="PackedScene" uid="uid://b6qld0vjlight" path="res://scenes/preload.tscn" id="13_e3byb"]
-[ext_resource type="PackedScene" uid="uid://efxdmdettrjx" path="res://scenes/ui_end_screen.tscn" id="14_6tknn"]
+[ext_resource type="PackedScene" path="res://scenes/ui_end_screen.tscn" id="14_6tknn"]
 
 [sub_resource type="GDScript" id="GDScript_cy51l"]
 script/source = "extends Node3D
@@ -17,7 +17,7 @@ script/source = "extends Node3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	GlobalPlayer.stop_music_level()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
