@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://da18ggk3xu0fa"]
+[gd_scene load_steps=14 format=3 uid="uid://da18ggk3xu0fa"]
 
 [ext_resource type="PackedScene" uid="uid://c38ebp5143i5x" path="res://scenes/level_camera.tscn" id="1_qq73t"]
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="2_oxv3h"]
@@ -7,6 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://c681r2buw6d0y" path="res://assets/levels_blend/complex_map_1.blend" id="6_6aee3"]
 [ext_resource type="PackedScene" uid="uid://dnfpmel15rp0g" path="res://scenes/door.tscn" id="6_cga3k"]
 [ext_resource type="PackedScene" uid="uid://datd7wg6v4r42" path="res://scenes/rocketsilo.tscn" id="7_fwu76"]
+[ext_resource type="PackedScene" uid="uid://bofhxr0l6vrdt" path="res://assets/WarningLight.blend" id="8_8siuc"]
+[ext_resource type="PackedScene" uid="uid://cgm1l4gs3i30g" path="res://assets/FireExtinguisher.blend" id="9_h28yl"]
+[ext_resource type="PackedScene" uid="uid://cd0kih764xane" path="res://assets/ammobx.blend" id="10_fxemq"]
+[ext_resource type="PackedScene" uid="uid://cx8gwgqjw2ft8" path="res://assets/TrafficCone.blend" id="11_vgwna"]
 
 [sub_resource type="Curve3D" id="Curve3D_ystvf"]
 _data = {
@@ -86,6 +90,30 @@ tracking_distance = 5.0
 tracking_angle = 20.0
 starting_rotation = 253.125
 debug_force_rotation = true
+
+[node name="WarningLight2" parent="." instance=ExtResource("8_8siuc")]
+transform = Transform3D(0.729278, 0, 0, 0, 0.729278, 0, 0, 0, 0.729278, 6.93883, 1.37526, -5.13279)
+
+[node name="FireExtinguisher2" parent="." instance=ExtResource("9_h28yl")]
+transform = Transform3D(0.934285, 0, -0.356526, 0, 1, 0, 0.356526, 0, 0.934285, 7.7278, 0, 10.2065)
+
+[node name="ammobx" parent="." instance=ExtResource("10_fxemq")]
+transform = Transform3D(0.867514, 0, 0.497413, 0, 1, 0, -0.497413, 0, 0.867514, -2.64453, 0, 9.84298)
+
+[node name="TrafficCone3" parent="." instance=ExtResource("11_vgwna")]
+transform = Transform3D(0.85879, 0, 0.512328, 0, 1, 0, -0.512328, 0, 0.85879, 1.35785, 0, -2.87741)
+
+[node name="TrafficCone4" parent="." instance=ExtResource("11_vgwna")]
+transform = Transform3D(-0.270971, -0.943011, 0.193143, 0.961633, -0.27413, 0.0106994, 0.0428568, 0.188632, 0.981112, 2.14042, 0.154362, -4.07642)
+
+[node name="TrafficCone5" parent="." instance=ExtResource("11_vgwna")]
+transform = Transform3D(0.802734, 0, 0.596337, 0, 1, 0, -0.596337, 0, 0.802734, 3.78024, 0, -2.28337)
+
+[node name="ammobx2" parent="." instance=ExtResource("10_fxemq")]
+transform = Transform3D(0.869348, 0, -0.4942, 0, 1, 0, 0.4942, 0, 0.869348, -5.0431, 0, -4.70417)
+
+[node name="ammobx3" parent="." instance=ExtResource("10_fxemq")]
+transform = Transform3D(0.100761, 0, -0.994911, 0, 1, 0, 0.994911, 0, 0.100761, -5.70784, 0, -4.61342)
 
 [connection signal="button_hit" from="Button" to="Door" method="toggle_door"]
 [connection signal="button_hit" from="complex_map_1/Button" to="Door" method="toggle_door"]
