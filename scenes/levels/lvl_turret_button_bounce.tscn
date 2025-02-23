@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cidnep6m6bpdf"]
+[gd_scene load_steps=15 format=3 uid="uid://cidnep6m6bpdf"]
 
 [ext_resource type="PackedScene" uid="uid://c38ebp5143i5x" path="res://scenes/level_camera.tscn" id="1_xb481"]
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="2_ltpxp"]
@@ -6,7 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://b8lky0yk4q64s" path="res://scenes/turret.tscn" id="4_kh4ld"]
 [ext_resource type="PackedScene" uid="uid://dt2b2acdq52cw" path="res://scenes/button.tscn" id="5_53jqv"]
 [ext_resource type="PackedScene" uid="uid://dnfpmel15rp0g" path="res://scenes/door.tscn" id="6_q722j"]
-[ext_resource type="PackedScene" uid="uid://cf6iagau1wkgo" path="res://scenes/ui_space_hint.tscn" id="7_wq4hk"]
+[ext_resource type="PackedScene" path="res://scenes/ui_space_hint.tscn" id="7_wq4hk"]
+[ext_resource type="PackedScene" uid="uid://cd0kih764xane" path="res://assets/ammobx.blend" id="8_kjhgk"]
+[ext_resource type="PackedScene" uid="uid://dhqp7mex168hw" path="res://assets/ToolCart.blend" id="9_k2pob"]
+[ext_resource type="PackedScene" uid="uid://dv6iy3otapwuv" path="res://assets/Wrench.blend" id="10_bwlam"]
+[ext_resource type="PackedScene" uid="uid://cx8gwgqjw2ft8" path="res://assets/TrafficCone.blend" id="11_3s0yk"]
+[ext_resource type="PackedScene" uid="uid://cgm1l4gs3i30g" path="res://assets/FireExtinguisher.blend" id="12_7cb45"]
 
 [sub_resource type="Curve3D" id="Curve3D_ystvf"]
 _data = {
@@ -29,7 +34,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00134277, -0.0864754, -0.03
 curve = SubResource("Curve3D_ystvf")
 
 [node name="Player" parent="Path3D" instance=ExtResource("2_ltpxp")]
-transform = Transform3D(-0.999961, 0, -0.00495004, 0, 0.999986, 0, 0.00495004, 0, -0.99996, -8.28076, 0.188526, -1.93722)
+transform = Transform3D(-0.999961, 0, -0.00495004, 0, 0.999986, 0, 0.00495005, 0, -0.99996, -8.28076, 0.188526, -1.93722)
 ammo = 1
 slowmotion_uses = 1
 
@@ -52,6 +57,30 @@ transform = Transform3D(-4.37112e-08, 0, 1, 0, 1, 0, -1, 0, -4.37112e-08, 8.1821
 transform = Transform3D(-7.39508e-06, 0, -1, 0, 1, 0, 1, 0, -7.39508e-06, -5.4066, 1, -0.803585)
 
 [node name="UiHint" parent="." instance=ExtResource("7_wq4hk")]
+
+[node name="ammobx" parent="." instance=ExtResource("8_kjhgk")]
+transform = Transform3D(0.347656, 0, -0.937622, 0, 1, 0, 0.937622, 0, 0.347656, 6.42563, 0, -0.840196)
+
+[node name="ToolCart2" parent="." instance=ExtResource("9_k2pob")]
+transform = Transform3D(0.996738, 0, 0.0807034, 0, 1, 0, -0.0807034, 0, 0.996738, 7.36713, 0, 4.06149)
+
+[node name="Wrench2" parent="." instance=ExtResource("10_bwlam")]
+transform = Transform3D(0.412643, 0, -0.910893, 0, 1, 0, 0.910893, 0, 0.412643, 7.43759, 0.799904, 3.99986)
+
+[node name="Wrench3" parent="." instance=ExtResource("10_bwlam")]
+transform = Transform3D(-0.0385455, 0, -0.839781, 0, 0.840666, 0, 0.839781, 0, -0.0385455, 7.31295, 0.799904, 4.10282)
+
+[node name="Wrench4" parent="." instance=ExtResource("10_bwlam")]
+transform = Transform3D(0.385188, 0, -0.47143, 0, 0.608783, 0, 0.47143, 0, 0.385188, 7.65353, 0.810004, 3.92523)
+
+[node name="TrafficCone2" parent="." instance=ExtResource("11_3s0yk")]
+transform = Transform3D(0.974511, 0, 0.224339, 0, 1, 0, -0.224339, 0, 0.974511, 5.59043, 0, 1.35496)
+
+[node name="TrafficCone3" parent="." instance=ExtResource("11_3s0yk")]
+transform = Transform3D(0.931526, 0, -0.363674, 0, 1, 0, 0.363674, 0, 0.931526, 4.2994, 0, 1.14327)
+
+[node name="FireExtinguisher2" parent="." instance=ExtResource("12_7cb45")]
+transform = Transform3D(0.852476, 0, -0.522766, 0, 1, 0, 0.522766, 0, 0.852476, -8.98697, 0, 4.1372)
 
 [connection signal="button_hit" from="Button" to="Door" method="toggle_door"]
 
