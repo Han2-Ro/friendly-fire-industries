@@ -84,13 +84,13 @@ transform = Transform3D(0.886057, -0.00148891, 0.463574, 0.0020563, 0.999998, -0
 
 [node name="UiHint" parent="." instance=ExtResource("8_g071g")]
 anchors_preset = -1
-anchor_left = 0.539
-anchor_right = 0.539
-offset_left = -136.92
+anchor_left = 0.533
+anchor_right = 0.533
+offset_left = -171.24
 offset_top = 45.0
-offset_right = 321.08
+offset_right = 286.76
 offset_bottom = 181.0
-scale = Vector2(0.6, 0.6)
+scale = Vector2(0.75, 0.75)
 
 [connection signal="button_hit" from="Button" to="Door" method="toggle_door"]
 
