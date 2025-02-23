@@ -56,8 +56,8 @@ theme_override_font_sizes/font_size = 30
 text = "Created by:
 a-toast
 anybuddy
-geldautomat312
-Han2"
+Leo
+Hannes"
 horizontal_alignment = 1
 
 [node name="MainMenuButton" type="Button" parent="."]
