@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://cul6wl06g6wvn"]
 
-[ext_resource type="Script" path="res://scripts/ui_level_end.gd" id="1_dt46y"]
+[ext_resource type="Script" path="res://scenes/levels/common/ui/ui_level_end.gd" id="1_dt46y"]
 [ext_resource type="Texture2D" uid="uid://dtagpag7eaum5" path="res://assets/icons/restart.svg" id="1_thasw"]
 [ext_resource type="Theme" uid="uid://dhgodsmrdod46" path="res://assets/ui_themes/main_menu_UI.tres" id="2_k206l"]
 [ext_resource type="Texture2D" uid="uid://ck7y0b7v033if" path="res://assets/icons/arrow_right.svg" id="3_2sd8s"]

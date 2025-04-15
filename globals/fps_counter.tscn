@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://jn3bitp36ead"]
 
-[ext_resource type="Script" path="res://scripts/fps_counter.gd" id="1_ixhbk"]
+[ext_resource type="Script" path="res://globals/fps_counter.gd" id="1_ixhbk"]
 
 [node name="FpsCounter" type="Control"]
 layout_mode = 3

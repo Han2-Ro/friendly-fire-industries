@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://datd7wg6v4r42"]
 
-[ext_resource type="Script" path="res://scripts/rocketsilo.gd" id="1_sadew"]
+[ext_resource type="Script" path="res://characters/enemies/rocketsilo/rocketsilo.gd" id="1_sadew"]
 [ext_resource type="AudioStream" uid="uid://dibpx6i7lmvul" path="res://assets/sounds/futuristic-grenade-launcher-98474.mp3" id="3_260ay"]
 [ext_resource type="PackedScene" uid="uid://hyiovj3pyx5w" path="res://assets/Rocketsilo.blend" id="3_ogab7"]
 [ext_resource type="AudioStream" uid="uid://bc1b6jq0jp8ie" path="res://assets/sounds/metal-hit-16-193282.mp3" id="4_7kn2e"]

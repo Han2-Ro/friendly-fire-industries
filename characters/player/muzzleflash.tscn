@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://h6o2oblxpy6m"]
 
-[ext_resource type="Script" path="res://scripts/muzzleflash.gd" id="1_rsxc4"]
+[ext_resource type="Script" path="res://characters/player/muzzleflash.gd" id="1_rsxc4"]
 [ext_resource type="AudioStream" uid="uid://1ws686kkm6w7" path="res://assets/sounds/futuristic-smg-sound-effect-100378.mp3" id="2_abrg0"]
 
 [sub_resource type="Curve" id="Curve_c8m7c"]

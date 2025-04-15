@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=3 uid="uid://dy7jyk1e43m2s"]
 
-[ext_resource type="Script" path="res://scripts/explosion.gd" id="1_ymwlx"]
+[ext_resource type="Script" path="res://characters/enemies/common/explosion.gd" id="1_ymwlx"]
 [ext_resource type="AudioStream" uid="uid://b4ssld4btjryy" path="res://assets/sounds/stomp-255897.mp3" id="2_qy5uk"]
 
 [sub_resource type="Curve" id="Curve_b3s5q"]

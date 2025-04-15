@@ -19,9 +19,9 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-EventBus="*res://scripts/event_bus.gd"
-GameState="*res://scripts/game_state.gd"
-GlobalPlayer="*res://scripts/audio_stream_player.gd"
+EventBus="*res://globals/event_bus.gd"
+GameState="*res://globals/game_state.gd"
+GlobalPlayer="*res://globals/audio_stream_player.gd"
 
 [display]
 

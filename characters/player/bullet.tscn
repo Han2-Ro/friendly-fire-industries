@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://bg8xfgyrgw4md"]
 
-[ext_resource type="Script" path="res://scripts/bullet.gd" id="1_jf0ka"]
+[ext_resource type="Script" path="res://characters/player/bullet.gd" id="1_jf0ka"]
 [ext_resource type="PackedScene" uid="uid://cvymwjucmvmaj" path="res://assets/bulletModel.blend" id="1_symgq"]
 
 [sub_resource type="Gradient" id="Gradient_o7tbt"]

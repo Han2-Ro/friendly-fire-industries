@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c38ebp5143i5x"]
 
-[ext_resource type="Script" path="res://scripts/level_camera.gd" id="1_0f6kq"]
+[ext_resource type="Script" path="res://scenes/levels/common/level_camera.gd" id="1_0f6kq"]
 [ext_resource type="Environment" uid="uid://viph0n6bgkui" path="res://assets/hdri/standard_env.tres" id="1_nrl03"]
 
 [node name="Camera3D" type="Camera3D"]

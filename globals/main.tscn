@@ -1,11 +1,11 @@
 [gd_scene load_steps=19 format=3 uid="uid://jn22a2o5sevi"]
 
-[ext_resource type="Script" path="res://scripts/main.gd" id="1_hlc4r"]
+[ext_resource type="Script" path="res://globals/main.gd" id="1_hlc4r"]
 [ext_resource type="PackedScene" uid="uid://5p5yqwo7owhf" path="res://scenes/intro.tscn" id="2_unlv0"]
 [ext_resource type="PackedScene" uid="uid://2ojdnxre5y7k" path="res://scenes/levels/lvl_button_bounce_intro.tscn" id="2_xyf22"]
 [ext_resource type="PackedScene" uid="uid://rpmycin7vdrd" path="res://scenes/levels/lvl_button_intro.tscn" id="3_k8pro"]
 [ext_resource type="PackedScene" uid="uid://blgctndk6av8o" path="res://scenes/levels/lvl_turret_intro.tscn" id="4_fetjn"]
-[ext_resource type="PackedScene" uid="uid://jn3bitp36ead" path="res://scenes/fps_counter.tscn" id="5_8u4a5"]
+[ext_resource type="PackedScene" uid="uid://jn3bitp36ead" path="res://globals/fps_counter.tscn" id="5_8u4a5"]
 [ext_resource type="PackedScene" uid="uid://cul6wl06g6wvn" path="res://scenes/levels/common/ui/ui_level_end.tscn" id="6_8y5au"]
 [ext_resource type="PackedScene" uid="uid://blaupr70ttbg4" path="res://scenes/levels/lvl_multiple_turrets_intro.tscn" id="6_qw3fj"]
 [ext_resource type="PackedScene" uid="uid://cidnep6m6bpdf" path="res://scenes/levels/lvl_turret_button_bounce.tscn" id="7_ushab"]
