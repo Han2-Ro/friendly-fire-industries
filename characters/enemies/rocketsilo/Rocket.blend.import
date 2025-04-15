@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://h0sa43xh6tvv"
-path="res://.godot/imported/Rocket.blend-5f5f049b56dd52b7888b8ef65d3b96d0.scn"
+path="res://.godot/imported/Rocket.blend-e3170bb8f36cdf41be7dd4367d776df9.scn"
 
 [deps]
 
-source_file="res://scenes/Rocket.blend"
-dest_files=["res://.godot/imported/Rocket.blend-5f5f049b56dd52b7888b8ef65d3b96d0.scn"]
+source_file="res://characters/enemies/rocketsilo/Rocket.blend"
+dest_files=["res://.godot/imported/Rocket.blend-e3170bb8f36cdf41be7dd4367d776df9.scn"]
 
 [params]
 

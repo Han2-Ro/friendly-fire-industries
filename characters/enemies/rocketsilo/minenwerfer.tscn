@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://oef1c1gyvt62"]
 
 [ext_resource type="Script" path="res://scripts/minenwerfer.gd" id="1_cyt58"]
-[ext_resource type="PackedScene" uid="uid://byxempdciilxd" path="res://scenes/mine.tscn" id="2_i5qfd"]
+[ext_resource type="PackedScene" uid="uid://byxempdciilxd" path="res://characters/enemies/rocketsilo/mine.tscn" id="2_i5qfd"]
 [ext_resource type="PackedScene" uid="uid://cbbu62g7myh87" path="res://assets/Mienenwerfer.blend" id="2_mf71q"]
 
 [sub_resource type="Animation" id="Animation_qbqwr"]

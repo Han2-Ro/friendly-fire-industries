@@ -1,13 +1,13 @@
 [gd_scene load_steps=11 format=3 uid="uid://blaupr70ttbg4"]
 
-[ext_resource type="PackedScene" uid="uid://c38ebp5143i5x" path="res://scenes/level_camera.tscn" id="1_scho0"]
-[ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="2_uqumt"]
+[ext_resource type="PackedScene" uid="uid://c38ebp5143i5x" path="res://scenes/levels/common/level_camera.tscn" id="1_scho0"]
+[ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://characters/player/player.tscn" id="2_uqumt"]
 [ext_resource type="PackedScene" uid="uid://cgnsxioll86no" path="res://assets/levels_blend/tripple_turret_map.blend" id="3_miupo"]
-[ext_resource type="PackedScene" uid="uid://b8lky0yk4q64s" path="res://scenes/turret.tscn" id="4_p7tmx"]
-[ext_resource type="PackedScene" uid="uid://dt2b2acdq52cw" path="res://scenes/button.tscn" id="5_7grsj"]
-[ext_resource type="PackedScene" uid="uid://dnfpmel15rp0g" path="res://scenes/door.tscn" id="6_gt0bi"]
+[ext_resource type="PackedScene" uid="uid://b8lky0yk4q64s" path="res://characters/enemies/turret/turret.tscn" id="4_p7tmx"]
+[ext_resource type="PackedScene" uid="uid://dt2b2acdq52cw" path="res://scenes/levels/common/button.tscn" id="5_7grsj"]
+[ext_resource type="PackedScene" uid="uid://dnfpmel15rp0g" path="res://scenes/levels/common/door.tscn" id="6_gt0bi"]
 [ext_resource type="PackedScene" uid="uid://cd0kih764xane" path="res://assets/ammobx.blend" id="7_5yaut"]
-[ext_resource type="PackedScene" uid="uid://dtxtvx60ecw26" path="res://scenes/ui_menu_hint.tscn" id="8_g071g"]
+[ext_resource type="PackedScene" uid="uid://dtxtvx60ecw26" path="res://scenes/levels/common/ui/ui_menu_hint.tscn" id="8_g071g"]
 
 [sub_resource type="Curve3D" id="Curve3D_ystvf"]
 _data = {

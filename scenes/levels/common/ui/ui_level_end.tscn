@@ -5,7 +5,7 @@
 [ext_resource type="Theme" uid="uid://dhgodsmrdod46" path="res://assets/ui_themes/main_menu_UI.tres" id="2_k206l"]
 [ext_resource type="Texture2D" uid="uid://ck7y0b7v033if" path="res://assets/icons/arrow_right.svg" id="3_2sd8s"]
 [ext_resource type="Texture2D" uid="uid://cguhrvreotte0" path="res://assets/icons/haus.svg" id="4_8xs06"]
-[ext_resource type="PackedScene" uid="uid://dt3jnvlwscwo1" path="res://scenes/ui_keybinds.tscn" id="6_brjrr"]
+[ext_resource type="PackedScene" uid="uid://dt3jnvlwscwo1" path="res://scenes/levels/common/ui/ui_keybinds.tscn" id="6_brjrr"]
 [ext_resource type="AudioStream" uid="uid://btiooojjkfty" path="res://assets/sounds/ui_sounds/hover.mp3" id="6_i0mxp"]
 [ext_resource type="AudioStream" uid="uid://chbnwkoqsievv" path="res://assets/sounds/ui_sounds/click.mp3" id="7_rsmh3"]
 

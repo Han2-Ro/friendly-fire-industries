@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bonttjbn6a236"]
 
-[ext_resource type="PackedScene" uid="uid://c38ebp5143i5x" path="res://scenes/level_camera.tscn" id="1_v0h7v"]
-[ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="3_ynr0j"]
+[ext_resource type="PackedScene" uid="uid://c38ebp5143i5x" path="res://scenes/levels/common/level_camera.tscn" id="1_v0h7v"]
+[ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://characters/player/player.tscn" id="3_ynr0j"]
 
 [node name="Levelleo2" type="Node2D"]
 

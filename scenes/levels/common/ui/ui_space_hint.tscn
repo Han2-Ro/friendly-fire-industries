@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://dhgodsmrdod46" path="res://assets/ui_themes/main_menu_UI.tres" id="1_33mtl"]
 [ext_resource type="Script" path="res://scripts/ui_hint.gd" id="2_06jcw"]
-[ext_resource type="PackedScene" uid="uid://be7f5bfaxhbwg" path="res://scenes/ui_keybinds_slowmo.tscn" id="2_xsg1w"]
+[ext_resource type="PackedScene" uid="uid://be7f5bfaxhbwg" path="res://scenes/levels/common/ui/ui_keybinds_slowmo.tscn" id="2_xsg1w"]
 
 [node name="UiMouseHint" type="Panel"]
 custom_minimum_size = Vector2(50, 50)

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://hsy148onjsyf"]
 
-[ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="1_bswsn"]
-[ext_resource type="PackedScene" uid="uid://b8lky0yk4q64s" path="res://scenes/turret.tscn" id="2_phuhy"]
+[ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://characters/player/player.tscn" id="1_bswsn"]
+[ext_resource type="PackedScene" uid="uid://b8lky0yk4q64s" path="res://characters/enemies/turret/turret.tscn" id="2_phuhy"]
 
 [sub_resource type="Curve3D" id="Curve3D_ftpi6"]
 _data = {

@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://dhgodsmrdod46" path="res://assets/ui_themes/main_menu_UI.tres" id="1_hfkoy"]
 [ext_resource type="Script" path="res://scripts/ui_hint.gd" id="2_12a1a"]
-[ext_resource type="PackedScene" uid="uid://bri0on4cqodjd" path="res://scenes/ui_keybinds_reset.tscn" id="2_nhp1b"]
+[ext_resource type="PackedScene" uid="uid://bri0on4cqodjd" path="res://scenes/levels/common/ui/ui_keybinds_reset.tscn" id="2_nhp1b"]
 
 [node name="UiResetHint" type="Panel"]
 custom_minimum_size = Vector2(50, 50)

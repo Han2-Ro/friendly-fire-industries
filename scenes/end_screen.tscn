@@ -1,6 +1,6 @@
 [gd_scene load_steps=27 format=3 uid="uid://7vy4bw8smj0a"]
 
-[ext_resource type="PackedScene" uid="uid://diuatrn3fo023" path="res://scenes/levels/main_menu/main_menu_map.tscn" id="1_h28c4"]
+[ext_resource type="PackedScene" uid="uid://diuatrn3fo023" path="res://scenes/main_menu/main_menu_map.tscn" id="1_h28c4"]
 [ext_resource type="AudioStream" uid="uid://bipgykl4xia41" path="res://assets/music/Introspective Machine.mp3" id="2_3lvvp"]
 [ext_resource type="Texture2D" uid="uid://d3ers1x7oajoh" path="res://assets/textures/FriendlyFireLogo2 mit HG.png" id="5_r5yxu"]
 [ext_resource type="PackedScene" uid="uid://mhd5k3skhprv" path="res://assets/Toolbox.blend" id="6_xllnq"]
