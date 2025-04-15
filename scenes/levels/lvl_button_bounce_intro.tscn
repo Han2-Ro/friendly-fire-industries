@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://characters/player/player.tscn" id="4_wir5o"]
 [ext_resource type="PackedScene" uid="uid://dldwm6qwbhk35" path="res://assets/levels_blend/button_bounce_intro_map.blend" id="5_ca2m0"]
 [ext_resource type="PackedScene" uid="uid://dt2b2acdq52cw" path="res://scenes/levels/common/button.tscn" id="5_d1364"]
-[ext_resource type="PackedScene" uid="uid://dn616rm8lgx61" path="res://scenes/levels/common/ui/ui_mouse_hint.tscn" id="6_1td86"]
+[ext_resource type="PackedScene" uid="uid://dn616rm8lgx61" path="res://scenes/levels/common/ui/keybind_hints/ui_mouse_hint.tscn" id="6_1td86"]
 [ext_resource type="PackedScene" uid="uid://bpjji0tfa5pbg" path="res://assets/Table.blend" id="7_74bau"]
 [ext_resource type="PackedScene" uid="uid://bgyjoe0a54i14" path="res://assets/OfficeChairBlue.blend" id="8_qa8yd"]
 [ext_resource type="PackedScene" uid="uid://5bjckehydxca" path="res://assets/ComputerScreen.blend" id="9_8tmfp"]

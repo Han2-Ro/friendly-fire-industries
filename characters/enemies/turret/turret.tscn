@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://du5auqcka6ert" path="res://characters/enemies/turret/turret_model.tscn" id="1_w0i3n"]
 [ext_resource type="Script" path="res://characters/enemies/turret/turret.gd" id="2_su5rc"]
-[ext_resource type="Shader" path="res://shader/vision_cone.gdshader" id="3_2ab0p"]
+[ext_resource type="Shader" path="res://characters/player/vision_cone.gdshader" id="3_2ab0p"]
 [ext_resource type="PackedScene" uid="uid://j11vvc024r4e" path="res://characters/enemies/turret/health_bar_3d.tscn" id="3_qevxr"]
 [ext_resource type="PackedScene" uid="uid://h6o2oblxpy6m" path="res://characters/player/muzzleflash.tscn" id="5_cmabb"]
 [ext_resource type="Script" path="res://characters/enemies/turret/vision_cone_new.gd" id="5_scbw6"]

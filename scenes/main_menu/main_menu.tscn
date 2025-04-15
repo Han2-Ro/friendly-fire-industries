@@ -8,7 +8,7 @@
 [ext_resource type="StyleBox" uid="uid://boilvtinge0qh" path="res://assets/ui_themes/normalBUtton.tres" id="4_epwfo"]
 [ext_resource type="PackedScene" uid="uid://cgm1l4gs3i30g" path="res://assets/FireExtinguisher.blend" id="5_wqrtu"]
 [ext_resource type="PackedScene" uid="uid://dundx2uw5a7ky" path="res://assets/PowerDrill.blend" id="6_g7l0b"]
-[ext_resource type="PackedScene" uid="uid://c8ohtww5qtrs" path="res://scenes/main_menu/main_menu_UI.tscn" id="7_dds4d"]
+[ext_resource type="PackedScene" uid="uid://c8ohtww5qtrs" path="res://scenes/main_menu/main_menu_ui.tscn" id="7_dds4d"]
 [ext_resource type="PackedScene" uid="uid://dmsrpbpete03w" path="res://scenes/main_menu/options_menu.tscn" id="10_vhtd2"]
 [ext_resource type="PackedScene" uid="uid://b6qld0vjlight" path="res://scenes/preload.tscn" id="11_xrwn4"]
 [ext_resource type="PackedScene" uid="uid://cecvu28s6wm8l" path="res://assets/Rocket.blend" id="12_fb2vg"]

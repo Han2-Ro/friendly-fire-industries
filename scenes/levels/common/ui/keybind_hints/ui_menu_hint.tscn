@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dtxtvx60ecw26"]
 
-[ext_resource type="Theme" uid="uid://dhgodsmrdod46" path="res://assets/ui_themes/main_menu_UI.tres" id="1_s6sbd"]
-[ext_resource type="PackedScene" uid="uid://dpclepm2j2a5r" path="res://scenes/levels/common/ui/ui_keybinds_menu.tscn" id="2_yxom3"]
+[ext_resource type="Theme" uid="uid://dhgodsmrdod46" path="res://assets/ui_themes/main_menu_UI.tres" id="1_biwrh"]
+[ext_resource type="PackedScene" uid="uid://dpclepm2j2a5r" path="res://scenes/levels/common/ui/keybind_hints/ui_keybinds_menu.tscn" id="2_jkffa"]
 
 [node name="UiResetHint" type="Panel"]
 custom_minimum_size = Vector2(50, 50)
@@ -14,9 +14,9 @@ offset_right = 228.0
 offset_bottom = 165.0
 grow_horizontal = 2
 mouse_filter = 2
-theme = ExtResource("1_s6sbd")
+theme = ExtResource("1_biwrh")
 
-[node name="Menu" parent="." instance=ExtResource("2_yxom3")]
+[node name="Menu" parent="." instance=ExtResource("2_jkffa")]
 layout_mode = 0
 offset_left = 37.0
 offset_top = 20.0

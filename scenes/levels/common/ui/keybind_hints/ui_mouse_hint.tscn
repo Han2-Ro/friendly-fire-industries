@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://dn616rm8lgx61"]
 
-[ext_resource type="Script" path="res://scenes/levels/common/ui/ui_hint.gd" id="1_gltae"]
-[ext_resource type="PackedScene" uid="uid://cmq8n3776l71b" path="res://scenes/levels/common/ui/ui_keybinds_aim.tscn" id="1_tf7l5"]
-[ext_resource type="PackedScene" uid="uid://cx7g1wqhq73g7" path="res://scenes/levels/common/ui/ui_keybinds_shoot.tscn" id="2_gljc2"]
+[ext_resource type="Script" path="res://scenes/levels/common/ui/keybind_hints/ui_hint.gd" id="1_gltae"]
+[ext_resource type="PackedScene" uid="uid://cmq8n3776l71b" path="res://scenes/levels/common/ui/keybind_hints/ui_keybinds_aim.tscn" id="1_tf7l5"]
+[ext_resource type="PackedScene" uid="uid://cx7g1wqhq73g7" path="res://scenes/levels/common/ui/keybind_hints/ui_keybinds_shoot.tscn" id="2_gljc2"]
 
 [node name="UiMouseHint" type="Panel"]
 custom_minimum_size = Vector2(50, 50)

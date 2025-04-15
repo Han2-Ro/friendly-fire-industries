@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://characters/player/player.tscn" id="4_t073e"]
 [ext_resource type="PackedScene" uid="uid://c6sn4q4jms5o0" path="res://assets/levels_blend/rocket_intro3.blend" id="5_6g8sp"]
 [ext_resource type="PackedScene" uid="uid://bofhxr0l6vrdt" path="res://assets/WarningLight.blend" id="6_o7g6e"]
-[ext_resource type="PackedScene" uid="uid://d014rcmkejwxp" path="res://scenes/levels/common/ui/ui_reset_hint.tscn" id="6_yu3f6"]
+[ext_resource type="PackedScene" uid="uid://d014rcmkejwxp" path="res://scenes/levels/common/ui/keybind_hints/ui_reset_hint.tscn" id="6_yu3f6"]
 [ext_resource type="PackedScene" uid="uid://mhd5k3skhprv" path="res://assets/Toolbox.blend" id="7_n8hpm"]
 [ext_resource type="PackedScene" uid="uid://dhqp7mex168hw" path="res://assets/ToolCart.blend" id="8_krxo2"]
 [ext_resource type="PackedScene" uid="uid://cx8gwgqjw2ft8" path="res://assets/TrafficCone.blend" id="9_8kmy1"]

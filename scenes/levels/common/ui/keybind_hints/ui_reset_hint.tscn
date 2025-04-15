@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://d014rcmkejwxp"]
 
-[ext_resource type="Theme" uid="uid://dhgodsmrdod46" path="res://assets/ui_themes/main_menu_UI.tres" id="1_hfkoy"]
-[ext_resource type="Script" path="res://scenes/levels/common/ui/ui_hint.gd" id="2_12a1a"]
-[ext_resource type="PackedScene" uid="uid://bri0on4cqodjd" path="res://scenes/levels/common/ui/ui_keybinds_reset.tscn" id="2_nhp1b"]
+[ext_resource type="Theme" uid="uid://dhgodsmrdod46" path="res://assets/ui_themes/main_menu_UI.tres" id="1_coqod"]
+[ext_resource type="Script" path="res://scenes/levels/common/ui/keybind_hints/ui_hint.gd" id="2_lrr6v"]
+[ext_resource type="PackedScene" uid="uid://bri0on4cqodjd" path="res://scenes/levels/common/ui/keybind_hints/ui_keybinds_reset.tscn" id="3_vh5np"]
 
 [node name="UiResetHint" type="Panel"]
 custom_minimum_size = Vector2(50, 50)
@@ -15,11 +15,11 @@ offset_right = 188.0
 offset_bottom = 262.0
 grow_horizontal = 2
 mouse_filter = 2
-theme = ExtResource("1_hfkoy")
-script = ExtResource("2_12a1a")
+theme = ExtResource("1_coqod")
+script = ExtResource("2_lrr6v")
 hint_status_level = 3
 
-[node name="Reset" parent="." instance=ExtResource("2_nhp1b")]
+[node name="Reset" parent="." instance=ExtResource("3_vh5np")]
 layout_mode = 0
 offset_left = 36.0
 offset_top = 21.0

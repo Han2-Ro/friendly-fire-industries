@@ -1,8 +1,8 @@
 [gd_scene load_steps=12 format=3 uid="uid://5p5yqwo7owhf"]
 
-[ext_resource type="Script" path="res://scenes/intro.gd" id="1_0l7bt"]
+[ext_resource type="Script" path="res://scenes/intro/intro.gd" id="1_0l7bt"]
 [ext_resource type="Theme" uid="uid://dhgodsmrdod46" path="res://assets/ui_themes/main_menu_UI.tres" id="1_qf3pt"]
-[ext_resource type="Shader" path="res://shader/crt_overlay.gdshader" id="2_3iv10"]
+[ext_resource type="Shader" path="res://scenes/intro/crt_overlay.gdshader" id="2_3iv10"]
 [ext_resource type="Texture2D" uid="uid://cma0kuctojkyb" path="res://assets/images/introbg2.png" id="2_ti5rx"]
 [ext_resource type="AudioStream" uid="uid://657wrjjcrwag" path="res://assets/sounds/retro-sci-fi-computer-104231.mp3" id="4_xxa14"]
 [ext_resource type="AudioStream" uid="uid://chbnwkoqsievv" path="res://assets/sounds/ui_sounds/click.mp3" id="6_kn3ln"]
