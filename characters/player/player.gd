@@ -5,13 +5,13 @@ extends PathFollow3D
 @export var slowmotion_uses: int = 3
 
 @onready var rotation_stange = $Player/player_base/player_rotationstange
-@onready var bullet_scene = preload("res://scenes/bullet.tscn")
+@onready var bullet_scene = preload("res://characters/player/bullet.tscn")
 @onready var muzzleflash = $Player/player_base/player_rotationstange/player_body/player_barrel/Muzzleflash
 @onready var player_barrel: MeshInstance3D = $Player/player_base/player_rotationstange/player_body/player_barrel
 @onready var player_body: MeshInstance3D = $Player/player_base/player_rotationstange/player_body
 @onready var no_ammo_player: AudioStreamPlayer = $NoAmmoPlayer
-@onready var player_kaputt = preload("res://scenes/player_kaputt.tscn")
-@onready var explodeparticle = preload("res://scenes/particles/explosion.tscn")
+@onready var player_kaputt = preload("res://characters/player/player_kaputt.tscn")
+@onready var explodeparticle = preload("res://characters/common/explosion.tscn")
 @onready var ui: UIPlayer = $UI
 
 var last_cursor_pos: Vector3

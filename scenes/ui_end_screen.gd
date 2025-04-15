@@ -9,7 +9,7 @@ func _ready() -> void:
 
 func _on_main_menu_button_pressed() -> void:
 	play_on_mouse_click()
-	get_tree().change_scene_to_file("res://scenes/levels/main_menu/main_menu.tscn")
+	get_tree().change_scene_to_file("res://scenes/main_menu/main_menu.tscn")
 
 func play_on_mouse_entered() -> void:
 	hover_audio_player.play()

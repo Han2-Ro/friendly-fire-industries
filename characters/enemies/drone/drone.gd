@@ -2,9 +2,9 @@ extends CharacterBody3D
 
 @export var speed = 5
 
-@onready var explodeparticle = preload("res://scenes/particles/explosion.tscn")
+@onready var explodeparticle = preload("res://characters/common/explosion.tscn")
 @onready var kill_area: Area3D = $KillArea
-@onready var drone_broken = preload("res://scenes/drone_broken.tscn")
+@onready var drone_broken = preload("res://characters/enemies/drone/drone_broken.tscn")
 var player: Node3D
 
 func _ready() -> void:

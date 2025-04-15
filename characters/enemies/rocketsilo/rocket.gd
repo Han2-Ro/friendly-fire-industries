@@ -4,7 +4,7 @@ class_name Rocket
 @export var sound_muted: bool = false
 
 @onready var kill_area: Area3D = $KillArea
-@onready var explodeparticle = preload("res://scenes/particles/explosion.tscn")
+@onready var explodeparticle = preload("res://characters/common/explosion.tscn")
 @onready var model = $Rocket
 @onready var particles = $FireParticles
 @onready var audio_flight: AudioStreamPlayer  = $Flight

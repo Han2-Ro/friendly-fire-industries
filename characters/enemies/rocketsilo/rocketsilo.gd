@@ -7,9 +7,9 @@ extends StaticBody3D
 @export var seconds_being_open: float = 2
 
 @onready var AnimPlayer = $AnimationPlayer
-@onready var explodeparticle = preload("res://scenes/particles/explosion.tscn")
-@onready var explosive_scene = preload("res://scenes/rocket.tscn")
-@onready var  silo_broken = preload("res://scenes/rocket_silo_broken.tscn")
+@onready var explodeparticle = preload("res://characters/common/explosion.tscn")
+@onready var explosive_scene = preload("res://characters/enemies/rocketsilo/rocket.tscn")
+@onready var  silo_broken = preload("res://characters/enemies/rocketsilo/rocket_silo_broken.tscn")
 @export var seconds_before_first_shot: float = 2
 @onready var launchsoundplayer: AudioStreamPlayer = $launchsoundplayer
 @onready var metal_ping_player: AudioStreamPlayer = $metalPingPlayer

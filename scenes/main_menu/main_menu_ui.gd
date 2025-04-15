@@ -15,7 +15,7 @@ func _ready() -> void:
 
 func _on_start_pressed() -> void:
 	play_on_mouse_click()
-	get_tree().change_scene_to_file("res://scenes/main.tscn")
+	get_tree().change_scene_to_file("res://globals/main.tscn")
 	GameState.current_level = 0
 
 func _on_options_pressed() -> void:
@@ -48,4 +48,4 @@ func play_on_mouse_click() -> void:
 
 func _on_continue_pressed() -> void:
 	play_on_mouse_click()
-	get_tree().change_scene_to_file("res://scenes/main.tscn")
+	get_tree().change_scene_to_file("res://globals/main.tscn")

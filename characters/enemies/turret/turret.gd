@@ -19,10 +19,10 @@ var player_alive: bool
 @onready var health_bar = $SubViewport/HealthBar3d
 @onready var timer = $Timer
 @onready var vision_cone = $VisionCone
-@onready var broken_turret = preload("res://scenes/turret_kaputt_model.tscn")
-@onready var explodeparticle = preload("res://scenes/particles/explosion.tscn")
+@onready var broken_turret = preload("res://characters/enemies/turret/turret_kaputt_model.tscn")
+@onready var explodeparticle = preload("res://characters/common/explosion.tscn")
 @onready var muzzleflash = $TurretLowPoly/Cylinder/Muzzleflash
-@onready var bullet_scene = preload("res://scenes/bullet.tscn")
+@onready var bullet_scene = preload("res://characters/player/bullet.tscn")
 @onready var ray_cast_3d: RayCast3D = $TurretLowPoly/RayCast3D
 @onready var turret_low_poly: Node3D = $TurretLowPoly
 @onready var turret_tower: Node3D = $TurretLowPoly/Cylinder
@@ -51,7 +51,7 @@ func _ready():
 func set_visioncone():
 	#vision_cone.scale = Vector3(tracking_distance * 2, tracking_distance * 2, 1)
 	var cone_material = ShaderMaterial.new()
-	cone_material.shader = load("res://shader/vision_cone.gdshader")
+	cone_material.shader = load("res://characters/enemies/turret/vision_cone.gdshader")
 	vision_cone.material_override = cone_material
 	
 	cone_material.set_shader_parameter("cone_angle", tracking_angle)
