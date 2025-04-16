@@ -1,5 +1,6 @@
 # Friendly Fire Industries
 This is a video game created in one week for [Brackeys Game Jam 2025.1](https://itch.io/jam/brackeys-13).  
+It is a top-down puzzle rail shooter.  
 You can play and download the game on [itch.io](https://han2.itch.io/friendly-fire-industries).
 
 > You are a cutting edge AI turret. Avoid destruction by solving clever puzzles.
