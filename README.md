@@ -11,7 +11,7 @@ You can play and download the game on [itch.io](https://han2.itch.io/friendly-fi
 ## What code and assets did you not make from scratch during the jam (if any)?
 2 gdshaders, wall texture, hdri, font, some icons, music, most sound effects
 
-Everything else, like all 3D models, we created ourselves.
+Everything else, like all code and 3D models, we created ourselves.
 
 ## Game Jam Results
 | Criteria   | Rank  | Score | Raw Score |
