@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c38ebp5143i5x" path="res://scenes/levels/common/level_camera.tscn" id="2_4yf57"]
 [ext_resource type="PackedScene" uid="uid://dnfpmel15rp0g" path="res://scenes/levels/common/door.tscn" id="3_b7rl2"]
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://characters/player/player.tscn" id="4_wir5o"]
-[ext_resource type="PackedScene" uid="uid://dldwm6qwbhk35" path="res://assets/levels_blend/button_bounce_intro_map.blend" id="5_ca2m0"]
+[ext_resource type="PackedScene" uid="uid://dldwm6qwbhk35" path="res://scenes/levels/lvl_button_bounce_intro/button_bounce_intro_map.blend" id="5_ca2m0"]
 [ext_resource type="PackedScene" uid="uid://dt2b2acdq52cw" path="res://scenes/levels/common/button.tscn" id="5_d1364"]
 [ext_resource type="PackedScene" uid="uid://dn616rm8lgx61" path="res://scenes/levels/common/ui/keybind_hints/ui_mouse_hint.tscn" id="6_1td86"]
 [ext_resource type="PackedScene" uid="uid://bpjji0tfa5pbg" path="res://assets/Table.blend" id="7_74bau"]

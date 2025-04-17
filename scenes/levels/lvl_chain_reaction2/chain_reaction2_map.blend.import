@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ds2irli2tj4wi"
-path="res://.godot/imported/rocket_intro2.blend-c2e00cca6d364bed809797a671c9e5cf.scn"
+uid="uid://dcb5hcolq4iu3"
+path="res://.godot/imported/chain_reaction2_map.blend-ae3dd7762359d461a64c05924bd30e99.scn"
 
 [deps]
 
-source_file="res://assets/levels_blend/rocket_intro2.blend"
-dest_files=["res://.godot/imported/rocket_intro2.blend-c2e00cca6d364bed809797a671c9e5cf.scn"]
+source_file="res://scenes/levels/lvl_chain_reaction2/chain_reaction2_map.blend"
+dest_files=["res://.godot/imported/chain_reaction2_map.blend-ae3dd7762359d461a64c05924bd30e99.scn"]
 
 [params]
 

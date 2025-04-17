@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c6sn4q4jms5o0"
-path="res://.godot/imported/rocket_intro3.blend-3debf3389fbcc79dbea6a5b535b9ba10.scn"
+uid="uid://buq1pqv6iid72"
+path="res://.godot/imported/drone_hell_map.blend-c43cc6ab1fb0497e361e393e94379cd2.scn"
 
 [deps]
 
-source_file="res://assets/levels_blend/rocket_intro3.blend"
-dest_files=["res://.godot/imported/rocket_intro3.blend-3debf3389fbcc79dbea6a5b535b9ba10.scn"]
+source_file="res://scenes/levels/lvl_drone_hell/drone_hell_map.blend"
+dest_files=["res://.godot/imported/drone_hell_map.blend-c43cc6ab1fb0497e361e393e94379cd2.scn"]
 
 [params]
 

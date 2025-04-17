@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c3bbup5phk4ux"
-path="res://.godot/imported/chain_reaction1_map.blend-4b9e88aef8c0136481ea29672afa405e.scn"
+path="res://.godot/imported/chain_reaction1_map.blend-b9f036c9f4936f56a6a66ddf1149a21f.scn"
 
 [deps]
 
-source_file="res://assets/levels_blend/chain_reaction1_map.blend"
-dest_files=["res://.godot/imported/chain_reaction1_map.blend-4b9e88aef8c0136481ea29672afa405e.scn"]
+source_file="res://scenes/levels/lvl_chain_reaction1/chain_reaction1_map.blend"
+dest_files=["res://.godot/imported/chain_reaction1_map.blend-b9f036c9f4936f56a6a66ddf1149a21f.scn"]
 
 [params]
 

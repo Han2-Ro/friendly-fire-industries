@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://72kqm48wdsjp"]
 
-[ext_resource type="PackedScene" uid="uid://dcb5hcolq4iu3" path="res://assets/levels_blend/chain_reaction2_map.blend" id="1_bjwjq"]
+[ext_resource type="PackedScene" uid="uid://dcb5hcolq4iu3" path="res://scenes/levels/lvl_chain_reaction2/chain_reaction2_map.blend" id="1_bjwjq"]
 [ext_resource type="PackedScene" uid="uid://dhqp7mex168hw" path="res://assets/ToolCart.blend" id="2_5na18"]
 [ext_resource type="PackedScene" uid="uid://c38ebp5143i5x" path="res://scenes/levels/common/level_camera.tscn" id="2_hah8l"]
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://characters/player/player.tscn" id="3_msfge"]

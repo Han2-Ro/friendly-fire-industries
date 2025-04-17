@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://characters/player/player.tscn" id="2_oxv3h"]
 [ext_resource type="PackedScene" uid="uid://b8lky0yk4q64s" path="res://characters/enemies/turret/turret.tscn" id="4_fsu6b"]
 [ext_resource type="PackedScene" uid="uid://dt2b2acdq52cw" path="res://scenes/levels/common/button.tscn" id="5_kgakm"]
-[ext_resource type="PackedScene" uid="uid://c681r2buw6d0y" path="res://assets/levels_blend/complex_map_1.blend" id="6_6aee3"]
+[ext_resource type="PackedScene" uid="uid://c681r2buw6d0y" path="res://scenes/levels/lvl_complex_1/complex_map_1.blend" id="6_6aee3"]
 [ext_resource type="PackedScene" uid="uid://dnfpmel15rp0g" path="res://scenes/levels/common/door.tscn" id="6_cga3k"]
 [ext_resource type="PackedScene" uid="uid://datd7wg6v4r42" path="res://characters/enemies/rocketsilo/rocketsilo.tscn" id="7_fwu76"]
 [ext_resource type="PackedScene" uid="uid://bofhxr0l6vrdt" path="res://assets/WarningLight.blend" id="8_8siuc"]

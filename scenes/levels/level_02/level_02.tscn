@@ -34,11 +34,10 @@ curve = SubResource("Curve3D_225gm")
 transform = Transform3D(-1, 0, 5.28415e-05, 0, 1, 0, -5.28415e-05, 0, -1, -0.99976, 0, -5.53392)
 speed = 2
 
-[node name="Minenwerfer" parent="." node_paths=PackedStringArray("targets") instance=ExtResource("3_yyotb")]
+[node name="Minenwerfer" parent="." instance=ExtResource("3_yyotb")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.84038, 0, -1.26145)
-incline = 2.0
-targets = [NodePath("Target"), NodePath("Target2")]
 seconds_between_shots = 2.0
+incline = 2.0
 
 [node name="Target" type="Node3D" parent="Minenwerfer"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 3.18488, 0, -2.70049)

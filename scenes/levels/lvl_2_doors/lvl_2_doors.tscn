@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dnfpmel15rp0g" path="res://scenes/levels/common/door.tscn" id="4_1wvax"]
 [ext_resource type="PackedScene" uid="uid://datd7wg6v4r42" path="res://characters/enemies/rocketsilo/rocketsilo.tscn" id="6_ynykx"]
 [ext_resource type="PackedScene" uid="uid://b8lky0yk4q64s" path="res://characters/enemies/turret/turret.tscn" id="7_0gso6"]
-[ext_resource type="PackedScene" uid="uid://if5hf3rhkbyx" path="res://assets/levels_blend/2_doors_intro_map.blend" id="7_2wmlm"]
+[ext_resource type="PackedScene" uid="uid://if5hf3rhkbyx" path="res://scenes/levels/lvl_2_doors/2_doors_intro_map.blend" id="7_2wmlm"]
 
 [sub_resource type="Curve3D" id="Curve3D_ystvf"]
 _data = {

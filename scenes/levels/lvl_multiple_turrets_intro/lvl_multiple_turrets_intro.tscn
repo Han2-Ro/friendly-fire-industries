@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c38ebp5143i5x" path="res://scenes/levels/common/level_camera.tscn" id="1_scho0"]
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://characters/player/player.tscn" id="2_uqumt"]
-[ext_resource type="PackedScene" uid="uid://cgnsxioll86no" path="res://assets/levels_blend/tripple_turret_map.blend" id="3_miupo"]
+[ext_resource type="PackedScene" uid="uid://cgnsxioll86no" path="res://scenes/levels/lvl_multiple_turrets_intro/tripple_turret_map.blend" id="3_miupo"]
 [ext_resource type="PackedScene" uid="uid://b8lky0yk4q64s" path="res://characters/enemies/turret/turret.tscn" id="4_p7tmx"]
 [ext_resource type="PackedScene" uid="uid://dt2b2acdq52cw" path="res://scenes/levels/common/button.tscn" id="5_7grsj"]
 [ext_resource type="PackedScene" uid="uid://dnfpmel15rp0g" path="res://scenes/levels/common/door.tscn" id="6_gt0bi"]

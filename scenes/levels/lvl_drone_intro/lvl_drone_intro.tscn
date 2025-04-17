@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dnfpmel15rp0g" path="res://scenes/levels/common/door.tscn" id="2_8gyle"]
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://characters/player/player.tscn" id="3_vbcmm"]
 [ext_resource type="PackedScene" uid="uid://dt2b2acdq52cw" path="res://scenes/levels/common/button.tscn" id="4_uxkrm"]
-[ext_resource type="PackedScene" uid="uid://d3nou6cf5g10q" path="res://assets/levels_blend/drone_intro_map.blend" id="5_4ku25"]
+[ext_resource type="PackedScene" uid="uid://d3nou6cf5g10q" path="res://scenes/levels/lvl_drone_intro/drone_intro_map.blend" id="5_4ku25"]
 [ext_resource type="PackedScene" uid="uid://dme01ctmicfat" path="res://characters/enemies/drone/drone.tscn" id="6_e7fom"]
 [ext_resource type="PackedScene" uid="uid://cgm1l4gs3i30g" path="res://assets/FireExtinguisher.blend" id="6_qrpf7"]
 [ext_resource type="PackedScene" uid="uid://bpjji0tfa5pbg" path="res://assets/Table.blend" id="7_owv8t"]

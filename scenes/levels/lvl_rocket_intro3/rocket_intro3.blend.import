@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://if5hf3rhkbyx"
-path="res://.godot/imported/2_doors_intro_map.blend-e28d0ee94f399b4ab8b7c46864001da3.scn"
+uid="uid://c6sn4q4jms5o0"
+path="res://.godot/imported/rocket_intro3.blend-7fe7603d29528bc2de975d69d23f68b4.scn"
 
 [deps]
 
-source_file="res://assets/levels_blend/2_doors_intro_map.blend"
-dest_files=["res://.godot/imported/2_doors_intro_map.blend-e28d0ee94f399b4ab8b7c46864001da3.scn"]
+source_file="res://scenes/levels/lvl_rocket_intro3/rocket_intro3.blend"
+dest_files=["res://.godot/imported/rocket_intro3.blend-7fe7603d29528bc2de975d69d23f68b4.scn"]
 
 [params]
 

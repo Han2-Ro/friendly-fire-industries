@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://bof0cw4bqi4rj"]
 
-[ext_resource type="PackedScene" uid="uid://ds2irli2tj4wi" path="res://assets/levels_blend/rocket_intro2.blend" id="1_xr2dl"]
+[ext_resource type="PackedScene" uid="uid://ds2irli2tj4wi" path="res://scenes/levels/lvl_rocket_intro2/rocket_intro2.blend" id="1_xr2dl"]
 [ext_resource type="PackedScene" uid="uid://c38ebp5143i5x" path="res://scenes/levels/common/level_camera.tscn" id="2_jml5a"]
 [ext_resource type="PackedScene" uid="uid://datd7wg6v4r42" path="res://characters/enemies/rocketsilo/rocketsilo.tscn" id="3_c61vw"]
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://characters/player/player.tscn" id="4_3kotp"]
