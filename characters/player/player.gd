@@ -18,6 +18,7 @@ var last_cursor_pos: Vector3
 var slowmotion_pressed: bool = false
 var slowmotion_time_left: float = 0
 var slowmotion_duration: float = 5
+var lock_on_target: Node3D = null
 
 func _ready() -> void:
 	EventBus.level_end.connect(_on_level_end)
@@ -27,7 +28,10 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	if (Engine.time_scale != 0): # don't aim when paused
-		look_at_cursor()
+		if lock_on_target:
+			print("locking on")
+		else:
+			look_at_cursor()
 	progress += speed * delta
 	if (progress_ratio >= 1.0):
 		EventBus.level_end.emit(true)
@@ -66,6 +70,11 @@ func _input(event: InputEvent) -> void:
 		else:
 			print("Out of ammo")
 			no_ammo_player.play()
+	elif event.is_action_pressed("lock_on"):
+		lock_on_target = self
+	elif event.is_action_released("lock_on"):
+		lock_on_target = null
+		
 	
 	handle_timescale(event)
 	
