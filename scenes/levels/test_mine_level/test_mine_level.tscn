@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://cbj6hobo6r6vd"]
 
 [ext_resource type="PackedScene" uid="uid://df6p0issk0o74" path="res://assets/Level1Base.blend" id="1_oqlni"]
-[ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="2_vuiik"]
-[ext_resource type="PackedScene" uid="uid://b8lky0yk4q64s" path="res://scenes/turret.tscn" id="3_a71fe"]
-[ext_resource type="PackedScene" path="res://scenes/rocketsilo.tscn" id="4_rxngc"]
+[ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://characters/player/player.tscn" id="2_vuiik"]
+[ext_resource type="PackedScene" uid="uid://b8lky0yk4q64s" path="res://characters/enemies/turret/turret.tscn" id="3_a71fe"]
+[ext_resource type="PackedScene" uid="uid://datd7wg6v4r42" path="res://characters/enemies/rocketsilo/rocketsilo.tscn" id="4_rxngc"]
 
 [sub_resource type="Curve3D" id="Curve3D_nhif4"]
 _data = {

@@ -1,0 +1,81 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmsrpbpete03w"]
+
+[ext_resource type="Script" path="res://scenes/main_menu/options_menu.gd" id="1_fl57t"]
+[ext_resource type="Theme" uid="uid://dhgodsmrdod46" path="res://ui/ui_themes/main_menu_UI.tres" id="2_8rxjc"]
+[ext_resource type="StyleBox" uid="uid://boilvtinge0qh" path="res://ui/ui_themes/normalBUtton.tres" id="2_d0d6q"]
+[ext_resource type="FontFile" uid="uid://cb8xjj2e0l24x" path="res://ui/fonts/Terminal F4.ttf" id="2_iwxhv"]
+
+[node name="OptionsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fl57t")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 500.0
+offset_top = 10.0
+offset_right = 796.0
+offset_bottom = 214.0
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_8rxjc")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_iwxhv")
+theme_override_styles/normal = ExtResource("2_d0d6q")
+text = "Volume"
+
+[node name="Volume" type="HSlider" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_8rxjc")
+theme_override_styles/slider = ExtResource("2_d0d6q")
+theme_override_styles/grabber_area = ExtResource("2_d0d6q")
+theme_override_styles/grabber_area_highlight = ExtResource("2_d0d6q")
+min_value = -30.0
+max_value = 0.0
+
+[node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(5.705, 13.71)
+layout_mode = 2
+
+[node name="Fullscreen" type="CheckBox" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_8rxjc")
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_iwxhv")
+theme_override_styles/focus = ExtResource("2_d0d6q")
+theme_override_styles/disabled_mirrored = ExtResource("2_d0d6q")
+theme_override_styles/disabled = ExtResource("2_d0d6q")
+theme_override_styles/hover_pressed_mirrored = ExtResource("2_d0d6q")
+theme_override_styles/hover_pressed = ExtResource("2_d0d6q")
+theme_override_styles/hover_mirrored = ExtResource("2_d0d6q")
+theme_override_styles/hover = ExtResource("2_d0d6q")
+theme_override_styles/pressed_mirrored = ExtResource("2_d0d6q")
+theme_override_styles/pressed = ExtResource("2_d0d6q")
+theme_override_styles/normal_mirrored = ExtResource("2_d0d6q")
+theme_override_styles/normal = ExtResource("2_d0d6q")
+text = "Fullscreen"
+
+[connection signal="value_changed" from="VBoxContainer/Volume" to="." method="_on_volume_value_changed"]
+[connection signal="toggled" from="VBoxContainer/Fullscreen" to="." method="_on_fullscreen_toggled"]

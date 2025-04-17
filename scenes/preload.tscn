@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://b6qld0vjlight"]
 
-[ext_resource type="Script" path="res://scripts/preload.gd" id="1_67uhk"]
-[ext_resource type="PackedScene" uid="uid://bg8xfgyrgw4md" path="res://scenes/bullet.tscn" id="1_lvvpc"]
-[ext_resource type="PackedScene" uid="uid://dt2b2acdq52cw" path="res://scenes/button.tscn" id="2_68j88"]
-[ext_resource type="PackedScene" uid="uid://b8lky0yk4q64s" path="res://scenes/turret.tscn" id="3_8jaiv"]
-[ext_resource type="PackedScene" uid="uid://cf8pivhpqj2mv" path="res://scenes/rocket.tscn" id="4_surv5"]
+[ext_resource type="Script" path="res://scenes/preload.gd" id="1_67uhk"]
+[ext_resource type="PackedScene" uid="uid://bg8xfgyrgw4md" path="res://characters/player/bullet.tscn" id="1_lvvpc"]
+[ext_resource type="PackedScene" uid="uid://dt2b2acdq52cw" path="res://scenes/levels/common/button.tscn" id="2_68j88"]
+[ext_resource type="PackedScene" uid="uid://b8lky0yk4q64s" path="res://characters/enemies/turret/turret.tscn" id="3_8jaiv"]
+[ext_resource type="PackedScene" uid="uid://cf8pivhpqj2mv" path="res://characters/enemies/rocketsilo/rocket.tscn" id="4_surv5"]
 
 [node name="Preload" type="Node3D"]
 script = ExtResource("1_67uhk")

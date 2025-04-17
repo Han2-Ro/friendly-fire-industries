@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://cnccgdbee6a2j"]
 
 [ext_resource type="PackedScene" uid="uid://x2sc06tp2kpu" path="res://scenes/levels/level_02/level_02_map.tscn" id="1_2pvps"]
-[ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="2_ifvsw"]
-[ext_resource type="PackedScene" uid="uid://oef1c1gyvt62" path="res://scenes/minenwerfer.tscn" id="3_yyotb"]
-[ext_resource type="PackedScene" uid="uid://dt2b2acdq52cw" path="res://scenes/button.tscn" id="4_u7nnf"]
-[ext_resource type="PackedScene" uid="uid://dnfpmel15rp0g" path="res://scenes/door.tscn" id="5_g3npw"]
+[ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://characters/player/player.tscn" id="2_ifvsw"]
+[ext_resource type="PackedScene" uid="uid://oef1c1gyvt62" path="res://characters/enemies/rocketsilo/minenwerfer.tscn" id="3_yyotb"]
+[ext_resource type="PackedScene" uid="uid://dt2b2acdq52cw" path="res://scenes/levels/common/button.tscn" id="4_u7nnf"]
+[ext_resource type="PackedScene" uid="uid://dnfpmel15rp0g" path="res://scenes/levels/common/door.tscn" id="5_g3npw"]
 
 [sub_resource type="Curve3D" id="Curve3D_225gm"]
 _data = {
@@ -34,11 +34,10 @@ curve = SubResource("Curve3D_225gm")
 transform = Transform3D(-1, 0, 5.28415e-05, 0, 1, 0, -5.28415e-05, 0, -1, -0.99976, 0, -5.53392)
 speed = 2
 
-[node name="Minenwerfer" parent="." node_paths=PackedStringArray("targets") instance=ExtResource("3_yyotb")]
+[node name="Minenwerfer" parent="." instance=ExtResource("3_yyotb")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.84038, 0, -1.26145)
-incline = 2.0
-targets = [NodePath("Target"), NodePath("Target2")]
 seconds_between_shots = 2.0
+incline = 2.0
 
 [node name="Target" type="Node3D" parent="Minenwerfer"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 3.18488, 0, -2.70049)

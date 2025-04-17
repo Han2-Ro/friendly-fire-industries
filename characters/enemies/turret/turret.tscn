@@ -1,0 +1,80 @@
+[gd_scene load_steps=13 format=3 uid="uid://b8lky0yk4q64s"]
+
+[ext_resource type="PackedScene" uid="uid://du5auqcka6ert" path="res://characters/enemies/turret/turret_model.tscn" id="1_w0i3n"]
+[ext_resource type="Script" path="res://characters/enemies/turret/turret.gd" id="2_su5rc"]
+[ext_resource type="Shader" path="res://characters/enemies/turret/vision_cone.gdshader" id="3_2ab0p"]
+[ext_resource type="PackedScene" uid="uid://j11vvc024r4e" path="res://characters/enemies/turret/health_bar_3d.tscn" id="3_qevxr"]
+[ext_resource type="PackedScene" uid="uid://h6o2oblxpy6m" path="res://characters/player/muzzleflash.tscn" id="5_cmabb"]
+[ext_resource type="Script" path="res://characters/enemies/turret/vision_cone_new.gd" id="5_scbw6"]
+[ext_resource type="Script" path="res://characters/enemies/turret/vision_cone_plane.gd" id="6_kghs8"]
+[ext_resource type="AudioStream" uid="uid://ddmghcuomqppp" path="res://assets/sounds/ui_sounds/beep.mp3" id="7_5v6ey"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_jocne"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="QuadMesh" id="QuadMesh_d7fub"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yvxql"]
+render_priority = 0
+shader = ExtResource("3_2ab0p")
+shader_parameter/cone_angle = 90.0
+shader_parameter/min_angle = 5.0
+shader_parameter/current_angle = 90.0
+shader_parameter/turret_rotation = 0.0
+shader_parameter/cone_color = Color(1, 0, 0, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ojes2"]
+size = Vector3(0.920349, 1, 0.918091)
+
+[node name="Turret" type="StaticBody3D"]
+collision_layer = 5
+collision_mask = 0
+script = ExtResource("2_su5rc")
+death_timer = 1.0
+
+[node name="TurretLowPoly" parent="." instance=ExtResource("1_w0i3n")]
+
+[node name="Cylinder" parent="TurretLowPoly" index="1"]
+transform = Transform3D(-4.37113e-08, 0, -0.999999, 0, 1, 0, 0.999999, 0, -4.37113e-08, 0, 0, 0)
+
+[node name="Sprite3D" type="Sprite3D" parent="TurretLowPoly/Cylinder" index="0"]
+transform = Transform3D(-3.21306e-08, 1.30937, -5.71509e-08, 0, -5.72344e-08, -1.30746, -0.7309, -5.54137e-08, 2.56739e-15, -0.00391434, 0.994822, -1.18036)
+texture = SubResource("ViewportTexture_jocne")
+
+[node name="Muzzleflash" parent="TurretLowPoly/Cylinder" index="1" instance=ExtResource("5_cmabb")]
+transform = Transform3D(-0.00331624, 0, 0.999995, 0, 1, 0, -0.999995, 0, -0.00331624, -0.00544231, 0.854439, -1.64112)
+
+[node name="VisionConeNew" type="Node3D" parent="TurretLowPoly/Cylinder" index="2"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+visible = false
+script = ExtResource("5_scbw6")
+
+[node name="RayCast3D" type="RayCast3D" parent="TurretLowPoly"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0.826843, 0)
+target_position = Vector3(0, 0, -10)
+collision_mask = 3
+
+[node name="VisionCone" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.999999, 0, -8.74228e-08, 0, 0.999999, 0, 8.74227e-08, 0, -1, 0, 0, 0)
+mesh = SubResource("QuadMesh_d7fub")
+skeleton = NodePath("../TurretLowPoly/Cylinder")
+surface_material_override/0 = SubResource("ShaderMaterial_yvxql")
+script = ExtResource("6_kghs8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.75171, 0, -2.13163e-14, 0, 1.75171, 0, 2.13163e-14, 0, 1.75171, -0.00229869, 0.619358, 0.00609421)
+shape = SubResource("BoxShape3D_ojes2")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="SubViewport" type="SubViewport" parent="."]
+disable_3d = true
+transparent_bg = true
+
+[node name="HealthBar3d" parent="SubViewport" instance=ExtResource("3_qevxr")]
+
+[node name="BeepPlayer" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("7_5v6ey")
+volume_db = 5.0
+
+[editable path="TurretLowPoly"]

@@ -1,0 +1,77 @@
+[gd_scene load_steps=7 format=3 uid="uid://cb1ccsqcw5st1"]
+
+[ext_resource type="Script" path="res://characters/player/ui_player.gd" id="1_uqr2g"]
+[ext_resource type="Texture2D" uid="uid://ogf3s0rd3vqw" path="res://ui/icons/bullet.svg" id="2_07jj8"]
+[ext_resource type="Texture2D" uid="uid://dynmweyr6a8d1" path="res://ui/icons/bullet_empty.svg" id="3_guscg"]
+[ext_resource type="Texture2D" uid="uid://b6ggey51uhol8" path="res://ui/icons/stopwatch.svg" id="4_vtsdc"]
+[ext_resource type="Texture2D" uid="uid://7y8kknv0wpgk" path="res://ui/icons/stopwatch2.svg" id="5_fo8mx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1oqi0"]
+bg_color = Color(0, 0.383333, 1, 0.862745)
+
+[node name="UIPlayer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_uqr2g")
+ammo_available_icon = ExtResource("2_07jj8")
+ammo_unavailable_icon = ExtResource("3_guscg")
+time_available_icon = ExtResource("4_vtsdc")
+time_unavailable_icon = ExtResource("5_fo8mx")
+icon_offset = 65
+
+[node name="BulletIcon" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 120.0
+offset_top = -83.0
+offset_right = 214.0
+offset_bottom = 13.0
+grow_vertical = 0
+rotation = 1.57079
+texture = ExtResource("2_07jj8")
+expand_mode = 1
+
+[node name="TimeIcon" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -83.0
+offset_top = -70.0
+offset_right = -38.0
+offset_bottom = -24.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("4_vtsdc")
+expand_mode = 1
+
+[node name="AmmoDisplay" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 152.0
+grow_vertical = 2
+
+[node name="SlowMotion" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -229.5
+offset_top = -68.0
+offset_right = 229.5
+offset_bottom = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1oqi0")

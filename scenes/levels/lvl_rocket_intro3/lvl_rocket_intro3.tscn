@@ -1,0 +1,170 @@
+[gd_scene load_steps=25 format=3 uid="uid://cleqoihbxyqty"]
+
+[ext_resource type="PackedScene" uid="uid://c38ebp5143i5x" path="res://scenes/levels/common/level_camera.tscn" id="2_epqrj"]
+[ext_resource type="PackedScene" uid="uid://datd7wg6v4r42" path="res://characters/enemies/rocketsilo/rocketsilo.tscn" id="3_ywf6x"]
+[ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://characters/player/player.tscn" id="4_t073e"]
+[ext_resource type="PackedScene" uid="uid://c6sn4q4jms5o0" path="res://scenes/levels/lvl_rocket_intro3/rocket_intro3.blend" id="5_6g8sp"]
+[ext_resource type="PackedScene" uid="uid://bofhxr0l6vrdt" path="res://assets/WarningLight.blend" id="6_o7g6e"]
+[ext_resource type="PackedScene" uid="uid://d014rcmkejwxp" path="res://scenes/levels/common/ui/keybind_hints/ui_reset_hint.tscn" id="6_yu3f6"]
+[ext_resource type="PackedScene" uid="uid://mhd5k3skhprv" path="res://assets/Toolbox.blend" id="7_n8hpm"]
+[ext_resource type="PackedScene" uid="uid://dhqp7mex168hw" path="res://assets/ToolCart.blend" id="8_krxo2"]
+[ext_resource type="PackedScene" uid="uid://cx8gwgqjw2ft8" path="res://assets/TrafficCone.blend" id="9_8kmy1"]
+[ext_resource type="PackedScene" uid="uid://cd0kih764xane" path="res://assets/ammobx.blend" id="10_qcauh"]
+[ext_resource type="PackedScene" uid="uid://cgm1l4gs3i30g" path="res://assets/FireExtinguisher.blend" id="11_ie8n0"]
+[ext_resource type="PackedScene" uid="uid://bpjji0tfa5pbg" path="res://assets/Table.blend" id="12_u4ds5"]
+[ext_resource type="PackedScene" uid="uid://8itxf6sbrcq3" path="res://assets/WarningTapePole.blend" id="13_2kttr"]
+[ext_resource type="PackedScene" uid="uid://cbbuw8h38tdkk" path="res://assets/WarningTape.blend" id="14_tgkts"]
+[ext_resource type="PackedScene" uid="uid://cflil2j25571m" path="res://assets/OfficeChairGreen.blend" id="15_i0qm4"]
+[ext_resource type="PackedScene" uid="uid://bw4jcts1j3fqv" path="res://assets/Drohne_broken.blend" id="16_kvlyy"]
+[ext_resource type="PackedScene" uid="uid://5bjckehydxca" path="res://assets/ComputerScreen.blend" id="17_177fq"]
+[ext_resource type="PackedScene" uid="uid://bgyjoe0a54i14" path="res://assets/OfficeChairBlue.blend" id="18_42gnd"]
+[ext_resource type="PackedScene" uid="uid://dundx2uw5a7ky" path="res://assets/PowerDrill.blend" id="20_laxia"]
+[ext_resource type="PackedScene" uid="uid://dv6iy3otapwuv" path="res://assets/Wrench.blend" id="21_7luvb"]
+[ext_resource type="PackedScene" uid="uid://dha2y6scogrfy" path="res://assets/ComputerCase.blend" id="22_56all"]
+[ext_resource type="PackedScene" uid="uid://dbumysk6ysrvp" path="res://assets/ComputerKeyboard.blend" id="22_c251l"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_fh0ot"]
+data = PackedVector3Array(-9, 0, -6, 9, 0, -5, 9, 0, -6, -9, 0, -6, -9, 0, -5, 9, 0, -5, -9, 0, -5, -9, 2, -6, -9, 2, -5, -9, 0, -5, -9, 0, -6, -9, 2, -6, 9, 0, -5, -9, 2, -5, 9, 2, -5, 9, 0, -5, -9, 0, -5, -9, 2, -5, 9, 0, -6, 9, 2, -5, 9, 2, -6, 9, 0, -6, 9, 0, -5, 9, 2, -5, -9, 0, -6, 9, 2, -6, -9, 2, -6, -9, 0, -6, 9, 0, -6, 9, 2, -6, 9, 0, 4.9999, 9, 2, 6, 9, 2, 4.9999, 9, 0, 4.9999, 9, 0, 6, 9, 2, 6, -9, 0, 6, -9, 2, 4.9999, -9, 2, 6, -9, 0, 6, -9, 0, 4.9999, -9, 2, 4.9999, 9, 0, 6, -9, 2, 6, 9, 2, 6, 9, 0, 6, -9, 0, 6, -9, 2, 6, -9, 0, 4.9999, 9, 2, 4.9999, -9, 2, 4.9999, -9, 0, 4.9999, 9, 0, 4.9999, 9, 2, 4.9999, -9, 0, 4.9999, 9, 0, 6, 9, 0, 4.9999, -9, 0, 4.9999, -9, 0, 6, 9, 0, 6, -9, 0, -5, -8.0002, 0, -3.0001, -8.0002, 0, -5, -9, 0, -5, -9, 0, -3.0001, -8.0002, 0, -3.0001, -9, 0, -3.0001, -9, 2, -5, -9, 2, -3.0001, -9, 0, -3.0001, -9, 0, -5, -9, 2, -5, -8.0002, 0, -3.0001, -9, 2, -3.0001, -8.0002, 2, -3.0001, -8.0002, 0, -3.0001, -9, 0, -3.0001, -9, 2, -3.0001, -8.0002, 0, -5, -8.0002, 2, -3.0001, -8.0002, 2, -5, -8.0002, 0, -5, -8.0002, 0, -3.0001, -8.0002, 2, -3.0001, -9, 0, -5, -8.0002, 2, -5, -9, 2, -5, -9, 0, -5, -8.0002, 0, -5, -8.0002, 2, -5, -9, 0, -1, -8.0002, 0, 4.9999, -8.0002, 0, -1, -9, 0, -1, -9, 0, 4.9999, -8.0002, 0, 4.9999, -9, 0, 4.9999, -9, 2, -1, -9, 2, 4.9999, -9, 0, 4.9999, -9, 0, -1, -9, 2, -1, -8.0002, 0, 4.9999, -9, 2, 4.9999, -8.0002, 2, 4.9999, -8.0002, 0, 4.9999, -9, 0, 4.9999, -9, 2, 4.9999, -8.0002, 0, -1, -8.0002, 2, 4.9999, -8.0002, 2, -1, -8.0002, 0, -1, -8.0002, 0, 4.9999, -8.0002, 2, 4.9999, -9, 0, -1, -8.0002, 2, -1, -9, 2, -1, -9, 0, -1, -8.0002, 0, -1, -8.0002, 2, -1, 8, 0, -5, 9, 0, 0.9999, 9, 0, -5, 8, 0, -5, 8, 0, 0.9999, 9, 0, 0.9999, 8, 0, 0.9999, 8, 2, -5, 8, 2, 0.9999, 8, 0, 0.9999, 8, 0, -5, 8, 2, -5, 9, 0, 0.9999, 8, 2, 0.9999, 9, 2, 0.9999, 9, 0, 0.9999, 8, 0, 0.9999, 8, 2, 0.9999, 9, 0, -5, 9, 2, 0.9999, 9, 2, -5, 9, 0, -5, 9, 0, 0.9999, 9, 2, 0.9999, 8, 0, -5, 9, 2, -5, 8, 2, -5, 8, 0, -5, 9, 0, -5, 9, 2, -5, 8, 0, 3, 9, 0, 4.9999, 9, 0, 3, 8, 0, 3, 8, 0, 4.9999, 9, 0, 4.9999, 8, 0, 4.9999, 8, 2, 3, 8, 2, 4.9999, 8, 0, 4.9999, 8, 0, 3, 8, 2, 3, 9, 0, 4.9999, 8, 2, 4.9999, 9, 2, 4.9999, 9, 0, 4.9999, 8, 0, 4.9999, 8, 2, 4.9999, 9, 0, 3, 9, 2, 4.9999, 9, 2, 3, 9, 0, 3, 9, 0, 4.9999, 9, 2, 4.9999, 8, 0, 3, 9, 2, 3, 8, 2, 3, 8, 0, 3, 9, 0, 3, 9, 2, 3, -3, 0, -0.0001, -2.0002, 0, 4.9999, -2.0002, 0, -0.0001, -3, 0, -0.0001, -3, 0, 4.9999, -2.0002, 0, 4.9999, -3, 0, 4.9999, -3, 2, -0.0001, -3, 2, 4.9999, -3, 0, 4.9999, -3, 0, -0.0001, -3, 2, -0.0001, -2.0002, 0, 4.9999, -3, 2, 4.9999, -2.0002, 2, 4.9999, -2.0002, 0, 4.9999, -3, 0, 4.9999, -3, 2, 4.9999, -2.0002, 0, -0.0001, -2.0002, 2, 4.9999, -2.0002, 2, -0.0001, -2.0002, 0, -0.0001, -2.0002, 0, 4.9999, -2.0002, 2, 4.9999, -3, 0, -0.0001, -2.0002, 2, -0.0001, -3, 2, -0.0001, -3, 0, -0.0001, -2.0002, 0, -0.0001, -2.0002, 2, -0.0001, -8.0002, 0, -0.0001, -5.0001, 0, 0.9999, -5.0001, 0, -0.0001, -8.0002, 0, -0.0001, -8.0002, 0, 0.9999, -5.0001, 0, 0.9999, -8.0002, 0, 0.9999, -8.0002, 2, -0.0001, -8.0002, 2, 0.9999, -8.0002, 0, 0.9999, -8.0002, 0, -0.0001, -8.0002, 2, -0.0001, -5.0001, 0, 0.9999, -8.0002, 2, 0.9999, -5.0001, 2, 0.9999, -5.0001, 0, 0.9999, -8.0002, 0, 0.9999, -8.0002, 2, 0.9999, -5.0001, 0, -0.0001, -5.0001, 2, 0.9999, -5.0001, 2, -0.0001, -5.0001, 0, -0.0001, -5.0001, 0, 0.9999, -5.0001, 2, 0.9999, -8.0002, 0, -0.0001, -5.0001, 2, -0.0001, -8.0002, 2, -0.0001, -8.0002, 0, -0.0001, -5.0001, 0, -0.0001, -5.0001, 2, -0.0001, 9, 2, -6, -9, 2, -5, -9, 2, -6, 9, 2, -6, 9, 2, -5, -9, 2, -5, 9, 2, 4.9999, -9, 2, 6, -9, 2, 4.9999, 9, 2, 4.9999, 9, 2, 6, -9, 2, 6, -8.0002, 2, -5, -9, 2, -3.0001, -9, 2, -5, -8.0002, 2, -5, -8.0002, 2, -3.0001, -9, 2, -3.0001, -8.0002, 2, -1, -9, 2, 4.9999, -9, 2, -1, -8.0002, 2, -1, -8.0002, 2, 4.9999, -9, 2, 4.9999, 9, 2, -5, 8, 2, 0.9999, 8, 2, -5, 9, 2, -5, 9, 2, 0.9999, 8, 2, 0.9999, 9, 2, 3, 8, 2, 4.9999, 8, 2, 3, 9, 2, 3, 9, 2, 4.9999, 8, 2, 4.9999, -2.0002, 2, -0.0001, -3, 2, 4.9999, -3, 2, -0.0001, -2.0002, 2, -0.0001, -2.0002, 2, 4.9999, -3, 2, 4.9999, -5.0001, 2, -0.0001, -8.0002, 2, 0.9999, -8.0002, 2, -0.0001, -5.0001, 2, -0.0001, -5.0001, 2, 0.9999, -8.0002, 2, 0.9999)
+
+[sub_resource type="Curve3D" id="Curve3D_rsl50"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -8.84236, 0, 1.99705, 0, 0, 0, 0, 0, 0, -1.07071, 0, 1.91284, 0, 0, 0, 0, 0, 0, -0.0601521, 0, 0.96244, 0, 0, 0, 0, 0, 0, -0.0120306, 0, -1.11883, 0, 0, 0, 0, 0, 0, 0.962433, 0, -1.96096, 0, 0, 0, 0, 0, 0, 8.67393, 0, -1.97299),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0)
+}
+point_count = 6
+
+[node name="RocketIntro2" type="Node3D"]
+
+[node name="rocket_intro3" parent="." instance=ExtResource("5_6g8sp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.90735e-06, -4.76837e-07)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="rocket_intro3/Walls" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="rocket_intro3/Walls/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_fh0ot")
+
+[node name="Camera3D" parent="." instance=ExtResource("2_epqrj")]
+
+[node name="Rocketsilo" parent="." node_paths=PackedStringArray("targets") instance=ExtResource("3_ywf6x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -3)
+incline = 5.0
+targets = [NodePath("../Target"), NodePath("../Target2")]
+seconds_between_shots = 0.75
+seconds_being_open = 1.0
+seconds_before_first_shot = 4.0
+
+[node name="Path3D" type="Path3D" parent="."]
+curve = SubResource("Curve3D_rsl50")
+
+[node name="Player" parent="Path3D" instance=ExtResource("4_t073e")]
+transform = Transform3D(0.010835, 0, -0.999938, 0, 1, 0, 0.999938, 0, 0.010835, -8.84236, 0, 1.99705)
+ammo = 1
+slowmotion_uses = 1
+
+[node name="Target" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.499949)
+
+[node name="Target2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.49, 0, -2)
+
+[node name="UiHint" parent="." instance=ExtResource("6_yu3f6")]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -496.0
+offset_top = -312.0
+offset_right = -123.0
+offset_bottom = -79.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="ammobx" parent="." instance=ExtResource("10_qcauh")]
+transform = Transform3D(0.839013, 0, 0.544112, 0, 1, 0, -0.544112, 0, 0.839013, -7.5371, 0, -4.55284)
+
+[node name="ammobx2" parent="." instance=ExtResource("10_qcauh")]
+transform = Transform3D(0.98842, 0, -0.151744, 0, 1, 0, 0.151744, 0, 0.98842, -6.56411, 0, -4.77197)
+
+[node name="ammobx3" parent="." instance=ExtResource("10_qcauh")]
+transform = Transform3D(0.29414, 0, -0.955762, 0, 1, 0, 0.955762, 0, 0.29414, -7.46704, 0, -1.93902)
+
+[node name="WarningTapePole2" parent="." instance=ExtResource("13_2kttr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.183939, 0, 2.89034)
+
+[node name="WarningTapePole3" parent="." instance=ExtResource("13_2kttr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.20206, 0, 1.45062)
+
+[node name="WarningTape2" parent="." instance=ExtResource("14_tgkts")]
+transform = Transform3D(0.573148, 0, 0.819452, 0, 1, 0, -0.819452, 0, 0.573148, 0.751146, 1.02048, 2.19438)
+
+[node name="TrafficCone2" parent="." instance=ExtResource("9_8kmy1")]
+transform = Transform3D(0.657783, 0, -0.753208, 0, 1, 0, 0.753208, 0, 0.657783, 2.10677, 0, -0.838223)
+
+[node name="TrafficCone3" parent="." instance=ExtResource("9_8kmy1")]
+transform = Transform3D(0.949879, 0, -0.312617, 0, 1, 0, 0.312617, 0, 0.949879, 4.0686, 0, -0.686251)
+
+[node name="TrafficCone4" parent="." instance=ExtResource("9_8kmy1")]
+transform = Transform3D(0.933893, 0, 0.357553, 0, 1, 0, -0.357553, 0, 0.933893, 6.11222, 0, -0.838223)
+
+[node name="Toolbox" parent="." instance=ExtResource("7_n8hpm")]
+transform = Transform3D(0.815355, 0, -0.316812, 0, 0.874742, 0, 0.316812, 0, 0.815355, 7.2795, 0, 4.4743)
+
+[node name="ToolCart2" parent="." instance=ExtResource("8_krxo2")]
+transform = Transform3D(-0.196665, 0, 0.980471, 0, 1, 0, -0.980471, 0, -0.196665, 7.29311, 0, 3.22632)
+
+[node name="PowerDrill2" parent="." instance=ExtResource("20_laxia")]
+transform = Transform3D(0.95077, 0, -0.309897, 0, 1, 0, 0.309897, 0, 0.95077, 7.20215, 0.810445, 3.01737)
+
+[node name="Wrench2" parent="." instance=ExtResource("21_7luvb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.23647, 0.813497, 3.34218)
+
+[node name="Wrench3" parent="." instance=ExtResource("21_7luvb")]
+transform = Transform3D(0.724751, 0, 0.385454, 0, 0.820877, 0, -0.385454, 0, 0.724751, 7.23647, 0.813497, 3.46893)
+
+[node name="Drohne_broken" parent="." instance=ExtResource("16_kvlyy")]
+transform = Transform3D(-0.716618, 0, -0.697465, 0, 1, 0, 0.697465, 0, -0.716618, 7.02385, 0, -4.19878)
+
+[node name="FireExtinguisher2" parent="." instance=ExtResource("11_ie8n0")]
+transform = Transform3D(0.966779, 0, -0.255614, 0, 1, 0, 0.255614, 0, 0.966779, 7.80327, 0, 1.85383)
+
+[node name="Table2" parent="." instance=ExtResource("12_u4ds5")]
+transform = Transform3D(0.00528829, 0, -0.999986, 0, 1, 0, 0.999986, 0, 0.00528829, -6.82733, 0, 4.3744)
+
+[node name="OfficeChairGreen2" parent="." instance=ExtResource("15_i0qm4")]
+transform = Transform3D(0.832457, 0, 0.554089, 0, 1, 0, -0.554089, 0, 0.832457, -5.66009, 0, 4.37761)
+
+[node name="OfficeChairGreen3" parent="." instance=ExtResource("15_i0qm4")]
+transform = Transform3D(0.330321, -0.943855, -0.00511539, -0.146582, -0.0566517, 0.987575, -0.932417, -0.325467, -0.157065, 4.40498, 0.457505, -3.78689)
+
+[node name="Table3" parent="." instance=ExtResource("12_u4ds5")]
+transform = Transform3D(-0.00836419, -0.145621, 0.989305, -0.998531, 0.0541767, -0.000467655, -0.0535292, -0.987856, -0.14586, 2.32231, 0.50185, -3.82114)
+
+[node name="Table4" parent="." instance=ExtResource("12_u4ds5")]
+transform = Transform3D(-0.00790437, -0.154214, -0.988006, -0.998531, 0.0541767, -0.000467653, 0.053599, 0.986551, -0.154416, 1.7812, 0.50185, -4.44189)
+
+[node name="OfficeChairBlue2" parent="." instance=ExtResource("18_42gnd")]
+transform = Transform3D(0.290766, 0.768613, -0.569815, 0.882381, -0.445681, -0.150907, -0.369945, -0.458915, -0.807798, 4.68107, 0.485694, -3.97272)
+
+[node name="FireExtinguisher3" parent="." instance=ExtResource("11_ie8n0")]
+transform = Transform3D(0.00397719, 0.897149, 0.441709, -0.99999, 0.0044331, 0, -0.00195814, -0.441705, 0.897158, 3.80407, 0.155553, -4.49757)
+
+[node name="FireExtinguisher4" parent="." instance=ExtResource("11_ie8n0")]
+transform = Transform3D(0.48295, -0.865489, -0.133001, 0.858659, 0.43831, 0.265686, -0.171652, -0.242515, 0.954841, 4.7927, 0.139686, -4.58674)
+
+[node name="ComputerCase2" parent="." instance=ExtResource("22_56all")]
+transform = Transform3D(0.530659, 0, -0.847585, 0, 1, 0, 0.847585, 0, 0.530659, 2.79566, 0, -4.54117)
+
+[node name="ComputerScreen" parent="." instance=ExtResource("17_177fq")]
+transform = Transform3D(0.372227, 0, 0.928142, 0, 1, 0, -0.928142, 0, 0.372227, 2.25219, 2.38419e-07, -4.4793)
+
+[node name="WarningLight2" parent="." instance=ExtResource("6_o7g6e")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.99636, 1.48982, -0.440087)
+
+[node name="ComputerKeyboard2" parent="." instance=ExtResource("22_c251l")]
+transform = Transform3D(0.890983, 0, 0.454037, 0, 1, 0, -0.454037, 0, 0.890983, 4.2346, 2.38419e-07, -4.34812)
+
+[node name="Toolbox2" parent="." instance=ExtResource("7_n8hpm")]
+transform = Transform3D(-0.246672, 0, -0.655115, 0, 0.700017, 0, 0.655115, 0, -0.246672, 6.60735, 0, -4.56967)
+
+[editable path="rocket_intro3"]

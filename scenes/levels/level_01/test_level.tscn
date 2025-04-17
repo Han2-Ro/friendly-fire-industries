@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://dyxaw3lu6lqej"]
 
-[ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://scenes/player.tscn" id="1_ukjkp"]
+[ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://characters/player/player.tscn" id="1_ukjkp"]
 [ext_resource type="PackedScene" uid="uid://dn6tsnouahmva" path="res://scenes/levels/level_01/test_map.tscn" id="2_odf3w"]
-[ext_resource type="PackedScene" uid="uid://b8lky0yk4q64s" path="res://scenes/turret.tscn" id="3_12jph"]
-[ext_resource type="PackedScene" uid="uid://dme01ctmicfat" path="res://scenes/drone.tscn" id="4_llwsi"]
-[ext_resource type="PackedScene" uid="uid://datd7wg6v4r42" path="res://scenes/rocketsilo.tscn" id="5_7wqp2"]
+[ext_resource type="PackedScene" uid="uid://b8lky0yk4q64s" path="res://characters/enemies/turret/turret.tscn" id="3_12jph"]
+[ext_resource type="PackedScene" uid="uid://dme01ctmicfat" path="res://characters/enemies/drone/drone.tscn" id="4_llwsi"]
+[ext_resource type="PackedScene" uid="uid://datd7wg6v4r42" path="res://characters/enemies/rocketsilo/rocketsilo.tscn" id="5_7wqp2"]
 
 [sub_resource type="Curve3D" id="Curve3D_fo07a"]
 _data = {

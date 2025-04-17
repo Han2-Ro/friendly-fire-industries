@@ -1,0 +1,179 @@
+[gd_scene load_steps=22 format=3 uid="uid://2ojdnxre5y7k"]
+
+[ext_resource type="PackedScene" uid="uid://c38ebp5143i5x" path="res://scenes/levels/common/level_camera.tscn" id="2_4yf57"]
+[ext_resource type="PackedScene" uid="uid://dnfpmel15rp0g" path="res://scenes/levels/common/door.tscn" id="3_b7rl2"]
+[ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://characters/player/player.tscn" id="4_wir5o"]
+[ext_resource type="PackedScene" uid="uid://dldwm6qwbhk35" path="res://scenes/levels/lvl_button_bounce_intro/button_bounce_intro_map.blend" id="5_ca2m0"]
+[ext_resource type="PackedScene" uid="uid://dt2b2acdq52cw" path="res://scenes/levels/common/button.tscn" id="5_d1364"]
+[ext_resource type="PackedScene" uid="uid://dn616rm8lgx61" path="res://scenes/levels/common/ui/keybind_hints/ui_mouse_hint.tscn" id="6_1td86"]
+[ext_resource type="PackedScene" uid="uid://bpjji0tfa5pbg" path="res://assets/Table.blend" id="7_74bau"]
+[ext_resource type="PackedScene" uid="uid://bgyjoe0a54i14" path="res://assets/OfficeChairBlue.blend" id="8_qa8yd"]
+[ext_resource type="PackedScene" uid="uid://5bjckehydxca" path="res://assets/ComputerScreen.blend" id="9_8tmfp"]
+[ext_resource type="PackedScene" uid="uid://dha2y6scogrfy" path="res://assets/ComputerCase.blend" id="10_3mkme"]
+[ext_resource type="PackedScene" uid="uid://dbumysk6ysrvp" path="res://assets/ComputerKeyboard.blend" id="11_oq2ub"]
+[ext_resource type="PackedScene" uid="uid://jrb350hpmrro" path="res://assets/ComputerMouse.blend" id="12_uktcm"]
+[ext_resource type="PackedScene" uid="uid://cgm1l4gs3i30g" path="res://assets/FireExtinguisher.blend" id="13_gbi7i"]
+[ext_resource type="PackedScene" uid="uid://cflil2j25571m" path="res://assets/OfficeChairGreen.blend" id="14_m12ur"]
+[ext_resource type="PackedScene" uid="uid://dundx2uw5a7ky" path="res://assets/PowerDrill.blend" id="15_ktjyt"]
+[ext_resource type="PackedScene" uid="uid://cx8gwgqjw2ft8" path="res://assets/TrafficCone.blend" id="16_s5vu7"]
+[ext_resource type="PackedScene" uid="uid://vdmpwrelyiyp" path="res://assets/Screwdriver.blend" id="17_isl4i"]
+[ext_resource type="PackedScene" uid="uid://mhd5k3skhprv" path="res://assets/Toolbox.blend" id="18_8wun4"]
+[ext_resource type="PackedScene" uid="uid://dv6iy3otapwuv" path="res://assets/Wrench.blend" id="19_wklx5"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_8tdts"]
+data = PackedVector3Array(8, 1.5, -0.8129, 8, 2, -2.813, 8, 2, -0.8129, 8, 1.5, -0.8129, 8, 1.5, -2.813, 8, 2, -2.813, 8, 1.5, -2.813, 9.6851, 2, -2.813, 8, 2, -2.813, 8, 1.5, -2.813, 9.6851, 1.5, -2.813, 9.6851, 2, -2.813, 9.6851, 1.5, -2.813, 9.6851, 2, -0.8129, 9.6851, 2, -2.813, 9.6851, 1.5, -2.813, 9.6851, 1.5, -0.8129, 9.6851, 2, -0.8129, 9.6851, 1.5, -0.8129, 8, 2, -0.8129, 9.6851, 2, -0.8129, 9.6851, 1.5, -0.8129, 8, 1.5, -0.8129, 8, 2, -0.8129, 8, 1.5, -2.813, 9.6851, 1.5, -0.8129, 9.6851, 1.5, -2.813, 8, 1.5, -2.813, 8, 1.5, -0.8129, 9.6851, 1.5, -0.8129, -7.0001, 0, -5.813, 9.6333, 0, -6.2235, -8.5291, 0, -6.2235, -7.0001, 0, -5.813, 8, 0, -5.813, 9.6333, 0, -6.2235, 9.6333, 0, -6.2235, 8, 0, -2.813, 9.6333, 0, -2.813, 9.6333, 0, -6.2235, 8, 0, -5.813, 8, 0, -2.813, 9.6333, 0, -0.8129, 8, 0, 5.3871, 9.6333, 0, 6.0423, 9.6333, 0, -0.8129, 8, 0, -0.8129, 8, 0, 5.3871, -7.0001, 0, -0.013, -8.5291, 0, -0.8129, -8.5291, 0, 6.0423, -7.0001, 0, -0.013, -7.0001, 0, -0.8129, -8.5291, 0, -0.8129, -7.0001, 0, -0.013, 0.1998, 0, 5.3871, 0.1998, 0, 0.787, -7.0001, 0, -0.013, -8.5291, 0, 6.0423, 0.1998, 0, 5.3871, -7.0001, 0, -0.013, 4.3998, 0, 0.787, 4.3998, 0, -0.013, -7.0001, 0, -0.013, 0.1998, 0, 0.787, 4.3998, 0, 0.787, -7.0001, 0, -5.813, -8.5291, 0, -2.813, -7.0001, 0, -2.813, -7.0001, 0, -5.813, -8.5291, 0, -6.2235, -8.5291, 0, -2.813, -8.5291, 0, 6.0423, 8, 0, 5.3871, 0.1998, 0, 5.3871, -8.5291, 0, 6.0423, 9.6333, 0, 6.0423, 8, 0, 5.3871, 8, 2, -5.813, -7.0001, 0, -5.813, -7.0001, 2, -5.813, 8, 2, -5.813, 8, 0, -5.813, -7.0001, 0, -5.813, -8.5291, 2, -6.2235, 9.6333, 0, -6.2235, 9.6333, 2, -6.2235, -8.5291, 2, -6.2235, -8.5291, 0, -6.2235, 9.6333, 0, -6.2235, 9.6333, 2, -2.813, 8, 0, -2.813, 8, 2, -2.813, 9.6333, 2, -2.813, 9.6333, 0, -2.813, 8, 0, -2.813, 9.6333, 2, -6.2235, 9.6333, 0, -2.813, 9.6333, 2, -2.813, 9.6333, 2, -6.2235, 9.6333, 0, -6.2235, 9.6333, 0, -2.813, 8, 2, -2.813, 8, 0, -5.813, 8, 2, -5.813, 8, 2, -2.813, 8, 0, -2.813, 8, 0, -5.813, 8, 2, -0.8129, 9.6333, 0, -0.8129, 9.6333, 2, -0.8129, 8, 2, -0.8129, 8, 0, -0.8129, 9.6333, 0, -0.8129, 9.6333, 2, -0.8129, 9.6333, 0, 6.0423, 9.6333, 2, 6.0423, 9.6333, 2, -0.8129, 9.6333, 0, -0.8129, 9.6333, 0, 6.0423, 8, 2, 5.3871, 8, 0, -0.8129, 8, 2, -0.8129, 8, 2, 5.3871, 8, 0, 5.3871, 8, 0, -0.8129, 0.1998, 2, 5.3871, 8, 0, 5.3871, 8, 2, 5.3871, 0.1998, 2, 5.3871, 0.1998, 0, 5.3871, 8, 0, 5.3871, 0.1998, 2, 0.787, 0.1998, 0, 5.3871, 0.1998, 2, 5.3871, 0.1998, 2, 0.787, 0.1998, 0, 0.787, 0.1998, 0, 5.3871, 4.3998, 2, -0.013, 4.3998, 0, 0.787, 4.3998, 2, 0.787, 4.3998, 2, -0.013, 4.3998, 0, -0.013, 4.3998, 0, 0.787, -7.0001, 2, -0.013, 4.3998, 0, -0.013, 4.3998, 2, -0.013, -7.0001, 2, -0.013, -7.0001, 0, -0.013, 4.3998, 0, -0.013, 4.3998, 2, 0.787, 0.1998, 0, 0.787, 0.1998, 2, 0.787, 4.3998, 2, 0.787, 4.3998, 0, 0.787, 0.1998, 0, 0.787, -8.5291, 2, -2.813, -8.5291, 0, -6.2235, -8.5291, 2, -6.2235, -8.5291, 2, -2.813, -8.5291, 0, -2.813, -8.5291, 0, -6.2235, -7.0001, 2, -2.813, -8.5291, 0, -2.813, -8.5291, 2, -2.813, -7.0001, 2, -2.813, -7.0001, 0, -2.813, -8.5291, 0, -2.813, -7.0001, 2, -5.813, -7.0001, 0, -2.813, -7.0001, 2, -2.813, -7.0001, 2, -5.813, -7.0001, 0, -5.813, -7.0001, 0, -2.813, 9.6333, 2, 6.0423, -8.5291, 0, 6.0423, -8.5291, 2, 6.0423, 9.6333, 2, 6.0423, 9.6333, 0, 6.0423, -8.5291, 0, 6.0423, -8.5291, 2, -0.8129, -7.0001, 0, -0.8129, -7.0001, 2, -0.8129, -8.5291, 2, -0.8129, -8.5291, 0, -0.8129, -7.0001, 0, -0.8129, -8.5291, 2, 6.0423, -8.5291, 0, -0.8129, -8.5291, 2, -0.8129, -8.5291, 2, 6.0423, -8.5291, 0, 6.0423, -8.5291, 0, -0.8129, -7.0001, 2, -0.8129, -7.0001, 0, -0.013, -7.0001, 2, -0.013, -7.0001, 2, -0.8129, -7.0001, 0, -0.8129, -7.0001, 0, -0.013, -8.5807, 1.5, -0.8129, -8.5807, 2, -2.813, -8.5807, 2, -0.8129, -8.5807, 1.5, -0.8129, -8.5807, 1.5, -2.813, -8.5807, 2, -2.813, -8.5807, 1.5, -2.813, -7.0001, 2, -2.813, -8.5807, 2, -2.813, -8.5807, 1.5, -2.813, -7.0001, 1.5, -2.813, -7.0001, 2, -2.813, -7.0001, 1.5, -2.813, -7.0001, 2, -0.8129, -7.0001, 2, -2.813, -7.0001, 1.5, -2.813, -7.0001, 1.5, -0.8129, -7.0001, 2, -0.8129, -7.0001, 1.5, -0.8129, -8.5807, 2, -0.8129, -7.0001, 2, -0.8129, -7.0001, 1.5, -0.8129, -8.5807, 1.5, -0.8129, -8.5807, 2, -0.8129, -8.5807, 1.5, -2.813, -7.0001, 1.5, -0.8129, -7.0001, 1.5, -2.813, -8.5807, 1.5, -2.813, -8.5807, 1.5, -0.8129, -7.0001, 1.5, -0.8129, 9.6851, 2, -2.813, 8, 2, -0.8129, 8, 2, -2.813, 9.6851, 2, -2.813, 9.6851, 2, -0.8129, 8, 2, -0.8129, -7.0001, 2, -5.813, 9.6333, 2, -6.2235, 8, 2, -5.813, -7.0001, 2, -5.813, -8.5291, 2, -6.2235, 9.6333, 2, -6.2235, 9.6333, 2, -6.2235, 8, 2, -2.813, 8, 2, -5.813, 9.6333, 2, -6.2235, 9.6333, 2, -2.813, 8, 2, -2.813, 9.6333, 2, -0.8129, 8, 2, 5.3871, 8, 2, -0.8129, 9.6333, 2, -0.8129, 9.6333, 2, 6.0423, 8, 2, 5.3871, -7.0001, 2, -0.013, -8.5291, 2, -0.8129, -7.0001, 2, -0.8129, -7.0001, 2, -0.013, -8.5291, 2, 6.0423, -8.5291, 2, -0.8129, -7.0001, 2, -0.013, 0.1998, 2, 5.3871, -8.5291, 2, 6.0423, -7.0001, 2, -0.013, 0.1998, 2, 0.787, 0.1998, 2, 5.3871, -7.0001, 2, -0.013, 4.3998, 2, 0.787, 0.1998, 2, 0.787, -7.0001, 2, -0.013, 4.3998, 2, -0.013, 4.3998, 2, 0.787, -7.0001, 2, -5.813, -8.5291, 2, -2.813, -8.5291, 2, -6.2235, -7.0001, 2, -5.813, -7.0001, 2, -2.813, -8.5291, 2, -2.813, -8.5291, 2, 6.0423, 8, 2, 5.3871, 9.6333, 2, 6.0423, -8.5291, 2, 6.0423, 0.1998, 2, 5.3871, 8, 2, 5.3871, -7.0001, 2, -2.813, -8.5807, 2, -0.8129, -8.5807, 2, -2.813, -7.0001, 2, -2.813, -7.0001, 2, -0.8129, -8.5807, 2, -0.8129)
+
+[sub_resource type="Curve3D" id="Curve3D_ystvf"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -8.25281, 0.188477, -1.79224, 0, 0, 0, 0, 0, 0, 9.3125, 0.188398, -1.7938),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[node name="Level_ButtonIntro2" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_8tdts")
+
+[node name="Camera3D" parent="." instance=ExtResource("2_4yf57")]
+transform = Transform3D(1, 0, 0, 0, 0.224951, 0.97437, 0, -0.97437, 0.224951, 0, 20, 4.31)
+current = true
+
+[node name="Door" parent="." instance=ExtResource("3_b7rl2")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 8.166, 0, -1.81009)
+
+[node name="Path3D" type="Path3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00134277, -0.0864754, -0.0320168)
+curve = SubResource("Curve3D_ystvf")
+
+[node name="Player" parent="Path3D" instance=ExtResource("4_wir5o")]
+transform = Transform3D(8.88854e-05, 4.49693e-06, -0.999987, 0, 0.999986, 4.49693e-06, 0.999988, -3.99716e-10, 8.88853e-05, -8.25281, 0.188477, -1.79224)
+
+[node name="Button" parent="." instance=ExtResource("5_d1364")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0.328396, 1.1423, 3.25899)
+
+[node name="button_bounce_intro_map" parent="." instance=ExtResource("5_ca2m0")]
+
+[node name="UiHint" parent="." instance=ExtResource("6_1td86")]
+anchors_preset = 2
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 0.0
+anchor_bottom = 1.0
+offset_left = 80.0
+offset_top = -352.0
+offset_right = 616.0
+offset_bottom = -215.0
+grow_horizontal = 1
+grow_vertical = 0
+
+[node name="Table2" parent="." instance=ExtResource("7_74bau")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.36497, 0, -4.87226)
+
+[node name="OfficeChairBlue2" parent="." instance=ExtResource("8_qa8yd")]
+transform = Transform3D(0.895067, 0, 0.445932, 0, 1, 0, -0.445932, 0, 0.895067, -5.0121, 0, -4.90274)
+
+[node name="OfficeChairBlue3" parent="." instance=ExtResource("8_qa8yd")]
+transform = Transform3D(0.999817, 0, 0.0191625, 0, 1, 0, -0.0191625, 0, 0.999817, 0.313052, 0, -4.66047)
+
+[node name="ComputerScreen" parent="." instance=ExtResource("9_8tmfp")]
+transform = Transform3D(0.952948, 0, -0.303135, 0, 1, 0, 0.303135, 0, 0.952948, -6.65345, 1.00231, -4.90066)
+
+[node name="ComputerCase2" parent="." instance=ExtResource("10_3mkme")]
+transform = Transform3D(0.991053, 0, 0.133467, 0, 1, 0, -0.133467, 0, 0.991053, -6.46214, 1.0099, -5.49816)
+
+[node name="ComputerKeyboard2" parent="." instance=ExtResource("11_oq2ub")]
+transform = Transform3D(0.992759, 0, 0.12012, 0, 1, 0, -0.12012, 0, 0.992759, -6.11922, 1.00112, -4.7453)
+
+[node name="ComputerMouse2" parent="." instance=ExtResource("12_uktcm")]
+transform = Transform3D(0.997909, 0, -0.0646368, 0, 1, 0, 0.0646368, 0, 0.997909, -6.18726, 0.998484, -5.23737)
+
+[node name="FireExtinguisher2" parent="." instance=ExtResource("13_gbi7i")]
+transform = Transform3D(0.940614, 0, -0.339477, 0, 1, 0, 0.339477, 0, 0.940614, 7.82573, 0, -5.48996)
+
+[node name="Table3" parent="." instance=ExtResource("7_74bau")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.23613, 4.76837e-07, -4.7751)
+
+[node name="OfficeChairGreen2" parent="." instance=ExtResource("14_m12ur")]
+transform = Transform3D(-0.992633, 0, 0.121159, 0, 1, 0, -0.121159, 0, -0.992633, 3.56931, 0, -4.85702)
+
+[node name="OfficeChairGreen3" parent="." instance=ExtResource("14_m12ur")]
+transform = Transform3D(0.332589, 0, 0.943072, 0, 1, 0, -0.943072, 0, 0.332589, -2.98526, 0, -4.59654)
+
+[node name="PowerDrill2" parent="." instance=ExtResource("15_ktjyt")]
+transform = Transform3D(0.890618, 0.454749, 0.00165089, 0, -0.00363032, 0.999994, 0.454752, -0.890612, -0.00323323, 4.42151, 1.04636, -5.27187)
+
+[node name="TrafficCone2" parent="." instance=ExtResource("16_s5vu7")]
+transform = Transform3D(0.995248, 0, -0.0973745, 0, 1, 0, 0.0973745, 0, 0.995248, 5.44857, -4.76837e-07, 0.467379)
+
+[node name="TrafficCone3" parent="." instance=ExtResource("16_s5vu7")]
+transform = Transform3D(0.969347, 0, 0.245697, 0, 1, 0, -0.245697, 0, 0.969347, 6.8703, -4.76837e-07, 0.139821)
+
+[node name="Screwdriver" parent="." instance=ExtResource("17_isl4i")]
+transform = Transform3D(0.845933, 0, 0.53329, 0, 1, 0, -0.53329, 0, 0.845933, 4.17124, 1.0144, -5.43369)
+
+[node name="Toolbox" parent="." instance=ExtResource("18_8wun4")]
+transform = Transform3D(0.435858, 0, -0.517653, 0, 0.676711, 0, 0.517653, 0, 0.435858, 4.96362, 0, -4.26727)
+
+[node name="ComputerCase3" parent="." instance=ExtResource("10_3mkme")]
+transform = Transform3D(0.987008, 0.160674, -7.02327e-09, 0, -4.37114e-08, -1, -0.160674, 0.987008, -4.31435e-08, 4.08956, 1.10952, -4.80447)
+
+[node name="ComputerCase6" parent="." instance=ExtResource("10_3mkme")]
+transform = Transform3D(0.987008, 0.160674, -7.02327e-09, 0, -4.37114e-08, -1, -0.160674, 0.987008, -4.31435e-08, 6.4392, 0.112124, -5.68982)
+
+[node name="Wrench2" parent="." instance=ExtResource("19_wklx5")]
+transform = Transform3D(0.681598, 0, 0.280322, 0, 0.736991, 0, -0.280322, 0, 0.681598, 4.46531, 1.00112, -3.97091)
+
+[node name="Wrench3" parent="." instance=ExtResource("19_wklx5")]
+transform = Transform3D(-0.230998, 0, 0.575439, 0, 0.620073, 0, -0.575439, 0, -0.230998, 4.58597, 1.00112, -4.26232)
+
+[node name="ComputerScreen2" parent="." instance=ExtResource("9_8tmfp")]
+transform = Transform3D(-0.906101, 0, 0.423061, 0, 1, 0, -0.423061, 0, -0.906101, 5.20954, 0, -5.35734)
+
+[node name="ComputerScreen3" parent="." instance=ExtResource("9_8tmfp")]
+transform = Transform3D(0.924559, 0, 0.381038, 0, 1, 0, -0.381038, 0, 0.924559, 5.28023, 0.48708, -5.42618)
+
+[node name="ComputerScreen4" parent="." instance=ExtResource("9_8tmfp")]
+transform = Transform3D(0.327861, 0, -0.944726, 0, 1, 0, 0.944726, 0, 0.327861, 5.71437, 0.00306678, -5.47203)
+
+[node name="Table4" parent="." instance=ExtResource("7_74bau")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.71402, 0, -4.73625)
+
+[node name="Table5" parent="." instance=ExtResource("7_74bau")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.450061, 0, -4.73625)
+
+[node name="ComputerCase4" parent="." instance=ExtResource("10_3mkme")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.644069, 0, -4.03229)
+
+[node name="ComputerCase7" parent="." instance=ExtResource("10_3mkme")]
+transform = Transform3D(0.990934, 0, -0.134349, 0, 1, 0, 0.134349, 0, 0.990934, 5.98851, 0, -5.0263)
+
+[node name="ComputerCase5" parent="." instance=ExtResource("10_3mkme")]
+transform = Transform3D(0.993077, 0, -0.117468, 0, 1, 0, 0.117468, 0, 0.993077, -1.55838, 0.980489, -5.43563)
+
+[node name="ComputerScreen5" parent="." instance=ExtResource("9_8tmfp")]
+transform = Transform3D(-0.973427, 0, -0.228996, 0, 1, 0, 0.228996, 0, -0.973427, -1.49607, 1.0024, -4.49446)
+
+[node name="ComputerScreen6" parent="." instance=ExtResource("9_8tmfp")]
+transform = Transform3D(0.999998, 0, 0.00200704, 0, 1, 0, -0.00200704, 0, 0.999998, -0.695199, 1.0024, -4.63821)
+
+[node name="ComputerMouse3" parent="." instance=ExtResource("12_uktcm")]
+transform = Transform3D(-0.976971, 0, -0.213371, 0, 1, 0, 0.213371, 0, -0.976971, -1.96426, 0.996308, -4.05252)
+
+[node name="ComputerMouse4" parent="." instance=ExtResource("12_uktcm")]
+transform = Transform3D(0.999973, 0, -0.00740014, 0, 1, 0, 0.00740014, 0, 0.999973, -0.239529, 0.996308, -5.12457)
+
+[node name="ComputerKeyboard3" parent="." instance=ExtResource("11_oq2ub")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.225693, 1.00045, -4.6079)
+
+[node name="ComputerKeyboard5" parent="." instance=ExtResource("11_oq2ub")]
+transform = Transform3D(0.603626, -0.735139, -0.308556, -2.96775e-09, 0.387017, -0.922073, 0.797268, 0.556587, 0.233613, 5.66448, 0.21617, -4.87543)
+
+[node name="ComputerKeyboard4" parent="." instance=ExtResource("11_oq2ub")]
+transform = Transform3D(-0.960634, 0, 0.277818, 0, 1, 0, -0.277818, 0, -0.960634, -2.02372, 1.00045, -4.57174)
+
+[connection signal="button_hit" from="Button" to="Door" method="toggle_door"]
+
+[editable path="button_bounce_intro_map"]

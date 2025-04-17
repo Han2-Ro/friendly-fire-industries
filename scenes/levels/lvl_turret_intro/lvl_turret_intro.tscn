@@ -1,0 +1,105 @@
+[gd_scene load_steps=18 format=3 uid="uid://blgctndk6av8o"]
+
+[ext_resource type="PackedScene" uid="uid://c38ebp5143i5x" path="res://scenes/levels/common/level_camera.tscn" id="1_8bney"]
+[ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://characters/player/player.tscn" id="3_sgl6h"]
+[ext_resource type="PackedScene" uid="uid://c4cr0cmorqvx2" path="res://scenes/levels/lvl_turret_intro/turret_intro_map.blend" id="5_56sju"]
+[ext_resource type="PackedScene" uid="uid://cf6iagau1wkgo" path="res://scenes/levels/common/ui/keybind_hints/ui_space_hint.tscn" id="5_m7f2y"]
+[ext_resource type="PackedScene" uid="uid://dhqp7mex168hw" path="res://assets/ToolCart.blend" id="6_3jvaj"]
+[ext_resource type="PackedScene" uid="uid://b8lky0yk4q64s" path="res://characters/enemies/turret/turret.tscn" id="6_g7p1d"]
+[ext_resource type="PackedScene" uid="uid://dundx2uw5a7ky" path="res://assets/PowerDrill.blend" id="7_cnyj3"]
+[ext_resource type="PackedScene" uid="uid://vdmpwrelyiyp" path="res://assets/Screwdriver.blend" id="8_j0ayn"]
+[ext_resource type="PackedScene" uid="uid://bqwnxe1pksefw" path="res://assets/Rocketsilo_broken.blend" id="9_m4mls"]
+[ext_resource type="PackedScene" uid="uid://8itxf6sbrcq3" path="res://assets/WarningTapePole.blend" id="10_57cjs"]
+[ext_resource type="PackedScene" uid="uid://cbbuw8h38tdkk" path="res://assets/WarningTape.blend" id="11_ki7x1"]
+[ext_resource type="PackedScene" uid="uid://cd0kih764xane" path="res://assets/ammobx.blend" id="12_1eh02"]
+[ext_resource type="PackedScene" uid="uid://bofhxr0l6vrdt" path="res://assets/WarningLight.blend" id="13_f4mlb"]
+[ext_resource type="PackedScene" uid="uid://cgm1l4gs3i30g" path="res://assets/FireExtinguisher.blend" id="14_j4bjv"]
+[ext_resource type="PackedScene" uid="uid://cx8gwgqjw2ft8" path="res://assets/TrafficCone.blend" id="15_7gbt4"]
+
+[sub_resource type="Curve3D" id="Curve3D_ystvf"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -8.28076, 0.188526, -1.93722, 0, 0, 0, 0, 0, 0, -8.26324, 0.188526, 1.60196, 0, 0, 0, 0, 0, 0, -7.16606, 0.188526, 2.60548, 0, 0, 0, 0, 0, 0, 8.89079, 0.188404, 2.60849),
+"tilts": PackedFloat32Array(0, 0, 0, 0)
+}
+point_count = 4
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_5tk27"]
+data = PackedVector3Array(7.9999, 0, -1, 9.5659, 0, -4.9322, 7.9999, 0, -4.6001, 7.9999, 0, -1, 9.5659, 0, -1, 9.5659, 0, -4.9322, 7.9999, 0, 1.8, 9.5659, 0, 1, 7.9999, 0, 1, 7.9999, 0, 1.8, 9.5659, 0, 2.0987, 9.5659, 0, 1, 9.5659, 0, 2.0987, -9.2002, 0, 1.8, -10.7933, 0, 2.0987, 9.5659, 0, 2.0987, 7.9999, 0, 1.8, -9.2002, 0, 1.8, -10.7933, 2, -4.9322, -10.7933, 0, 2.0987, -10.7933, 0, -4.9322, -10.7933, 2, -4.9322, -10.7933, 2, 2.0987, -10.7933, 0, 2.0987, 7.9999, 2, -1, 7.9999, 0, -4.6001, 7.9999, 2, -4.6001, 7.9999, 2, -1, 7.9999, 0, -1, 7.9999, 0, -4.6001, 7.9999, 2, 1.8, 7.9999, 0, 1, 7.9999, 2, 1, 7.9999, 2, 1.8, 7.9999, 0, 1.8, 7.9999, 0, 1, -9.2002, 2, 1.8, 7.9999, 0, 1.8, 7.9999, 2, 1.8, -9.2002, 2, 1.8, -9.2002, 0, 1.8, 7.9999, 0, 1.8, -9.2002, 0, -4.9322, -10.7933, 0, 2.0987, -9.2002, 0, 1.8, -9.2002, 0, -4.9322, -10.7933, 0, -4.9322, -10.7933, 0, 2.0987, -9.2002, 2, 1.8, -9.2002, 0, -4.9322, -9.2002, 0, 1.8, -9.2002, 2, 1.8, -9.2002, 2, -4.9322, -9.2002, 0, -4.9322, 7.9999, 2, -4.6001, -5.5493, 0, -4.6001, -5.5493, 2, -4.6001, 7.9999, 2, -4.6001, 7.9999, 0, -4.6001, -5.5493, 0, -4.6001, 9.5659, 0, -1, 9.5659, 2, -4.9322, 9.5659, 0, -4.9322, 9.5659, 0, -1, 9.5659, 2, -1, 9.5659, 2, -4.9322, 9.5659, 2, 2.0987, 9.5659, 0, 1, 9.5659, 0, 2.0987, 9.5659, 2, 2.0987, 9.5659, 2, 1, 9.5659, 0, 1, 9.5659, 0, 2.0987, -10.7933, 2, 2.0987, 9.5659, 2, 2.0987, 9.5659, 0, 2.0987, -10.7933, 0, 2.0987, -10.7933, 2, 2.0987, -7.3493, 2, -4.9322, 9.5659, 0, -4.9322, 9.5659, 2, -4.9322, -7.3493, 2, -4.9322, -7.3493, 0, -4.9322, 9.5659, 0, -4.9322, -10.7933, 2, -4.9322, -9.2002, 0, -4.9322, -9.2002, 2, -4.9322, -10.7933, 2, -4.9322, -10.7933, 0, -4.9322, -9.2002, 0, -4.9322, -7.3493, 0, -4.9322, -5.5493, 0, -2.1662, -5.5493, 0, -4.6001, -7.3493, 0, -4.9322, -7.3493, 0, -2.1662, -5.5493, 0, -2.1662, 7.9999, 0, -4.6001, -7.3493, 0, -4.9322, -5.5493, 0, -4.6001, 7.9999, 0, -4.6001, 9.5659, 0, -4.9322, -7.3493, 0, -4.9322, -7.3493, 2, -2.1662, -5.5493, 0, -2.1662, -7.3493, 0, -2.1662, -7.3493, 2, -2.1662, -5.5493, 2, -2.1662, -5.5493, 0, -2.1662, -5.5493, 0, -4.6001, -5.5493, 2, -2.1662, -5.5493, 2, -4.6001, -5.5493, 0, -4.6001, -5.5493, 0, -2.1662, -5.5493, 2, -2.1662, -7.3493, 2, -4.9322, -7.3493, 0, -2.1662, -7.3493, 0, -4.9322, -7.3493, 2, -4.9322, -7.3493, 2, -2.1662, -7.3493, 0, -2.1662, 7.9999, 2, 1.8, -10.7933, 2, 2.0987, -9.2002, 2, 1.8, 7.9999, 2, 1.8, 9.5659, 2, 2.0987, -10.7933, 2, 2.0987, -10.7933, 2, -4.9322, -9.2002, 2, 1.8, -10.7933, 2, 2.0987, -10.7933, 2, -4.9322, -9.2002, 2, -4.9322, -9.2002, 2, 1.8, 7.9999, 2, 1, 9.5659, 2, 2.0987, 7.9999, 2, 1.8, 7.9999, 2, 1, 9.5659, 2, 1, 9.5659, 2, 2.0987, 9.5659, 2, -1, 7.9999, 0, -1, 7.9999, 2, -1, 9.5659, 2, -1, 9.5659, 0, -1, 7.9999, 0, -1, 9.5659, 0, 1, 7.9999, 2, 1, 7.9999, 0, 1, 9.5659, 0, 1, 9.5659, 2, 1, 7.9999, 2, 1, 9.5659, 2, -1, 7.9999, 2, -4.6001, 9.5659, 2, -4.9322, 9.5659, 2, -1, 7.9999, 2, -1, 7.9999, 2, -4.6001, -5.5493, 2, -4.6001, 9.5659, 2, -4.9322, 7.9999, 2, -4.6001, -5.5493, 2, -4.6001, -7.3493, 2, -4.9322, 9.5659, 2, -4.9322, -5.5493, 2, -4.6001, -7.3493, 2, -2.1662, -7.3493, 2, -4.9322, -5.5493, 2, -4.6001, -5.5493, 2, -2.1662, -7.3493, 2, -2.1662)
+
+[node name="Level_ButtonIntro" type="Node3D"]
+
+[node name="Camera3D" parent="." instance=ExtResource("1_8bney")]
+transform = Transform3D(1, 0, 0, 0, 0.224951, 0.97437, 0, -0.97437, 0.224951, 0, 20, 6.425)
+current = true
+
+[node name="Path3D" type="Path3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00134277, -0.0864754, -0.0320168)
+curve = SubResource("Curve3D_ystvf")
+
+[node name="Player" parent="Path3D" instance=ExtResource("3_sgl6h")]
+transform = Transform3D(-0.999959, 0, -0.00495003, 0, 0.999986, 0, 0.00495003, 0, -0.999958, -8.28076, 0.188526, -1.93722)
+
+[node name="turret_intro_map" parent="." instance=ExtResource("5_56sju")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="turret_intro_map/Wall" index="3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="turret_intro_map/Wall/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_5tk27")
+
+[node name="Turret" parent="." instance=ExtResource("6_g7p1d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.36315, 0, -0.177002)
+rotation_speed = 0.0
+tracking_angle = 30.0
+death_timer = 2.0
+starting_rotation = 10.0
+
+[node name="UiHint" parent="." instance=ExtResource("5_m7f2y")]
+offset_top = 25.0
+offset_bottom = 166.0
+
+[node name="ToolCart2" parent="." instance=ExtResource("6_3jvaj")]
+transform = Transform3D(-0.992051, 0, -0.125835, 0, 1, 0, 0.125835, 0, -0.992051, -4.96799, -4.76837e-07, -1.55238)
+
+[node name="PowerDrill2" parent="." instance=ExtResource("7_cnyj3")]
+transform = Transform3D(-0.960556, -0.277432, 0.0190594, -4.11488e-10, 0.0685377, 0.997649, -0.278086, 0.958297, -0.0658343, -5.04555, 0.816647, -1.62326)
+
+[node name="Screwdriver" parent="." instance=ExtResource("8_j0ayn")]
+transform = Transform3D(1.05127, 0, -0.71329, 0, 1.27041, 0, 0.71329, 0, 1.05127, -4.80867, 0.822087, -1.59045)
+
+[node name="Screwdriver2" parent="." instance=ExtResource("8_j0ayn")]
+transform = Transform3D(0.98467, 0, -0.244648, 0, 1.01461, 0, 0.244648, 0, 0.98467, -4.80867, 0.822087, -1.74934)
+
+[node name="Rocketsilo_broken" parent="." instance=ExtResource("9_m4mls")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.38036, 0, -1.4039)
+
+[node name="WarningTapePole2" parent="." instance=ExtResource("10_57cjs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.18836, -2.38419e-07, -1.48104)
+
+[node name="WarningTapePole3" parent="." instance=ExtResource("10_57cjs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.16687, 0, 0.195144)
+
+[node name="WarningTape2" parent="." instance=ExtResource("11_ki7x1")]
+transform = Transform3D(0.504829, 0, -0.863219, 0, 1, 0, 0.863219, 0, 0.504829, 6.63596, 1.00713, -0.606208)
+
+[node name="ammobx" parent="." instance=ExtResource("12_1eh02")]
+transform = Transform3D(0.747856, 0, -0.663861, 0, 1, 0, 0.663861, 0, 0.747856, 3.30054, 0, -1.55124)
+
+[node name="WarningLight2" parent="." instance=ExtResource("13_f4mlb")]
+transform = Transform3D(0.600219, 0, 0, 0, 0.600219, 0, 0, 0, 0.600219, -6.47992, 1.65768, 0.440975)
+
+[node name="FireExtinguisher2" parent="." instance=ExtResource("14_j4bjv")]
+transform = Transform3D(0.69039, 0, 0.723437, 0, 1, 0, -0.723437, 0, 0.69039, -5.38622, 0, -0.706436)
+
+[node name="TrafficCone2" parent="." instance=ExtResource("15_7gbt4")]
+transform = Transform3D(0.953465, 0, 0.301505, 0, 1, 0, -0.301505, 0, 0.953465, -8.89179, 0, 3.96091)
+
+[node name="TrafficCone4" parent="." instance=ExtResource("15_7gbt4")]
+transform = Transform3D(0.287194, -0.945794, 0.151637, -0.0359511, -0.168838, -0.984988, 0.957198, 0.277431, -0.0824914, -8.40723, 0.172592, 3.53768)
+
+[node name="TrafficCone3" parent="." instance=ExtResource("15_7gbt4")]
+transform = Transform3D(0.848279, 0, -0.529549, 0, 1, 0, 0.529549, 0, 0.848279, -8.47505, 0, 4.12668)
+
+[node name="ammobx2" parent="." instance=ExtResource("12_1eh02")]
+transform = Transform3D(-0.13805, 0, -0.990425, 0, 1, 0, 0.990425, 0, -0.13805, 3.98942, 0, -1.52033)
+
+[editable path="turret_intro_map"]

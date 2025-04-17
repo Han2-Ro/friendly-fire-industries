@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://cf6iagau1wkgo"]
+
+[ext_resource type="Theme" uid="uid://dhgodsmrdod46" path="res://ui/ui_themes/main_menu_UI.tres" id="1_33mtl"]
+[ext_resource type="Script" path="res://scenes/levels/common/ui/keybind_hints/ui_hint.gd" id="2_06jcw"]
+[ext_resource type="PackedScene" uid="uid://be7f5bfaxhbwg" path="res://scenes/levels/common/ui/keybind_hints/ui_keybinds_slowmo.tscn" id="2_xsg1w"]
+
+[node name="UiMouseHint" type="Panel"]
+custom_minimum_size = Vector2(50, 50)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -360.0
+offset_top = 29.0
+offset_right = 360.0
+offset_bottom = 170.0
+grow_horizontal = 2
+mouse_filter = 2
+theme = ExtResource("1_33mtl")
+script = ExtResource("2_06jcw")
+hint_status_level = 2
+
+[node name="Slowmo" parent="." instance=ExtResource("2_xsg1w")]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 22.0
+offset_right = 715.0
+offset_bottom = 118.0
