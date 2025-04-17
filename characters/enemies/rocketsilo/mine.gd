@@ -7,7 +7,7 @@ var distance: float
 var incline: float
 var x: float = 0
 @onready var kill_area: Area3D = $KillArea
-@onready var explodeparticle = preload("res://scenes/particles/explosion.tscn")
+@onready var explodeparticle = preload("res://characters/common/explosion.tscn")
 
 func _ready() -> void:
 	distance = global_position.distance_to(target)

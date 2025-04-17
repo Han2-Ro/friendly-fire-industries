@@ -9,7 +9,7 @@ extends StaticBody3D
 @export var seconds_before_first_shot: float = 2
 
 @onready var AnimPlayer = $AnimationPlayer
-@onready var explodeparticle = preload("res://scenes/particles/explosion.tscn")
+@onready var explodeparticle = preload("res://characters/common/explosion.tscn")
 
 var time_since_last_action: float = seconds_between_shots
 var i_target: int = 0
