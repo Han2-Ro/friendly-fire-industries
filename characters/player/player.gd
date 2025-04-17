@@ -13,6 +13,7 @@ extends PathFollow3D
 @onready var player_kaputt = preload("res://characters/player/player_kaputt.tscn")
 @onready var explodeparticle = preload("res://characters/common/explosion.tscn")
 @onready var ui: UIPlayer = $UI
+@onready var ray: RayCast3D = $Player/player_base/player_rotationstange/RayCast3D
 
 var last_cursor_pos: Vector3
 var slowmotion_pressed: bool = false
@@ -28,8 +29,8 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	if (Engine.time_scale != 0): # don't aim when paused
-		if lock_on_target:
-			print("locking on")
+		if is_instance_valid(lock_on_target):
+			look_at_lock_on_target()
 		else:
 			look_at_cursor()
 	progress += speed * delta
@@ -61,6 +62,11 @@ func look_at_cursor():
 		rotation_stange.look_at(cursor_position_on_plane, Vector3.UP, 0)
 		last_cursor_pos = cursor_position_on_plane
 
+func look_at_lock_on_target():
+	var target_pos := lock_on_target.position
+	target_pos.y = player_barrel.global_position.y
+	rotation_stange.look_at(target_pos, Vector3.UP, 0)
+
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("shoot") and Engine.time_scale != 0: # don't shoot when paused
 		if (ammo > 0):
@@ -70,8 +76,8 @@ func _input(event: InputEvent) -> void:
 		else:
 			print("Out of ammo")
 			no_ammo_player.play()
-	elif event.is_action_pressed("lock_on"):
-		lock_on_target = self
+	elif event.is_action_pressed("lock_on") and ray.is_colliding() and ray.get_collider().has_method("on_hit"):
+		lock_on_target = ray.get_collider()
 	elif event.is_action_released("lock_on"):
 		lock_on_target = null
 		
