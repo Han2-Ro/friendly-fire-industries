@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://d014rcmkejwxp"]
 
-[ext_resource type="Theme" uid="uid://dhgodsmrdod46" path="res://assets/ui_themes/main_menu_UI.tres" id="1_coqod"]
+[ext_resource type="Theme" uid="uid://dhgodsmrdod46" path="res://ui/ui_themes/main_menu_UI.tres" id="1_coqod"]
 [ext_resource type="Script" path="res://scenes/levels/common/ui/keybind_hints/ui_hint.gd" id="2_lrr6v"]
 [ext_resource type="PackedScene" uid="uid://bri0on4cqodjd" path="res://scenes/levels/common/ui/keybind_hints/ui_keybinds_reset.tscn" id="3_vh5np"]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cf6iagau1wkgo"]
 
-[ext_resource type="Theme" uid="uid://dhgodsmrdod46" path="res://assets/ui_themes/main_menu_UI.tres" id="1_33mtl"]
+[ext_resource type="Theme" uid="uid://dhgodsmrdod46" path="res://ui/ui_themes/main_menu_UI.tres" id="1_33mtl"]
 [ext_resource type="Script" path="res://scenes/levels/common/ui/keybind_hints/ui_hint.gd" id="2_06jcw"]
 [ext_resource type="PackedScene" uid="uid://be7f5bfaxhbwg" path="res://scenes/levels/common/ui/keybind_hints/ui_keybinds_slowmo.tscn" id="2_xsg1w"]
 

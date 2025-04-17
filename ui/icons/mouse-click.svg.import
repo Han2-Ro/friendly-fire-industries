@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dktekp37bpahg"
-path="res://.godot/imported/spacebar.svg-ef30d508dc2d3fb421b937a4df8900d7.ctex"
+uid="uid://cupdptx8a3fb7"
+path="res://.godot/imported/mouse-click.svg-51561870f47b1384d8889d9706251200.ctex"
 metadata={
 "has_editor_variant": true,
 "vram_texture": false
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/icons/spacebar.svg"
-dest_files=["res://.godot/imported/spacebar.svg-ef30d508dc2d3fb421b937a4df8900d7.ctex"]
+source_file="res://ui/icons/mouse-click.svg"
+dest_files=["res://.godot/imported/mouse-click.svg-51561870f47b1384d8889d9706251200.ctex"]
 
 [params]
 

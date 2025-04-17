@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ogf3s0rd3vqw"
-path="res://.godot/imported/bullet.svg-4a56f74a0ab1163188360c73413e7d67.ctex"
+uid="uid://b6ggey51uhol8"
+path="res://.godot/imported/stopwatch.svg-e162ab8fd2c641a5bbf443525bc81e24.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/bullet.svg"
-dest_files=["res://.godot/imported/bullet.svg-4a56f74a0ab1163188360c73413e7d67.ctex"]
+source_file="res://ui/icons/stopwatch.svg"
+dest_files=["res://.godot/imported/stopwatch.svg-e162ab8fd2c641a5bbf443525bc81e24.ctex"]
 
 [params]
 

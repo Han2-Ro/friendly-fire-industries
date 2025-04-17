@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cx7g1wqhq73g7"]
 
-[ext_resource type="Theme" uid="uid://dhgodsmrdod46" path="res://assets/ui_themes/main_menu_UI.tres" id="1_h8mcm"]
+[ext_resource type="Theme" uid="uid://dhgodsmrdod46" path="res://ui/ui_themes/main_menu_UI.tres" id="1_h8mcm"]
 
 [node name="Shoot" type="RichTextLabel"]
 anchors_preset = 7
@@ -16,6 +16,6 @@ grow_vertical = 0
 theme = ExtResource("1_h8mcm")
 theme_override_font_sizes/normal_font_size = 32
 bbcode_enabled = true
-text = "[img width=96 height=96]res://assets/icons/mouse-click.png[/img] Shoot"
+text = "[img width=96 height=96]res://ui/icons/mouse-click.png[/img] Shoot"
 fit_content = true
 scroll_active = false

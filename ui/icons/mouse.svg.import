@@ -2,16 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgspggymvuamr"
-path="res://.godot/imported/spacebar.png-c7a5a02f91f7d0f45f4b90dd56d47e5f.ctex"
+uid="uid://dmeurer7ek8b3"
+path="res://.godot/imported/mouse.svg-d215c7a1107cf5d794063c4033d37cd8.ctex"
 metadata={
+"has_editor_variant": true,
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/spacebar.png"
-dest_files=["res://.godot/imported/spacebar.png-c7a5a02f91f7d0f45f4b90dd56d47e5f.ctex"]
+source_file="res://ui/icons/mouse.svg"
+dest_files=["res://.godot/imported/mouse.svg-d215c7a1107cf5d794063c4033d37cd8.ctex"]
 
 [params]
 
@@ -32,3 +33,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=true
+editor/convert_colors_with_editor_theme=false

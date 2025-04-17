@@ -2,16 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbwki5qnrpm7p"
-path="res://.godot/imported/mouse-click.png-69c331a6f536f7a6243dec01e3479e57.ctex"
+uid="uid://dktekp37bpahg"
+path="res://.godot/imported/spacebar.svg-096e857976cf95c5e45be812381ea714.ctex"
 metadata={
+"has_editor_variant": true,
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/mouse-click.png"
-dest_files=["res://.godot/imported/mouse-click.png-69c331a6f536f7a6243dec01e3479e57.ctex"]
+source_file="res://ui/icons/spacebar.svg"
+dest_files=["res://.godot/imported/spacebar.svg-096e857976cf95c5e45be812381ea714.ctex"]
 
 [params]
 
@@ -32,3 +33,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=true
+editor/convert_colors_with_editor_theme=false

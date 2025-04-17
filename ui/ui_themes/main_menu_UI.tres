@@ -1,7 +1,7 @@
 [gd_resource type="Theme" load_steps=5 format=3 uid="uid://dhgodsmrdod46"]
 
-[ext_resource type="StyleBox" uid="uid://boilvtinge0qh" path="res://assets/ui_themes/normalBUtton.tres" id="1_0cxpf"]
-[ext_resource type="FontFile" uid="uid://cb8xjj2e0l24x" path="res://assets/fonts/Terminal F4.ttf" id="2_2mt5f"]
+[ext_resource type="StyleBox" uid="uid://boilvtinge0qh" path="res://ui/ui_themes/normalBUtton.tres" id="1_0cxpf"]
+[ext_resource type="FontFile" uid="uid://cb8xjj2e0l24x" path="res://ui/fonts/Terminal F4.ttf" id="2_2mt5f"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wsiv0"]
 bg_color = Color(0.650128, 0.650128, 0.650128, 1)

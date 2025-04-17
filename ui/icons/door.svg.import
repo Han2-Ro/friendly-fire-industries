@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7y8kknv0wpgk"
-path="res://.godot/imported/stopwatch2.svg-2deb6af8d549eb41df1c118120b2d4f4.ctex"
+uid="uid://cwack8shd2qqm"
+path="res://.godot/imported/door.svg-e069ab968fd9078ffd3b233a325b6d03.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/stopwatch2.svg"
-dest_files=["res://.godot/imported/stopwatch2.svg-2deb6af8d549eb41df1c118120b2d4f4.ctex"]
+source_file="res://ui/icons/door.svg"
+dest_files=["res://.godot/imported/door.svg-e069ab968fd9078ffd3b233a325b6d03.ctex"]
 
 [params]
 

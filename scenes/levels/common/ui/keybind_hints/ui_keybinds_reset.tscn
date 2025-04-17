@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bri0on4cqodjd"]
 
-[ext_resource type="Theme" uid="uid://dhgodsmrdod46" path="res://assets/ui_themes/main_menu_UI.tres" id="1_yidvf"]
+[ext_resource type="Theme" uid="uid://dhgodsmrdod46" path="res://ui/ui_themes/main_menu_UI.tres" id="1_yidvf"]
 
 [node name="Reset" type="RichTextLabel"]
 offset_left = -111.0
@@ -9,7 +9,7 @@ offset_right = 224.0
 theme = ExtResource("1_yidvf")
 theme_override_font_sizes/normal_font_size = 32
 bbcode_enabled = true
-text = "[img width=96 height=96]res://assets/icons/Key.png[/img] Reset Level"
+text = "[img width=96 height=96]res://ui/icons/Key.png[/img] Reset Level"
 fit_content = true
 scroll_active = false
 

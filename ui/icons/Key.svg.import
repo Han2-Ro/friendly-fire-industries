@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cupdptx8a3fb7"
-path="res://.godot/imported/mouse-click.svg-ff360b30f82c9f8df9c551d6b0726abd.ctex"
+uid="uid://bk8fgi6mnfbho"
+path="res://.godot/imported/Key.svg-b2eb056f3b8c1fc946a5572b2a664655.ctex"
 metadata={
 "has_editor_variant": true,
 "vram_texture": false
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/icons/mouse-click.svg"
-dest_files=["res://.godot/imported/mouse-click.svg-ff360b30f82c9f8df9c551d6b0726abd.ctex"]
+source_file="res://ui/icons/Key.svg"
+dest_files=["res://.godot/imported/Key.svg-b2eb056f3b8c1fc946a5572b2a664655.ctex"]
 
 [params]
 

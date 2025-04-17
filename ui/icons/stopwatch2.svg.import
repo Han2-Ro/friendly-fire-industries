@@ -2,17 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bk8fgi6mnfbho"
-path="res://.godot/imported/Key.svg-d65c724ea416cc9e8ab69f1ae605c8be.ctex"
+uid="uid://7y8kknv0wpgk"
+path="res://.godot/imported/stopwatch2.svg-dbebf56d6cf63b040bb57c983ca5c9e9.ctex"
 metadata={
-"has_editor_variant": true,
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/Key.svg"
-dest_files=["res://.godot/imported/Key.svg-d65c724ea416cc9e8ab69f1ae605c8be.ctex"]
+source_file="res://ui/icons/stopwatch2.svg"
+dest_files=["res://.godot/imported/stopwatch2.svg-dbebf56d6cf63b040bb57c983ca5c9e9.ctex"]
 
 [params]
 
@@ -34,5 +33,5 @@ process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
 svg/scale=1.0
-editor/scale_with_editor_scale=true
+editor/scale_with_editor_scale=false
 editor/convert_colors_with_editor_theme=false

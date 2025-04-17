@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dtxtvx60ecw26"]
 
-[ext_resource type="Theme" uid="uid://dhgodsmrdod46" path="res://assets/ui_themes/main_menu_UI.tres" id="1_biwrh"]
+[ext_resource type="Theme" uid="uid://dhgodsmrdod46" path="res://ui/ui_themes/main_menu_UI.tres" id="1_biwrh"]
 [ext_resource type="PackedScene" uid="uid://dpclepm2j2a5r" path="res://scenes/levels/common/ui/keybind_hints/ui_keybinds_menu.tscn" id="2_jkffa"]
 
 [node name="UiResetHint" type="Panel"]

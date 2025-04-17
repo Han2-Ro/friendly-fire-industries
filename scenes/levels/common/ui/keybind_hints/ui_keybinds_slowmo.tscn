@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://be7f5bfaxhbwg"]
 
-[ext_resource type="Theme" uid="uid://dhgodsmrdod46" path="res://assets/ui_themes/main_menu_UI.tres" id="1_7vseo"]
+[ext_resource type="Theme" uid="uid://dhgodsmrdod46" path="res://ui/ui_themes/main_menu_UI.tres" id="1_7vseo"]
 
 [node name="Slowmo" type="RichTextLabel"]
 offset_left = -111.0
@@ -10,7 +10,7 @@ offset_bottom = -134.0
 theme = ExtResource("1_7vseo")
 theme_override_font_sizes/normal_font_size = 32
 bbcode_enabled = true
-text = "[img width=295 height=96]res://assets/icons/spacebar.png[/img] Hold for slow-motion"
+text = "[img width=295 height=96]res://ui/icons/spacebar.png[/img] Hold for slow-motion"
 fit_content = true
 scroll_active = false
 
