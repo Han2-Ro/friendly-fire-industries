@@ -7,9 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://datd7wg6v4r42" path="res://characters/enemies/rocketsilo/rocketsilo.tscn" id="9_t83oj"]
 [ext_resource type="PackedScene" uid="uid://b8lky0yk4q64s" path="res://characters/enemies/turret/turret.tscn" id="10_g5reg"]
 [ext_resource type="PackedScene" uid="uid://c38ebp5143i5x" path="res://scenes/levels/common/level_camera.tscn" id="11_jg30h"]
-[ext_resource type="PackedScene" uid="uid://cx8gwgqjw2ft8" path="res://assets/TrafficCone.blend" id="12_tunet"]
-[ext_resource type="PackedScene" uid="uid://cbbuw8h38tdkk" path="res://assets/WarningTape.blend" id="13_nrj5f"]
-[ext_resource type="PackedScene" uid="uid://8itxf6sbrcq3" path="res://assets/WarningTapePole.blend" id="14_6vcdd"]
+[ext_resource type="PackedScene" uid="uid://cx8gwgqjw2ft8" path="res://scenes/levels/common/deco/TrafficCone.blend" id="12_tunet"]
+[ext_resource type="PackedScene" uid="uid://cbbuw8h38tdkk" path="res://scenes/levels/common/deco/WarningTape.blend" id="13_nrj5f"]
+[ext_resource type="PackedScene" uid="uid://8itxf6sbrcq3" path="res://scenes/levels/common/deco/WarningTapePole.blend" id="14_6vcdd"]
 
 [sub_resource type="Curve3D" id="Curve3D_ystvf"]
 _data = {

@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b8lky0yk4q64s" path="res://characters/enemies/turret/turret.tscn" id="4_p7tmx"]
 [ext_resource type="PackedScene" uid="uid://dt2b2acdq52cw" path="res://scenes/levels/common/button.tscn" id="5_7grsj"]
 [ext_resource type="PackedScene" uid="uid://dnfpmel15rp0g" path="res://scenes/levels/common/door.tscn" id="6_gt0bi"]
-[ext_resource type="PackedScene" uid="uid://cd0kih764xane" path="res://assets/ammobx.blend" id="7_5yaut"]
+[ext_resource type="PackedScene" uid="uid://cd0kih764xane" path="res://scenes/levels/common/deco/ammobx.blend" id="7_5yaut"]
 [ext_resource type="PackedScene" uid="uid://dtxtvx60ecw26" path="res://scenes/levels/common/ui/keybind_hints/ui_menu_hint.tscn" id="8_g071g"]
 
 [sub_resource type="Curve3D" id="Curve3D_ystvf"]

@@ -7,10 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://c681r2buw6d0y" path="res://scenes/levels/lvl_complex_1/complex_map_1.blend" id="6_6aee3"]
 [ext_resource type="PackedScene" uid="uid://dnfpmel15rp0g" path="res://scenes/levels/common/door.tscn" id="6_cga3k"]
 [ext_resource type="PackedScene" uid="uid://datd7wg6v4r42" path="res://characters/enemies/rocketsilo/rocketsilo.tscn" id="7_fwu76"]
-[ext_resource type="PackedScene" uid="uid://bofhxr0l6vrdt" path="res://assets/WarningLight.blend" id="8_8siuc"]
-[ext_resource type="PackedScene" uid="uid://cgm1l4gs3i30g" path="res://assets/FireExtinguisher.blend" id="9_h28yl"]
-[ext_resource type="PackedScene" uid="uid://cd0kih764xane" path="res://assets/ammobx.blend" id="10_fxemq"]
-[ext_resource type="PackedScene" uid="uid://cx8gwgqjw2ft8" path="res://assets/TrafficCone.blend" id="11_vgwna"]
+[ext_resource type="PackedScene" uid="uid://bofhxr0l6vrdt" path="res://scenes/levels/common/deco/WarningLight.blend" id="8_8siuc"]
+[ext_resource type="PackedScene" uid="uid://cgm1l4gs3i30g" path="res://scenes/levels/common/deco/FireExtinguisher.blend" id="9_h28yl"]
+[ext_resource type="PackedScene" uid="uid://cd0kih764xane" path="res://scenes/levels/common/deco/ammobx.blend" id="10_fxemq"]
+[ext_resource type="PackedScene" uid="uid://cx8gwgqjw2ft8" path="res://scenes/levels/common/deco/TrafficCone.blend" id="11_vgwna"]
 
 [sub_resource type="Curve3D" id="Curve3D_ystvf"]
 _data = {

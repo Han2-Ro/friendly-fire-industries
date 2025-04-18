@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://dt2b2acdq52cw"]
 
 [ext_resource type="Script" path="res://scenes/levels/common/button.gd" id="1_lkfdi"]
-[ext_resource type="PackedScene" uid="uid://cet7e7nga4sxb" path="res://assets/buttons_and_lasers/Button.blend" id="2_vjavu"]
+[ext_resource type="PackedScene" uid="uid://cet7e7nga4sxb" path="res://scenes/levels/common/buttons_and_lasers/Button.blend" id="2_vjavu"]
 [ext_resource type="AudioStream" uid="uid://c1j1fgo5wdcvw" path="res://assets/sounds/no-access-243463.mp3" id="3_73fh8"]
 [ext_resource type="AudioStream" uid="uid://ctn6ndkmulqy8" path="res://assets/sounds/access-21-299881.mp3" id="4_y44b7"]
 

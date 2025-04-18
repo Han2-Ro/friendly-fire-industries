@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/levels/common/door.gd" id="1_cn5x8"]
 [ext_resource type="PackedScene" uid="uid://xq7beckd7qfh" path="res://assets/Tuer.blend" id="1_ej4xw"]
-[ext_resource type="PackedScene" uid="uid://cn2uujo4p8fh1" path="res://assets/buttons_and_lasers/LaserEmitters.blend" id="3_3n4qs"]
+[ext_resource type="PackedScene" uid="uid://cn2uujo4p8fh1" path="res://scenes/levels/common/buttons_and_lasers/LaserEmitters.blend" id="3_3n4qs"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ckiqm"]
 size = Vector3(2, 2.19653, 0.119019)

@@ -4,12 +4,12 @@
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://characters/player/player.tscn" id="3_q55hm"]
 [ext_resource type="PackedScene" uid="uid://buq1pqv6iid72" path="res://scenes/levels/lvl_drone_hell/drone_hell_map.blend" id="4_qli7v"]
 [ext_resource type="PackedScene" uid="uid://b8lky0yk4q64s" path="res://characters/enemies/turret/turret.tscn" id="5_cedrh"]
-[ext_resource type="PackedScene" uid="uid://bofhxr0l6vrdt" path="res://assets/WarningLight.blend" id="6_elbam"]
+[ext_resource type="PackedScene" uid="uid://bofhxr0l6vrdt" path="res://scenes/levels/common/deco/WarningLight.blend" id="6_elbam"]
 [ext_resource type="PackedScene" uid="uid://dme01ctmicfat" path="res://characters/enemies/drone/drone.tscn" id="6_gvl05"]
-[ext_resource type="PackedScene" uid="uid://dhqp7mex168hw" path="res://assets/ToolCart.blend" id="7_6jbi7"]
-[ext_resource type="PackedScene" uid="uid://cx8gwgqjw2ft8" path="res://assets/TrafficCone.blend" id="8_eusuh"]
-[ext_resource type="PackedScene" uid="uid://cd0kih764xane" path="res://assets/ammobx.blend" id="9_j0yku"]
-[ext_resource type="PackedScene" uid="uid://dundx2uw5a7ky" path="res://assets/PowerDrill.blend" id="10_ib3xc"]
+[ext_resource type="PackedScene" uid="uid://dhqp7mex168hw" path="res://scenes/levels/common/deco/ToolCart.blend" id="7_6jbi7"]
+[ext_resource type="PackedScene" uid="uid://cx8gwgqjw2ft8" path="res://scenes/levels/common/deco/TrafficCone.blend" id="8_eusuh"]
+[ext_resource type="PackedScene" uid="uid://cd0kih764xane" path="res://scenes/levels/common/deco/ammobx.blend" id="9_j0yku"]
+[ext_resource type="PackedScene" uid="uid://dundx2uw5a7ky" path="res://scenes/levels/common/deco/PowerDrill.blend" id="10_ib3xc"]
 
 [sub_resource type="Curve3D" id="Curve3D_ystvf"]
 _data = {
