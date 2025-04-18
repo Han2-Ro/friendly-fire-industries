@@ -29,6 +29,16 @@ window/size/viewport_height=720
 mouse_cursor/custom_image="res://assets/images/cursor-crosshair-32.png"
 mouse_cursor/custom_image_hotspot=Vector2(16, 18)
 
+[file_customization]
+
+folder_colors={
+"res://characters/enemies/": "red",
+"res://characters/player/": "green",
+"res://scenes/": "purple",
+"res://scenes/levels/": "pink",
+"res://ui/": "gray"
+}
+
 [global_group]
 
 block_player="if the player drive into this he dies"
