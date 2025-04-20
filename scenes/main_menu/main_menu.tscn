@@ -11,8 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://c8ohtww5qtrs" path="res://scenes/main_menu/main_menu_ui.tscn" id="7_dds4d"]
 [ext_resource type="PackedScene" uid="uid://dmsrpbpete03w" path="res://scenes/main_menu/options_menu.tscn" id="10_vhtd2"]
 [ext_resource type="PackedScene" uid="uid://b6qld0vjlight" path="res://scenes/preload.tscn" id="11_xrwn4"]
-[ext_resource type="PackedScene" uid="uid://cecvu28s6wm8l" path="res://assets/Rocket.blend" id="12_fb2vg"]
-[ext_resource type="PackedScene" uid="uid://hyiovj3pyx5w" path="res://assets/Rocketsilo.blend" id="12_u17jf"]
+[ext_resource type="PackedScene" uid="uid://cecvu28s6wm8l" path="res://characters/enemies/rocketsilo/Rocket.blend" id="12_fb2vg"]
+[ext_resource type="PackedScene" uid="uid://hyiovj3pyx5w" path="res://characters/enemies/rocketsilo/Rocketsilo.blend" id="12_u17jf"]
 
 [sub_resource type="GDScript" id="GDScript_cy51l"]
 script/source = "extends Node3D

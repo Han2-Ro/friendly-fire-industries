@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cecvu28s6wm8l"
-path="res://.godot/imported/Rocket.blend-e3170bb8f36cdf41be7dd4367d776df9.scn"
+uid="uid://f5b7i8wmy701"
+path="res://.godot/imported/Level2Test.blend-b6e1e44ab21e10a48d9b11f6fe011ca6.scn"
 
 [deps]
 
-source_file="res://characters/enemies/rocketsilo/Rocket.blend"
-dest_files=["res://.godot/imported/Rocket.blend-e3170bb8f36cdf41be7dd4367d776df9.scn"]
+source_file="res://scenes/levels/level_02/Level2Test.blend"
+dest_files=["res://.godot/imported/Level2Test.blend-b6e1e44ab21e10a48d9b11f6fe011ca6.scn"]
 
 [params]
 
@@ -25,7 +25,7 @@ meshes/light_baking=1
 meshes/lightmap_texel_size=0.2
 meshes/force_disable_compression=false
 skins/use_named_skins=true
-animation/import=false
+animation/import=true
 animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true

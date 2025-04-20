@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://characters/player/player.gd" id="1_6100m"]
 [ext_resource type="Script" path="res://characters/player/ray.gd" id="2_y0miw"]
-[ext_resource type="PackedScene" uid="uid://be88bwduqfvp2" path="res://assets/Player.blend" id="3_00mdn"]
+[ext_resource type="PackedScene" uid="uid://be88bwduqfvp2" path="res://characters/player/Player.blend" id="3_00mdn"]
 [ext_resource type="Texture2D" uid="uid://cqits2h8pwfsp" path="res://assets/textures/testGesicht.png" id="3_gl3h4"]
 [ext_resource type="PackedScene" uid="uid://h6o2oblxpy6m" path="res://characters/player/muzzleflash.tscn" id="3_gwj78"]
 [ext_resource type="Script" path="res://characters/player/player_hurt_character.gd" id="5_sefwu"]

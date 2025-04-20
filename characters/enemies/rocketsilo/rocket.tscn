@@ -1,7 +1,7 @@
 [gd_scene load_steps=21 format=3 uid="uid://cf8pivhpqj2mv"]
 
 [ext_resource type="Script" path="res://characters/enemies/rocketsilo/rocket.gd" id="1_wduoi"]
-[ext_resource type="PackedScene" uid="uid://cecvu28s6wm8l" path="res://assets/Rocket.blend" id="2_rnh1f"]
+[ext_resource type="PackedScene" uid="uid://cecvu28s6wm8l" path="res://characters/enemies/rocketsilo/Rocket.blend" id="2_rnh1f"]
 [ext_resource type="AudioStream" uid="uid://xnghiy1qu1gj" path="res://assets/sounds/rocket_flight.mp3" id="3_nrnun"]
 [ext_resource type="AudioStream" uid="uid://nhgcqpkvo447" path="res://assets/sounds/rocket_landing.mp3" id="4_eo7ap"]
 

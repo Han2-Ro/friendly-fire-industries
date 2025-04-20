@@ -7,10 +7,22 @@ import bpy
 import os
 
 # Set the top-level directory containing all subfolders
-top_dir = "scenes/levels/common/"  # <-- change this
+top_dir = "characters"  # <-- change this
 
 # Set the path Blender should use to find missing files. For some reason this worked only with absolut path for me
-search_dir = "/home/hannes/projects/godot/brackeys-game-jam/assets/textures/"  # <-- change this
+search_dir = "/home/hannes/projects/godot/friendly-fire-industries/scenes/main_menu/textures/"  # <-- change this
+
+def has_missing_files() -> bool:
+    # Check for missing images
+    missing: bool = False
+    for img in bpy.data.images:
+        if img.source == 'FILE':
+            img_path = bpy.path.abspath(img.filepath)
+            if not os.path.exists(img_path):
+                print(f"  MISSING: {img_path}")
+                missing = True
+    return missing
+
 
 # Save original file to restore later
 original_file = bpy.data.filepath
@@ -24,19 +36,14 @@ for root, dirs, files in os.walk(top_dir):
             # Open the .blend file
             bpy.ops.wm.open_mainfile(filepath=filepath)
 
+            if not has_missing_files():
+                print("  ✅ File has no missing images.")
+                continue
+
             # Try to find missing files in the specified search directory
             bpy.ops.file.find_missing_files(directory=search_dir)
 
-            # Check for missing images
-            missing = False
-            for img in bpy.data.images:
-                if img.source == 'FILE':
-                    img_path = bpy.path.abspath(img.filepath)
-                    if not os.path.exists(img_path):
-                        print(f"  MISSING: {img_path}")
-                        missing = True
-
-            if not missing:
+            if not has_missing_files():
                 print("  ✅ All external images found.")
                 bpy.ops.wm.save_mainfile()
 

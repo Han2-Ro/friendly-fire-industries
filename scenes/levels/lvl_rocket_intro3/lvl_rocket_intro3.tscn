@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://8itxf6sbrcq3" path="res://scenes/levels/common/deco/WarningTapePole.blend" id="13_2kttr"]
 [ext_resource type="PackedScene" uid="uid://cbbuw8h38tdkk" path="res://scenes/levels/common/deco/WarningTape.blend" id="14_tgkts"]
 [ext_resource type="PackedScene" uid="uid://cflil2j25571m" path="res://scenes/levels/common/deco/OfficeChairGreen.blend" id="15_i0qm4"]
-[ext_resource type="PackedScene" uid="uid://bw4jcts1j3fqv" path="res://assets/Drohne_broken.blend" id="16_kvlyy"]
+[ext_resource type="PackedScene" uid="uid://bw4jcts1j3fqv" path="res://characters/enemies/drone/Drohne_broken.blend" id="16_kvlyy"]
 [ext_resource type="PackedScene" uid="uid://5bjckehydxca" path="res://scenes/levels/common/deco/ComputerScreen.blend" id="17_177fq"]
 [ext_resource type="PackedScene" uid="uid://bgyjoe0a54i14" path="res://scenes/levels/common/deco/OfficeChairBlue.blend" id="18_42gnd"]
 [ext_resource type="PackedScene" uid="uid://dundx2uw5a7ky" path="res://scenes/levels/common/deco/PowerDrill.blend" id="20_laxia"]

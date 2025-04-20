@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://dnfpmel15rp0g"]
 
 [ext_resource type="Script" path="res://scenes/levels/common/door.gd" id="1_cn5x8"]
-[ext_resource type="PackedScene" uid="uid://xq7beckd7qfh" path="res://assets/Tuer.blend" id="1_ej4xw"]
+[ext_resource type="PackedScene" uid="uid://xq7beckd7qfh" path="res://scenes/levels/common/Tuer.blend" id="1_ej4xw"]
 [ext_resource type="PackedScene" uid="uid://cn2uujo4p8fh1" path="res://scenes/levels/common/buttons_and_lasers/LaserEmitters.blend" id="3_3n4qs"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ckiqm"]

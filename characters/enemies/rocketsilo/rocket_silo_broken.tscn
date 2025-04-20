@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cjouyudecijtf"]
 
-[ext_resource type="PackedScene" uid="uid://bqwnxe1pksefw" path="res://assets/Rocketsilo_broken.blend" id="1_jkorq"]
+[ext_resource type="PackedScene" uid="uid://bqwnxe1pksefw" path="res://characters/enemies/rocketsilo/Rocketsilo_broken.blend" id="1_jkorq"]
 
 [node name="rocket_silo_broken" type="Node3D"]
 

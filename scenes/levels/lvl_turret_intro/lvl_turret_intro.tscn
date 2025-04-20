@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b8lky0yk4q64s" path="res://characters/enemies/turret/turret.tscn" id="6_g7p1d"]
 [ext_resource type="PackedScene" uid="uid://dundx2uw5a7ky" path="res://scenes/levels/common/deco/PowerDrill.blend" id="7_cnyj3"]
 [ext_resource type="PackedScene" uid="uid://vdmpwrelyiyp" path="res://scenes/levels/common/deco/Screwdriver.blend" id="8_j0ayn"]
-[ext_resource type="PackedScene" uid="uid://bqwnxe1pksefw" path="res://assets/Rocketsilo_broken.blend" id="9_m4mls"]
+[ext_resource type="PackedScene" uid="uid://bqwnxe1pksefw" path="res://characters/enemies/rocketsilo/Rocketsilo_broken.blend" id="9_m4mls"]
 [ext_resource type="PackedScene" uid="uid://8itxf6sbrcq3" path="res://scenes/levels/common/deco/WarningTapePole.blend" id="10_57cjs"]
 [ext_resource type="PackedScene" uid="uid://cbbuw8h38tdkk" path="res://scenes/levels/common/deco/WarningTape.blend" id="11_ki7x1"]
 [ext_resource type="PackedScene" uid="uid://cd0kih764xane" path="res://scenes/levels/common/deco/ammobx.blend" id="12_1eh02"]

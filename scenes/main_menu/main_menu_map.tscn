@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://diuatrn3fo023"]
 
-[ext_resource type="PackedScene" uid="uid://b3m6lyelqm8b5" path="res://assets/Main_menu.blend" id="1_yqn4o"]
+[ext_resource type="PackedScene" uid="uid://b3m6lyelqm8b5" path="res://scenes/main_menu/Main_menu.blend" id="1_yqn4o"]
 [ext_resource type="Texture2D" uid="uid://cqits2h8pwfsp" path="res://assets/textures/testGesicht.png" id="2_2nte4"]
 
 [node name="Main_menu" instance=ExtResource("1_yqn4o")]

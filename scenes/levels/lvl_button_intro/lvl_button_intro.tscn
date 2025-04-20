@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dnfpmel15rp0g" path="res://scenes/levels/common/door.tscn" id="7_vykej"]
 [ext_resource type="PackedScene" uid="uid://wtl1r2baf1fi" path="res://characters/player/player.tscn" id="8_vdtp2"]
 [ext_resource type="PackedScene" uid="uid://dt2b2acdq52cw" path="res://scenes/levels/common/button.tscn" id="9_eponc"]
-[ext_resource type="PackedScene" uid="uid://htby4u43bmt" path="res://assets/TurretLowPolyKaputt.blend" id="10_y3mc6"]
+[ext_resource type="PackedScene" uid="uid://htby4u43bmt" path="res://characters/enemies/turret/TurretLowPolyKaputt.blend" id="10_y3mc6"]
 [ext_resource type="PackedScene" uid="uid://c38ebp5143i5x" path="res://scenes/levels/common/level_camera.tscn" id="11_r8rfm"]
 [ext_resource type="PackedScene" uid="uid://cx8gwgqjw2ft8" path="res://scenes/levels/common/deco/TrafficCone.blend" id="12_enqw4"]
 [ext_resource type="PackedScene" uid="uid://cbbuw8h38tdkk" path="res://scenes/levels/common/deco/WarningTape.blend" id="13_ffl43"]
