@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://wtl1r2baf1fi"]
+[gd_scene load_steps=12 format=3 uid="uid://wtl1r2baf1fi"]
 
 [ext_resource type="Script" path="res://characters/player/player.gd" id="1_6100m"]
 [ext_resource type="Script" path="res://characters/player/ray.gd" id="2_y0miw"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://characters/player/player_hurt_character.gd" id="5_sefwu"]
 [ext_resource type="PackedScene" uid="uid://cb1ccsqcw5st1" path="res://characters/player/ui_player.tscn" id="6_ts5m1"]
 [ext_resource type="AudioStream" uid="uid://dae1acu65rn81" path="res://assets/sounds/ui_sounds/emptygun.mp3" id="7_gyvqs"]
+[ext_resource type="PackedScene" uid="uid://b8l0v0rloqu5t" path="res://characters/player/lock_on_marker.blend" id="9_ys5yf"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c57xa"]
 size = Vector3(0.78125, 1.74609, 0.706665)
@@ -65,6 +66,10 @@ shape = SubResource("CylinderShape3D_o2xel")
 stream = ExtResource("7_gyvqs")
 volume_db = -10.0
 max_polyphony = 3
+
+[node name="LockOnMarker" parent="." instance=ExtResource("9_ys5yf")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.07056, 0)
 
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
 

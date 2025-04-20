@@ -14,6 +14,7 @@ extends PathFollow3D
 @onready var explodeparticle = preload("res://characters/common/explosion.tscn")
 @onready var ui: UIPlayer = $UI
 @onready var ray: RayCast3D = $Player/player_base/player_rotationstange/RayCast3D
+@onready var lock_on_marker: Node3D = %LockOnMarker
 
 var last_cursor_pos: Vector3
 var slowmotion_pressed: bool = false
@@ -26,6 +27,7 @@ func _ready() -> void:
 	ui.setup_ammo(ammo)
 	ui.setup_time(slowmotion_uses)
 	Engine.time_scale = 1
+	lock_on_marker.hide()
 
 func _physics_process(delta: float) -> void:
 	if (Engine.time_scale != 0): # don't aim when paused
@@ -64,6 +66,8 @@ func look_at_cursor():
 
 func look_at_lock_on_target():
 	var target_pos := lock_on_target.position
+	lock_on_marker.global_position.x = target_pos.x
+	lock_on_marker.global_position.z = target_pos.z
 	target_pos.y = player_barrel.global_position.y
 	rotation_stange.look_at(target_pos, Vector3.UP, 0)
 
@@ -78,9 +82,10 @@ func _input(event: InputEvent) -> void:
 			no_ammo_player.play()
 	elif event.is_action_pressed("lock_on") and ray.is_colliding() and ray.get_collider().has_method("on_hit"):
 		lock_on_target = ray.get_collider()
+		lock_on_marker.show()
 	elif event.is_action_released("lock_on"):
 		lock_on_target = null
-		
+		lock_on_marker.hide()
 	
 	handle_timescale(event)
 	
