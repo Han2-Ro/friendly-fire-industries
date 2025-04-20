@@ -22,7 +22,7 @@ var player_alive: bool
 @onready var broken_turret = preload("res://characters/enemies/turret/turret_kaputt_model.tscn")
 @onready var explodeparticle = preload("res://characters/common/explosion.tscn")
 @onready var muzzleflash = $TurretLowPoly/Cylinder/Muzzleflash
-@onready var bullet_scene = preload("res://characters/player/bullet.tscn")
+@onready var bullet_scene = preload("res://characters/player/bullet/bullet.tscn")
 @onready var ray_cast_3d: RayCast3D = $TurretLowPoly/RayCast3D
 @onready var turret_low_poly: Node3D = $TurretLowPoly
 @onready var turret_tower: Node3D = $TurretLowPoly/Cylinder

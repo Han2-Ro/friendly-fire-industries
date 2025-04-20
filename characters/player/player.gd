@@ -5,7 +5,7 @@ extends PathFollow3D
 @export var slowmotion_uses: int = 3
 
 @onready var rotation_stange = $Player/player_base/player_rotationstange
-@onready var bullet_scene = preload("res://characters/player/bullet.tscn")
+@onready var bullet_scene = preload("res://characters/player/bullet/bullet.tscn")
 @onready var muzzleflash = $Player/player_base/player_rotationstange/player_body/player_barrel/Muzzleflash
 @onready var player_barrel: MeshInstance3D = $Player/player_base/player_rotationstange/player_body/player_barrel
 @onready var player_body: MeshInstance3D = $Player/player_base/player_rotationstange/player_body
